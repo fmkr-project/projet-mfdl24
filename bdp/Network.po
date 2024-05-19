@@ -1,7 +1,27 @@
-THEORY ProofList
+THEORY ProofList IS
+_f(1) & _f(2) & _f(5) & _f(9) & _f(6) & Operation_DeleteUser.2,(_f(3) => _f(14));
+_f(1) & _f(2) & _f(5) & _f(9) & _f(6) & Operation_DeleteUser.1,(_f(3) => _f(13));
+_f(1) & _f(2) & _f(5) & _f(9) & _f(10) & _f(7) & Operation_AddUser.2,(_f(3) => _f(12));
+_f(1) & _f(2) & _f(5) & _f(9) & _f(10) & _f(7) & Operation_AddUser.1,(_f(3) => _f(11));
+_f(1) & _f(2) & _f(5) & _f(6) & _f(7) & Operation_SetGender.1,(_f(3) => _f(8));
+_f(1) & _f(2) & Initialisation.1,(_f(3) => _f(4))
 END
 &
-THEORY Formulas
+THEORY Formulas IS
+((NAT) = (((0) .. (2147483647)))) & ((INT) = (((-2147483647) .. (2147483647))));
+USERS: FIN(INTEGER) & not(USERS = {}) & GENDERS: FIN(INTEGER) & not(GENDERS = {});
+"Invariant is preserved";
+(({}) : ((({}) --> (GENDERS))));
+users : POW( USERS) & getGender : users +-> GENDERS & dom(getGender) = users & ((getGender) : (((users) --> (GENDERS))));
+((user) : (users));
+((gender) : (GENDERS));
+((((getGender) <+ (({((user) |-> (gender))})))) : (((users) --> (GENDERS))));
+((user) : (USERS));
+not(((user) : (users)));
+((users) \/ (({user}))) : POW( USERS);
+((((getGender) <+ (({((user) |-> (gender))})))) : (((((users) \/ (({user})))) --> (GENDERS))));
+(users - ({user})) : POW( USERS);
+((((({user})) <<| (getGender))) : ((((users - ({user}))) --> (GENDERS))))
 END
 &
 THEORY EnumerateX

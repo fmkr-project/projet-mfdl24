@@ -28,51 +28,469 @@
 <Pos l='13' c='5' s='5'/>
 </Attr>
 </Id>
+<Id value='getGender' typref='6'>
+<Attr>
+<Pos l='14' c='5' s='9'/>
+</Attr>
+</Id>
 </Abstract_Variables>
 <Invariant>
 <Attr>
-<Pos l='15' c='1' s='9'/>
+<Pos l='16' c='1' s='9'/>
 </Attr>
+<Nary_Pred op='&amp;'>
 <Exp_Comparison op='&lt;:'>
 <Attr>
-<Pos l='16' c='11' s='2'/>
+<Pos l='17' c='11' s='2'/>
 </Attr>
 <Id value='users' typref='4'>
 <Attr>
-<Pos l='16' c='5' s='5'/>
+<Pos l='17' c='5' s='5'/>
 </Attr>
 </Id>
 <Id value='USERS' typref='4'>
 <Attr>
-<Pos l='16' c='13' s='5'/>
+<Pos l='17' c='13' s='5'/>
 </Attr>
 </Id>
 </Exp_Comparison>
+<Exp_Comparison op=':'>
+<Attr>
+<Pos l='18' c='15' s='1'/>
+</Attr>
+<Id value='getGender' typref='6'>
+<Attr>
+<Pos l='18' c='5' s='9'/>
+</Attr>
+</Id>
+<Binary_Exp op='--&gt;' typref='7'>
+<Attr>
+<Pos l='18' c='23' s='3'/>
+</Attr>
+<Id value='users' typref='4'>
+<Attr>
+<Pos l='18' c='17' s='5'/>
+</Attr>
+</Id>
+<Id value='GENDERS' typref='5'>
+<Attr>
+<Pos l='18' c='25' s='7'/>
+</Attr>
+</Id>
+</Binary_Exp>
+</Exp_Comparison>
+</Nary_Pred>
 </Invariant>
 <Initialisation>
 <Attr>
-<Pos l='19' c='1' s='14'/>
+<Pos l='21' c='1' s='14'/>
 </Attr>
+<Nary_Sub op='||'>
 <Assignement_Sub>
 <Attr>
-<Pos l='20' c='11' s='2'/>
+<Pos l='22' c='11' s='2'/>
 </Attr>
 <Variables>
 <Id value='users' typref='4'>
 <Attr>
-<Pos l='20' c='5' s='5'/>
+<Pos l='22' c='5' s='5'/>
 </Attr>
 </Id>
 </Variables>
 <Values>
 <EmptySet typref='4'>
 <Attr>
-<Pos l='20' c='14' s='2'/>
+<Pos l='22' c='14' s='2'/>
 </Attr>
 </EmptySet>
 </Values>
 </Assignement_Sub>
+<Assignement_Sub>
+<Attr>
+<Pos l='23' c='15' s='2'/>
+</Attr>
+<Variables>
+<Id value='getGender' typref='6'>
+<Attr>
+<Pos l='23' c='5' s='9'/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<EmptySet typref='6'>
+<Attr>
+<Pos l='23' c='18' s='2'/>
+</Attr>
+</EmptySet>
+</Values>
+</Assignement_Sub>
+</Nary_Sub>
 </Initialisation>
+<Operations>
+<Operation name='SetGender'>
+<Attr>
+<Pos l='28' c='5' s='9' endLine='33'/>
+</Attr>
+<Input_Parameters>
+<Id value='user' typref='8'>
+<Attr>
+<Pos l='28' c='15' s='4'/>
+</Attr>
+</Id>
+<Id value='gender' typref='9'>
+<Attr>
+<Pos l='28' c='21' s='6'/>
+</Attr>
+</Id>
+</Input_Parameters>
+<Precondition>
+<Nary_Pred op='&amp;'>
+<Exp_Comparison op=':'>
+<Attr>
+<Pos l='30' c='14' s='1'/>
+</Attr>
+<Id value='user' typref='8'>
+<Attr>
+<Pos l='30' c='9' s='4'/>
+</Attr>
+</Id>
+<Id value='users' typref='4'>
+<Attr>
+<Pos l='30' c='16' s='5'/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison op=':'>
+<Attr>
+<Pos l='30' c='31' s='1'/>
+</Attr>
+<Id value='gender' typref='9'>
+<Attr>
+<Pos l='30' c='24' s='6'/>
+</Attr>
+</Id>
+<Id value='GENDERS' typref='5'>
+<Attr>
+<Pos l='30' c='33' s='7'/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Nary_Pred>
+</Precondition>
+<Body>
+<Assignement_Sub>
+<Attr>
+<Pos l='32' c='19' s='2'/>
+</Attr>
+<Variables>
+<Id value='getGender' typref='6'>
+<Attr>
+<Pos l='32' c='9' s='9'/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Binary_Exp op='&lt;+' typref='6'>
+<Attr>
+<Pos l='32' c='32' s='2'/>
+</Attr>
+<Id value='getGender' typref='6'>
+<Attr>
+<Pos l='32' c='22' s='9'/>
+</Attr>
+</Id>
+<Nary_Exp op='{' typref='6'>
+<Attr>
+<Pos l='32' c='34' s='1'/>
+</Attr>
+<Binary_Exp op='|-&gt;' typref='10'>
+<Attr>
+<Pos l='32' c='41' s='3'/>
+</Attr>
+<Id value='user' typref='8'>
+<Attr>
+<Pos l='32' c='36' s='4'/>
+</Attr>
+</Id>
+<Id value='gender' typref='9'>
+<Attr>
+<Pos l='32' c='43' s='6'/>
+</Attr>
+</Id>
+</Binary_Exp>
+</Nary_Exp>
+</Binary_Exp>
+</Values>
+</Assignement_Sub>
+</Body>
+</Operation>
+<Operation name='AddUser'>
+<Attr>
+<Pos l='35' c='5' s='7' endLine='41'/>
+</Attr>
+<Input_Parameters>
+<Id value='user' typref='8'>
+<Attr>
+<Pos l='35' c='13' s='4'/>
+</Attr>
+</Id>
+<Id value='gender' typref='9'>
+<Attr>
+<Pos l='35' c='19' s='6'/>
+</Attr>
+</Id>
+</Input_Parameters>
+<Precondition>
+<Nary_Pred op='&amp;'>
+<Exp_Comparison op=':'>
+<Attr>
+<Pos l='37' c='14' s='1'/>
+</Attr>
+<Id value='user' typref='8'>
+<Attr>
+<Pos l='37' c='9' s='4'/>
+</Attr>
+</Id>
+<Id value='USERS' typref='4'>
+<Attr>
+<Pos l='37' c='16' s='5'/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison op='/:'>
+<Attr>
+<Pos l='37' c='29' s='2'/>
+</Attr>
+<Id value='user' typref='8'>
+<Attr>
+<Pos l='37' c='24' s='4'/>
+</Attr>
+</Id>
+<Id value='users' typref='4'>
+<Attr>
+<Pos l='37' c='31' s='5'/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison op=':'>
+<Attr>
+<Pos l='37' c='46' s='1'/>
+</Attr>
+<Id value='gender' typref='9'>
+<Attr>
+<Pos l='37' c='39' s='6'/>
+</Attr>
+</Id>
+<Id value='GENDERS' typref='5'>
+<Attr>
+<Pos l='37' c='48' s='7'/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Nary_Pred>
+</Precondition>
+<Body>
+<Nary_Sub op='||'>
+<Assignement_Sub>
+<Attr>
+<Pos l='39' c='15' s='2'/>
+</Attr>
+<Variables>
+<Id value='users' typref='4'>
+<Attr>
+<Pos l='39' c='9' s='5'/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Binary_Exp op='\/' typref='4'>
+<Attr>
+<Pos l='39' c='24' s='2'/>
+</Attr>
+<Id value='users' typref='4'>
+<Attr>
+<Pos l='39' c='18' s='5'/>
+</Attr>
+</Id>
+<Nary_Exp op='{' typref='4'>
+<Attr>
+<Pos l='39' c='26' s='1'/>
+</Attr>
+<Id value='user' typref='8'>
+<Attr>
+<Pos l='39' c='27' s='4'/>
+</Attr>
+</Id>
+</Nary_Exp>
+</Binary_Exp>
+</Values>
+</Assignement_Sub>
+<Assignement_Sub>
+<Attr>
+<Pos l='40' c='19' s='2'/>
+</Attr>
+<Variables>
+<Id value='getGender' typref='6'>
+<Attr>
+<Pos l='40' c='9' s='9'/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Binary_Exp op='&lt;+' typref='6'>
+<Attr>
+<Pos l='40' c='32' s='2'/>
+</Attr>
+<Id value='getGender' typref='6'>
+<Attr>
+<Pos l='40' c='22' s='9'/>
+</Attr>
+</Id>
+<Nary_Exp op='{' typref='6'>
+<Attr>
+<Pos l='40' c='34' s='1'/>
+</Attr>
+<Binary_Exp op='|-&gt;' typref='10'>
+<Attr>
+<Pos l='40' c='41' s='3'/>
+</Attr>
+<Id value='user' typref='8'>
+<Attr>
+<Pos l='40' c='36' s='4'/>
+</Attr>
+</Id>
+<Id value='gender' typref='9'>
+<Attr>
+<Pos l='40' c='43' s='6'/>
+</Attr>
+</Id>
+</Binary_Exp>
+</Nary_Exp>
+</Binary_Exp>
+</Values>
+</Assignement_Sub>
+</Nary_Sub>
+</Body>
+</Operation>
+<Operation name='DeleteUser'>
+<Attr>
+<Pos l='43' c='5' s='10' endLine='49'/>
+</Attr>
+<Input_Parameters>
+<Id value='user' typref='8'>
+<Attr>
+<Pos l='43' c='16' s='4'/>
+</Attr>
+</Id>
+</Input_Parameters>
+<Precondition>
+<Nary_Pred op='&amp;'>
+<Exp_Comparison op=':'>
+<Attr>
+<Pos l='45' c='14' s='1'/>
+</Attr>
+<Id value='user' typref='8'>
+<Attr>
+<Pos l='45' c='9' s='4'/>
+</Attr>
+</Id>
+<Id value='USERS' typref='4'>
+<Attr>
+<Pos l='45' c='16' s='5'/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison op=':'>
+<Attr>
+<Pos l='45' c='29' s='1'/>
+</Attr>
+<Id value='user' typref='8'>
+<Attr>
+<Pos l='45' c='24' s='4'/>
+</Attr>
+</Id>
+<Id value='users' typref='4'>
+<Attr>
+<Pos l='45' c='31' s='5'/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Nary_Pred>
+</Precondition>
+<Body>
+<Nary_Sub op='||'>
+<Assignement_Sub>
+<Attr>
+<Pos l='47' c='15' s='2'/>
+</Attr>
+<Variables>
+<Id value='users' typref='4'>
+<Attr>
+<Pos l='47' c='9' s='5'/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Binary_Exp op='-s' typref='4'>
+<Attr>
+<Pos l='47' c='24' s='1'/>
+</Attr>
+<Id value='users' typref='4'>
+<Attr>
+<Pos l='47' c='18' s='5'/>
+</Attr>
+</Id>
+<Nary_Exp op='{' typref='4'>
+<Attr>
+<Pos l='47' c='26' s='1'/>
+</Attr>
+<Id value='user' typref='8'>
+<Attr>
+<Pos l='47' c='27' s='4'/>
+</Attr>
+</Id>
+</Nary_Exp>
+</Binary_Exp>
+</Values>
+</Assignement_Sub>
+<Assignement_Sub>
+<Attr>
+<Pos l='48' c='19' s='2'/>
+</Attr>
+<Variables>
+<Id value='getGender' typref='6'>
+<Attr>
+<Pos l='48' c='9' s='9'/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Binary_Exp op='&lt;&lt;|' typref='6'>
+<Attr>
+<Pos l='48' c='29' s='3'/>
+</Attr>
+<Nary_Exp op='{' typref='4'>
+<Attr>
+<Pos l='48' c='22' s='1'/>
+</Attr>
+<Id value='user' typref='8'>
+<Attr>
+<Pos l='48' c='23' s='4'/>
+</Attr>
+</Id>
+</Nary_Exp>
+<Id value='getGender' typref='6'>
+<Attr>
+<Pos l='48' c='31' s='9'/>
+</Attr>
+</Id>
+</Binary_Exp>
+</Values>
+</Assignement_Sub>
+</Nary_Sub>
+</Body>
+</Operation>
+</Operations>
 <TypeInfos>
 <Type id='0'>
 <Id value='BOOL'/>
@@ -101,6 +519,36 @@
 <Unary_Exp op='POW'>
 <Id value='GENDERS'/>
 </Unary_Exp>
+</Type>
+<Type id='6'>
+<Unary_Exp op='POW'>
+<Binary_Exp op='*'>
+<Id value='USERS'/>
+<Id value='GENDERS'/>
+</Binary_Exp>
+</Unary_Exp>
+</Type>
+<Type id='7'>
+<Unary_Exp op='POW'>
+<Unary_Exp op='POW'>
+<Binary_Exp op='*'>
+<Id value='USERS'/>
+<Id value='GENDERS'/>
+</Binary_Exp>
+</Unary_Exp>
+</Unary_Exp>
+</Type>
+<Type id='8'>
+<Id value='USERS'/>
+</Type>
+<Type id='9'>
+<Id value='GENDERS'/>
+</Type>
+<Type id='10'>
+<Binary_Exp op='*'>
+<Id value='USERS'/>
+<Id value='GENDERS'/>
+</Binary_Exp>
 </Type>
 </TypeInfos>
 

@@ -10,14 +10,42 @@ SETS
     GENDERS
 
 ABSTRACT_VARIABLES
-    users
+    users ,
+    getGender
 
 INVARIANT
-    users <: USERS
+    users <: USERS &
+    getGender : users --> GENDERS
 
 
 INITIALISATION
-    users := {}
+    users := {} ||
+    getGender := {}
 
+
+OPERATIONS
+    // Gender operations
+    SetGender ( user , gender ) =
+    PRE
+        user : users & gender : GENDERS
+    THEN
+        getGender := getGender <+ { ( user |-> gender ) }
+    END ;
+
+    AddUser ( user , gender ) =
+    PRE
+        user : USERS & user /: users & gender : GENDERS
+    THEN
+        users := users \/ { user } ||
+        getGender := getGender <+ { ( user |-> gender ) }
+    END ;
+
+    DeleteUser ( user ) =
+    PRE
+        user : USERS & user : users
+    THEN
+        users := users - { user } ||
+        getGender := { user } <<| getGender
+    END
 
 END
