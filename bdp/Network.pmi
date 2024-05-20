@@ -1,26 +1,35 @@
 THEORY BalanceX IS
-Network,6,2,0,4,0,0,0;
-Initialisation,1,0,0,1,0,0,0;
-Operation_AddUser,2,1,0,1,0,0,0;
-Operation_DeleteUser,2,1,0,1,0,0,0;
+Network,10,5,0,5,0,0,0;
+Initialisation,2,1,0,1,0,0,0;
+Operation_AddUser,3,2,0,1,0,0,0;
+Operation_DeleteUser,3,1,0,2,0,0,0;
+Operation_SetAge,1,1,0,0,0,0,0;
 Operation_SetGender,1,0,0,1,0,0,0
 END
 &
 THEORY ProofState IS
+Proved(0);
+Proved(Util);
+Proved(0);
+Proved(Util);
 Proved(Util);
 Proved(0);
 Proved(Util);
 Proved(0);
-Proved(0);
+Proved(Util);
 Proved(0)
 END
 &
 THEORY MethodList IS
+pr;
 mp & pr;
 pr;
 dd(1) & mp & pr;
+dd(1) & mp & pr;
 pr;
+dd(1) & mp & pr;
 pr;
+dd(1) & mp;
 pr
 END
 &
@@ -30,13 +39,18 @@ Force(0),?;
 Force(0),?;
 Force(0),?;
 Force(0),?;
+Force(0),?;
+Force(0),?;
+Force(0),?;
+Force(0),?;
 Force(0),?
 END
 &
 THEORY Status IS
-Network,6,2,4,0,0,0;
-Initialisation,1,0,1,0,0,0;
-Operation_AddUser,2,1,1,0,0,0;
-Operation_DeleteUser,2,1,1,0,0,0;
+Network,10,5,5,0,0,0;
+Initialisation,2,1,1,0,0,0;
+Operation_AddUser,3,2,1,0,0,0;
+Operation_DeleteUser,3,1,2,0,0,0;
+Operation_SetAge,1,1,0,0,0,0;
 Operation_SetGender,1,0,1,0,0,0
 END

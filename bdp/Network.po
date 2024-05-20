@@ -1,9 +1,13 @@
 THEORY ProofList IS
-_f(1) & _f(2) & _f(5) & _f(9) & _f(6) & Operation_DeleteUser.2,(_f(3) => _f(14));
-_f(1) & _f(2) & _f(5) & _f(9) & _f(6) & Operation_DeleteUser.1,(_f(3) => _f(13));
-_f(1) & _f(2) & _f(5) & _f(9) & _f(10) & _f(7) & Operation_AddUser.2,(_f(3) => _f(12));
-_f(1) & _f(2) & _f(5) & _f(9) & _f(10) & _f(7) & Operation_AddUser.1,(_f(3) => _f(11));
-_f(1) & _f(2) & _f(5) & _f(6) & _f(7) & Operation_SetGender.1,(_f(3) => _f(8));
+_f(1) & _f(2) & _f(6) & _f(13) & _f(7) & Operation_DeleteUser.3,(_f(3) => _f(20));
+_f(1) & _f(2) & _f(6) & _f(13) & _f(7) & Operation_DeleteUser.2,(_f(3) => _f(19));
+_f(1) & _f(2) & _f(6) & _f(13) & _f(7) & Operation_DeleteUser.1,(_f(3) => _f(18));
+_f(1) & _f(2) & _f(6) & _f(13) & _f(14) & _f(8) & _f(10) & _f(11) & Operation_AddUser.3,(_f(3) => _f(17));
+_f(1) & _f(2) & _f(6) & _f(13) & _f(14) & _f(8) & _f(10) & _f(11) & Operation_AddUser.2,(_f(3) => _f(16));
+_f(1) & _f(2) & _f(6) & _f(13) & _f(14) & _f(8) & _f(10) & _f(11) & Operation_AddUser.1,(_f(3) => _f(15));
+_f(1) & _f(2) & _f(6) & _f(7) & _f(10) & _f(11) & Operation_SetAge.1,(_f(3) => _f(12));
+_f(1) & _f(2) & _f(6) & _f(7) & _f(8) & Operation_SetGender.1,(_f(3) => _f(9));
+_f(1) & _f(2) & Initialisation.2,(_f(3) => _f(5));
 _f(1) & _f(2) & Initialisation.1,(_f(3) => _f(4))
 END
 &
@@ -12,16 +16,22 @@ THEORY Formulas IS
 USERS: FIN(INTEGER) & not(USERS = {}) & GENDERS: FIN(INTEGER) & not(GENDERS = {});
 "Invariant is preserved";
 (({}) : ((({}) --> (GENDERS))));
-users : POW( USERS) & getGender : users +-> GENDERS & dom(getGender) = users & ((getGender) : (((users) --> (GENDERS))));
+(({}) : ((({}) --> (NATURAL))));
+users : POW( USERS) & getGender : users +-> GENDERS & dom(getGender) = users & ((getGender) : (((users) --> (GENDERS)))) & getAge : users +-> NATURAL & dom(getAge) = users & ((getAge) : (((users) --> (NATURAL))));
 ((user) : (users));
 ((gender) : (GENDERS));
 ((((getGender) <+ (({((user) |-> (gender))})))) : (((users) --> (GENDERS))));
+age : INTEGER & 0 <= age & ((age) : (NATURAL));
+(18 <= age);
+((((getAge) <+ (({((user) |-> (age))})))) : (((users) --> (NATURAL))));
 ((user) : (USERS));
 not(((user) : (users)));
 ((users) \/ (({user}))) : POW( USERS);
 ((((getGender) <+ (({((user) |-> (gender))})))) : (((((users) \/ (({user})))) --> (GENDERS))));
+((((getAge) <+ (({((user) |-> (age))})))) : (((((users) \/ (({user})))) --> (NATURAL))));
 (users - ({user})) : POW( USERS);
-((((({user})) <<| (getGender))) : ((((users - ({user}))) --> (GENDERS))))
+((((({user})) <<| (getGender))) : ((((users - ({user}))) --> (GENDERS))));
+((((({user})) <<| (getAge))) : ((((users - ({user}))) --> (NATURAL))))
 END
 &
 THEORY EnumerateX
