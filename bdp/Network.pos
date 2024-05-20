@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<Proof_Obligations version="1.0" author="pmi2Pos" xmlns="https://www.atelierb.eu/Formats/pog">
+<Proof_Obligations xmlns="https://www.atelierb.eu/Formats/pog" version="1.0" author="pmi2Pos">
 <Proof_Obligation>
 <Tag>Initialisation</Tag>
 <Simple_Goal status="Proved">
@@ -8,7 +8,11 @@
 </Simple_Goal>
 <Simple_Goal status="Proved">
 <Tag>Invariant is preserved</Tag>
-<Proof_State passList="Force(0),?" proofState="Proved(Util)" methodList="dd(1) &amp; mp"/>
+<Proof_State passList="Force(0),?" proofState="Proved(0)" methodList="pr"/>
+</Simple_Goal>
+<Simple_Goal status="Proved">
+<Tag>Invariant is preserved</Tag>
+<Proof_State passList="Force(0),?" proofState="Proved(0)" methodList="pr"/>
 </Simple_Goal>
 </Proof_Obligation>
 <Proof_Obligation>
@@ -22,7 +26,7 @@
 <Tag>Operation_SetAge</Tag>
 <Simple_Goal status="Proved">
 <Tag>Invariant is preserved</Tag>
-<Proof_State passList="Force(0),?" proofState="Proved(Util)" methodList="dd(1) &amp; mp &amp; pr"/>
+<Proof_State passList="Force(0),?" proofState="Proved(0)" methodList="pr"/>
 </Simple_Goal>
 </Proof_Obligation>
 <Proof_Obligation>
@@ -33,11 +37,15 @@
 </Simple_Goal>
 <Simple_Goal status="Proved">
 <Tag>Invariant is preserved</Tag>
-<Proof_State passList="Force(0),?" proofState="Proved(Util)" methodList="dd(1) &amp; mp &amp; pr"/>
+<Proof_State passList="Force(0),?" proofState="Proved(Util)" methodList="dd(1) &amp; pr"/>
 </Simple_Goal>
 <Simple_Goal status="Proved">
 <Tag>Invariant is preserved</Tag>
-<Proof_State passList="Force(0),?" proofState="Proved(Util)" methodList="dd(1) &amp; mp &amp; pr"/>
+<Proof_State passList="Force(0),?" proofState="Proved(0)" methodList="pr"/>
+</Simple_Goal>
+<Simple_Goal status="Proved">
+<Tag>Invariant is preserved</Tag>
+<Proof_State passList="Force(0),?" proofState="Proved(0)" methodList="pr"/>
 </Simple_Goal>
 </Proof_Obligation>
 <Proof_Obligation>
@@ -48,11 +56,30 @@
 </Simple_Goal>
 <Simple_Goal status="Proved">
 <Tag>Invariant is preserved</Tag>
-<Proof_State passList="Force(0),?" proofState="Proved(Util)" methodList="mp &amp; pr"/>
+<Proof_State passList="Force(0),?" proofState="Proved(Util)" methodList="dd(1) &amp; mp"/>
+</Simple_Goal>
+<Simple_Goal status="Proved">
+<Tag>Invariant is preserved</Tag>
+<Proof_State passList="Force(0),?" proofState="Proved(Util)" methodList="dd(1) &amp; mp &amp; pr"/>
 </Simple_Goal>
 <Simple_Goal status="Proved">
 <Tag>Invariant is preserved</Tag>
 <Proof_State passList="Force(0),?" proofState="Proved(0)" methodList="pr"/>
+</Simple_Goal>
+<Simple_Goal status="Proved">
+<Tag>Invariant is preserved</Tag>
+<Proof_State passList="Force(0),?" proofState="Proved(0)" methodList="pr"/>
+</Simple_Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Tag>Operation_PublishContent</Tag>
+<Simple_Goal status="Proved">
+<Tag>Invariant is preserved</Tag>
+<Proof_State passList="Force(0),?" proofState="Proved(Util)" methodList="dd(1) &amp; mp"/>
+</Simple_Goal>
+<Simple_Goal status="Proved">
+<Tag>Invariant is preserved</Tag>
+<Proof_State passList="Force(0),(?; 0; 1)" proofState="Proved(Util)" methodList="dd(1) &amp; mp &amp; pr &amp; pr"/>
 </Simple_Goal>
 </Proof_Obligation>
 </Proof_Obligations>

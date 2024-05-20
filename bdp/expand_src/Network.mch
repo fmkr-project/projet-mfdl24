@@ -7,21 +7,33 @@ MACHINE
 
 SETS
     USERS ;
-    GENDERS
+    GENDERS ;
+    CONTENTS
 
 ABSTRACT_VARIABLES
     users ,
+    contents ,
+
+    // Functions
+    getContentOwner ,
     getGender ,
     getAge
 
 INVARIANT
     users <: USERS &
+    contents <: CONTENTS &
+
+    // Functions
+    getContentOwner : contents --> users &
     getGender : users --> GENDERS &
     getAge : users --> NATURAL
 
 
 INITIALISATION
     users := {} ||
+    contents := {} ||
+
+    getContentOwner := {} ||
     getGender := {} ||
     getAge := {}
 
@@ -44,6 +56,7 @@ OPERATIONS
         getAge := getAge <+ { ( user |-> age ) }
     END ;
 
+    // User management
     AddUser ( user , gender , age ) =
     PRE
         user : USERS & user /: users &
@@ -60,8 +73,24 @@ OPERATIONS
         user : USERS & user : users
     THEN
         users := users - { user } ||
+
+        // Delete personal information
         getGender := { user } <<| getGender ||
-        getAge := { user } <<| getAge
+        getAge := { user } <<| getAge ||
+
+        // Delete content related information
+        contents := contents - dom ( getContentOwner |> { user } ) ||
+        getContentOwner := getContentOwner |>> { user }
+    END ;
+
+    // Content management
+    PublishContent ( user , content ) =
+    PRE
+        user : USERS & user : users & content : CONTENTS &
+        content /: contents // Le contenu est original
+    THEN
+        contents := contents \/ { content } ||
+        getContentOwner := getContentOwner \/ { content |-> user }
     END
 
 END

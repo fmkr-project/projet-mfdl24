@@ -37,9 +37,9 @@ THEORY ListVariablesX IS
   External_Context_List_Variables(Machine(Network))==(?);
   Context_List_Variables(Machine(Network))==(?);
   Abstract_List_Variables(Machine(Network))==(?);
-  Local_List_Variables(Machine(Network))==(getAge,getGender,users);
-  List_Variables(Machine(Network))==(getAge,getGender,users);
-  External_List_Variables(Machine(Network))==(getAge,getGender,users)
+  Local_List_Variables(Machine(Network))==(getAge,getGender,getContentOwner,contents,users);
+  List_Variables(Machine(Network))==(getAge,getGender,getContentOwner,contents,users);
+  External_List_Variables(Machine(Network))==(getAge,getGender,getContentOwner,contents,users)
 END
 &
 THEORY ListVisibleVariablesX IS
@@ -57,7 +57,7 @@ THEORY ListInvariantX IS
   Expanded_List_Invariant(Machine(Network))==(btrue);
   Abstract_List_Invariant(Machine(Network))==(btrue);
   Context_List_Invariant(Machine(Network))==(btrue);
-  List_Invariant(Machine(Network))==(users <: USERS & getGender: users --> GENDERS & getAge: users --> NATURAL)
+  List_Invariant(Machine(Network))==(users <: USERS & contents <: CONTENTS & getContentOwner: contents --> users & getGender: users --> GENDERS & getAge: users --> NATURAL)
 END
 &
 THEORY ListAssertionsX IS
@@ -76,9 +76,9 @@ THEORY ListExclusivityX IS
 END
 &
 THEORY ListInitialisationX IS
-  Expanded_List_Initialisation(Machine(Network))==(users,getGender,getAge:={},{},{});
+  Expanded_List_Initialisation(Machine(Network))==(users,contents,getContentOwner,getGender,getAge:={},{},{},{},{});
   Context_List_Initialisation(Machine(Network))==(skip);
-  List_Initialisation(Machine(Network))==(users:={} || getGender:={} || getAge:={})
+  List_Initialisation(Machine(Network))==(users:={} || contents:={} || getContentOwner:={} || getGender:={} || getAge:={})
 END
 &
 THEORY ListParametersX IS
@@ -93,29 +93,32 @@ THEORY ListConstraintsX IS
 END
 &
 THEORY ListOperationsX IS
-  Internal_List_Operations(Machine(Network))==(SetGender,SetAge,AddUser,DeleteUser);
-  List_Operations(Machine(Network))==(SetGender,SetAge,AddUser,DeleteUser)
+  Internal_List_Operations(Machine(Network))==(SetGender,SetAge,AddUser,DeleteUser,PublishContent);
+  List_Operations(Machine(Network))==(SetGender,SetAge,AddUser,DeleteUser,PublishContent)
 END
 &
 THEORY ListInputX IS
   List_Input(Machine(Network),SetGender)==(user,gender);
   List_Input(Machine(Network),SetAge)==(user,age);
   List_Input(Machine(Network),AddUser)==(user,gender,age);
-  List_Input(Machine(Network),DeleteUser)==(user)
+  List_Input(Machine(Network),DeleteUser)==(user);
+  List_Input(Machine(Network),PublishContent)==(user,content)
 END
 &
 THEORY ListOutputX IS
   List_Output(Machine(Network),SetGender)==(?);
   List_Output(Machine(Network),SetAge)==(?);
   List_Output(Machine(Network),AddUser)==(?);
-  List_Output(Machine(Network),DeleteUser)==(?)
+  List_Output(Machine(Network),DeleteUser)==(?);
+  List_Output(Machine(Network),PublishContent)==(?)
 END
 &
 THEORY ListHeaderX IS
   List_Header(Machine(Network),SetGender)==(SetGender(user,gender));
   List_Header(Machine(Network),SetAge)==(SetAge(user,age));
   List_Header(Machine(Network),AddUser)==(AddUser(user,gender,age));
-  List_Header(Machine(Network),DeleteUser)==(DeleteUser(user))
+  List_Header(Machine(Network),DeleteUser)==(DeleteUser(user));
+  List_Header(Machine(Network),PublishContent)==(PublishContent(user,content))
 END
 &
 THEORY ListOperationGuardX END
@@ -124,18 +127,21 @@ THEORY ListPreconditionX IS
   List_Precondition(Machine(Network),SetGender)==(user: users & gender: GENDERS);
   List_Precondition(Machine(Network),SetAge)==(user: users & age: NATURAL & age>=18);
   List_Precondition(Machine(Network),AddUser)==(user: USERS & user/:users & gender: GENDERS & age: NATURAL & age>=18);
-  List_Precondition(Machine(Network),DeleteUser)==(user: USERS & user: users)
+  List_Precondition(Machine(Network),DeleteUser)==(user: USERS & user: users);
+  List_Precondition(Machine(Network),PublishContent)==(user: USERS & user: users & content: CONTENTS & content/:contents)
 END
 &
 THEORY ListSubstitutionX IS
-  Expanded_List_Substitution(Machine(Network),DeleteUser)==(user: USERS & user: users | users,getGender,getAge:=users-{user},{user}<<|getGender,{user}<<|getAge);
+  Expanded_List_Substitution(Machine(Network),PublishContent)==(user: USERS & user: users & content: CONTENTS & content/:contents | contents,getContentOwner:=contents\/{content},getContentOwner\/{content|->user});
+  Expanded_List_Substitution(Machine(Network),DeleteUser)==(user: USERS & user: users | users,getGender,getAge,contents,getContentOwner:=users-{user},{user}<<|getGender,{user}<<|getAge,contents-dom(getContentOwner|>{user}),getContentOwner|>>{user});
   Expanded_List_Substitution(Machine(Network),AddUser)==(user: USERS & user/:users & gender: GENDERS & age: NATURAL & age>=18 | users,getGender,getAge:=users\/{user},getGender<+{user|->gender},getAge<+{user|->age});
   Expanded_List_Substitution(Machine(Network),SetAge)==(user: users & age: NATURAL & age>=18 | getAge:=getAge<+{user|->age});
   Expanded_List_Substitution(Machine(Network),SetGender)==(user: users & gender: GENDERS | getGender:=getGender<+{user|->gender});
   List_Substitution(Machine(Network),SetGender)==(getGender:=getGender<+{user|->gender});
   List_Substitution(Machine(Network),SetAge)==(getAge:=getAge<+{user|->age});
   List_Substitution(Machine(Network),AddUser)==(users:=users\/{user} || getGender:=getGender<+{user|->gender} || getAge:=getAge<+{user|->age});
-  List_Substitution(Machine(Network),DeleteUser)==(users:=users-{user} || getGender:={user}<<|getGender || getAge:={user}<<|getAge)
+  List_Substitution(Machine(Network),DeleteUser)==(users:=users-{user} || getGender:={user}<<|getGender || getAge:={user}<<|getAge || contents:=contents-dom(getContentOwner|>{user}) || getContentOwner:=getContentOwner|>>{user});
+  List_Substitution(Machine(Network),PublishContent)==(contents:=contents\/{content} || getContentOwner:=getContentOwner\/{content|->user})
 END
 &
 THEORY ListConstantsX IS
@@ -149,14 +155,15 @@ THEORY ListSetsX IS
   Context_List_Enumerated(Machine(Network))==(?);
   Context_List_Defered(Machine(Network))==(?);
   Context_List_Sets(Machine(Network))==(?);
-  List_Valuable_Sets(Machine(Network))==(USERS,GENDERS);
+  List_Valuable_Sets(Machine(Network))==(USERS,GENDERS,CONTENTS);
   Inherited_List_Enumerated(Machine(Network))==(?);
   Inherited_List_Defered(Machine(Network))==(?);
   Inherited_List_Sets(Machine(Network))==(?);
   List_Enumerated(Machine(Network))==(?);
-  List_Defered(Machine(Network))==(USERS,GENDERS);
-  List_Sets(Machine(Network))==(USERS,GENDERS);
-  Set_Definition(Machine(Network),GENDERS)==(?)
+  List_Defered(Machine(Network))==(USERS,GENDERS,CONTENTS);
+  List_Sets(Machine(Network))==(USERS,GENDERS,CONTENTS);
+  Set_Definition(Machine(Network),GENDERS)==(?);
+  Set_Definition(Machine(Network),CONTENTS)==(?)
 END
 &
 THEORY ListHiddenConstantsX IS
@@ -170,7 +177,7 @@ THEORY ListPropertiesX IS
   Abstract_List_Properties(Machine(Network))==(btrue);
   Context_List_Properties(Machine(Network))==(btrue);
   Inherited_List_Properties(Machine(Network))==(btrue);
-  List_Properties(Machine(Network))==(USERS: FIN(INTEGER) & not(USERS = {}) & GENDERS: FIN(INTEGER) & not(GENDERS = {}))
+  List_Properties(Machine(Network))==(USERS: FIN(INTEGER) & not(USERS = {}) & GENDERS: FIN(INTEGER) & not(GENDERS = {}) & CONTENTS: FIN(INTEGER) & not(CONTENTS = {}))
 END
 &
 THEORY ListSeenInfoX END
@@ -179,11 +186,12 @@ THEORY ListANYVarX IS
   List_ANY_Var(Machine(Network),SetGender)==(?);
   List_ANY_Var(Machine(Network),SetAge)==(?);
   List_ANY_Var(Machine(Network),AddUser)==(?);
-  List_ANY_Var(Machine(Network),DeleteUser)==(?)
+  List_ANY_Var(Machine(Network),DeleteUser)==(?);
+  List_ANY_Var(Machine(Network),PublishContent)==(?)
 END
 &
 THEORY ListOfIdsX IS
-  List_Of_Ids(Machine(Network)) == (USERS,GENDERS | ? | getAge,getGender,users | ? | SetGender,SetAge,AddUser,DeleteUser | ? | ? | ? | Network);
+  List_Of_Ids(Machine(Network)) == (USERS,GENDERS,CONTENTS | ? | getAge,getGender,getContentOwner,contents,users | ? | SetGender,SetAge,AddUser,DeleteUser,PublishContent | ? | ? | ? | Network);
   List_Of_HiddenCst_Ids(Machine(Network)) == (? | ?);
   List_Of_VisibleCst_Ids(Machine(Network)) == (?);
   List_Of_VisibleVar_Ids(Machine(Network)) == (? | ?);
@@ -191,15 +199,15 @@ THEORY ListOfIdsX IS
 END
 &
 THEORY SetsEnvX IS
-  Sets(Machine(Network)) == (Type(USERS) == Cst(SetOf(atype(USERS,"[USERS","]USERS")));Type(GENDERS) == Cst(SetOf(atype(GENDERS,"[GENDERS","]GENDERS"))))
+  Sets(Machine(Network)) == (Type(USERS) == Cst(SetOf(atype(USERS,"[USERS","]USERS")));Type(GENDERS) == Cst(SetOf(atype(GENDERS,"[GENDERS","]GENDERS")));Type(CONTENTS) == Cst(SetOf(atype(CONTENTS,"[CONTENTS","]CONTENTS"))))
 END
 &
 THEORY VariablesEnvX IS
-  Variables(Machine(Network)) == (Type(getAge) == Mvl(SetOf(atype(USERS,?,?)*btype(INTEGER,?,?)));Type(getGender) == Mvl(SetOf(atype(USERS,?,?)*atype(GENDERS,"[GENDERS","]GENDERS")));Type(users) == Mvl(SetOf(atype(USERS,?,?))))
+  Variables(Machine(Network)) == (Type(getAge) == Mvl(SetOf(atype(USERS,?,?)*btype(INTEGER,?,?)));Type(getGender) == Mvl(SetOf(atype(USERS,?,?)*atype(GENDERS,"[GENDERS","]GENDERS")));Type(getContentOwner) == Mvl(SetOf(atype(CONTENTS,?,?)*atype(USERS,?,?)));Type(contents) == Mvl(SetOf(atype(CONTENTS,?,?)));Type(users) == Mvl(SetOf(atype(USERS,?,?))))
 END
 &
 THEORY OperationsEnvX IS
-  Operations(Machine(Network)) == (Type(DeleteUser) == Cst(No_type,atype(USERS,?,?));Type(AddUser) == Cst(No_type,atype(USERS,?,?)*atype(GENDERS,?,?)*btype(INTEGER,?,?));Type(SetAge) == Cst(No_type,atype(USERS,?,?)*btype(INTEGER,?,?));Type(SetGender) == Cst(No_type,atype(USERS,?,?)*atype(GENDERS,?,?)))
+  Operations(Machine(Network)) == (Type(PublishContent) == Cst(No_type,atype(USERS,?,?)*atype(CONTENTS,?,?));Type(DeleteUser) == Cst(No_type,atype(USERS,?,?));Type(AddUser) == Cst(No_type,atype(USERS,?,?)*atype(GENDERS,?,?)*btype(INTEGER,?,?));Type(SetAge) == Cst(No_type,atype(USERS,?,?)*btype(INTEGER,?,?));Type(SetGender) == Cst(No_type,atype(USERS,?,?)*atype(GENDERS,?,?)))
 END
 &
 THEORY TCIntRdX IS
