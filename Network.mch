@@ -19,6 +19,7 @@ PROPERTIES
 ABSTRACT_VARIABLES
     users,
     contents,
+    privateContents,
     
     // Functions
     getContentOwner,
@@ -30,7 +31,8 @@ ABSTRACT_VARIABLES
 INVARIANT
     users ⊆ USERS &
     masterUser ∈ users &
-    contents ⊆ CONTENTS &
+    contents : FIN(CONTENTS) &
+    privateContents ⊆ contents &
     
     // Functions
     getContentOwner : contents → users &
@@ -47,6 +49,7 @@ INVARIANT
 INITIALISATION
     users := {masterUser} ||
     contents := {} ||
+    privateContents := {} ||    
     
     getContentOwner := {} ||
     getGender := {masterUser ↦ NB} ||
@@ -98,6 +101,7 @@ OPERATIONS
         
         // Delete content related information
         contents := contents - dom(getContentOwner ▷ {user}) ||
+        privateContents := privateContents - dom(getContentOwner ▷ {user}) ||
         getContentOwner := getContentOwner ▶ {user} ||
         
         // Delete RW rights associated with the user's contents
@@ -120,25 +124,91 @@ OPERATIONS
         hasWRights := hasWRights ∪ {content ↦ user, content ↦ masterUser}
     END;
     
+    DeleteContent(user, content) =
+    PRE
+        user : USERS & user ∈ users &
+        content : CONTENTS & content ∈ contents &
+        (getContentOwner(content) = user or user = masterUser)
+    THEN
+        IF card(getContentOwner ▷ {user}) = 1 & user ≠ masterUser
+        THEN
+            // Delete owner.
+            // We use getContentOwner(content) because user can be masterUser
+            users := users - {user} ||
+        
+            // Delete personal information
+            getGender := {user} ◀ getGender ||
+            getAge := {user} ◀ getAge ||
+            
+            // Delete content related information
+            contents := contents - dom(getContentOwner ▷ {user}) ||
+            privateContents := privateContents - dom(getContentOwner ▷ {user}) ||
+            getContentOwner := getContentOwner ▶ {user} ||
+            
+            // Delete RW rights associated with the user's contents
+            // Delete RW rights of the user on other people's contents
+            hasRRights := dom(getContentOwner ▶ {user}) ◁ (hasRRights ▶ {user}) ||
+            hasWRights := dom(getContentOwner ▶ {user}) ◁ (hasWRights ▶ {user})
+        ELSE
+            contents := contents - {content} ||
+            privateContents := privateContents - {content} ||
+            // Revoke all rights on content
+            getContentOwner := {content} ◀ getContentOwner ||
+            hasRRights := {content} ◀ hasRRights ||
+            hasWRights := {content} ◀ hasWRights
+        END
+    END;
+    
+    SetPrivateContent(user, content) =
+    PRE
+        user : USERS & user ∈ users &
+        content : CONTENTS & content ∈ contents &
+        (getContentOwner(content) = user or user = masterUser)
+    THEN
+        privateContents := privateContents ∪ {content}
+    END;
+    
     // Rights management
     GrantRRights(from, content, target) =
     PRE
         from : USERS & from ∈ users &
         content : CONTENTS & content ∈ contents &
         target : USERS & target ∈ users & target ≠ from &
-        getContentOwner(content) = from
+        (getContentOwner(content) = from or from = masterUser)
     THEN
         hasRRights := hasRRights ∪ {content ↦ target}
     END;
+    
+    RevokeRRights(from, content, target) =
+    PRE
+        from : USERS & from ∈ users &
+        content : CONTENTS & content ∈ contents &
+        target : USERS & target ∈ users & target ≠ from & target ≠ masterUser & // Possible : target does not have the rights
+        (getContentOwner(content) = from or from = masterUser)
+    THEN
+        hasRRights := hasRRights - {content ↦ target}
+    END;
+        
     
     GrantWRights(from, content, target) =
     PRE
         from : USERS & from ∈ users &
         content : CONTENTS & content ∈ contents &
         target : USERS & target ∈ users & target ≠ from &
-        getContentOwner(content) = from
+        (getContentOwner(content) = from or from = masterUser)
     THEN
+        hasRRights := hasRRights ∪ {content ↦ target} ||
         hasWRights := hasWRights ∪ {content ↦ target}
-    END
+    END;
 
+    RevokeWRights(from, content, target) =
+    PRE
+        from : USERS & from ∈ users &
+        content : CONTENTS & content ∈ contents &
+        target : USERS & target ∈ users & target ≠ from & target ≠ masterUser & // Possible : target does not have the rights
+        (getContentOwner(content) = from or from = masterUser)
+    THEN
+        hasRRights := hasRRights - {content ↦ target} ||
+        hasWRights := hasWRights - {content ↦ target}
+    END
 END
