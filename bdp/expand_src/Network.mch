@@ -7,39 +7,51 @@ MACHINE
 
 SETS
     USERS ;
+    PSEUDOS ;
     GENDERS = { MM , FF , NB } ;
-    CONTENTS
+    CONTENTS ;
+    PASSWORDS
 
 ABSTRACT_CONSTANTS
-    masterUser
+    masterUser ,
+    masterPseudo ,
+    masterPassword
 
 PROPERTIES
-    masterUser : USERS
+    masterUser : USERS &
+    masterPseudo : PSEUDOS &
+    masterPassword : PASSWORDS
 
 ABSTRACT_VARIABLES
     users ,
+    loggedUsers ,
     contents ,
     privateContents ,
 
     // Functions
+    pseudos ,
     getContentOwner ,
     getGender ,
     getAge ,
     hasRRights ,
-    hasWRights
+    hasWRights ,
+    shadow // /etc/shadow
 
 INVARIANT
     users <: USERS &
+    loggedUsers <: users &
     masterUser : users &
     contents : FIN ( CONTENTS ) &
     privateContents <: contents &
 
     // Functions
+    pseudos : users >-> PSEUDOS &
     getContentOwner : contents --> users &
     getGender : users --> GENDERS &
     getAge : users --> NATURAL &
     hasRRights : contents <-> users &
     hasWRights : contents <-> users &
+    shadow : users >-> PASSWORDS &
 
     // Properties on constants
     dom ( hasRRights |> { masterUser } ) = contents &
@@ -48,18 +60,21 @@ INVARIANT
 
 INITIALISATION
     users := { masterUser } ||
+    loggedUsers := { masterUser } ||
     contents := {} ||
     privateContents := {} ||
 
+    pseudos := { masterUser |-> masterPseudo } ||
     getContentOwner := {} ||
     getGender := { masterUser |-> NB } ||
     getAge := { masterUser |-> 666 } ||
     hasRRights := {} ||
-    hasWRights := {}
+    hasWRights := {} ||
+    shadow := { masterUser |-> masterPassword }
 
 
 OPERATIONS
-    // Gender operations
+    // Personal info operations
     SetGender ( user , gender ) =
     PRE
         user : users & gender : GENDERS
@@ -67,7 +82,6 @@ OPERATIONS
         getGender := getGender <+ { ( user |-> gender ) }
     END ;
 
-    // Age operations
     // Only allow +18 to register
     SetAge ( user , age ) =
     PRE
@@ -76,14 +90,28 @@ OPERATIONS
         getAge := getAge <+ { ( user |-> age ) }
     END ;
 
+    SetPseudo ( user , pseudo ) =
+    PRE
+        user : users & user /= masterUser &
+        pseudo : PSEUDOS & pseudo /: ran ( pseudos )
+    THEN
+        pseudos := pseudos <+ { ( user |-> pseudo ) }
+    END ;
+
+    // Session management
+
     // User management
-    AddUser ( user , gender , age ) =
+    AddUser ( user , pwd , pseudo , gender , age ) =
     PRE
         user : USERS & user /: users & user /= masterUser &
+        pwd : PASSWORDS & pwd /: ran ( shadow ) &
+        pseudo : PSEUDOS & pseudo /: ran ( pseudos ) &
         gender : GENDERS &
         age : NATURAL & age >= 18
     THEN
         users := users \/ { user } ||
+        shadow := shadow <+ { ( user |-> pwd ) } ||
+        pseudos := pseudos <+ { ( user |-> pseudo ) } ||
         getGender := getGender \/ { ( user |-> gender ) } ||
         getAge := getAge <+ { ( user |-> age ) }
     END ;
@@ -94,10 +122,13 @@ OPERATIONS
         user /= masterUser // masterUser cannot be deleted, EVER!
     THEN
         users := users - { user } ||
+        loggedUsers := loggedUsers - { user } ||
 
         // Delete personal information
         getGender := { user } <<| getGender ||
         getAge := { user } <<| getAge ||
+        pseudos := { user } <<| pseudos ||
+        shadow := { user } <<| shadow ||
 
         // Delete content related information
         contents := contents - dom ( getContentOwner |> { user } ) ||
@@ -135,10 +166,13 @@ OPERATIONS
             // Delete owner.
             // We use getContentOwner(content) because user can be masterUser
             users := users - { user } ||
+            loggedUsers := loggedUsers - { user } ||
 
             // Delete personal information
             getGender := { user } <<| getGender ||
             getAge := { user } <<| getAge ||
+            pseudos := { user } <<| pseudos ||
+        shadow := { user } <<| shadow ||
 
             // Delete content related information
             contents := contents - dom ( getContentOwner |> { user } ) ||
@@ -166,6 +200,15 @@ OPERATIONS
         ( getContentOwner ( content ) = user or user = masterUser )
     THEN
         privateContents := privateContents \/ { content }
+    END ;
+
+    SetPublicContent ( user , content ) =
+    PRE
+        user : USERS & user : users &
+        content : CONTENTS & content : contents &
+        ( getContentOwner ( content ) = user or user = masterUser )
+    THEN
+        privateContents := privateContents - { content }
     END ;
 
     // Rights management
