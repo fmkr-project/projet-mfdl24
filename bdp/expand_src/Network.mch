@@ -17,7 +17,9 @@ ABSTRACT_VARIABLES
     // Functions
     getContentOwner ,
     getGender ,
-    getAge
+    getAge ,
+    hasRRights ,
+    hasWRights
 
 INVARIANT
     users <: USERS &
@@ -26,7 +28,9 @@ INVARIANT
     // Functions
     getContentOwner : contents --> users &
     getGender : users --> GENDERS &
-    getAge : users --> NATURAL
+    getAge : users --> NATURAL &
+    hasRRights : contents <-> users &
+    hasWRights : contents <-> users
 
 
 INITIALISATION
@@ -35,7 +39,9 @@ INITIALISATION
 
     getContentOwner := {} ||
     getGender := {} ||
-    getAge := {}
+    getAge := {} ||
+    hasRRights := {} ||
+    hasWRights := {}
 
 
 OPERATIONS
@@ -80,7 +86,12 @@ OPERATIONS
 
         // Delete content related information
         contents := contents - dom ( getContentOwner |> { user } ) ||
-        getContentOwner := getContentOwner |>> { user }
+        getContentOwner := getContentOwner |>> { user } ||
+
+        // Delete RW rights associated with the user's contents
+        // Delete RW rights of the user on other people's contents
+        hasRRights := dom ( getContentOwner |>> { user } ) <| ( hasRRights |>> { user } ) ||
+        hasWRights := dom ( getContentOwner |>> { user } ) <| ( hasWRights |>> { user } )
     END ;
 
     // Content management
@@ -90,7 +101,21 @@ OPERATIONS
         content /: contents // Le contenu est original
     THEN
         contents := contents \/ { content } ||
-        getContentOwner := getContentOwner \/ { content |-> user }
+        getContentOwner := getContentOwner \/ { content |-> user } ||
+        // Content creator has RW rights
+        hasRRights := hasRRights \/ { content |-> user } ||
+        hasWRights := hasWRights \/ { content |-> user }
+    END ;
+
+    // Rights management
+    GrantRRights ( from , content , target ) =
+    PRE
+        from : USERS & from : users &
+        content : CONTENTS & content : contents &
+        target : USERS & target : users & target /= from &
+        getContentOwner ( content ) = from
+    THEN
+        hasRRights := hasRRights \/ { content |-> target }
     END
 
 END

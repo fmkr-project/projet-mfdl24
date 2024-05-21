@@ -1,16 +1,25 @@
 THEORY BalanceX IS
-Network,16,5,0,11,0,0,0;
-Initialisation,3,0,0,3,0,0,0;
-Operation_AddUser,4,1,0,3,0,0,0;
-Operation_DeleteUser,5,2,0,3,0,0,0;
-Operation_PublishContent,2,2,0,0,0,0,0;
+Network,26,13,0,13,0,0,0;
+Initialisation,4,1,0,3,0,0,0;
+Operation_AddUser,6,1,0,5,0,0,0;
+Operation_DeleteUser,7,4,0,3,0,0,0;
+Operation_GrantRRights,1,1,0,0,0,0,0;
+Operation_PublishContent,4,4,0,0,0,0,0;
 Operation_SetAge,1,0,0,1,0,0,0;
-Operation_SetGender,1,0,0,1,0,0,0
+Operation_SetGender,1,0,0,1,0,0,0;
+WellDefinednessPrecondition_GrantRRights,2,2,0,0,0,0,0
 END
 &
 THEORY ProofState IS
 Proved(Util);
 Proved(Util);
+Proved(Util);
+Proved(Util);
+Proved(Util);
+Proved(Util);
+Proved(Util);
+Proved(Util);
+Proved(Util);
 Proved(0);
 Proved(0);
 Proved(Util);
@@ -18,17 +27,27 @@ Proved(Util);
 Proved(0);
 Proved(0);
 Proved(0);
+Proved(0);
+Proved(0);
 Proved(Util);
 Proved(0);
 Proved(0);
 Proved(0);
+Proved(Util);
 Proved(0);
 Proved(0);
 Proved(0)
 END
 &
 THEORY MethodList IS
+dd(1) & mp;
+dd(1) & mp;
+dd(1) & mp;
+dd(1) & mp;
+dd(1) & mp;
 dd(1) & mp & pr & pr;
+dd(1) & mp;
+dd(1) & mp;
 dd(1) & mp;
 pr;
 pr;
@@ -37,17 +56,30 @@ dd(1) & mp;
 pr;
 pr;
 pr;
+pr;
+pr;
 dd(1) & pr;
 pr;
 pr;
 pr;
+dd(1) & pr;
 pr;
 pr;
 pr
 END
 &
 THEORY PassList IS
-Force(0),(?; 0; 1);
+Force(0),?;
+Force(0),?;
+Force(0),?;
+Force(0),?;
+Force(0),?;
+Force(0),?;
+Force(0),?;
+Force(0),?;
+Force(0),?;
+Force(0),?;
+Force(0),?;
 Force(0),?;
 Force(0),?;
 Force(0),?;
@@ -66,11 +98,13 @@ Force(0),?
 END
 &
 THEORY Status IS
-Network,16,5,11,0,0,0;
-Initialisation,3,0,3,0,0,0;
-Operation_AddUser,4,1,3,0,0,0;
-Operation_DeleteUser,5,2,3,0,0,0;
-Operation_PublishContent,2,2,0,0,0,0;
+Network,26,13,13,0,0,0;
+Initialisation,4,1,3,0,0,0;
+Operation_AddUser,6,1,5,0,0,0;
+Operation_DeleteUser,7,4,3,0,0,0;
+Operation_GrantRRights,1,1,0,0,0,0;
+Operation_PublishContent,4,4,0,0,0,0;
 Operation_SetAge,1,0,1,0,0,0;
-Operation_SetGender,1,0,1,0,0,0
+Operation_SetGender,1,0,1,0,0,0;
+WellDefinednessPrecondition_GrantRRights,2,2,0,0,0,0
 END

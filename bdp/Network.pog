@@ -31,7 +31,7 @@
     </Define>
     <Define name="inprp" hash="0"/>
     <Define name="inext" hash="0"/>
-    <Define name="inv" hash="3755733089">
+    <Define name="inv" hash="617857386">
         <Exp_Comparison op="&lt;:">
             <Id value="users" typref="0" tag="C:\Users\thayt\Documents\iie_s4\mfdl\projet-mfdl24\bdp\Network.bxml:1:3:1:1:1"/>
             <Id value="USERS" typref="0" tag="C:\Users\thayt\Documents\iie_s4\mfdl\projet-mfdl24\bdp\Network.bxml:1:3:1:1:2"/>
@@ -61,6 +61,20 @@
                 <Id value="NATURAL" typref="0" tag="C:\Users\thayt\Documents\iie_s4\mfdl\projet-mfdl24\bdp\Network.bxml:1:3:1:5:2:2"/>
             </Binary_Exp>
         </Exp_Comparison>
+        <Exp_Comparison op=":">
+            <Id value="hasRRights" typref="2" tag="C:\Users\thayt\Documents\iie_s4\mfdl\projet-mfdl24\bdp\Network.bxml:1:3:1:6:1"/>
+            <Binary_Exp op="&lt;-&gt;" typref="3">
+                <Id value="contents" typref="0" tag="C:\Users\thayt\Documents\iie_s4\mfdl\projet-mfdl24\bdp\Network.bxml:1:3:1:6:2:1"/>
+                <Id value="users" typref="0" tag="C:\Users\thayt\Documents\iie_s4\mfdl\projet-mfdl24\bdp\Network.bxml:1:3:1:6:2:2"/>
+            </Binary_Exp>
+        </Exp_Comparison>
+        <Exp_Comparison op=":">
+            <Id value="hasWRights" typref="2" tag="C:\Users\thayt\Documents\iie_s4\mfdl\projet-mfdl24\bdp\Network.bxml:1:3:1:7:1"/>
+            <Binary_Exp op="&lt;-&gt;" typref="3">
+                <Id value="contents" typref="0" tag="C:\Users\thayt\Documents\iie_s4\mfdl\projet-mfdl24\bdp\Network.bxml:1:3:1:7:2:1"/>
+                <Id value="users" typref="0" tag="C:\Users\thayt\Documents\iie_s4\mfdl\projet-mfdl24\bdp\Network.bxml:1:3:1:7:2:2"/>
+            </Binary_Exp>
+        </Exp_Comparison>
     </Define>
     <Define name="ass" hash="0"/>
     <Define name="cst" hash="0"/>
@@ -75,7 +89,7 @@
             <Id value="CONTENTS" typref="0"/>
         </Set>
     </Define>
-    <Proof_Obligation goalHash="3331471232">
+    <Proof_Obligation goalHash="4182242140">
         <Tag>Initialisation</Tag>
         <Definition name="B definitions"/>
         <Definition name="ctx"/>
@@ -120,8 +134,20 @@
                 </Exp_Comparison>
             </Goal>
         </Simple_Goal>
+        <Simple_Goal>
+            <Tag>Invariant is preserved</Tag>
+            <Goal>
+                <Exp_Comparison op=":">
+                    <EmptySet typref="2" tag="C:\Users\thayt\Documents\iie_s4\mfdl\projet-mfdl24\bdp\Network.bxml:1:3:1:6:1,C:\Users\thayt\Documents\iie_s4\mfdl\projet-mfdl24\bdp\Network.bxml:1:4:1:6:2:1"/>
+                    <Binary_Exp op="&lt;-&gt;" typref="3">
+                        <EmptySet typref="0" tag="C:\Users\thayt\Documents\iie_s4\mfdl\projet-mfdl24\bdp\Network.bxml:1:3:1:6:2:1,C:\Users\thayt\Documents\iie_s4\mfdl\projet-mfdl24\bdp\Network.bxml:1:4:1:2:2:1"/>
+                        <EmptySet typref="0" tag="C:\Users\thayt\Documents\iie_s4\mfdl\projet-mfdl24\bdp\Network.bxml:1:3:1:6:2:2,C:\Users\thayt\Documents\iie_s4\mfdl\projet-mfdl24\bdp\Network.bxml:1:4:1:1:2:1"/>
+                    </Binary_Exp>
+                </Exp_Comparison>
+            </Goal>
+        </Simple_Goal>
     </Proof_Obligation>
-    <Proof_Obligation goalHash="3683665499">
+    <Proof_Obligation goalHash="3522236071">
         <Tag>Operation_SetGender</Tag>
         <Definition name="B definitions"/>
         <Definition name="ctx"/>
@@ -165,7 +191,7 @@
             </Goal>
         </Simple_Goal>
     </Proof_Obligation>
-    <Proof_Obligation goalHash="106195445">
+    <Proof_Obligation goalHash="3403937395">
         <Tag>Operation_SetAge</Tag>
         <Definition name="B definitions"/>
         <Definition name="ctx"/>
@@ -215,7 +241,7 @@
             </Goal>
         </Simple_Goal>
     </Proof_Obligation>
-    <Proof_Obligation goalHash="2375898146">
+    <Proof_Obligation goalHash="3788277592">
         <Tag>Operation_AddUser</Tag>
         <Definition name="B definitions"/>
         <Definition name="ctx"/>
@@ -339,8 +365,42 @@
                 </Exp_Comparison>
             </Goal>
         </Simple_Goal>
+        <Simple_Goal>
+            <Tag>Invariant is preserved</Tag>
+            <Goal>
+                <Exp_Comparison op=":">
+                    <Id value="hasRRights" typref="2" tag="C:\Users\thayt\Documents\iie_s4\mfdl\projet-mfdl24\bdp\Network.bxml:1:3:1:6:1"/>
+                    <Binary_Exp op="&lt;-&gt;" typref="3">
+                        <Id value="contents" typref="0" tag="C:\Users\thayt\Documents\iie_s4\mfdl\projet-mfdl24\bdp\Network.bxml:1:3:1:6:2:1"/>
+                        <Binary_Exp op="\/" typref="0" tag="C:\Users\thayt\Documents\iie_s4\mfdl\projet-mfdl24\bdp\Network.bxml:1:3:1:6:2:2">
+                            <Id value="users" typref="0" tag="C:\Users\thayt\Documents\iie_s4\mfdl\projet-mfdl24\bdp\Network.bxml:1:5:3:3:1:1:2:1:1"/>
+                            <Nary_Exp op="{" typref="0">
+                                <Id value="user" typref="1" tag="C:\Users\thayt\Documents\iie_s4\mfdl\projet-mfdl24\bdp\Network.bxml:1:5:3:3:1:1:2:1:2:1"/>
+                            </Nary_Exp>
+                        </Binary_Exp>
+                    </Binary_Exp>
+                </Exp_Comparison>
+            </Goal>
+        </Simple_Goal>
+        <Simple_Goal>
+            <Tag>Invariant is preserved</Tag>
+            <Goal>
+                <Exp_Comparison op=":">
+                    <Id value="hasWRights" typref="2" tag="C:\Users\thayt\Documents\iie_s4\mfdl\projet-mfdl24\bdp\Network.bxml:1:3:1:7:1"/>
+                    <Binary_Exp op="&lt;-&gt;" typref="3">
+                        <Id value="contents" typref="0" tag="C:\Users\thayt\Documents\iie_s4\mfdl\projet-mfdl24\bdp\Network.bxml:1:3:1:7:2:1"/>
+                        <Binary_Exp op="\/" typref="0" tag="C:\Users\thayt\Documents\iie_s4\mfdl\projet-mfdl24\bdp\Network.bxml:1:3:1:7:2:2">
+                            <Id value="users" typref="0" tag="C:\Users\thayt\Documents\iie_s4\mfdl\projet-mfdl24\bdp\Network.bxml:1:5:3:3:1:1:2:1:1"/>
+                            <Nary_Exp op="{" typref="0">
+                                <Id value="user" typref="1" tag="C:\Users\thayt\Documents\iie_s4\mfdl\projet-mfdl24\bdp\Network.bxml:1:5:3:3:1:1:2:1:2:1"/>
+                            </Nary_Exp>
+                        </Binary_Exp>
+                    </Binary_Exp>
+                </Exp_Comparison>
+            </Goal>
+        </Simple_Goal>
     </Proof_Obligation>
-    <Proof_Obligation goalHash="431247342">
+    <Proof_Obligation goalHash="819286595">
         <Tag>Operation_DeleteUser</Tag>
         <Definition name="B definitions"/>
         <Definition name="ctx"/>
@@ -472,8 +532,92 @@
                 </Exp_Comparison>
             </Goal>
         </Simple_Goal>
+        <Simple_Goal>
+            <Tag>Invariant is preserved</Tag>
+            <Goal>
+                <Exp_Comparison op=":">
+                    <Binary_Exp op="&lt;|" typref="2" tag="C:\Users\thayt\Documents\iie_s4\mfdl\projet-mfdl24\bdp\Network.bxml:1:3:1:6:1">
+                        <Unary_Exp op="dom" typref="0">
+                            <Binary_Exp op="|&gt;&gt;" typref="2">
+                                <Id value="getContentOwner" typref="2" tag="C:\Users\thayt\Documents\iie_s4\mfdl\projet-mfdl24\bdp\Network.bxml:1:5:4:3:1:6:2:1:1:1:1"/>
+                                <Nary_Exp op="{" typref="0">
+                                    <Id value="user" typref="1" tag="C:\Users\thayt\Documents\iie_s4\mfdl\projet-mfdl24\bdp\Network.bxml:1:5:4:3:1:6:2:1:1:1:2:1"/>
+                                </Nary_Exp>
+                            </Binary_Exp>
+                        </Unary_Exp>
+                        <Binary_Exp op="|&gt;&gt;" typref="2">
+                            <Id value="hasRRights" typref="2" tag="C:\Users\thayt\Documents\iie_s4\mfdl\projet-mfdl24\bdp\Network.bxml:1:5:4:3:1:6:2:1:2:1"/>
+                            <Nary_Exp op="{" typref="0">
+                                <Id value="user" typref="1" tag="C:\Users\thayt\Documents\iie_s4\mfdl\projet-mfdl24\bdp\Network.bxml:1:5:4:3:1:6:2:1:2:2:1"/>
+                            </Nary_Exp>
+                        </Binary_Exp>
+                    </Binary_Exp>
+                    <Binary_Exp op="&lt;-&gt;" typref="3">
+                        <Binary_Exp op="-s" typref="0" tag="C:\Users\thayt\Documents\iie_s4\mfdl\projet-mfdl24\bdp\Network.bxml:1:3:1:6:2:1">
+                            <Id value="contents" typref="0" tag="C:\Users\thayt\Documents\iie_s4\mfdl\projet-mfdl24\bdp\Network.bxml:1:5:4:3:1:4:2:1:1"/>
+                            <Unary_Exp op="dom" typref="0">
+                                <Binary_Exp op="|&gt;" typref="2">
+                                    <Id value="getContentOwner" typref="2" tag="C:\Users\thayt\Documents\iie_s4\mfdl\projet-mfdl24\bdp\Network.bxml:1:5:4:3:1:4:2:1:2:1:1"/>
+                                    <Nary_Exp op="{" typref="0">
+                                        <Id value="user" typref="1" tag="C:\Users\thayt\Documents\iie_s4\mfdl\projet-mfdl24\bdp\Network.bxml:1:5:4:3:1:4:2:1:2:1:2:1"/>
+                                    </Nary_Exp>
+                                </Binary_Exp>
+                            </Unary_Exp>
+                        </Binary_Exp>
+                        <Binary_Exp op="-s" typref="0" tag="C:\Users\thayt\Documents\iie_s4\mfdl\projet-mfdl24\bdp\Network.bxml:1:3:1:6:2:2">
+                            <Id value="users" typref="0" tag="C:\Users\thayt\Documents\iie_s4\mfdl\projet-mfdl24\bdp\Network.bxml:1:5:4:3:1:1:2:1:1"/>
+                            <Nary_Exp op="{" typref="0">
+                                <Id value="user" typref="1" tag="C:\Users\thayt\Documents\iie_s4\mfdl\projet-mfdl24\bdp\Network.bxml:1:5:4:3:1:1:2:1:2:1"/>
+                            </Nary_Exp>
+                        </Binary_Exp>
+                    </Binary_Exp>
+                </Exp_Comparison>
+            </Goal>
+        </Simple_Goal>
+        <Simple_Goal>
+            <Tag>Invariant is preserved</Tag>
+            <Goal>
+                <Exp_Comparison op=":">
+                    <Binary_Exp op="&lt;|" typref="2" tag="C:\Users\thayt\Documents\iie_s4\mfdl\projet-mfdl24\bdp\Network.bxml:1:3:1:7:1">
+                        <Unary_Exp op="dom" typref="0">
+                            <Binary_Exp op="|&gt;&gt;" typref="2">
+                                <Id value="getContentOwner" typref="2" tag="C:\Users\thayt\Documents\iie_s4\mfdl\projet-mfdl24\bdp\Network.bxml:1:5:4:3:1:7:2:1:1:1:1"/>
+                                <Nary_Exp op="{" typref="0">
+                                    <Id value="user" typref="1" tag="C:\Users\thayt\Documents\iie_s4\mfdl\projet-mfdl24\bdp\Network.bxml:1:5:4:3:1:7:2:1:1:1:2:1"/>
+                                </Nary_Exp>
+                            </Binary_Exp>
+                        </Unary_Exp>
+                        <Binary_Exp op="|&gt;&gt;" typref="2">
+                            <Id value="hasWRights" typref="2" tag="C:\Users\thayt\Documents\iie_s4\mfdl\projet-mfdl24\bdp\Network.bxml:1:5:4:3:1:7:2:1:2:1"/>
+                            <Nary_Exp op="{" typref="0">
+                                <Id value="user" typref="1" tag="C:\Users\thayt\Documents\iie_s4\mfdl\projet-mfdl24\bdp\Network.bxml:1:5:4:3:1:7:2:1:2:2:1"/>
+                            </Nary_Exp>
+                        </Binary_Exp>
+                    </Binary_Exp>
+                    <Binary_Exp op="&lt;-&gt;" typref="3">
+                        <Binary_Exp op="-s" typref="0" tag="C:\Users\thayt\Documents\iie_s4\mfdl\projet-mfdl24\bdp\Network.bxml:1:3:1:7:2:1">
+                            <Id value="contents" typref="0" tag="C:\Users\thayt\Documents\iie_s4\mfdl\projet-mfdl24\bdp\Network.bxml:1:5:4:3:1:4:2:1:1"/>
+                            <Unary_Exp op="dom" typref="0">
+                                <Binary_Exp op="|&gt;" typref="2">
+                                    <Id value="getContentOwner" typref="2" tag="C:\Users\thayt\Documents\iie_s4\mfdl\projet-mfdl24\bdp\Network.bxml:1:5:4:3:1:4:2:1:2:1:1"/>
+                                    <Nary_Exp op="{" typref="0">
+                                        <Id value="user" typref="1" tag="C:\Users\thayt\Documents\iie_s4\mfdl\projet-mfdl24\bdp\Network.bxml:1:5:4:3:1:4:2:1:2:1:2:1"/>
+                                    </Nary_Exp>
+                                </Binary_Exp>
+                            </Unary_Exp>
+                        </Binary_Exp>
+                        <Binary_Exp op="-s" typref="0" tag="C:\Users\thayt\Documents\iie_s4\mfdl\projet-mfdl24\bdp\Network.bxml:1:3:1:7:2:2">
+                            <Id value="users" typref="0" tag="C:\Users\thayt\Documents\iie_s4\mfdl\projet-mfdl24\bdp\Network.bxml:1:5:4:3:1:1:2:1:1"/>
+                            <Nary_Exp op="{" typref="0">
+                                <Id value="user" typref="1" tag="C:\Users\thayt\Documents\iie_s4\mfdl\projet-mfdl24\bdp\Network.bxml:1:5:4:3:1:1:2:1:2:1"/>
+                            </Nary_Exp>
+                        </Binary_Exp>
+                    </Binary_Exp>
+                </Exp_Comparison>
+            </Goal>
+        </Simple_Goal>
     </Proof_Obligation>
-    <Proof_Obligation goalHash="1561078539">
+    <Proof_Obligation goalHash="1443009092">
         <Tag>Operation_PublishContent</Tag>
         <Definition name="B definitions"/>
         <Definition name="ctx"/>
@@ -545,6 +689,238 @@
                             </Nary_Exp>
                         </Binary_Exp>
                         <Id value="users" typref="0" tag="C:\Users\thayt\Documents\iie_s4\mfdl\projet-mfdl24\bdp\Network.bxml:1:3:1:3:2:2"/>
+                    </Binary_Exp>
+                </Exp_Comparison>
+            </Goal>
+        </Simple_Goal>
+        <Simple_Goal>
+            <Tag>Invariant is preserved</Tag>
+            <Goal>
+                <Exp_Comparison op=":">
+                    <Binary_Exp op="\/" typref="2" tag="C:\Users\thayt\Documents\iie_s4\mfdl\projet-mfdl24\bdp\Network.bxml:1:3:1:6:1">
+                        <Id value="hasRRights" typref="2" tag="C:\Users\thayt\Documents\iie_s4\mfdl\projet-mfdl24\bdp\Network.bxml:1:5:5:3:1:3:2:1:1"/>
+                        <Nary_Exp op="{" typref="2">
+                            <Binary_Exp op="|-&gt;" typref="4">
+                                <Id value="content" typref="1" tag="C:\Users\thayt\Documents\iie_s4\mfdl\projet-mfdl24\bdp\Network.bxml:1:5:5:3:1:3:2:1:2:1:1"/>
+                                <Id value="user" typref="1" tag="C:\Users\thayt\Documents\iie_s4\mfdl\projet-mfdl24\bdp\Network.bxml:1:5:5:3:1:3:2:1:2:1:2"/>
+                            </Binary_Exp>
+                        </Nary_Exp>
+                    </Binary_Exp>
+                    <Binary_Exp op="&lt;-&gt;" typref="3">
+                        <Binary_Exp op="\/" typref="0" tag="C:\Users\thayt\Documents\iie_s4\mfdl\projet-mfdl24\bdp\Network.bxml:1:3:1:6:2:1">
+                            <Id value="contents" typref="0" tag="C:\Users\thayt\Documents\iie_s4\mfdl\projet-mfdl24\bdp\Network.bxml:1:5:5:3:1:1:2:1:1"/>
+                            <Nary_Exp op="{" typref="0">
+                                <Id value="content" typref="1" tag="C:\Users\thayt\Documents\iie_s4\mfdl\projet-mfdl24\bdp\Network.bxml:1:5:5:3:1:1:2:1:2:1"/>
+                            </Nary_Exp>
+                        </Binary_Exp>
+                        <Id value="users" typref="0" tag="C:\Users\thayt\Documents\iie_s4\mfdl\projet-mfdl24\bdp\Network.bxml:1:3:1:6:2:2"/>
+                    </Binary_Exp>
+                </Exp_Comparison>
+            </Goal>
+        </Simple_Goal>
+        <Simple_Goal>
+            <Tag>Invariant is preserved</Tag>
+            <Goal>
+                <Exp_Comparison op=":">
+                    <Binary_Exp op="\/" typref="2" tag="C:\Users\thayt\Documents\iie_s4\mfdl\projet-mfdl24\bdp\Network.bxml:1:3:1:7:1">
+                        <Id value="hasWRights" typref="2" tag="C:\Users\thayt\Documents\iie_s4\mfdl\projet-mfdl24\bdp\Network.bxml:1:5:5:3:1:4:2:1:1"/>
+                        <Nary_Exp op="{" typref="2">
+                            <Binary_Exp op="|-&gt;" typref="4">
+                                <Id value="content" typref="1" tag="C:\Users\thayt\Documents\iie_s4\mfdl\projet-mfdl24\bdp\Network.bxml:1:5:5:3:1:4:2:1:2:1:1"/>
+                                <Id value="user" typref="1" tag="C:\Users\thayt\Documents\iie_s4\mfdl\projet-mfdl24\bdp\Network.bxml:1:5:5:3:1:4:2:1:2:1:2"/>
+                            </Binary_Exp>
+                        </Nary_Exp>
+                    </Binary_Exp>
+                    <Binary_Exp op="&lt;-&gt;" typref="3">
+                        <Binary_Exp op="\/" typref="0" tag="C:\Users\thayt\Documents\iie_s4\mfdl\projet-mfdl24\bdp\Network.bxml:1:3:1:7:2:1">
+                            <Id value="contents" typref="0" tag="C:\Users\thayt\Documents\iie_s4\mfdl\projet-mfdl24\bdp\Network.bxml:1:5:5:3:1:1:2:1:1"/>
+                            <Nary_Exp op="{" typref="0">
+                                <Id value="content" typref="1" tag="C:\Users\thayt\Documents\iie_s4\mfdl\projet-mfdl24\bdp\Network.bxml:1:5:5:3:1:1:2:1:2:1"/>
+                            </Nary_Exp>
+                        </Binary_Exp>
+                        <Id value="users" typref="0" tag="C:\Users\thayt\Documents\iie_s4\mfdl\projet-mfdl24\bdp\Network.bxml:1:3:1:7:2:2"/>
+                    </Binary_Exp>
+                </Exp_Comparison>
+            </Goal>
+        </Simple_Goal>
+    </Proof_Obligation>
+    <Proof_Obligation goalHash="3137050035">
+        <Tag>Operation_GrantRRights</Tag>
+        <Definition name="B definitions"/>
+        <Definition name="ctx"/>
+        <Definition name="cst"/>
+        <Definition name="lprp"/>
+        <Definition name="inprp"/>
+        <Definition name="inext"/>
+        <Definition name="seext"/>
+        <Definition name="inv"/>
+        <Definition name="ass"/>
+        <Hypothesis>
+            <Exp_Comparison op=":">
+                <Id value="from" typref="1" tag="C:\Users\thayt\Documents\iie_s4\mfdl\projet-mfdl24\bdp\Network.bxml:1:5:6:2:1:1:1"/>
+                <Id value="USERS" typref="0" tag="C:\Users\thayt\Documents\iie_s4\mfdl\projet-mfdl24\bdp\Network.bxml:1:5:6:2:1:1:2"/>
+            </Exp_Comparison>
+        </Hypothesis>
+        <Hypothesis>
+            <Exp_Comparison op=":">
+                <Id value="from" typref="1" tag="C:\Users\thayt\Documents\iie_s4\mfdl\projet-mfdl24\bdp\Network.bxml:1:5:6:2:1:2:1"/>
+                <Id value="users" typref="0" tag="C:\Users\thayt\Documents\iie_s4\mfdl\projet-mfdl24\bdp\Network.bxml:1:5:6:2:1:2:2"/>
+            </Exp_Comparison>
+        </Hypothesis>
+        <Hypothesis>
+            <Exp_Comparison op=":">
+                <Id value="content" typref="1" tag="C:\Users\thayt\Documents\iie_s4\mfdl\projet-mfdl24\bdp\Network.bxml:1:5:6:2:1:3:1"/>
+                <Id value="CONTENTS" typref="0" tag="C:\Users\thayt\Documents\iie_s4\mfdl\projet-mfdl24\bdp\Network.bxml:1:5:6:2:1:3:2"/>
+            </Exp_Comparison>
+        </Hypothesis>
+        <Hypothesis>
+            <Exp_Comparison op=":">
+                <Id value="content" typref="1" tag="C:\Users\thayt\Documents\iie_s4\mfdl\projet-mfdl24\bdp\Network.bxml:1:5:6:2:1:4:1"/>
+                <Id value="contents" typref="0" tag="C:\Users\thayt\Documents\iie_s4\mfdl\projet-mfdl24\bdp\Network.bxml:1:5:6:2:1:4:2"/>
+            </Exp_Comparison>
+        </Hypothesis>
+        <Hypothesis>
+            <Exp_Comparison op=":">
+                <Id value="target" typref="1" tag="C:\Users\thayt\Documents\iie_s4\mfdl\projet-mfdl24\bdp\Network.bxml:1:5:6:2:1:5:1"/>
+                <Id value="USERS" typref="0" tag="C:\Users\thayt\Documents\iie_s4\mfdl\projet-mfdl24\bdp\Network.bxml:1:5:6:2:1:5:2"/>
+            </Exp_Comparison>
+        </Hypothesis>
+        <Hypothesis>
+            <Exp_Comparison op=":">
+                <Id value="target" typref="1" tag="C:\Users\thayt\Documents\iie_s4\mfdl\projet-mfdl24\bdp\Network.bxml:1:5:6:2:1:6:1"/>
+                <Id value="users" typref="0" tag="C:\Users\thayt\Documents\iie_s4\mfdl\projet-mfdl24\bdp\Network.bxml:1:5:6:2:1:6:2"/>
+            </Exp_Comparison>
+        </Hypothesis>
+        <Hypothesis>
+            <Unary_Pred op="not">
+                <Exp_Comparison op="=">
+                    <Id value="target" typref="1" tag="C:\Users\thayt\Documents\iie_s4\mfdl\projet-mfdl24\bdp\Network.bxml:1:5:6:2:1:7:1"/>
+                    <Id value="from" typref="1" tag="C:\Users\thayt\Documents\iie_s4\mfdl\projet-mfdl24\bdp\Network.bxml:1:5:6:2:1:7:2"/>
+                </Exp_Comparison>
+            </Unary_Pred>
+        </Hypothesis>
+        <Hypothesis>
+            <Exp_Comparison op="=">
+                <Binary_Exp op="(" typref="1">
+                    <Id value="getContentOwner" typref="2" tag="C:\Users\thayt\Documents\iie_s4\mfdl\projet-mfdl24\bdp\Network.bxml:1:5:6:2:1:8:1:1"/>
+                    <Id value="content" typref="1" tag="C:\Users\thayt\Documents\iie_s4\mfdl\projet-mfdl24\bdp\Network.bxml:1:5:6:2:1:8:1:2"/>
+                </Binary_Exp>
+                <Id value="from" typref="1" tag="C:\Users\thayt\Documents\iie_s4\mfdl\projet-mfdl24\bdp\Network.bxml:1:5:6:2:1:8:2"/>
+            </Exp_Comparison>
+        </Hypothesis>
+        <Simple_Goal>
+            <Tag>Invariant is preserved</Tag>
+            <Goal>
+                <Exp_Comparison op=":">
+                    <Binary_Exp op="\/" typref="2" tag="C:\Users\thayt\Documents\iie_s4\mfdl\projet-mfdl24\bdp\Network.bxml:1:3:1:6:1">
+                        <Id value="hasRRights" typref="2" tag="C:\Users\thayt\Documents\iie_s4\mfdl\projet-mfdl24\bdp\Network.bxml:1:5:6:3:1:2:1:1"/>
+                        <Nary_Exp op="{" typref="2">
+                            <Binary_Exp op="|-&gt;" typref="4">
+                                <Id value="content" typref="1" tag="C:\Users\thayt\Documents\iie_s4\mfdl\projet-mfdl24\bdp\Network.bxml:1:5:6:3:1:2:1:2:1:1"/>
+                                <Id value="target" typref="1" tag="C:\Users\thayt\Documents\iie_s4\mfdl\projet-mfdl24\bdp\Network.bxml:1:5:6:3:1:2:1:2:1:2"/>
+                            </Binary_Exp>
+                        </Nary_Exp>
+                    </Binary_Exp>
+                    <Binary_Exp op="&lt;-&gt;" typref="3">
+                        <Id value="contents" typref="0" tag="C:\Users\thayt\Documents\iie_s4\mfdl\projet-mfdl24\bdp\Network.bxml:1:3:1:6:2:1"/>
+                        <Id value="users" typref="0" tag="C:\Users\thayt\Documents\iie_s4\mfdl\projet-mfdl24\bdp\Network.bxml:1:3:1:6:2:2"/>
+                    </Binary_Exp>
+                </Exp_Comparison>
+            </Goal>
+        </Simple_Goal>
+    </Proof_Obligation>
+    <Proof_Obligation goalHash="3342771309">
+        <Tag>WellDefinednessPrecondition_GrantRRights</Tag>
+        <Definition name="B definitions"/>
+        <Definition name="ctx"/>
+        <Definition name="cst"/>
+        <Definition name="lprp"/>
+        <Definition name="inprp"/>
+        <Definition name="inext"/>
+        <Definition name="seext"/>
+        <Definition name="inv"/>
+        <Definition name="ass"/>
+        <Local_Hyp num="1">
+            <Exp_Comparison op=":">
+                <Id value="from" typref="1" tag="C:\Users\thayt\Documents\iie_s4\mfdl\projet-mfdl24\bdp\Network.bxml:1:5:6:2:1:1:1"/>
+                <Id value="USERS" typref="0" tag="C:\Users\thayt\Documents\iie_s4\mfdl\projet-mfdl24\bdp\Network.bxml:1:5:6:2:1:1:2"/>
+            </Exp_Comparison>
+        </Local_Hyp>
+        <Local_Hyp num="2">
+            <Exp_Comparison op=":">
+                <Id value="from" typref="1" tag="C:\Users\thayt\Documents\iie_s4\mfdl\projet-mfdl24\bdp\Network.bxml:1:5:6:2:1:2:1"/>
+                <Id value="users" typref="0" tag="C:\Users\thayt\Documents\iie_s4\mfdl\projet-mfdl24\bdp\Network.bxml:1:5:6:2:1:2:2"/>
+            </Exp_Comparison>
+        </Local_Hyp>
+        <Local_Hyp num="3">
+            <Exp_Comparison op=":">
+                <Id value="content" typref="1" tag="C:\Users\thayt\Documents\iie_s4\mfdl\projet-mfdl24\bdp\Network.bxml:1:5:6:2:1:3:1"/>
+                <Id value="CONTENTS" typref="0" tag="C:\Users\thayt\Documents\iie_s4\mfdl\projet-mfdl24\bdp\Network.bxml:1:5:6:2:1:3:2"/>
+            </Exp_Comparison>
+        </Local_Hyp>
+        <Local_Hyp num="4">
+            <Exp_Comparison op=":">
+                <Id value="content" typref="1" tag="C:\Users\thayt\Documents\iie_s4\mfdl\projet-mfdl24\bdp\Network.bxml:1:5:6:2:1:4:1"/>
+                <Id value="contents" typref="0" tag="C:\Users\thayt\Documents\iie_s4\mfdl\projet-mfdl24\bdp\Network.bxml:1:5:6:2:1:4:2"/>
+            </Exp_Comparison>
+        </Local_Hyp>
+        <Local_Hyp num="5">
+            <Exp_Comparison op=":">
+                <Id value="target" typref="1" tag="C:\Users\thayt\Documents\iie_s4\mfdl\projet-mfdl24\bdp\Network.bxml:1:5:6:2:1:5:1"/>
+                <Id value="USERS" typref="0" tag="C:\Users\thayt\Documents\iie_s4\mfdl\projet-mfdl24\bdp\Network.bxml:1:5:6:2:1:5:2"/>
+            </Exp_Comparison>
+        </Local_Hyp>
+        <Local_Hyp num="6">
+            <Exp_Comparison op=":">
+                <Id value="target" typref="1" tag="C:\Users\thayt\Documents\iie_s4\mfdl\projet-mfdl24\bdp\Network.bxml:1:5:6:2:1:6:1"/>
+                <Id value="users" typref="0" tag="C:\Users\thayt\Documents\iie_s4\mfdl\projet-mfdl24\bdp\Network.bxml:1:5:6:2:1:6:2"/>
+            </Exp_Comparison>
+        </Local_Hyp>
+        <Local_Hyp num="7">
+            <Unary_Pred op="not">
+                <Exp_Comparison op="=">
+                    <Id value="target" typref="1" tag="C:\Users\thayt\Documents\iie_s4\mfdl\projet-mfdl24\bdp\Network.bxml:1:5:6:2:1:7:1"/>
+                    <Id value="from" typref="1" tag="C:\Users\thayt\Documents\iie_s4\mfdl\projet-mfdl24\bdp\Network.bxml:1:5:6:2:1:7:2"/>
+                </Exp_Comparison>
+            </Unary_Pred>
+        </Local_Hyp>
+        <Simple_Goal>
+            <Tag>Operation precondition is well defined</Tag>
+            <Ref_Hyp num="1"/>
+            <Ref_Hyp num="2"/>
+            <Ref_Hyp num="3"/>
+            <Ref_Hyp num="4"/>
+            <Ref_Hyp num="5"/>
+            <Ref_Hyp num="6"/>
+            <Ref_Hyp num="7"/>
+            <Goal>
+                <Exp_Comparison op=":">
+                    <Id value="content" typref="1" tag="C:\Users\thayt\Documents\iie_s4\mfdl\projet-mfdl24\bdp\Network.bxml:1:5:6:2:1:8:1:2"/>
+                    <Unary_Exp op="dom" typref="0">
+                        <Id value="getContentOwner" typref="2" tag="C:\Users\thayt\Documents\iie_s4\mfdl\projet-mfdl24\bdp\Network.bxml:1:5:6:2:1:8:1:1"/>
+                    </Unary_Exp>
+                </Exp_Comparison>
+            </Goal>
+        </Simple_Goal>
+        <Simple_Goal>
+            <Tag>Operation precondition is well defined</Tag>
+            <Ref_Hyp num="1"/>
+            <Ref_Hyp num="2"/>
+            <Ref_Hyp num="3"/>
+            <Ref_Hyp num="4"/>
+            <Ref_Hyp num="5"/>
+            <Ref_Hyp num="6"/>
+            <Ref_Hyp num="7"/>
+            <Goal>
+                <Exp_Comparison op=":">
+                    <Id value="getContentOwner" typref="2" tag="C:\Users\thayt\Documents\iie_s4\mfdl\projet-mfdl24\bdp\Network.bxml:1:5:6:2:1:8:1:1"/>
+                    <Binary_Exp op="+-&gt;" typref="3">
+                        <Unary_Exp op="dom" typref="0">
+                            <Id value="getContentOwner" typref="2" tag="C:\Users\thayt\Documents\iie_s4\mfdl\projet-mfdl24\bdp\Network.bxml:1:5:6:2:1:8:1:1"/>
+                        </Unary_Exp>
+                        <Unary_Exp op="ran" typref="0">
+                            <Id value="getContentOwner" typref="2" tag="C:\Users\thayt\Documents\iie_s4\mfdl\projet-mfdl24\bdp\Network.bxml:1:5:6:2:1:8:1:1"/>
+                        </Unary_Exp>
                     </Binary_Exp>
                 </Exp_Comparison>
             </Goal>

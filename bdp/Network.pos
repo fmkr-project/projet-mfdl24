@@ -4,82 +4,128 @@
 <Tag>Initialisation</Tag>
 <Simple_Goal status="Proved">
 <Tag>Invariant is preserved</Tag>
-<Proof_State passList="Force(0),?" proofState="Proved(0)" methodList="pr"/>
+<Proof_State proofState="Proved(0)" methodList="pr" passList="Force(0),?"/>
 </Simple_Goal>
 <Simple_Goal status="Proved">
 <Tag>Invariant is preserved</Tag>
-<Proof_State passList="Force(0),?" proofState="Proved(0)" methodList="pr"/>
+<Proof_State proofState="Proved(0)" methodList="pr" passList="Force(0),?"/>
 </Simple_Goal>
 <Simple_Goal status="Proved">
 <Tag>Invariant is preserved</Tag>
-<Proof_State passList="Force(0),?" proofState="Proved(0)" methodList="pr"/>
+<Proof_State proofState="Proved(0)" methodList="pr" passList="Force(0),?"/>
+</Simple_Goal>
+<Simple_Goal status="Proved">
+<Tag>Invariant is preserved</Tag>
+<Proof_State proofState="Proved(Util)" methodList="dd(1) &amp; pr" passList="Force(0),?"/>
 </Simple_Goal>
 </Proof_Obligation>
 <Proof_Obligation>
 <Tag>Operation_SetGender</Tag>
 <Simple_Goal status="Proved">
 <Tag>Invariant is preserved</Tag>
-<Proof_State passList="Force(0),?" proofState="Proved(0)" methodList="pr"/>
+<Proof_State proofState="Proved(0)" methodList="pr" passList="Force(0),?"/>
 </Simple_Goal>
 </Proof_Obligation>
 <Proof_Obligation>
 <Tag>Operation_SetAge</Tag>
 <Simple_Goal status="Proved">
 <Tag>Invariant is preserved</Tag>
-<Proof_State passList="Force(0),?" proofState="Proved(0)" methodList="pr"/>
+<Proof_State proofState="Proved(0)" methodList="pr" passList="Force(0),?"/>
 </Simple_Goal>
 </Proof_Obligation>
 <Proof_Obligation>
 <Tag>Operation_AddUser</Tag>
 <Simple_Goal status="Proved">
 <Tag>Invariant is preserved</Tag>
-<Proof_State passList="Force(0),?" proofState="Proved(0)" methodList="pr"/>
+<Proof_State proofState="Proved(0)" methodList="pr" passList="Force(0),?"/>
 </Simple_Goal>
 <Simple_Goal status="Proved">
 <Tag>Invariant is preserved</Tag>
-<Proof_State passList="Force(0),?" proofState="Proved(Util)" methodList="dd(1) &amp; pr"/>
+<Proof_State proofState="Proved(Util)" methodList="dd(1) &amp; pr" passList="Force(0),?"/>
 </Simple_Goal>
 <Simple_Goal status="Proved">
 <Tag>Invariant is preserved</Tag>
-<Proof_State passList="Force(0),?" proofState="Proved(0)" methodList="pr"/>
+<Proof_State proofState="Proved(0)" methodList="pr" passList="Force(0),?"/>
 </Simple_Goal>
 <Simple_Goal status="Proved">
 <Tag>Invariant is preserved</Tag>
-<Proof_State passList="Force(0),?" proofState="Proved(0)" methodList="pr"/>
+<Proof_State proofState="Proved(0)" methodList="pr" passList="Force(0),?"/>
+</Simple_Goal>
+<Simple_Goal status="Proved">
+<Tag>Invariant is preserved</Tag>
+<Proof_State proofState="Proved(0)" methodList="pr" passList="Force(0),?"/>
+</Simple_Goal>
+<Simple_Goal status="Proved">
+<Tag>Invariant is preserved</Tag>
+<Proof_State proofState="Proved(0)" methodList="pr" passList="Force(0),?"/>
 </Simple_Goal>
 </Proof_Obligation>
 <Proof_Obligation>
 <Tag>Operation_DeleteUser</Tag>
 <Simple_Goal status="Proved">
 <Tag>Invariant is preserved</Tag>
-<Proof_State passList="Force(0),?" proofState="Proved(0)" methodList="pr"/>
+<Proof_State proofState="Proved(0)" methodList="pr" passList="Force(0),?"/>
 </Simple_Goal>
 <Simple_Goal status="Proved">
 <Tag>Invariant is preserved</Tag>
-<Proof_State passList="Force(0),?" proofState="Proved(Util)" methodList="dd(1) &amp; mp"/>
+<Proof_State proofState="Proved(Util)" methodList="dd(1) &amp; mp" passList="Force(0),?"/>
 </Simple_Goal>
 <Simple_Goal status="Proved">
 <Tag>Invariant is preserved</Tag>
-<Proof_State passList="Force(0),?" proofState="Proved(Util)" methodList="dd(1) &amp; mp &amp; pr"/>
+<Proof_State proofState="Proved(Util)" methodList="dd(1) &amp; mp &amp; pr" passList="Force(0),?"/>
 </Simple_Goal>
 <Simple_Goal status="Proved">
 <Tag>Invariant is preserved</Tag>
-<Proof_State passList="Force(0),?" proofState="Proved(0)" methodList="pr"/>
+<Proof_State proofState="Proved(0)" methodList="pr" passList="Force(0),?"/>
 </Simple_Goal>
 <Simple_Goal status="Proved">
 <Tag>Invariant is preserved</Tag>
-<Proof_State passList="Force(0),?" proofState="Proved(0)" methodList="pr"/>
+<Proof_State proofState="Proved(0)" methodList="pr" passList="Force(0),?"/>
+</Simple_Goal>
+<Simple_Goal status="Proved">
+<Tag>Invariant is preserved</Tag>
+<Proof_State proofState="Proved(Util)" methodList="dd(1) &amp; mp" passList="Force(0),?"/>
+</Simple_Goal>
+<Simple_Goal status="Proved">
+<Tag>Invariant is preserved</Tag>
+<Proof_State proofState="Proved(Util)" methodList="dd(1) &amp; mp" passList="Force(0),?"/>
 </Simple_Goal>
 </Proof_Obligation>
 <Proof_Obligation>
 <Tag>Operation_PublishContent</Tag>
 <Simple_Goal status="Proved">
 <Tag>Invariant is preserved</Tag>
-<Proof_State passList="Force(0),?" proofState="Proved(Util)" methodList="dd(1) &amp; mp"/>
+<Proof_State proofState="Proved(Util)" methodList="dd(1) &amp; mp" passList="Force(0),?"/>
 </Simple_Goal>
 <Simple_Goal status="Proved">
 <Tag>Invariant is preserved</Tag>
-<Proof_State passList="Force(0),(?; 0; 1)" proofState="Proved(Util)" methodList="dd(1) &amp; mp &amp; pr &amp; pr"/>
+<Proof_State proofState="Proved(Util)" methodList="dd(1) &amp; mp &amp; pr &amp; pr" passList="Force(0),?"/>
+</Simple_Goal>
+<Simple_Goal status="Proved">
+<Tag>Invariant is preserved</Tag>
+<Proof_State proofState="Proved(Util)" methodList="dd(1) &amp; mp" passList="Force(0),?"/>
+</Simple_Goal>
+<Simple_Goal status="Proved">
+<Tag>Invariant is preserved</Tag>
+<Proof_State proofState="Proved(Util)" methodList="dd(1) &amp; mp" passList="Force(0),?"/>
+</Simple_Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Tag>Operation_GrantRRights</Tag>
+<Simple_Goal status="Proved">
+<Tag>Invariant is preserved</Tag>
+<Proof_State proofState="Proved(Util)" methodList="dd(1) &amp; mp" passList="Force(0),?"/>
+</Simple_Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Tag>WellDefinednessPrecondition_GrantRRights</Tag>
+<Simple_Goal status="Proved">
+<Tag>Operation precondition is well defined</Tag>
+<Proof_State proofState="Proved(Util)" methodList="dd(1) &amp; mp" passList="Force(0),?"/>
+</Simple_Goal>
+<Simple_Goal status="Proved">
+<Tag>Operation precondition is well defined</Tag>
+<Proof_State proofState="Proved(Util)" methodList="dd(1) &amp; mp" passList="Force(0),?"/>
 </Simple_Goal>
 </Proof_Obligation>
 </Proof_Obligations>

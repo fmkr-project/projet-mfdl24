@@ -1,17 +1,27 @@
 THEORY ProofList IS
-_f(1) & _f(2) & _f(7) & _f(14) & _f(8) & _f(25) & _f(26) & Operation_PublishContent.2,(_f(3) => _f(28));
-_f(1) & _f(2) & _f(7) & _f(14) & _f(8) & _f(25) & _f(26) & Operation_PublishContent.1,(_f(3) => _f(27));
-_f(1) & _f(2) & _f(7) & _f(14) & _f(8) & Operation_DeleteUser.5,(_f(3) => _f(24));
-_f(1) & _f(2) & _f(7) & _f(14) & _f(8) & Operation_DeleteUser.4,(_f(3) => _f(23));
-_f(1) & _f(2) & _f(7) & _f(14) & _f(8) & Operation_DeleteUser.3,(_f(3) => _f(22));
-_f(1) & _f(2) & _f(7) & _f(14) & _f(8) & Operation_DeleteUser.2,(_f(3) => _f(21));
-_f(1) & _f(2) & _f(7) & _f(14) & _f(8) & Operation_DeleteUser.1,(_f(3) => _f(20));
-_f(1) & _f(2) & _f(7) & _f(14) & _f(15) & _f(9) & _f(11) & _f(12) & Operation_AddUser.4,(_f(3) => _f(19));
-_f(1) & _f(2) & _f(7) & _f(14) & _f(15) & _f(9) & _f(11) & _f(12) & Operation_AddUser.3,(_f(3) => _f(18));
-_f(1) & _f(2) & _f(7) & _f(14) & _f(15) & _f(9) & _f(11) & _f(12) & Operation_AddUser.2,(_f(3) => _f(17));
-_f(1) & _f(2) & _f(7) & _f(14) & _f(15) & _f(9) & _f(11) & _f(12) & Operation_AddUser.1,(_f(3) => _f(16));
-_f(1) & _f(2) & _f(7) & _f(8) & _f(11) & _f(12) & Operation_SetAge.1,(_f(3) => _f(13));
-_f(1) & _f(2) & _f(7) & _f(8) & _f(9) & Operation_SetGender.1,(_f(3) => _f(10));
+_f(1) & _f(2) & _f(8) & WellDefinednessPrecondition_GrantRRights.2,(_f(36) & _f(37) & _f(30) & _f(38) & _f(39) & _f(40) & _f(41) & _f(44) => _f(46));
+_f(1) & _f(2) & _f(8) & WellDefinednessPrecondition_GrantRRights.1,(_f(36) & _f(37) & _f(30) & _f(38) & _f(39) & _f(40) & _f(41) & _f(44) => _f(45));
+_f(1) & _f(2) & _f(8) & _f(36) & _f(37) & _f(30) & _f(38) & _f(39) & _f(40) & _f(41) & _f(42) & Operation_GrantRRights.1,(_f(3) => _f(43));
+_f(1) & _f(2) & _f(8) & _f(15) & _f(9) & _f(30) & _f(31) & Operation_PublishContent.4,(_f(3) => _f(35));
+_f(1) & _f(2) & _f(8) & _f(15) & _f(9) & _f(30) & _f(31) & Operation_PublishContent.3,(_f(3) => _f(34));
+_f(1) & _f(2) & _f(8) & _f(15) & _f(9) & _f(30) & _f(31) & Operation_PublishContent.2,(_f(3) => _f(33));
+_f(1) & _f(2) & _f(8) & _f(15) & _f(9) & _f(30) & _f(31) & Operation_PublishContent.1,(_f(3) => _f(32));
+_f(1) & _f(2) & _f(8) & _f(15) & _f(9) & Operation_DeleteUser.7,(_f(3) => _f(29));
+_f(1) & _f(2) & _f(8) & _f(15) & _f(9) & Operation_DeleteUser.6,(_f(3) => _f(28));
+_f(1) & _f(2) & _f(8) & _f(15) & _f(9) & Operation_DeleteUser.5,(_f(3) => _f(27));
+_f(1) & _f(2) & _f(8) & _f(15) & _f(9) & Operation_DeleteUser.4,(_f(3) => _f(26));
+_f(1) & _f(2) & _f(8) & _f(15) & _f(9) & Operation_DeleteUser.3,(_f(3) => _f(25));
+_f(1) & _f(2) & _f(8) & _f(15) & _f(9) & Operation_DeleteUser.2,(_f(3) => _f(24));
+_f(1) & _f(2) & _f(8) & _f(15) & _f(9) & Operation_DeleteUser.1,(_f(3) => _f(23));
+_f(1) & _f(2) & _f(8) & _f(15) & _f(16) & _f(10) & _f(12) & _f(13) & Operation_AddUser.6,(_f(3) => _f(22));
+_f(1) & _f(2) & _f(8) & _f(15) & _f(16) & _f(10) & _f(12) & _f(13) & Operation_AddUser.5,(_f(3) => _f(21));
+_f(1) & _f(2) & _f(8) & _f(15) & _f(16) & _f(10) & _f(12) & _f(13) & Operation_AddUser.4,(_f(3) => _f(20));
+_f(1) & _f(2) & _f(8) & _f(15) & _f(16) & _f(10) & _f(12) & _f(13) & Operation_AddUser.3,(_f(3) => _f(19));
+_f(1) & _f(2) & _f(8) & _f(15) & _f(16) & _f(10) & _f(12) & _f(13) & Operation_AddUser.2,(_f(3) => _f(18));
+_f(1) & _f(2) & _f(8) & _f(15) & _f(16) & _f(10) & _f(12) & _f(13) & Operation_AddUser.1,(_f(3) => _f(17));
+_f(1) & _f(2) & _f(8) & _f(9) & _f(12) & _f(13) & Operation_SetAge.1,(_f(3) => _f(14));
+_f(1) & _f(2) & _f(8) & _f(9) & _f(10) & Operation_SetGender.1,(_f(3) => _f(11));
+_f(1) & _f(2) & Initialisation.4,(_f(3) => _f(7));
 _f(1) & _f(2) & Initialisation.3,(_f(3) => _f(6));
 _f(1) & _f(2) & Initialisation.2,(_f(3) => _f(5));
 _f(1) & _f(2) & Initialisation.1,(_f(3) => _f(4))
@@ -24,7 +34,8 @@ USERS: FIN(INTEGER) & not(USERS = {}) & GENDERS: FIN(INTEGER) & not(GENDERS = {}
 (({}) : ((({}) --> ({}))));
 (({}) : ((({}) --> (GENDERS))));
 (({}) : ((({}) --> (NATURAL))));
-users : POW( USERS) & contents : POW( CONTENTS) & getContentOwner : contents +-> users & dom(getContentOwner) = contents & ((getContentOwner) : (((contents) --> (users)))) & getGender : users +-> GENDERS & dom(getGender) = users & ((getGender) : (((users) --> (GENDERS)))) & getAge : users +-> NATURAL & dom(getAge) = users & ((getAge) : (((users) --> (NATURAL))));
+(({}) : ((({}) <-> ({}))));
+users : POW( USERS) & contents : POW( CONTENTS) & getContentOwner : contents +-> users & dom(getContentOwner) = contents & ((getContentOwner) : (((contents) --> (users)))) & getGender : users +-> GENDERS & dom(getGender) = users & ((getGender) : (((users) --> (GENDERS)))) & getAge : users +-> NATURAL & dom(getAge) = users & ((getAge) : (((users) --> (NATURAL)))) & ((hasRRights) : (((contents) <-> (users)))) & ((hasWRights) : (((contents) <-> (users))));
 ((user) : (users));
 ((gender) : (GENDERS));
 ((((getGender) <+ (({((user) |-> (gender))})))) : (((users) --> (GENDERS))));
@@ -37,15 +48,32 @@ not(((user) : (users)));
 ((getContentOwner) : (((contents) --> (((users) \/ (({user})))))));
 ((((getGender) <+ (({((user) |-> (gender))})))) : (((((users) \/ (({user})))) --> (GENDERS))));
 ((((getAge) <+ (({((user) |-> (age))})))) : (((((users) \/ (({user})))) --> (NATURAL))));
+((hasRRights) : (((contents) <-> (((users) \/ (({user})))))));
+((hasWRights) : (((contents) <-> (((users) \/ (({user})))))));
 (users - ({user})) : POW( USERS);
 (contents - dom(((getContentOwner) |> (({user}))))) : POW( CONTENTS);
 ((((getContentOwner) |>> (({user})))) : ((((contents - dom(((getContentOwner) |> (({user})))))) --> ((users - ({user}))))));
 ((((({user})) <<| (getGender))) : ((((users - ({user}))) --> (GENDERS))));
 ((((({user})) <<| (getAge))) : ((((users - ({user}))) --> (NATURAL))));
+((((dom(((getContentOwner) |>> (({user}))))) <| (((hasRRights) |>> (({user})))))) : ((((contents - dom(((getContentOwner) |> (({user})))))) <-> ((users - ({user}))))));
+((((dom(((getContentOwner) |>> (({user}))))) <| (((hasWRights) |>> (({user})))))) : ((((contents - dom(((getContentOwner) |> (({user})))))) <-> ((users - ({user}))))));
 ((content) : (CONTENTS));
 not(((content) : (contents)));
 ((contents) \/ (({content}))) : POW( CONTENTS);
-((((getContentOwner) \/ (({((content) |-> (user))})))) : (((((contents) \/ (({content})))) --> (users))))
+((((getContentOwner) \/ (({((content) |-> (user))})))) : (((((contents) \/ (({content})))) --> (users))));
+((((hasRRights) \/ (({((content) |-> (user))})))) : (((((contents) \/ (({content})))) <-> (users))));
+((((hasWRights) \/ (({((content) |-> (user))})))) : (((((contents) \/ (({content})))) <-> (users))));
+((from) : (USERS));
+((from) : (users));
+((content) : (contents));
+((target) : (USERS));
+((target) : (users));
+not(((target) = (from)));
+(((getContentOwner )(content)) = (from));
+((((hasRRights) \/ (({((content) |-> (target))})))) : (((contents) <-> (users))));
+"Operation precondition is well defined";
+((content) : (dom(getContentOwner)));
+((getContentOwner) : (((dom(getContentOwner)) +-> (ran(getContentOwner)))))
 END
 &
 THEORY EnumerateX
