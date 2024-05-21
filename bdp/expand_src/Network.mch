@@ -10,6 +10,7 @@ SETS
     PSEUDOS ;
     GENDERS = { MM , FF , NB } ;
     CONTENTS ;
+    CONTENT_TYPES = { PHOTO , VIDEO , TEXT } ;
     PASSWORDS
 
 ABSTRACT_CONSTANTS
@@ -26,6 +27,9 @@ ABSTRACT_VARIABLES
     users ,
     loggedUsers ,
     contents ,
+    photoContents ,
+    videoContents ,
+    textContents ,
     privateContents ,
 
     // Functions
@@ -42,6 +46,9 @@ INVARIANT
     loggedUsers <: users &
     masterUser : users &
     contents : FIN ( CONTENTS ) &
+    photoContents <: contents &
+    videoContents <: contents &
+    textContents <: contents &
     privateContents <: contents &
 
     // Functions
@@ -62,6 +69,9 @@ INITIALISATION
     users := { masterUser } ||
     loggedUsers := { masterUser } ||
     contents := {} ||
+    photoContents := {} ||
+    videoContents := {} ||
+    textContents := {} ||
     privateContents := {} ||
 
     pseudos := { masterUser |-> masterPseudo } ||
@@ -99,13 +109,28 @@ OPERATIONS
     END ;
 
     // Session management
+    LogIn ( pseudo , pwd ) =
+    PRE
+        pseudo : PSEUDOS & pseudo : ran ( pseudos ) &
+        pwd : PASSWORDS & pwd : ran ( shadow ) &
+        shadow ( pseudos ~ ( pseudo ) ) = pwd
+    THEN
+        loggedUsers := loggedUsers \/ { pseudos ~ ( pseudo ) }
+    END ;
+
+    LogOut ( user ) =
+    PRE
+        user : USERS & user : users & user : loggedUsers
+    THEN
+        loggedUsers := loggedUsers - { user }
+    END ;
 
     // User management
-    AddUser ( user , pwd , pseudo , gender , age ) =
+    AddUser ( user , pseudo , pwd , gender , age ) =
     PRE
         user : USERS & user /: users & user /= masterUser &
-        pwd : PASSWORDS & pwd /: ran ( shadow ) &
         pseudo : PSEUDOS & pseudo /: ran ( pseudos ) &
+        pwd : PASSWORDS & pwd /: ran ( shadow ) &
         gender : GENDERS &
         age : NATURAL & age >= 18
     THEN
@@ -133,6 +158,9 @@ OPERATIONS
         // Delete content related information
         contents := contents - dom ( getContentOwner |> { user } ) ||
         privateContents := privateContents - dom ( getContentOwner |> { user } ) ||
+        photoContents := photoContents - dom ( getContentOwner |> { user } ) ||
+        videoContents := videoContents - dom ( getContentOwner |> { user } ) ||
+        textContents := textContents - dom ( getContentOwner |> { user } ) ||
         getContentOwner := getContentOwner |>> { user } ||
 
         // Delete RW rights associated with the user's contents
@@ -142,22 +170,32 @@ OPERATIONS
     END ;
 
     // Content management
-    PublishContent ( user , content ) =
+    PublishContent ( user , content , contentType ) =
     PRE
-        user : USERS & user : users & content : CONTENTS &
-        content /: contents // Le contenu est original
+        user : USERS & user : users & user : loggedUsers &
+        content : CONTENTS &
+        content /: contents & // Le contenu est original
+        contentType : CONTENT_TYPES
     THEN
         contents := contents \/ { content } ||
         getContentOwner := getContentOwner \/ { content |-> user } ||
         // Content creator has RW rights
         // Master user always has RW rights
         hasRRights := hasRRights \/ { content |-> user , content |-> masterUser } ||
-        hasWRights := hasWRights \/ { content |-> user , content |-> masterUser }
+        hasWRights := hasWRights \/ { content |-> user , content |-> masterUser } ||
+        // Filter on content type
+        IF contentType = PHOTO THEN
+            photoContents := photoContents \/ { content }
+        ELSIF contentType = VIDEO THEN
+            videoContents := videoContents \/ { content }
+        ELSIF contentType = TEXT THEN
+            textContents := textContents \/ { content }
+        END
     END ;
 
     DeleteContent ( user , content ) =
     PRE
-        user : USERS & user : users &
+        user : USERS & user : users & user : loggedUsers &
         content : CONTENTS & content : contents &
         ( getContentOwner ( content ) = user or user = masterUser )
     THEN
@@ -172,10 +210,13 @@ OPERATIONS
             getGender := { user } <<| getGender ||
             getAge := { user } <<| getAge ||
             pseudos := { user } <<| pseudos ||
-        shadow := { user } <<| shadow ||
+            shadow := { user } <<| shadow ||
 
             // Delete content related information
             contents := contents - dom ( getContentOwner |> { user } ) ||
+            photoContents := photoContents - dom ( getContentOwner |> { user } ) ||
+            videoContents := videoContents - dom ( getContentOwner |> { user } ) ||
+            textContents := textContents - dom ( getContentOwner |> { user } ) ||
             privateContents := privateContents - dom ( getContentOwner |> { user } ) ||
             getContentOwner := getContentOwner |>> { user } ||
 
@@ -186,6 +227,9 @@ OPERATIONS
         ELSE
             contents := contents - { content } ||
             privateContents := privateContents - { content } ||
+            photoContents := photoContents - { content } ||
+            videoContents := videoContents - { content } ||
+            textContents := textContents - { content } ||
             // Revoke all rights on content
             getContentOwner := { content } <<| getContentOwner ||
             hasRRights := { content } <<| hasRRights ||
@@ -195,7 +239,7 @@ OPERATIONS
 
     SetPrivateContent ( user , content ) =
     PRE
-        user : USERS & user : users &
+        user : USERS & user : users & user : loggedUsers &
         content : CONTENTS & content : contents &
         ( getContentOwner ( content ) = user or user = masterUser )
     THEN
@@ -204,7 +248,7 @@ OPERATIONS
 
     SetPublicContent ( user , content ) =
     PRE
-        user : USERS & user : users &
+        user : USERS & user : users & user : loggedUsers &
         content : CONTENTS & content : contents &
         ( getContentOwner ( content ) = user or user = masterUser )
     THEN
@@ -214,7 +258,7 @@ OPERATIONS
     // Rights management
     GrantRRights ( from , content , target ) =
     PRE
-        from : USERS & from : users &
+        from : USERS & from : users & from : loggedUsers &
         content : CONTENTS & content : contents &
         target : USERS & target : users & target /= from &
         ( getContentOwner ( content ) = from or from = masterUser )
@@ -224,7 +268,7 @@ OPERATIONS
 
     RevokeRRights ( from , content , target ) =
     PRE
-        from : USERS & from : users &
+        from : USERS & from : users & from : loggedUsers &
         content : CONTENTS & content : contents &
         target : USERS & target : users & target /= from & target /= masterUser & // Possible : target does not have the rights
         ( getContentOwner ( content ) = from or from = masterUser )
@@ -235,7 +279,7 @@ OPERATIONS
 
     GrantWRights ( from , content , target ) =
     PRE
-        from : USERS & from : users &
+        from : USERS & from : users & from : loggedUsers &
         content : CONTENTS & content : contents &
         target : USERS & target : users & target /= from &
         ( getContentOwner ( content ) = from or from = masterUser )
@@ -246,7 +290,7 @@ OPERATIONS
 
     RevokeWRights ( from , content , target ) =
     PRE
-        from : USERS & from : users &
+        from : USERS & from : users & from : loggedUsers &
         content : CONTENTS & content : contents &
         target : USERS & target : users & target /= from & target /= masterUser & // Possible : target does not have the rights
         ( getContentOwner ( content ) = from or from = masterUser )
