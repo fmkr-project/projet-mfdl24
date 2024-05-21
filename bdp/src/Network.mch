@@ -7,8 +7,14 @@ MACHINE
 
 SETS
     USERS ;
-    GENDERS ;
+    GENDERS = { MM , FF , NB } ;
     CONTENTS
+
+ABSTRACT_CONSTANTS
+    masterUser
+
+PROPERTIES
+    masterUser : USERS
 
 ABSTRACT_VARIABLES
     users ,
@@ -23,6 +29,7 @@ ABSTRACT_VARIABLES
 
 INVARIANT
     users <: USERS &
+    masterUser : users &
     contents <: CONTENTS &
 
     // Functions
@@ -30,16 +37,20 @@ INVARIANT
     getGender : users --> GENDERS &
     getAge : users --> NATURAL &
     hasRRights : contents <-> users &
-    hasWRights : contents <-> users
+    hasWRights : contents <-> users &
+
+    // Properties on constants
+    dom ( hasRRights |> { masterUser } ) = contents &
+    dom ( hasWRights |> { masterUser } ) = contents
 
 
 INITIALISATION
-    users := {} ||
+    users := { masterUser } ||
     contents := {} ||
 
     getContentOwner := {} ||
-    getGender := {} ||
-    getAge := {} ||
+    getGender := { masterUser |-> NB } ||
+    getAge := { masterUser |-> 666 } ||
     hasRRights := {} ||
     hasWRights := {}
 
@@ -65,18 +76,19 @@ OPERATIONS
     // User management
     AddUser ( user , gender , age ) =
     PRE
-        user : USERS & user /: users &
+        user : USERS & user /: users & user /= masterUser &
         gender : GENDERS &
         age : NATURAL & age >= 18
     THEN
         users := users \/ { user } ||
-        getGender := getGender <+ { ( user |-> gender ) } ||
+        getGender := getGender \/ { ( user |-> gender ) } ||
         getAge := getAge <+ { ( user |-> age ) }
     END ;
 
     DeleteUser ( user ) =
     PRE
-        user : USERS & user : users
+        user : USERS & user : users &
+        user /= masterUser
     THEN
         users := users - { user } ||
 
@@ -103,8 +115,9 @@ OPERATIONS
         contents := contents \/ { content } ||
         getContentOwner := getContentOwner \/ { content |-> user } ||
         // Content creator has RW rights
-        hasRRights := hasRRights \/ { content |-> user } ||
-        hasWRights := hasWRights \/ { content |-> user }
+        // Master user always has RW rights
+        hasRRights := hasRRights \/ { content |-> user , content |-> masterUser } ||
+        hasWRights := hasWRights \/ { content |-> user , content |-> masterUser }
     END ;
 
     // Rights management
@@ -116,6 +129,16 @@ OPERATIONS
         getContentOwner ( content ) = from
     THEN
         hasRRights := hasRRights \/ { content |-> target }
+    END ;
+
+    GrantWRights ( from , content , target ) =
+    PRE
+        from : USERS & from : users &
+        content : CONTENTS & content : contents &
+        target : USERS & target : users & target /= from &
+        getContentOwner ( content ) = from
+    THEN
+        hasWRights := hasWRights \/ { content |-> target }
     END
 
 END
