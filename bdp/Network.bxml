@@ -517,7 +517,7 @@
 <Pos l='61' c='5' s='6'/>
 </Attr>
 </Id>
-<Binary_Exp op='&gt;-&gt;' typref='25'>
+<Binary_Exp op='--&gt;' typref='25'>
 <Attr>
 <Pos l='61' c='20' s='3'/>
 </Attr>

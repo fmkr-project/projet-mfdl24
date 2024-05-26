@@ -118,7 +118,7 @@
 </Simple_Goal>
 <Simple_Goal status="Proved">
 <Tag>Invariant is preserved</Tag>
-<Proof_State methodList="dd(1) &amp; pp(rp.1 | 10)" proofState="Proved(Util)" passList="Force(0),(?; 0; 1)"/>
+<Proof_State methodList="pr" proofState="Proved(0)" passList="Force(0),?"/>
 </Simple_Goal>
 </Proof_Obligation>
 <Proof_Obligation>
@@ -399,7 +399,7 @@
 </Simple_Goal>
 <Simple_Goal status="Proved">
 <Tag>Invariant is preserved</Tag>
-<Proof_State methodList="dd(0) &amp; pp(rp.1 | 10)" proofState="Proved(Util)" passList="Force(0),?"/>
+<Proof_State methodList="dd(0) &amp; pp(rp.1 | 10)" proofState="Proved(Util)" passList="Force(0),(?; 0; 1)"/>
 </Simple_Goal>
 <Simple_Goal status="Proved">
 <Tag>Invariant is preserved</Tag>
@@ -419,11 +419,11 @@
 </Simple_Goal>
 <Simple_Goal status="Proved">
 <Tag>Invariant is preserved</Tag>
-<Proof_State methodList="dd(1) &amp; pp(rp.1 | 10)" proofState="Proved(Util)" passList="Force(0),?"/>
+<Proof_State methodList="dd(1) &amp; pp(rp.1 | 10)" proofState="Proved(Util)" passList="Force(0),(?; 0; 1)"/>
 </Simple_Goal>
 <Simple_Goal status="Proved">
 <Tag>Invariant is preserved</Tag>
-<Proof_State methodList="dd(1) &amp; pp(rp.1 | 10)" proofState="Proved(Util)" passList="Force(0),?"/>
+<Proof_State methodList="dd(1) &amp; pp(rp.1 | 10)" proofState="Proved(Util)" passList="Force(0),(?; 0; 1)"/>
 </Simple_Goal>
 <Simple_Goal status="Proved">
 <Tag>Invariant is preserved</Tag>

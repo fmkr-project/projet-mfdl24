@@ -57,7 +57,7 @@ THEORY ListInvariantX IS
   Expanded_List_Invariant(Machine(Network))==(btrue);
   Abstract_List_Invariant(Machine(Network))==(btrue);
   Context_List_Invariant(Machine(Network))==(btrue);
-  List_Invariant(Machine(Network))==(users <: USERS & loggedUsers <: users & masterUser: users & contents: FIN(CONTENTS) & photoContents <: contents & videoContents <: contents & textContents <: contents & privateContents <: contents & pseudos: users >-> PSEUDOS & getContentOwner: contents --> users & getGender: users --> GENDERS & getAge: users --> NATURAL & hasRRights: contents <-> users & hasWRights: contents <-> users & shadow: users >-> PASSWORDS & dom(hasRRights|>{masterUser}) = contents & dom(hasWRights|>{masterUser}) = contents)
+  List_Invariant(Machine(Network))==(users <: USERS & loggedUsers <: users & masterUser: users & contents: FIN(CONTENTS) & photoContents <: contents & videoContents <: contents & textContents <: contents & privateContents <: contents & pseudos: users >-> PSEUDOS & getContentOwner: contents --> users & getGender: users --> GENDERS & getAge: users --> NATURAL & hasRRights: contents <-> users & hasWRights: contents <-> users & shadow: users --> PASSWORDS & dom(hasRRights|>{masterUser}) = contents & dom(hasWRights|>{masterUser}) = contents)
 END
 &
 THEORY ListAssertionsX IS

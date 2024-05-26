@@ -62,7 +62,7 @@
     </Define>
     <Define name="inprp" hash="0"/>
     <Define name="inext" hash="0"/>
-    <Define name="inv" hash="18767529">
+    <Define name="inv" hash="1813767713">
         <Exp_Comparison op="&lt;:">
             <Id value="users" typref="0" tag="C:\Users\thayt\Documents\iie_s4\mfdl\projet-mfdl24\bdp\Network.bxml:1:5:1:1:1"/>
             <Id value="USERS" typref="0" tag="C:\Users\thayt\Documents\iie_s4\mfdl\projet-mfdl24\bdp\Network.bxml:1:5:1:1:2"/>
@@ -141,7 +141,7 @@
         </Exp_Comparison>
         <Exp_Comparison op=":">
             <Id value="shadow" typref="3" tag="C:\Users\thayt\Documents\iie_s4\mfdl\projet-mfdl24\bdp\Network.bxml:1:5:1:15:1"/>
-            <Binary_Exp op="&gt;-&gt;" typref="4">
+            <Binary_Exp op="--&gt;" typref="4">
                 <Id value="users" typref="0" tag="C:\Users\thayt\Documents\iie_s4\mfdl\projet-mfdl24\bdp\Network.bxml:1:5:1:15:2:1"/>
                 <Id value="PASSWORDS" typref="0" tag="C:\Users\thayt\Documents\iie_s4\mfdl\projet-mfdl24\bdp\Network.bxml:1:5:1:15:2:2"/>
             </Binary_Exp>
@@ -201,7 +201,7 @@
             <Id value="PASSWORDS" typref="0"/>
         </Set>
     </Define>
-    <Proof_Obligation goalHash="1973518452">
+    <Proof_Obligation goalHash="43706911">
         <Tag>Initialisation</Tag>
         <Definition name="B definitions"/>
         <Definition name="ctx"/>
@@ -338,7 +338,7 @@
                             <Id value="masterPassword" typref="1" tag="C:\Users\thayt\Documents\iie_s4\mfdl\projet-mfdl24\bdp\Network.bxml:1:6:1:14:2:1:1:2"/>
                         </Binary_Exp>
                     </Nary_Exp>
-                    <Binary_Exp op="&gt;-&gt;" typref="4">
+                    <Binary_Exp op="--&gt;" typref="4">
                         <Nary_Exp op="{" typref="0" tag="C:\Users\thayt\Documents\iie_s4\mfdl\projet-mfdl24\bdp\Network.bxml:1:5:1:15:2:1">
                             <Id value="masterUser" typref="1" tag="C:\Users\thayt\Documents\iie_s4\mfdl\projet-mfdl24\bdp\Network.bxml:1:6:1:1:2:1:1"/>
                         </Nary_Exp>
@@ -364,7 +364,7 @@
             </Goal>
         </Simple_Goal>
     </Proof_Obligation>
-    <Proof_Obligation goalHash="1370055322">
+    <Proof_Obligation goalHash="2078908792">
         <Tag>Operation_SetGender</Tag>
         <Definition name="B definitions"/>
         <Definition name="ctx"/>
@@ -408,7 +408,7 @@
             </Goal>
         </Simple_Goal>
     </Proof_Obligation>
-    <Proof_Obligation goalHash="4274340564">
+    <Proof_Obligation goalHash="2796143259">
         <Tag>Operation_SetAge</Tag>
         <Definition name="B definitions"/>
         <Definition name="ctx"/>
@@ -458,7 +458,7 @@
             </Goal>
         </Simple_Goal>
     </Proof_Obligation>
-    <Proof_Obligation goalHash="2550184146">
+    <Proof_Obligation goalHash="973390838">
         <Tag>Operation_SetPseudo</Tag>
         <Definition name="B definitions"/>
         <Definition name="ctx"/>
@@ -520,7 +520,7 @@
             </Goal>
         </Simple_Goal>
     </Proof_Obligation>
-    <Proof_Obligation goalHash="274817291">
+    <Proof_Obligation goalHash="266804727">
         <Tag>Operation_LogIn</Tag>
         <Definition name="B definitions"/>
         <Definition name="ctx"/>
@@ -593,7 +593,7 @@
             </Goal>
         </Simple_Goal>
     </Proof_Obligation>
-    <Proof_Obligation goalHash="3273340153">
+    <Proof_Obligation goalHash="1991832404">
         <Tag>Operation_LogOut</Tag>
         <Definition name="B definitions"/>
         <Definition name="ctx"/>
@@ -637,7 +637,7 @@
             </Goal>
         </Simple_Goal>
     </Proof_Obligation>
-    <Proof_Obligation goalHash="3233268069">
+    <Proof_Obligation goalHash="2494576134">
         <Tag>Operation_AddUser</Tag>
         <Definition name="B definitions"/>
         <Definition name="ctx"/>
@@ -901,7 +901,7 @@
                             </Binary_Exp>
                         </Nary_Exp>
                     </Binary_Exp>
-                    <Binary_Exp op="&gt;-&gt;" typref="4">
+                    <Binary_Exp op="--&gt;" typref="4">
                         <Binary_Exp op="\/" typref="0" tag="C:\Users\thayt\Documents\iie_s4\mfdl\projet-mfdl24\bdp\Network.bxml:1:5:1:15:2:1">
                             <Id value="users" typref="0" tag="C:\Users\thayt\Documents\iie_s4\mfdl\projet-mfdl24\bdp\Network.bxml:1:7:6:3:1:1:2:1:1"/>
                             <Nary_Exp op="{" typref="0">
@@ -914,7 +914,7 @@
             </Goal>
         </Simple_Goal>
     </Proof_Obligation>
-    <Proof_Obligation goalHash="655475050">
+    <Proof_Obligation goalHash="1127287488">
         <Tag>Operation_DeleteUser</Tag>
         <Definition name="B definitions"/>
         <Definition name="ctx"/>
@@ -1321,7 +1321,7 @@
                         </Nary_Exp>
                         <Id value="shadow" typref="3" tag="C:\Users\thayt\Documents\iie_s4\mfdl\projet-mfdl24\bdp\Network.bxml:1:7:7:3:1:6:2:1:2"/>
                     </Binary_Exp>
-                    <Binary_Exp op="&gt;-&gt;" typref="4">
+                    <Binary_Exp op="--&gt;" typref="4">
                         <Binary_Exp op="-s" typref="0" tag="C:\Users\thayt\Documents\iie_s4\mfdl\projet-mfdl24\bdp\Network.bxml:1:5:1:15:2:1">
                             <Id value="users" typref="0" tag="C:\Users\thayt\Documents\iie_s4\mfdl\projet-mfdl24\bdp\Network.bxml:1:7:7:3:1:1:2:1:1"/>
                             <Nary_Exp op="{" typref="0">
@@ -1416,7 +1416,7 @@
             </Goal>
         </Simple_Goal>
     </Proof_Obligation>
-    <Proof_Obligation goalHash="3463183446">
+    <Proof_Obligation goalHash="4117121436">
         <Tag>Operation_PublishContent</Tag>
         <Definition name="B definitions"/>
         <Definition name="ctx"/>
@@ -2497,7 +2497,7 @@
             </Goal>
         </Simple_Goal>
     </Proof_Obligation>
-    <Proof_Obligation goalHash="223613210">
+    <Proof_Obligation goalHash="2183425202">
         <Tag>Operation_DeleteContent</Tag>
         <Definition name="B definitions"/>
         <Definition name="ctx"/>
@@ -3003,7 +3003,7 @@
                         </Nary_Exp>
                         <Id value="shadow" typref="3" tag="C:\Users\thayt\Documents\iie_s4\mfdl\projet-mfdl24\bdp\Network.bxml:1:7:9:3:1:2:1:6:2:1:2"/>
                     </Binary_Exp>
-                    <Binary_Exp op="&gt;-&gt;" typref="4">
+                    <Binary_Exp op="--&gt;" typref="4">
                         <Binary_Exp op="-s" typref="0" tag="C:\Users\thayt\Documents\iie_s4\mfdl\projet-mfdl24\bdp\Network.bxml:1:5:1:15:2:1">
                             <Id value="users" typref="0" tag="C:\Users\thayt\Documents\iie_s4\mfdl\projet-mfdl24\bdp\Network.bxml:1:7:9:3:1:2:1:1:2:1:1"/>
                             <Nary_Exp op="{" typref="0">
@@ -3322,7 +3322,7 @@
             </Goal>
         </Simple_Goal>
     </Proof_Obligation>
-    <Proof_Obligation goalHash="32773638">
+    <Proof_Obligation goalHash="2383385377">
         <Tag>Operation_SetPrivateContent</Tag>
         <Definition name="B definitions"/>
         <Definition name="ctx"/>
@@ -3393,7 +3393,7 @@
             </Goal>
         </Simple_Goal>
     </Proof_Obligation>
-    <Proof_Obligation goalHash="63836091">
+    <Proof_Obligation goalHash="3106987702">
         <Tag>Operation_SetPublicContent</Tag>
         <Definition name="B definitions"/>
         <Definition name="ctx"/>
@@ -3464,7 +3464,7 @@
             </Goal>
         </Simple_Goal>
     </Proof_Obligation>
-    <Proof_Obligation goalHash="1877903610">
+    <Proof_Obligation goalHash="3853267323">
         <Tag>Operation_GrantRRights</Tag>
         <Definition name="B definitions"/>
         <Definition name="ctx"/>
@@ -3585,7 +3585,7 @@
             </Goal>
         </Simple_Goal>
     </Proof_Obligation>
-    <Proof_Obligation goalHash="649089408">
+    <Proof_Obligation goalHash="3782759994">
         <Tag>Operation_RevokeRRights</Tag>
         <Definition name="B definitions"/>
         <Definition name="ctx"/>
@@ -3714,7 +3714,7 @@
             </Goal>
         </Simple_Goal>
     </Proof_Obligation>
-    <Proof_Obligation goalHash="3126567937">
+    <Proof_Obligation goalHash="53815099">
         <Tag>Operation_GrantWRights</Tag>
         <Definition name="B definitions"/>
         <Definition name="ctx"/>
@@ -3879,7 +3879,7 @@
             </Goal>
         </Simple_Goal>
     </Proof_Obligation>
-    <Proof_Obligation goalHash="1812826789">
+    <Proof_Obligation goalHash="1030260556">
         <Tag>Operation_RevokeWRights</Tag>
         <Definition name="B definitions"/>
         <Definition name="ctx"/>

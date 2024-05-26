@@ -58,7 +58,7 @@ INVARIANT
     getAge : users → ℕ &
     hasRRights : contents ↔ users &
     hasWRights : contents ↔ users &
-    shadow : users ↣ PASSWORDS &
+    shadow : users → PASSWORDS &
     
     // Properties on constants
     dom(hasRRights ▷ {masterUser}) = contents &
