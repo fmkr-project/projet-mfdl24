@@ -38,7 +38,7 @@ ABSTRACT_VARIABLES
     getGender ,
     getAge ,
     hasNoRRights ,
-    hasNoWRights ,
+    hasWRights ,
     shadow // /etc/shadow
 
 INVARIANT
@@ -57,13 +57,13 @@ INVARIANT
     getGender : users --> GENDERS &
     getAge : users --> NATURAL &
     hasNoRRights : contents <-> users &
-    hasNoWRights : contents <-> users &
+    hasWRights : contents <-> users &
     shadow : users --> PASSWORDS &
 
     // Properties on constants
     // Every content is always accessible to the master user
     dom ( hasNoRRights |> { masterUser } ) = {} &
-    dom ( hasNoWRights |> { masterUser } ) = {}
+    dom ( hasWRights |> { masterUser } ) = contents
 
 
 INITIALISATION
@@ -80,7 +80,7 @@ INITIALISATION
     getGender := { masterUser |-> NB } ||
     getAge := { masterUser |-> 666 } ||
     hasNoRRights := {} ||
-    hasNoWRights := {} ||
+    hasWRights := {} ||
     shadow := { masterUser |-> masterPassword }
 
 
@@ -167,7 +167,7 @@ OPERATIONS
         // Delete RW rights associated with the user's contents
         // Delete RW rights of the user on other people's contents
         hasNoRRights := dom ( getContentOwner |>> { user } ) <| ( hasNoRRights |>> { user } ) ||
-        hasNoWRights := dom ( getContentOwner |>> { user } ) <| ( hasNoWRights |>> { user } )
+        hasWRights := dom ( getContentOwner |>> { user } ) <| ( hasWRights |>> { user } )
     END ;
 
     // Content management
@@ -180,6 +180,9 @@ OPERATIONS
     THEN
         contents := contents \/ { content } ||
         getContentOwner := getContentOwner \/ { content |-> user } ||
+
+        // Master user and creator can edit the content
+        hasWRights := hasWRights \/ { content |-> user } \/ { content |-> masterUser } ||
 
         // Filter on content type
         IF contentType = PHOTO THEN
@@ -221,7 +224,7 @@ OPERATIONS
             // Delete RW rights associated with the user's contents
             // Delete RW rights of the user on other people's contents
             hasNoRRights := dom ( getContentOwner |>> { user } ) <| ( hasNoRRights |>> { user } ) ||
-            hasNoWRights := dom ( getContentOwner |>> { user } ) <| ( hasNoWRights |>> { user } )
+            hasWRights := dom ( getContentOwner |>> { user } ) <| ( hasWRights |>> { user } )
         ELSE
             contents := contents - { content } ||
             privateContents := privateContents - { content } ||
@@ -231,7 +234,7 @@ OPERATIONS
             // Revoke all rights on content
             getContentOwner := { content } <<| getContentOwner ||
             hasNoRRights := { content } <<| hasNoRRights ||
-            hasNoWRights := { content } <<| hasNoWRights
+            hasWRights := { content } <<| hasWRights
         END
     END ;
 
@@ -282,8 +285,7 @@ OPERATIONS
         target : USERS & target : users & target /= from & target /= masterUser &
         ( getContentOwner ( content ) = from or from = masterUser )
     THEN
-        hasNoRRights := hasNoRRights \/ { content |-> target } ||
-        hasNoWRights := hasNoWRights \/ { content |-> target }
+        hasWRights := hasWRights - { content |-> target }
     END ;
 
     GrantWRights ( from , content , target ) =
@@ -294,6 +296,6 @@ OPERATIONS
         ( getContentOwner ( content ) = from or from = masterUser )
     THEN
         hasNoRRights := hasNoRRights - { content |-> target } ||
-        hasNoWRights := hasNoWRights - { content |-> target }
+        hasWRights := hasWRights \/ { content |-> target }
     END
 END
