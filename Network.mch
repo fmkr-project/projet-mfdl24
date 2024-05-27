@@ -37,8 +37,8 @@ ABSTRACT_VARIABLES
     getContentOwner,
     getGender,
     getAge,
-    hasRRights,
-    hasWRights,
+    hasNoRRights,
+    hasNoWRights,
     shadow // /etc/shadow
     
 INVARIANT
@@ -56,13 +56,14 @@ INVARIANT
     getContentOwner : contents → users &
     getGender : users → GENDERS &
     getAge : users → ℕ &
-    hasRRights : contents ↔ users &
-    hasWRights : contents ↔ users &
+    hasNoRRights : contents ↔ users &
+    hasNoWRights : contents ↔ users &
     shadow : users → PASSWORDS &
     
     // Properties on constants
-    dom(hasRRights ▷ {masterUser}) = contents &
-    dom(hasWRights ▷ {masterUser}) = contents
+    // Every content is always accessible to the master user
+    dom(hasNoRRights ▷ {masterUser}) = {} &
+    dom(hasNoWRights ▷ {masterUser}) = {}
 
 
 INITIALISATION
@@ -78,8 +79,8 @@ INITIALISATION
     getContentOwner := {} ||
     getGender := {masterUser ↦ NB} ||
     getAge := {masterUser ↦ 666} ||
-    hasRRights := {} ||
-    hasWRights := {} ||
+    hasNoRRights := {} ||
+    hasNoWRights := {} ||
     shadow := {masterUser ↦ masterPassword}
 
 
@@ -165,8 +166,8 @@ OPERATIONS
         
         // Delete RW rights associated with the user's contents
         // Delete RW rights of the user on other people's contents
-        hasRRights := dom(getContentOwner ▶ {user}) ◁ (hasRRights ▶ {user}) ||
-        hasWRights := dom(getContentOwner ▶ {user}) ◁ (hasWRights ▶ {user})
+        hasNoRRights := dom(getContentOwner ▶ {user}) ◁ (hasNoRRights ▶ {user}) ||
+        hasNoWRights := dom(getContentOwner ▶ {user}) ◁ (hasNoWRights ▶ {user})
     END;
     
     // Content management
@@ -179,10 +180,7 @@ OPERATIONS
     THEN
         contents := contents ∪ {content} ||
         getContentOwner := getContentOwner ∪ {content ↦ user} ||
-        // Content creator has RW rights
-        // Master user always has RW rights
-        hasRRights := hasRRights ∪ {content ↦ user, content ↦ masterUser} ||
-        hasWRights := hasWRights ∪ {content ↦ user, content ↦ masterUser} ||
+        
         // Filter on content type
         IF contentType = PHOTO THEN
             photoContents := photoContents ∪ {content}
@@ -222,8 +220,8 @@ OPERATIONS
             
             // Delete RW rights associated with the user's contents
             // Delete RW rights of the user on other people's contents
-            hasRRights := dom(getContentOwner ▶ {user}) ◁ (hasRRights ▶ {user}) ||
-            hasWRights := dom(getContentOwner ▶ {user}) ◁ (hasWRights ▶ {user})
+            hasNoRRights := dom(getContentOwner ▶ {user}) ◁ (hasNoRRights ▶ {user}) ||
+            hasNoWRights := dom(getContentOwner ▶ {user}) ◁ (hasNoWRights ▶ {user})
         ELSE
             contents := contents - {content} ||
             privateContents := privateContents - {content} ||
@@ -232,8 +230,8 @@ OPERATIONS
             textContents := textContents - {content} ||
             // Revoke all rights on content
             getContentOwner := {content} ◀ getContentOwner ||
-            hasRRights := {content} ◀ hasRRights ||
-            hasWRights := {content} ◀ hasWRights
+            hasNoRRights := {content} ◀ hasNoRRights ||
+            hasNoWRights := {content} ◀ hasNoWRights
         END
     END;
     
@@ -256,46 +254,46 @@ OPERATIONS
     END;
     
     // Rights management
-    GrantRRights(from, content, target) =
-    PRE
-        from : USERS & from ∈ users & from ∈ loggedUsers &
-        content : CONTENTS & content ∈ contents &
-        target : USERS & target ∈ users & target ≠ from &
-        (getContentOwner(content) = from or from = masterUser)
-    THEN
-        hasRRights := hasRRights ∪ {content ↦ target}
-    END;
-    
     RevokeRRights(from, content, target) =
     PRE
         from : USERS & from ∈ users & from ∈ loggedUsers &
         content : CONTENTS & content ∈ contents &
-        target : USERS & target ∈ users & target ≠ from & target ≠ masterUser & // Possible : target does not have the rights
+        target : USERS & target ∈ users & target ≠ from & target ≠ masterUser &
         (getContentOwner(content) = from or from = masterUser)
     THEN
-        hasRRights := hasRRights - {content ↦ target}
+        hasNoRRights := hasNoRRights ∪ {content ↦ target}
     END;
-        
     
-    GrantWRights(from, content, target) =
+    GrantRRights(from, content, target) =
     PRE
         from : USERS & from ∈ users & from ∈ loggedUsers &
         content : CONTENTS & content ∈ contents &
-        target : USERS & target ∈ users & target ≠ from &
+        target : USERS & target ∈ users & target ≠ from & target ≠ masterUser & // Possible : target does not have the rights
         (getContentOwner(content) = from or from = masterUser)
     THEN
-        hasRRights := hasRRights ∪ {content ↦ target} ||
-        hasWRights := hasWRights ∪ {content ↦ target}
+        hasNoRRights := hasNoRRights - {content ↦ target}
     END;
-
+        
+    
     RevokeWRights(from, content, target) =
     PRE
         from : USERS & from ∈ users & from ∈ loggedUsers &
         content : CONTENTS & content ∈ contents &
+        target : USERS & target ∈ users & target ≠ from & target ≠ masterUser &
+        (getContentOwner(content) = from or from = masterUser)
+    THEN
+        hasNoRRights := hasNoRRights ∪ {content ↦ target} ||
+        hasNoWRights := hasNoWRights ∪ {content ↦ target}
+    END;
+
+    GrantWRights(from, content, target) =
+    PRE
+        from : USERS & from ∈ users & from ∈ loggedUsers &
+        content : CONTENTS & content ∈ contents &
         target : USERS & target ∈ users & target ≠ from & target ≠ masterUser & // Possible : target does not have the rights
         (getContentOwner(content) = from or from = masterUser)
     THEN
-        hasRRights := hasRRights - {content ↦ target} ||
-        hasWRights := hasWRights - {content ↦ target}
+        hasNoRRights := hasNoRRights - {content ↦ target} ||
+        hasNoWRights := hasNoWRights - {content ↦ target}
     END
 END

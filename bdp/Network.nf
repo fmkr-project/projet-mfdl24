@@ -37,9 +37,9 @@ THEORY ListVariablesX IS
   External_Context_List_Variables(Machine(Network))==(?);
   Context_List_Variables(Machine(Network))==(?);
   Abstract_List_Variables(Machine(Network))==(?);
-  Local_List_Variables(Machine(Network))==(shadow,hasWRights,hasRRights,getAge,getGender,getContentOwner,pseudos,privateContents,textContents,videoContents,photoContents,contents,loggedUsers,users);
-  List_Variables(Machine(Network))==(shadow,hasWRights,hasRRights,getAge,getGender,getContentOwner,pseudos,privateContents,textContents,videoContents,photoContents,contents,loggedUsers,users);
-  External_List_Variables(Machine(Network))==(shadow,hasWRights,hasRRights,getAge,getGender,getContentOwner,pseudos,privateContents,textContents,videoContents,photoContents,contents,loggedUsers,users)
+  Local_List_Variables(Machine(Network))==(shadow,hasNoWRights,hasNoRRights,getAge,getGender,getContentOwner,pseudos,privateContents,textContents,videoContents,photoContents,contents,loggedUsers,users);
+  List_Variables(Machine(Network))==(shadow,hasNoWRights,hasNoRRights,getAge,getGender,getContentOwner,pseudos,privateContents,textContents,videoContents,photoContents,contents,loggedUsers,users);
+  External_List_Variables(Machine(Network))==(shadow,hasNoWRights,hasNoRRights,getAge,getGender,getContentOwner,pseudos,privateContents,textContents,videoContents,photoContents,contents,loggedUsers,users)
 END
 &
 THEORY ListVisibleVariablesX IS
@@ -57,7 +57,7 @@ THEORY ListInvariantX IS
   Expanded_List_Invariant(Machine(Network))==(btrue);
   Abstract_List_Invariant(Machine(Network))==(btrue);
   Context_List_Invariant(Machine(Network))==(btrue);
-  List_Invariant(Machine(Network))==(users <: USERS & loggedUsers <: users & masterUser: users & contents: FIN(CONTENTS) & photoContents <: contents & videoContents <: contents & textContents <: contents & privateContents <: contents & pseudos: users >-> PSEUDOS & getContentOwner: contents --> users & getGender: users --> GENDERS & getAge: users --> NATURAL & hasRRights: contents <-> users & hasWRights: contents <-> users & shadow: users --> PASSWORDS & dom(hasRRights|>{masterUser}) = contents & dom(hasWRights|>{masterUser}) = contents)
+  List_Invariant(Machine(Network))==(users <: USERS & loggedUsers <: users & masterUser: users & contents: FIN(CONTENTS) & photoContents <: contents & videoContents <: contents & textContents <: contents & privateContents <: contents & pseudos: users >-> PSEUDOS & getContentOwner: contents --> users & getGender: users --> GENDERS & getAge: users --> NATURAL & hasNoRRights: contents <-> users & hasNoWRights: contents <-> users & shadow: users --> PASSWORDS & dom(hasNoRRights|>{masterUser}) = {} & dom(hasNoWRights|>{masterUser}) = {})
 END
 &
 THEORY ListAssertionsX IS
@@ -76,9 +76,9 @@ THEORY ListExclusivityX IS
 END
 &
 THEORY ListInitialisationX IS
-  Expanded_List_Initialisation(Machine(Network))==(users,loggedUsers,contents,photoContents,videoContents,textContents,privateContents,pseudos,getContentOwner,getGender,getAge,hasRRights,hasWRights,shadow:={masterUser},{masterUser},{},{},{},{},{},{masterUser|->masterPseudo},{},{masterUser|->NB},{masterUser|->666},{},{},{masterUser|->masterPassword});
+  Expanded_List_Initialisation(Machine(Network))==(users,loggedUsers,contents,photoContents,videoContents,textContents,privateContents,pseudos,getContentOwner,getGender,getAge,hasNoRRights,hasNoWRights,shadow:={masterUser},{masterUser},{},{},{},{},{},{masterUser|->masterPseudo},{},{masterUser|->NB},{masterUser|->666},{},{},{masterUser|->masterPassword});
   Context_List_Initialisation(Machine(Network))==(skip);
-  List_Initialisation(Machine(Network))==(users:={masterUser} || loggedUsers:={masterUser} || contents:={} || photoContents:={} || videoContents:={} || textContents:={} || privateContents:={} || pseudos:={masterUser|->masterPseudo} || getContentOwner:={} || getGender:={masterUser|->NB} || getAge:={masterUser|->666} || hasRRights:={} || hasWRights:={} || shadow:={masterUser|->masterPassword})
+  List_Initialisation(Machine(Network))==(users:={masterUser} || loggedUsers:={masterUser} || contents:={} || photoContents:={} || videoContents:={} || textContents:={} || privateContents:={} || pseudos:={masterUser|->masterPseudo} || getContentOwner:={} || getGender:={masterUser|->NB} || getAge:={masterUser|->666} || hasNoRRights:={} || hasNoWRights:={} || shadow:={masterUser|->masterPassword})
 END
 &
 THEORY ListParametersX IS
@@ -93,8 +93,8 @@ THEORY ListConstraintsX IS
 END
 &
 THEORY ListOperationsX IS
-  Internal_List_Operations(Machine(Network))==(SetGender,SetAge,SetPseudo,LogIn,LogOut,AddUser,DeleteUser,PublishContent,DeleteContent,SetPrivateContent,SetPublicContent,GrantRRights,RevokeRRights,GrantWRights,RevokeWRights);
-  List_Operations(Machine(Network))==(SetGender,SetAge,SetPseudo,LogIn,LogOut,AddUser,DeleteUser,PublishContent,DeleteContent,SetPrivateContent,SetPublicContent,GrantRRights,RevokeRRights,GrantWRights,RevokeWRights)
+  Internal_List_Operations(Machine(Network))==(SetGender,SetAge,SetPseudo,LogIn,LogOut,AddUser,DeleteUser,PublishContent,DeleteContent,SetPrivateContent,SetPublicContent,RevokeRRights,GrantRRights,RevokeWRights,GrantWRights);
+  List_Operations(Machine(Network))==(SetGender,SetAge,SetPseudo,LogIn,LogOut,AddUser,DeleteUser,PublishContent,DeleteContent,SetPrivateContent,SetPublicContent,RevokeRRights,GrantRRights,RevokeWRights,GrantWRights)
 END
 &
 THEORY ListInputX IS
@@ -109,10 +109,10 @@ THEORY ListInputX IS
   List_Input(Machine(Network),DeleteContent)==(user,content);
   List_Input(Machine(Network),SetPrivateContent)==(user,content);
   List_Input(Machine(Network),SetPublicContent)==(user,content);
-  List_Input(Machine(Network),GrantRRights)==(from,content,target);
   List_Input(Machine(Network),RevokeRRights)==(from,content,target);
-  List_Input(Machine(Network),GrantWRights)==(from,content,target);
-  List_Input(Machine(Network),RevokeWRights)==(from,content,target)
+  List_Input(Machine(Network),GrantRRights)==(from,content,target);
+  List_Input(Machine(Network),RevokeWRights)==(from,content,target);
+  List_Input(Machine(Network),GrantWRights)==(from,content,target)
 END
 &
 THEORY ListOutputX IS
@@ -127,10 +127,10 @@ THEORY ListOutputX IS
   List_Output(Machine(Network),DeleteContent)==(?);
   List_Output(Machine(Network),SetPrivateContent)==(?);
   List_Output(Machine(Network),SetPublicContent)==(?);
-  List_Output(Machine(Network),GrantRRights)==(?);
   List_Output(Machine(Network),RevokeRRights)==(?);
-  List_Output(Machine(Network),GrantWRights)==(?);
-  List_Output(Machine(Network),RevokeWRights)==(?)
+  List_Output(Machine(Network),GrantRRights)==(?);
+  List_Output(Machine(Network),RevokeWRights)==(?);
+  List_Output(Machine(Network),GrantWRights)==(?)
 END
 &
 THEORY ListHeaderX IS
@@ -145,10 +145,10 @@ THEORY ListHeaderX IS
   List_Header(Machine(Network),DeleteContent)==(DeleteContent(user,content));
   List_Header(Machine(Network),SetPrivateContent)==(SetPrivateContent(user,content));
   List_Header(Machine(Network),SetPublicContent)==(SetPublicContent(user,content));
-  List_Header(Machine(Network),GrantRRights)==(GrantRRights(from,content,target));
   List_Header(Machine(Network),RevokeRRights)==(RevokeRRights(from,content,target));
-  List_Header(Machine(Network),GrantWRights)==(GrantWRights(from,content,target));
-  List_Header(Machine(Network),RevokeWRights)==(RevokeWRights(from,content,target))
+  List_Header(Machine(Network),GrantRRights)==(GrantRRights(from,content,target));
+  List_Header(Machine(Network),RevokeWRights)==(RevokeWRights(from,content,target));
+  List_Header(Machine(Network),GrantWRights)==(GrantWRights(from,content,target))
 END
 &
 THEORY ListOperationGuardX END
@@ -165,22 +165,22 @@ THEORY ListPreconditionX IS
   List_Precondition(Machine(Network),DeleteContent)==(user: USERS & user: users & user: loggedUsers & content: CONTENTS & content: contents & (getContentOwner(content) = user or user = masterUser));
   List_Precondition(Machine(Network),SetPrivateContent)==(user: USERS & user: users & user: loggedUsers & content: CONTENTS & content: contents & (getContentOwner(content) = user or user = masterUser));
   List_Precondition(Machine(Network),SetPublicContent)==(user: USERS & user: users & user: loggedUsers & content: CONTENTS & content: contents & (getContentOwner(content) = user or user = masterUser));
-  List_Precondition(Machine(Network),GrantRRights)==(from: USERS & from: users & from: loggedUsers & content: CONTENTS & content: contents & target: USERS & target: users & target/=from & (getContentOwner(content) = from or from = masterUser));
   List_Precondition(Machine(Network),RevokeRRights)==(from: USERS & from: users & from: loggedUsers & content: CONTENTS & content: contents & target: USERS & target: users & target/=from & target/=masterUser & (getContentOwner(content) = from or from = masterUser));
-  List_Precondition(Machine(Network),GrantWRights)==(from: USERS & from: users & from: loggedUsers & content: CONTENTS & content: contents & target: USERS & target: users & target/=from & (getContentOwner(content) = from or from = masterUser));
-  List_Precondition(Machine(Network),RevokeWRights)==(from: USERS & from: users & from: loggedUsers & content: CONTENTS & content: contents & target: USERS & target: users & target/=from & target/=masterUser & (getContentOwner(content) = from or from = masterUser))
+  List_Precondition(Machine(Network),GrantRRights)==(from: USERS & from: users & from: loggedUsers & content: CONTENTS & content: contents & target: USERS & target: users & target/=from & target/=masterUser & (getContentOwner(content) = from or from = masterUser));
+  List_Precondition(Machine(Network),RevokeWRights)==(from: USERS & from: users & from: loggedUsers & content: CONTENTS & content: contents & target: USERS & target: users & target/=from & target/=masterUser & (getContentOwner(content) = from or from = masterUser));
+  List_Precondition(Machine(Network),GrantWRights)==(from: USERS & from: users & from: loggedUsers & content: CONTENTS & content: contents & target: USERS & target: users & target/=from & target/=masterUser & (getContentOwner(content) = from or from = masterUser))
 END
 &
 THEORY ListSubstitutionX IS
-  Expanded_List_Substitution(Machine(Network),RevokeWRights)==(from: USERS & from: users & from: loggedUsers & content: CONTENTS & content: contents & target: USERS & target: users & target/=from & target/=masterUser & (getContentOwner(content) = from or from = masterUser) | hasRRights,hasWRights:=hasRRights-{content|->target},hasWRights-{content|->target});
-  Expanded_List_Substitution(Machine(Network),GrantWRights)==(from: USERS & from: users & from: loggedUsers & content: CONTENTS & content: contents & target: USERS & target: users & target/=from & (getContentOwner(content) = from or from = masterUser) | hasRRights,hasWRights:=hasRRights\/{content|->target},hasWRights\/{content|->target});
-  Expanded_List_Substitution(Machine(Network),RevokeRRights)==(from: USERS & from: users & from: loggedUsers & content: CONTENTS & content: contents & target: USERS & target: users & target/=from & target/=masterUser & (getContentOwner(content) = from or from = masterUser) | hasRRights:=hasRRights-{content|->target});
-  Expanded_List_Substitution(Machine(Network),GrantRRights)==(from: USERS & from: users & from: loggedUsers & content: CONTENTS & content: contents & target: USERS & target: users & target/=from & (getContentOwner(content) = from or from = masterUser) | hasRRights:=hasRRights\/{content|->target});
+  Expanded_List_Substitution(Machine(Network),GrantWRights)==(from: USERS & from: users & from: loggedUsers & content: CONTENTS & content: contents & target: USERS & target: users & target/=from & target/=masterUser & (getContentOwner(content) = from or from = masterUser) | hasNoRRights,hasNoWRights:=hasNoRRights-{content|->target},hasNoWRights-{content|->target});
+  Expanded_List_Substitution(Machine(Network),RevokeWRights)==(from: USERS & from: users & from: loggedUsers & content: CONTENTS & content: contents & target: USERS & target: users & target/=from & target/=masterUser & (getContentOwner(content) = from or from = masterUser) | hasNoRRights,hasNoWRights:=hasNoRRights\/{content|->target},hasNoWRights\/{content|->target});
+  Expanded_List_Substitution(Machine(Network),GrantRRights)==(from: USERS & from: users & from: loggedUsers & content: CONTENTS & content: contents & target: USERS & target: users & target/=from & target/=masterUser & (getContentOwner(content) = from or from = masterUser) | hasNoRRights:=hasNoRRights-{content|->target});
+  Expanded_List_Substitution(Machine(Network),RevokeRRights)==(from: USERS & from: users & from: loggedUsers & content: CONTENTS & content: contents & target: USERS & target: users & target/=from & target/=masterUser & (getContentOwner(content) = from or from = masterUser) | hasNoRRights:=hasNoRRights\/{content|->target});
   Expanded_List_Substitution(Machine(Network),SetPublicContent)==(user: USERS & user: users & user: loggedUsers & content: CONTENTS & content: contents & (getContentOwner(content) = user or user = masterUser) | privateContents:=privateContents-{content});
   Expanded_List_Substitution(Machine(Network),SetPrivateContent)==(user: USERS & user: users & user: loggedUsers & content: CONTENTS & content: contents & (getContentOwner(content) = user or user = masterUser) | privateContents:=privateContents\/{content});
-  Expanded_List_Substitution(Machine(Network),DeleteContent)==(user: USERS & user: users & user: loggedUsers & content: CONTENTS & content: contents & (getContentOwner(content) = user or user = masterUser) | card(getContentOwner|>{user}) = 1 & user/=masterUser ==> users,loggedUsers,getGender,getAge,pseudos,shadow,contents,photoContents,videoContents,textContents,privateContents,getContentOwner,hasRRights,hasWRights:=users-{user},loggedUsers-{user},{user}<<|getGender,{user}<<|getAge,{user}<<|pseudos,{user}<<|shadow,contents-dom(getContentOwner|>{user}),photoContents-dom(getContentOwner|>{user}),videoContents-dom(getContentOwner|>{user}),textContents-dom(getContentOwner|>{user}),privateContents-dom(getContentOwner|>{user}),getContentOwner|>>{user},dom(getContentOwner|>>{user})<|(hasRRights|>>{user}),dom(getContentOwner|>>{user})<|(hasWRights|>>{user}) [] not(card(getContentOwner|>{user}) = 1 & user/=masterUser) ==> contents,privateContents,photoContents,videoContents,textContents,getContentOwner,hasRRights,hasWRights:=contents-{content},privateContents-{content},photoContents-{content},videoContents-{content},textContents-{content},{content}<<|getContentOwner,{content}<<|hasRRights,{content}<<|hasWRights);
-  Expanded_List_Substitution(Machine(Network),PublishContent)==(user: USERS & user: users & user: loggedUsers & content: CONTENTS & content/:contents & contentType: CONTENT_TYPES | contents,getContentOwner,hasRRights,hasWRights:=contents\/{content},getContentOwner\/{content|->user},hasRRights\/{content|->user,content|->masterUser},hasWRights\/{content|->user,content|->masterUser} || (contentType = PHOTO ==> photoContents:=photoContents\/{content} [] not(contentType = PHOTO) ==> (contentType = VIDEO ==> videoContents:=videoContents\/{content} [] not(contentType = VIDEO) ==> (contentType = TEXT ==> textContents:=textContents\/{content} [] not(contentType = TEXT) ==> skip))));
-  Expanded_List_Substitution(Machine(Network),DeleteUser)==(user: USERS & user: users & user/=masterUser | users,loggedUsers,getGender,getAge,pseudos,shadow,contents,privateContents,photoContents,videoContents,textContents,getContentOwner,hasRRights,hasWRights:=users-{user},loggedUsers-{user},{user}<<|getGender,{user}<<|getAge,{user}<<|pseudos,{user}<<|shadow,contents-dom(getContentOwner|>{user}),privateContents-dom(getContentOwner|>{user}),photoContents-dom(getContentOwner|>{user}),videoContents-dom(getContentOwner|>{user}),textContents-dom(getContentOwner|>{user}),getContentOwner|>>{user},dom(getContentOwner|>>{user})<|(hasRRights|>>{user}),dom(getContentOwner|>>{user})<|(hasWRights|>>{user}));
+  Expanded_List_Substitution(Machine(Network),DeleteContent)==(user: USERS & user: users & user: loggedUsers & content: CONTENTS & content: contents & (getContentOwner(content) = user or user = masterUser) | card(getContentOwner|>{user}) = 1 & user/=masterUser ==> users,loggedUsers,getGender,getAge,pseudos,shadow,contents,photoContents,videoContents,textContents,privateContents,getContentOwner,hasNoRRights,hasNoWRights:=users-{user},loggedUsers-{user},{user}<<|getGender,{user}<<|getAge,{user}<<|pseudos,{user}<<|shadow,contents-dom(getContentOwner|>{user}),photoContents-dom(getContentOwner|>{user}),videoContents-dom(getContentOwner|>{user}),textContents-dom(getContentOwner|>{user}),privateContents-dom(getContentOwner|>{user}),getContentOwner|>>{user},dom(getContentOwner|>>{user})<|(hasNoRRights|>>{user}),dom(getContentOwner|>>{user})<|(hasNoWRights|>>{user}) [] not(card(getContentOwner|>{user}) = 1 & user/=masterUser) ==> contents,privateContents,photoContents,videoContents,textContents,getContentOwner,hasNoRRights,hasNoWRights:=contents-{content},privateContents-{content},photoContents-{content},videoContents-{content},textContents-{content},{content}<<|getContentOwner,{content}<<|hasNoRRights,{content}<<|hasNoWRights);
+  Expanded_List_Substitution(Machine(Network),PublishContent)==(user: USERS & user: users & user: loggedUsers & content: CONTENTS & content/:contents & contentType: CONTENT_TYPES | contents,getContentOwner:=contents\/{content},getContentOwner\/{content|->user} || (contentType = PHOTO ==> photoContents:=photoContents\/{content} [] not(contentType = PHOTO) ==> (contentType = VIDEO ==> videoContents:=videoContents\/{content} [] not(contentType = VIDEO) ==> (contentType = TEXT ==> textContents:=textContents\/{content} [] not(contentType = TEXT) ==> skip))));
+  Expanded_List_Substitution(Machine(Network),DeleteUser)==(user: USERS & user: users & user/=masterUser | users,loggedUsers,getGender,getAge,pseudos,shadow,contents,privateContents,photoContents,videoContents,textContents,getContentOwner,hasNoRRights,hasNoWRights:=users-{user},loggedUsers-{user},{user}<<|getGender,{user}<<|getAge,{user}<<|pseudos,{user}<<|shadow,contents-dom(getContentOwner|>{user}),privateContents-dom(getContentOwner|>{user}),photoContents-dom(getContentOwner|>{user}),videoContents-dom(getContentOwner|>{user}),textContents-dom(getContentOwner|>{user}),getContentOwner|>>{user},dom(getContentOwner|>>{user})<|(hasNoRRights|>>{user}),dom(getContentOwner|>>{user})<|(hasNoWRights|>>{user}));
   Expanded_List_Substitution(Machine(Network),AddUser)==(user: USERS & user/:users & user/=masterUser & pseudo: PSEUDOS & pseudo/:ran(pseudos) & pwd: PASSWORDS & pwd/:ran(shadow) & gender: GENDERS & age: NATURAL & age>=18 | users,shadow,pseudos,getGender,getAge:=users\/{user},shadow<+{user|->pwd},pseudos<+{user|->pseudo},getGender\/{user|->gender},getAge<+{user|->age});
   Expanded_List_Substitution(Machine(Network),LogOut)==(user: USERS & user: users & user: loggedUsers | loggedUsers:=loggedUsers-{user});
   Expanded_List_Substitution(Machine(Network),LogIn)==(pseudo: PSEUDOS & pseudo: ran(pseudos) & pwd: PASSWORDS & pwd: ran(shadow) & shadow(pseudos~(pseudo)) = pwd | loggedUsers:=loggedUsers\/{pseudos~(pseudo)});
@@ -193,15 +193,15 @@ THEORY ListSubstitutionX IS
   List_Substitution(Machine(Network),LogIn)==(loggedUsers:=loggedUsers\/{pseudos~(pseudo)});
   List_Substitution(Machine(Network),LogOut)==(loggedUsers:=loggedUsers-{user});
   List_Substitution(Machine(Network),AddUser)==(users:=users\/{user} || shadow:=shadow<+{user|->pwd} || pseudos:=pseudos<+{user|->pseudo} || getGender:=getGender\/{user|->gender} || getAge:=getAge<+{user|->age});
-  List_Substitution(Machine(Network),DeleteUser)==(users:=users-{user} || loggedUsers:=loggedUsers-{user} || getGender:={user}<<|getGender || getAge:={user}<<|getAge || pseudos:={user}<<|pseudos || shadow:={user}<<|shadow || contents:=contents-dom(getContentOwner|>{user}) || privateContents:=privateContents-dom(getContentOwner|>{user}) || photoContents:=photoContents-dom(getContentOwner|>{user}) || videoContents:=videoContents-dom(getContentOwner|>{user}) || textContents:=textContents-dom(getContentOwner|>{user}) || getContentOwner:=getContentOwner|>>{user} || hasRRights:=dom(getContentOwner|>>{user})<|(hasRRights|>>{user}) || hasWRights:=dom(getContentOwner|>>{user})<|(hasWRights|>>{user}));
-  List_Substitution(Machine(Network),PublishContent)==(contents:=contents\/{content} || getContentOwner:=getContentOwner\/{content|->user} || hasRRights:=hasRRights\/{content|->user,content|->masterUser} || hasWRights:=hasWRights\/{content|->user,content|->masterUser} || IF contentType = PHOTO THEN photoContents:=photoContents\/{content} ELSIF contentType = VIDEO THEN videoContents:=videoContents\/{content} ELSIF contentType = TEXT THEN textContents:=textContents\/{content} END);
-  List_Substitution(Machine(Network),DeleteContent)==(IF card(getContentOwner|>{user}) = 1 & user/=masterUser THEN users:=users-{user} || loggedUsers:=loggedUsers-{user} || getGender:={user}<<|getGender || getAge:={user}<<|getAge || pseudos:={user}<<|pseudos || shadow:={user}<<|shadow || contents:=contents-dom(getContentOwner|>{user}) || photoContents:=photoContents-dom(getContentOwner|>{user}) || videoContents:=videoContents-dom(getContentOwner|>{user}) || textContents:=textContents-dom(getContentOwner|>{user}) || privateContents:=privateContents-dom(getContentOwner|>{user}) || getContentOwner:=getContentOwner|>>{user} || hasRRights:=dom(getContentOwner|>>{user})<|(hasRRights|>>{user}) || hasWRights:=dom(getContentOwner|>>{user})<|(hasWRights|>>{user}) ELSE contents:=contents-{content} || privateContents:=privateContents-{content} || photoContents:=photoContents-{content} || videoContents:=videoContents-{content} || textContents:=textContents-{content} || getContentOwner:={content}<<|getContentOwner || hasRRights:={content}<<|hasRRights || hasWRights:={content}<<|hasWRights END);
+  List_Substitution(Machine(Network),DeleteUser)==(users:=users-{user} || loggedUsers:=loggedUsers-{user} || getGender:={user}<<|getGender || getAge:={user}<<|getAge || pseudos:={user}<<|pseudos || shadow:={user}<<|shadow || contents:=contents-dom(getContentOwner|>{user}) || privateContents:=privateContents-dom(getContentOwner|>{user}) || photoContents:=photoContents-dom(getContentOwner|>{user}) || videoContents:=videoContents-dom(getContentOwner|>{user}) || textContents:=textContents-dom(getContentOwner|>{user}) || getContentOwner:=getContentOwner|>>{user} || hasNoRRights:=dom(getContentOwner|>>{user})<|(hasNoRRights|>>{user}) || hasNoWRights:=dom(getContentOwner|>>{user})<|(hasNoWRights|>>{user}));
+  List_Substitution(Machine(Network),PublishContent)==(contents:=contents\/{content} || getContentOwner:=getContentOwner\/{content|->user} || IF contentType = PHOTO THEN photoContents:=photoContents\/{content} ELSIF contentType = VIDEO THEN videoContents:=videoContents\/{content} ELSIF contentType = TEXT THEN textContents:=textContents\/{content} END);
+  List_Substitution(Machine(Network),DeleteContent)==(IF card(getContentOwner|>{user}) = 1 & user/=masterUser THEN users:=users-{user} || loggedUsers:=loggedUsers-{user} || getGender:={user}<<|getGender || getAge:={user}<<|getAge || pseudos:={user}<<|pseudos || shadow:={user}<<|shadow || contents:=contents-dom(getContentOwner|>{user}) || photoContents:=photoContents-dom(getContentOwner|>{user}) || videoContents:=videoContents-dom(getContentOwner|>{user}) || textContents:=textContents-dom(getContentOwner|>{user}) || privateContents:=privateContents-dom(getContentOwner|>{user}) || getContentOwner:=getContentOwner|>>{user} || hasNoRRights:=dom(getContentOwner|>>{user})<|(hasNoRRights|>>{user}) || hasNoWRights:=dom(getContentOwner|>>{user})<|(hasNoWRights|>>{user}) ELSE contents:=contents-{content} || privateContents:=privateContents-{content} || photoContents:=photoContents-{content} || videoContents:=videoContents-{content} || textContents:=textContents-{content} || getContentOwner:={content}<<|getContentOwner || hasNoRRights:={content}<<|hasNoRRights || hasNoWRights:={content}<<|hasNoWRights END);
   List_Substitution(Machine(Network),SetPrivateContent)==(privateContents:=privateContents\/{content});
   List_Substitution(Machine(Network),SetPublicContent)==(privateContents:=privateContents-{content});
-  List_Substitution(Machine(Network),GrantRRights)==(hasRRights:=hasRRights\/{content|->target});
-  List_Substitution(Machine(Network),RevokeRRights)==(hasRRights:=hasRRights-{content|->target});
-  List_Substitution(Machine(Network),GrantWRights)==(hasRRights:=hasRRights\/{content|->target} || hasWRights:=hasWRights\/{content|->target});
-  List_Substitution(Machine(Network),RevokeWRights)==(hasRRights:=hasRRights-{content|->target} || hasWRights:=hasWRights-{content|->target})
+  List_Substitution(Machine(Network),RevokeRRights)==(hasNoRRights:=hasNoRRights\/{content|->target});
+  List_Substitution(Machine(Network),GrantRRights)==(hasNoRRights:=hasNoRRights-{content|->target});
+  List_Substitution(Machine(Network),RevokeWRights)==(hasNoRRights:=hasNoRRights\/{content|->target} || hasNoWRights:=hasNoWRights\/{content|->target});
+  List_Substitution(Machine(Network),GrantWRights)==(hasNoRRights:=hasNoRRights-{content|->target} || hasNoWRights:=hasNoWRights-{content|->target})
 END
 &
 THEORY ListConstantsX IS
@@ -257,14 +257,14 @@ THEORY ListANYVarX IS
   List_ANY_Var(Machine(Network),DeleteContent)==(?);
   List_ANY_Var(Machine(Network),SetPrivateContent)==(?);
   List_ANY_Var(Machine(Network),SetPublicContent)==(?);
-  List_ANY_Var(Machine(Network),GrantRRights)==(?);
   List_ANY_Var(Machine(Network),RevokeRRights)==(?);
-  List_ANY_Var(Machine(Network),GrantWRights)==(?);
-  List_ANY_Var(Machine(Network),RevokeWRights)==(?)
+  List_ANY_Var(Machine(Network),GrantRRights)==(?);
+  List_ANY_Var(Machine(Network),RevokeWRights)==(?);
+  List_ANY_Var(Machine(Network),GrantWRights)==(?)
 END
 &
 THEORY ListOfIdsX IS
-  List_Of_Ids(Machine(Network)) == (USERS,PSEUDOS,GENDERS,CONTENTS,CONTENT_TYPES,PASSWORDS,MM,FF,NB,PHOTO,VIDEO,TEXT | ? | shadow,hasWRights,hasRRights,getAge,getGender,getContentOwner,pseudos,privateContents,textContents,videoContents,photoContents,contents,loggedUsers,users | ? | SetGender,SetAge,SetPseudo,LogIn,LogOut,AddUser,DeleteUser,PublishContent,DeleteContent,SetPrivateContent,SetPublicContent,GrantRRights,RevokeRRights,GrantWRights,RevokeWRights | ? | ? | ? | Network);
+  List_Of_Ids(Machine(Network)) == (USERS,PSEUDOS,GENDERS,CONTENTS,CONTENT_TYPES,PASSWORDS,MM,FF,NB,PHOTO,VIDEO,TEXT | ? | shadow,hasNoWRights,hasNoRRights,getAge,getGender,getContentOwner,pseudos,privateContents,textContents,videoContents,photoContents,contents,loggedUsers,users | ? | SetGender,SetAge,SetPseudo,LogIn,LogOut,AddUser,DeleteUser,PublishContent,DeleteContent,SetPrivateContent,SetPublicContent,RevokeRRights,GrantRRights,RevokeWRights,GrantWRights | ? | ? | ? | Network);
   List_Of_HiddenCst_Ids(Machine(Network)) == (masterPassword,masterPseudo,masterUser | ?);
   List_Of_VisibleCst_Ids(Machine(Network)) == (?);
   List_Of_VisibleVar_Ids(Machine(Network)) == (? | ?);
@@ -284,11 +284,11 @@ THEORY HiddenConstantsEnvX IS
 END
 &
 THEORY VariablesEnvX IS
-  Variables(Machine(Network)) == (Type(shadow) == Mvl(SetOf(atype(USERS,?,?)*atype(PASSWORDS,"[PASSWORDS","]PASSWORDS")));Type(hasWRights) == Mvl(SetOf(atype(CONTENTS,?,?)*atype(USERS,?,?)));Type(hasRRights) == Mvl(SetOf(atype(CONTENTS,?,?)*atype(USERS,?,?)));Type(getAge) == Mvl(SetOf(atype(USERS,?,?)*btype(INTEGER,?,?)));Type(getGender) == Mvl(SetOf(atype(USERS,?,?)*etype(GENDERS,0,2)));Type(getContentOwner) == Mvl(SetOf(atype(CONTENTS,?,?)*atype(USERS,?,?)));Type(pseudos) == Mvl(SetOf(atype(USERS,?,?)*atype(PSEUDOS,"[PSEUDOS","]PSEUDOS")));Type(privateContents) == Mvl(SetOf(atype(CONTENTS,?,?)));Type(textContents) == Mvl(SetOf(atype(CONTENTS,?,?)));Type(videoContents) == Mvl(SetOf(atype(CONTENTS,?,?)));Type(photoContents) == Mvl(SetOf(atype(CONTENTS,?,?)));Type(contents) == Mvl(SetOf(atype(CONTENTS,?,?)));Type(loggedUsers) == Mvl(SetOf(atype(USERS,?,?)));Type(users) == Mvl(SetOf(atype(USERS,?,?))))
+  Variables(Machine(Network)) == (Type(shadow) == Mvl(SetOf(atype(USERS,?,?)*atype(PASSWORDS,"[PASSWORDS","]PASSWORDS")));Type(hasNoWRights) == Mvl(SetOf(atype(CONTENTS,?,?)*atype(USERS,?,?)));Type(hasNoRRights) == Mvl(SetOf(atype(CONTENTS,?,?)*atype(USERS,?,?)));Type(getAge) == Mvl(SetOf(atype(USERS,?,?)*btype(INTEGER,?,?)));Type(getGender) == Mvl(SetOf(atype(USERS,?,?)*etype(GENDERS,0,2)));Type(getContentOwner) == Mvl(SetOf(atype(CONTENTS,?,?)*atype(USERS,?,?)));Type(pseudos) == Mvl(SetOf(atype(USERS,?,?)*atype(PSEUDOS,"[PSEUDOS","]PSEUDOS")));Type(privateContents) == Mvl(SetOf(atype(CONTENTS,?,?)));Type(textContents) == Mvl(SetOf(atype(CONTENTS,?,?)));Type(videoContents) == Mvl(SetOf(atype(CONTENTS,?,?)));Type(photoContents) == Mvl(SetOf(atype(CONTENTS,?,?)));Type(contents) == Mvl(SetOf(atype(CONTENTS,?,?)));Type(loggedUsers) == Mvl(SetOf(atype(USERS,?,?)));Type(users) == Mvl(SetOf(atype(USERS,?,?))))
 END
 &
 THEORY OperationsEnvX IS
-  Operations(Machine(Network)) == (Type(RevokeWRights) == Cst(No_type,atype(USERS,?,?)*atype(CONTENTS,?,?)*atype(USERS,?,?));Type(GrantWRights) == Cst(No_type,atype(USERS,?,?)*atype(CONTENTS,?,?)*atype(USERS,?,?));Type(RevokeRRights) == Cst(No_type,atype(USERS,?,?)*atype(CONTENTS,?,?)*atype(USERS,?,?));Type(GrantRRights) == Cst(No_type,atype(USERS,?,?)*atype(CONTENTS,?,?)*atype(USERS,?,?));Type(SetPublicContent) == Cst(No_type,atype(USERS,?,?)*atype(CONTENTS,?,?));Type(SetPrivateContent) == Cst(No_type,atype(USERS,?,?)*atype(CONTENTS,?,?));Type(DeleteContent) == Cst(No_type,atype(USERS,?,?)*atype(CONTENTS,?,?));Type(PublishContent) == Cst(No_type,atype(USERS,?,?)*atype(CONTENTS,?,?)*etype(CONTENT_TYPES,?,?));Type(DeleteUser) == Cst(No_type,atype(USERS,?,?));Type(AddUser) == Cst(No_type,atype(USERS,?,?)*atype(PSEUDOS,?,?)*atype(PASSWORDS,?,?)*etype(GENDERS,?,?)*btype(INTEGER,?,?));Type(LogOut) == Cst(No_type,atype(USERS,?,?));Type(LogIn) == Cst(No_type,atype(PSEUDOS,?,?)*atype(PASSWORDS,?,?));Type(SetPseudo) == Cst(No_type,atype(USERS,?,?)*atype(PSEUDOS,?,?));Type(SetAge) == Cst(No_type,atype(USERS,?,?)*btype(INTEGER,?,?));Type(SetGender) == Cst(No_type,atype(USERS,?,?)*etype(GENDERS,?,?)))
+  Operations(Machine(Network)) == (Type(GrantWRights) == Cst(No_type,atype(USERS,?,?)*atype(CONTENTS,?,?)*atype(USERS,?,?));Type(RevokeWRights) == Cst(No_type,atype(USERS,?,?)*atype(CONTENTS,?,?)*atype(USERS,?,?));Type(GrantRRights) == Cst(No_type,atype(USERS,?,?)*atype(CONTENTS,?,?)*atype(USERS,?,?));Type(RevokeRRights) == Cst(No_type,atype(USERS,?,?)*atype(CONTENTS,?,?)*atype(USERS,?,?));Type(SetPublicContent) == Cst(No_type,atype(USERS,?,?)*atype(CONTENTS,?,?));Type(SetPrivateContent) == Cst(No_type,atype(USERS,?,?)*atype(CONTENTS,?,?));Type(DeleteContent) == Cst(No_type,atype(USERS,?,?)*atype(CONTENTS,?,?));Type(PublishContent) == Cst(No_type,atype(USERS,?,?)*atype(CONTENTS,?,?)*etype(CONTENT_TYPES,?,?));Type(DeleteUser) == Cst(No_type,atype(USERS,?,?));Type(AddUser) == Cst(No_type,atype(USERS,?,?)*atype(PSEUDOS,?,?)*atype(PASSWORDS,?,?)*etype(GENDERS,?,?)*btype(INTEGER,?,?));Type(LogOut) == Cst(No_type,atype(USERS,?,?));Type(LogIn) == Cst(No_type,atype(PSEUDOS,?,?)*atype(PASSWORDS,?,?));Type(SetPseudo) == Cst(No_type,atype(USERS,?,?)*atype(PSEUDOS,?,?));Type(SetAge) == Cst(No_type,atype(USERS,?,?)*btype(INTEGER,?,?));Type(SetGender) == Cst(No_type,atype(USERS,?,?)*etype(GENDERS,?,?)))
 END
 &
 THEORY TCIntRdX IS
