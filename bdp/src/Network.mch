@@ -16,12 +16,14 @@ SETS
 ABSTRACT_CONSTANTS
     masterUser ,
     masterPseudo ,
-    masterPassword
+    masterPassword ,
+    masterContent
 
 PROPERTIES
     masterUser : USERS &
     masterPseudo : PSEUDOS &
-    masterPassword : PASSWORDS
+    masterPassword : PASSWORDS &
+    masterContent : CONTENTS
 
 ABSTRACT_VARIABLES
     users ,
@@ -56,6 +58,7 @@ INVARIANT
     getContentOwner : contents --> users &
     getGender : users --> GENDERS &
     getAge : users --> NATURAL &
+    ! user . ( user : dom ( getAge ) => getAge ( user ) >= 18 ) &
     hasNoRRights : contents <-> users &
     hasWRights : contents <-> users &
     shadow : users --> PASSWORDS &
@@ -63,24 +66,30 @@ INVARIANT
     // Properties on constants
     // Every content is always accessible to the master user
     dom ( hasNoRRights |> { masterUser } ) = {} &
-    dom ( hasWRights |> { masterUser } ) = contents
+    dom ( hasWRights |> { masterUser } ) = contents &
+
+    // Content owner can write and can read its own contents
+    ! user . ( user : users => dom ( getContentOwner |> { user } ) <: dom ( hasWRights |> { user } ) &
+                              dom ( getContentOwner |> { user } ) /\ dom ( hasNoRRights |> { user } ) = {} ) &
+
+    ! user . ( user : users => dom ( getContentOwner |> { user } ) /= {} )
 
 
 INITIALISATION
     users := { masterUser } ||
     loggedUsers := { masterUser } ||
-    contents := {} ||
+    contents := { masterContent } ||
     photoContents := {} ||
     videoContents := {} ||
     textContents := {} ||
     privateContents := {} ||
 
     pseudos := { masterUser |-> masterPseudo } ||
-    getContentOwner := {} ||
+    getContentOwner := { masterContent |-> masterUser } ||
     getGender := { masterUser |-> NB } ||
     getAge := { masterUser |-> 666 } ||
     hasNoRRights := {} ||
-    hasWRights := {} ||
+    hasWRights := { masterContent |-> masterUser } ||
     shadow := { masterUser |-> masterPassword }
 
 
@@ -127,19 +136,39 @@ OPERATIONS
     END ;
 
     // User management
-    AddUser ( user , pseudo , pwd , gender , age ) =
+    AddUser ( user , pseudo , pwd , gender , age , content , contentType ) =
     PRE
         user : USERS & user /: users & user /= masterUser &
         pseudo : PSEUDOS & pseudo /: ran ( pseudos ) &
         pwd : PASSWORDS & pwd /: ran ( shadow ) &
         gender : GENDERS &
-        age : NATURAL & age >= 18
+        content : CONTENTS & content /: contents &
+        contentType : CONTENT_TYPES &
+        age : NATURAL & age >= 18 &
+        user /: ran ( getContentOwner )
     THEN
         users := users \/ { user } ||
         shadow := shadow <+ { ( user |-> pwd ) } ||
         pseudos := pseudos <+ { ( user |-> pseudo ) } ||
         getGender := getGender \/ { ( user |-> gender ) } ||
-        getAge := getAge <+ { ( user |-> age ) }
+        getAge := getAge <+ { ( user |-> age ) } ||
+
+        // Create the user's first content
+        contents := contents \/ { content } ||
+        getContentOwner := getContentOwner \/ { content |-> user } ||
+
+        // Filter on content type
+        IF contentType = PHOTO THEN
+            photoContents := photoContents \/ { content }
+        ELSIF contentType = VIDEO THEN
+            videoContents := videoContents \/ { content }
+        ELSIF contentType = TEXT THEN
+            textContents := textContents \/ { content }
+        END ||
+
+        // Master user and creator can edit the content
+        hasWRights := hasWRights \/ { content |-> user } \/ { content |-> masterUser }
+
     END ;
 
     DeleteUser ( user ) =
@@ -176,6 +205,7 @@ OPERATIONS
         user : USERS & user : users & user : loggedUsers &
         content : CONTENTS &
         content /: contents & // Le contenu est original
+
         contentType : CONTENT_TYPES
     THEN
         contents := contents \/ { content } ||
@@ -198,9 +228,11 @@ OPERATIONS
     PRE
         user : USERS & user : users & user : loggedUsers &
         content : CONTENTS & content : contents &
-        ( getContentOwner ( content ) = user or user = masterUser )
+        content /= masterContent &
+        ( getContentOwner ( content ) /= masterUser & user = masterUser ) & // Pas touche au superutilisateur
+        ( getContentOwner ( content ) = user & user /= masterUser )
     THEN
-        IF card ( getContentOwner |> { user } ) = 1 & user /= masterUser
+        IF card ( getContentOwner |> { user } ) <= 1
         THEN
             // Delete owner.
             // We use getContentOwner(content) because user can be masterUser
@@ -225,7 +257,8 @@ OPERATIONS
             // Delete RW rights of the user on other people's contents
             hasNoRRights := dom ( getContentOwner |>> { user } ) <| ( hasNoRRights |>> { user } ) ||
             hasWRights := dom ( getContentOwner |>> { user } ) <| ( hasWRights |>> { user } )
-        ELSE
+        ELSIF ( getContentOwner ( content ) = user or user = masterUser )
+        THEN
             contents := contents - { content } ||
             privateContents := privateContents - { content } ||
             photoContents := photoContents - { content } ||
@@ -261,7 +294,7 @@ OPERATIONS
     PRE
         from : USERS & from : users & from : loggedUsers &
         content : CONTENTS & content : contents &
-        target : USERS & target : users & target /= from & target /= masterUser &
+        target : USERS & target : users & target /= from & target /= masterUser & target /= getContentOwner ( content ) &
         ( getContentOwner ( content ) = from or from = masterUser )
     THEN
         hasNoRRights := hasNoRRights \/ { content |-> target }
@@ -282,7 +315,7 @@ OPERATIONS
     PRE
         from : USERS & from : users & from : loggedUsers &
         content : CONTENTS & content : contents &
-        target : USERS & target : users & target /= from & target /= masterUser &
+        target : USERS & target : users & target /= from & target /= masterUser & target /= getContentOwner ( content ) &
         ( getContentOwner ( content ) = from or from = masterUser )
     THEN
         hasWRights := hasWRights - { content |-> target }

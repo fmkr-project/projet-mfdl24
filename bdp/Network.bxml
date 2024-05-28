@@ -100,129 +100,149 @@
 <Pos l='19' c='5' s='14'/>
 </Attr>
 </Id>
+<Id value='masterContent' typref='15'>
+<Attr>
+<Pos l='20' c='5' s='13'/>
+</Attr>
+</Id>
 </Abstract_Constants>
 <Abstract_Variables>
 <Attr>
-<Pos l='26' c='1' s='18'/>
+<Pos l='28' c='1' s='18'/>
 </Attr>
 <Id value='users' typref='4'>
 <Attr>
-<Pos l='27' c='5' s='5'/>
+<Pos l='29' c='5' s='5'/>
 </Attr>
 </Id>
 <Id value='loggedUsers' typref='4'>
 <Attr>
-<Pos l='28' c='5' s='11'/>
+<Pos l='30' c='5' s='11'/>
 </Attr>
 </Id>
 <Id value='contents' typref='8'>
 <Attr>
-<Pos l='29' c='5' s='8'/>
+<Pos l='31' c='5' s='8'/>
 </Attr>
 </Id>
 <Id value='photoContents' typref='8'>
 <Attr>
-<Pos l='30' c='5' s='13'/>
+<Pos l='32' c='5' s='13'/>
 </Attr>
 </Id>
 <Id value='videoContents' typref='8'>
 <Attr>
-<Pos l='31' c='5' s='13'/>
+<Pos l='33' c='5' s='13'/>
 </Attr>
 </Id>
 <Id value='textContents' typref='8'>
 <Attr>
-<Pos l='32' c='5' s='12'/>
+<Pos l='34' c='5' s='12'/>
 </Attr>
 </Id>
 <Id value='privateContents' typref='8'>
 <Attr>
-<Pos l='33' c='5' s='15'/>
+<Pos l='35' c='5' s='15'/>
 </Attr>
 </Id>
-<Id value='pseudos' typref='15'>
+<Id value='pseudos' typref='16'>
 <Attr>
-<Pos l='36' c='5' s='7'/>
+<Pos l='38' c='5' s='7'/>
 </Attr>
 </Id>
-<Id value='getContentOwner' typref='16'>
+<Id value='getContentOwner' typref='17'>
 <Attr>
-<Pos l='37' c='5' s='15'/>
+<Pos l='39' c='5' s='15'/>
 </Attr>
 </Id>
-<Id value='getGender' typref='17'>
+<Id value='getGender' typref='18'>
 <Attr>
-<Pos l='38' c='5' s='9'/>
+<Pos l='40' c='5' s='9'/>
 </Attr>
 </Id>
-<Id value='getAge' typref='18'>
+<Id value='getAge' typref='19'>
 <Attr>
-<Pos l='39' c='5' s='6'/>
+<Pos l='41' c='5' s='6'/>
 </Attr>
 </Id>
-<Id value='hasNoRRights' typref='16'>
+<Id value='hasNoRRights' typref='17'>
 <Attr>
-<Pos l='40' c='5' s='12'/>
+<Pos l='42' c='5' s='12'/>
 </Attr>
 </Id>
-<Id value='hasWRights' typref='16'>
+<Id value='hasWRights' typref='17'>
 <Attr>
-<Pos l='41' c='5' s='10'/>
+<Pos l='43' c='5' s='10'/>
 </Attr>
 </Id>
-<Id value='shadow' typref='19'>
+<Id value='shadow' typref='20'>
 <Attr>
-<Pos l='42' c='5' s='6'/>
+<Pos l='44' c='5' s='6'/>
 </Attr>
 </Id>
 </Abstract_Variables>
 <Properties>
 <Attr>
-<Pos l='21' c='1' s='10'/>
+<Pos l='22' c='1' s='10'/>
 </Attr>
 <Nary_Pred op='&amp;'>
 <Exp_Comparison op=':'>
 <Attr>
-<Pos l='22' c='16' s='1'/>
+<Pos l='23' c='16' s='1'/>
 </Attr>
 <Id value='masterUser' typref='12'>
 <Attr>
-<Pos l='22' c='5' s='10'/>
+<Pos l='23' c='5' s='10'/>
 </Attr>
 </Id>
 <Id value='USERS' typref='4'>
 <Attr>
-<Pos l='22' c='18' s='5'/>
+<Pos l='23' c='18' s='5'/>
 </Attr>
 </Id>
 </Exp_Comparison>
 <Exp_Comparison op=':'>
 <Attr>
-<Pos l='23' c='18' s='1'/>
+<Pos l='24' c='18' s='1'/>
 </Attr>
 <Id value='masterPseudo' typref='13'>
 <Attr>
-<Pos l='23' c='5' s='12'/>
+<Pos l='24' c='5' s='12'/>
 </Attr>
 </Id>
 <Id value='PSEUDOS' typref='5'>
 <Attr>
-<Pos l='23' c='20' s='7'/>
+<Pos l='24' c='20' s='7'/>
 </Attr>
 </Id>
 </Exp_Comparison>
 <Exp_Comparison op=':'>
 <Attr>
-<Pos l='24' c='20' s='1'/>
+<Pos l='25' c='20' s='1'/>
 </Attr>
 <Id value='masterPassword' typref='14'>
 <Attr>
-<Pos l='24' c='5' s='14'/>
+<Pos l='25' c='5' s='14'/>
 </Attr>
 </Id>
 <Id value='PASSWORDS' typref='11'>
 <Attr>
-<Pos l='24' c='22' s='9'/>
+<Pos l='25' c='22' s='9'/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison op=':'>
+<Attr>
+<Pos l='26' c='19' s='1'/>
+</Attr>
+<Id value='masterContent' typref='15'>
+<Attr>
+<Pos l='26' c='5' s='13'/>
+</Attr>
+</Id>
+<Id value='CONTENTS' typref='8'>
+<Attr>
+<Pos l='26' c='21' s='8'/>
 </Attr>
 </Id>
 </Exp_Comparison>
@@ -230,333 +250,397 @@
 </Properties>
 <Invariant>
 <Attr>
-<Pos l='44' c='1' s='9'/>
+<Pos l='46' c='1' s='9'/>
 </Attr>
 <Nary_Pred op='&amp;'>
 <Exp_Comparison op='&lt;:'>
 <Attr>
-<Pos l='45' c='11' s='2'/>
+<Pos l='47' c='11' s='2'/>
 </Attr>
 <Id value='users' typref='4'>
 <Attr>
-<Pos l='45' c='5' s='5'/>
+<Pos l='47' c='5' s='5'/>
 </Attr>
 </Id>
 <Id value='USERS' typref='4'>
 <Attr>
-<Pos l='45' c='13' s='5'/>
+<Pos l='47' c='13' s='5'/>
 </Attr>
 </Id>
 </Exp_Comparison>
 <Exp_Comparison op='&lt;:'>
 <Attr>
-<Pos l='46' c='17' s='2'/>
+<Pos l='48' c='17' s='2'/>
 </Attr>
 <Id value='loggedUsers' typref='4'>
 <Attr>
-<Pos l='46' c='5' s='11'/>
+<Pos l='48' c='5' s='11'/>
 </Attr>
 </Id>
 <Id value='users' typref='4'>
 <Attr>
-<Pos l='46' c='19' s='5'/>
+<Pos l='48' c='19' s='5'/>
 </Attr>
 </Id>
 </Exp_Comparison>
 <Exp_Comparison op=':'>
 <Attr>
-<Pos l='47' c='16' s='1'/>
+<Pos l='49' c='16' s='1'/>
 </Attr>
 <Id value='masterUser' typref='12'>
 <Attr>
-<Pos l='47' c='5' s='10'/>
+<Pos l='49' c='5' s='10'/>
 </Attr>
 </Id>
 <Id value='users' typref='4'>
 <Attr>
-<Pos l='47' c='18' s='5'/>
+<Pos l='49' c='18' s='5'/>
 </Attr>
 </Id>
 </Exp_Comparison>
 <Exp_Comparison op=':'>
 <Attr>
-<Pos l='48' c='14' s='1'/>
+<Pos l='50' c='14' s='1'/>
 </Attr>
 <Id value='contents' typref='8'>
 <Attr>
-<Pos l='48' c='5' s='8'/>
+<Pos l='50' c='5' s='8'/>
 </Attr>
 </Id>
-<Unary_Exp op='FIN' typref='20'>
+<Unary_Exp op='FIN' typref='21'>
 <Attr>
-<Pos l='48' c='16' s='3'/>
+<Pos l='50' c='16' s='3'/>
 </Attr>
 <Id value='CONTENTS' typref='8'>
 <Attr>
-<Pos l='48' c='20' s='8'/>
+<Pos l='50' c='20' s='8'/>
 </Attr>
 </Id>
 </Unary_Exp>
 </Exp_Comparison>
 <Exp_Comparison op='&lt;:'>
 <Attr>
-<Pos l='49' c='19' s='2'/>
+<Pos l='51' c='19' s='2'/>
 </Attr>
 <Id value='photoContents' typref='8'>
 <Attr>
-<Pos l='49' c='5' s='13'/>
+<Pos l='51' c='5' s='13'/>
 </Attr>
 </Id>
 <Id value='contents' typref='8'>
 <Attr>
-<Pos l='49' c='21' s='8'/>
+<Pos l='51' c='21' s='8'/>
 </Attr>
 </Id>
 </Exp_Comparison>
 <Exp_Comparison op='&lt;:'>
 <Attr>
-<Pos l='50' c='19' s='2'/>
+<Pos l='52' c='19' s='2'/>
 </Attr>
 <Id value='videoContents' typref='8'>
 <Attr>
-<Pos l='50' c='5' s='13'/>
+<Pos l='52' c='5' s='13'/>
 </Attr>
 </Id>
 <Id value='contents' typref='8'>
 <Attr>
-<Pos l='50' c='21' s='8'/>
+<Pos l='52' c='21' s='8'/>
 </Attr>
 </Id>
 </Exp_Comparison>
 <Exp_Comparison op='&lt;:'>
 <Attr>
-<Pos l='51' c='18' s='2'/>
+<Pos l='53' c='18' s='2'/>
 </Attr>
 <Id value='textContents' typref='8'>
 <Attr>
-<Pos l='51' c='5' s='12'/>
+<Pos l='53' c='5' s='12'/>
 </Attr>
 </Id>
 <Id value='contents' typref='8'>
 <Attr>
-<Pos l='51' c='20' s='8'/>
+<Pos l='53' c='20' s='8'/>
 </Attr>
 </Id>
 </Exp_Comparison>
 <Exp_Comparison op='&lt;:'>
 <Attr>
-<Pos l='52' c='21' s='2'/>
+<Pos l='54' c='21' s='2'/>
 </Attr>
 <Id value='privateContents' typref='8'>
 <Attr>
-<Pos l='52' c='5' s='15'/>
+<Pos l='54' c='5' s='15'/>
 </Attr>
 </Id>
 <Id value='contents' typref='8'>
 <Attr>
-<Pos l='52' c='23' s='8'/>
+<Pos l='54' c='23' s='8'/>
 </Attr>
 </Id>
 </Exp_Comparison>
 <Exp_Comparison op=':'>
 <Attr>
-<Pos l='55' c='13' s='1'/>
+<Pos l='57' c='13' s='1'/>
 </Attr>
-<Id value='pseudos' typref='15'>
+<Id value='pseudos' typref='16'>
 <Attr>
-<Pos l='55' c='5' s='7'/>
+<Pos l='57' c='5' s='7'/>
 </Attr>
 </Id>
-<Binary_Exp op='&gt;-&gt;' typref='21'>
+<Binary_Exp op='&gt;-&gt;' typref='22'>
 <Attr>
-<Pos l='55' c='21' s='3'/>
+<Pos l='57' c='21' s='3'/>
 </Attr>
 <Id value='users' typref='4'>
 <Attr>
-<Pos l='55' c='15' s='5'/>
+<Pos l='57' c='15' s='5'/>
 </Attr>
 </Id>
 <Id value='PSEUDOS' typref='5'>
 <Attr>
-<Pos l='55' c='23' s='7'/>
+<Pos l='57' c='23' s='7'/>
 </Attr>
 </Id>
 </Binary_Exp>
 </Exp_Comparison>
 <Exp_Comparison op=':'>
 <Attr>
-<Pos l='56' c='21' s='1'/>
+<Pos l='58' c='21' s='1'/>
 </Attr>
-<Id value='getContentOwner' typref='16'>
+<Id value='getContentOwner' typref='17'>
 <Attr>
-<Pos l='56' c='5' s='15'/>
-</Attr>
-</Id>
-<Binary_Exp op='--&gt;' typref='22'>
-<Attr>
-<Pos l='56' c='32' s='3'/>
-</Attr>
-<Id value='contents' typref='8'>
-<Attr>
-<Pos l='56' c='23' s='8'/>
-</Attr>
-</Id>
-<Id value='users' typref='4'>
-<Attr>
-<Pos l='56' c='34' s='5'/>
-</Attr>
-</Id>
-</Binary_Exp>
-</Exp_Comparison>
-<Exp_Comparison op=':'>
-<Attr>
-<Pos l='57' c='15' s='1'/>
-</Attr>
-<Id value='getGender' typref='17'>
-<Attr>
-<Pos l='57' c='5' s='9'/>
+<Pos l='58' c='5' s='15'/>
 </Attr>
 </Id>
 <Binary_Exp op='--&gt;' typref='23'>
 <Attr>
-<Pos l='57' c='23' s='3'/>
+<Pos l='58' c='32' s='3'/>
 </Attr>
-<Id value='users' typref='4'>
+<Id value='contents' typref='8'>
 <Attr>
-<Pos l='57' c='17' s='5'/>
+<Pos l='58' c='23' s='8'/>
 </Attr>
 </Id>
-<Id value='GENDERS' typref='6'>
+<Id value='users' typref='4'>
 <Attr>
-<Pos l='57' c='25' s='7'/>
+<Pos l='58' c='34' s='5'/>
 </Attr>
 </Id>
 </Binary_Exp>
 </Exp_Comparison>
 <Exp_Comparison op=':'>
 <Attr>
-<Pos l='58' c='12' s='1'/>
+<Pos l='59' c='15' s='1'/>
 </Attr>
-<Id value='getAge' typref='18'>
+<Id value='getGender' typref='18'>
 <Attr>
-<Pos l='58' c='5' s='6'/>
+<Pos l='59' c='5' s='9'/>
 </Attr>
 </Id>
 <Binary_Exp op='--&gt;' typref='24'>
 <Attr>
-<Pos l='58' c='20' s='3'/>
+<Pos l='59' c='23' s='3'/>
 </Attr>
 <Id value='users' typref='4'>
 <Attr>
-<Pos l='58' c='14' s='5'/>
+<Pos l='59' c='17' s='5'/>
 </Attr>
 </Id>
-<Id value='NATURAL' typref='2'>
+<Id value='GENDERS' typref='6'>
 <Attr>
-<Pos l='58' c='22' s='7'/>
+<Pos l='59' c='25' s='7'/>
 </Attr>
 </Id>
 </Binary_Exp>
 </Exp_Comparison>
 <Exp_Comparison op=':'>
 <Attr>
-<Pos l='59' c='18' s='1'/>
+<Pos l='60' c='12' s='1'/>
 </Attr>
-<Id value='hasNoRRights' typref='16'>
+<Id value='getAge' typref='19'>
 <Attr>
-<Pos l='59' c='5' s='12'/>
-</Attr>
-</Id>
-<Binary_Exp op='&lt;-&gt;' typref='22'>
-<Attr>
-<Pos l='59' c='29' s='3'/>
-</Attr>
-<Id value='contents' typref='8'>
-<Attr>
-<Pos l='59' c='20' s='8'/>
-</Attr>
-</Id>
-<Id value='users' typref='4'>
-<Attr>
-<Pos l='59' c='31' s='5'/>
-</Attr>
-</Id>
-</Binary_Exp>
-</Exp_Comparison>
-<Exp_Comparison op=':'>
-<Attr>
-<Pos l='60' c='16' s='1'/>
-</Attr>
-<Id value='hasWRights' typref='16'>
-<Attr>
-<Pos l='60' c='5' s='10'/>
-</Attr>
-</Id>
-<Binary_Exp op='&lt;-&gt;' typref='22'>
-<Attr>
-<Pos l='60' c='27' s='3'/>
-</Attr>
-<Id value='contents' typref='8'>
-<Attr>
-<Pos l='60' c='18' s='8'/>
-</Attr>
-</Id>
-<Id value='users' typref='4'>
-<Attr>
-<Pos l='60' c='29' s='5'/>
-</Attr>
-</Id>
-</Binary_Exp>
-</Exp_Comparison>
-<Exp_Comparison op=':'>
-<Attr>
-<Pos l='61' c='12' s='1'/>
-</Attr>
-<Id value='shadow' typref='19'>
-<Attr>
-<Pos l='61' c='5' s='6'/>
+<Pos l='60' c='5' s='6'/>
 </Attr>
 </Id>
 <Binary_Exp op='--&gt;' typref='25'>
 <Attr>
-<Pos l='61' c='20' s='3'/>
+<Pos l='60' c='20' s='3'/>
 </Attr>
 <Id value='users' typref='4'>
 <Attr>
-<Pos l='61' c='14' s='5'/>
+<Pos l='60' c='14' s='5'/>
+</Attr>
+</Id>
+<Id value='NATURAL' typref='2'>
+<Attr>
+<Pos l='60' c='22' s='7'/>
+</Attr>
+</Id>
+</Binary_Exp>
+</Exp_Comparison>
+<Quantified_Pred type='!'>
+<Attr>
+<Pos l='61' c='11' s='1'/>
+</Attr>
+<Variables>
+<Id value='user' typref='12'>
+<Attr>
+<Pos l='61' c='7' s='4'/>
+</Attr>
+</Id>
+</Variables>
+<Body>
+<Binary_Pred op='=&gt;'>
+<Attr>
+<Pos l='61' c='33' s='2'/>
+</Attr>
+<Exp_Comparison op=':'>
+<Attr>
+<Pos l='61' c='19' s='1'/>
+</Attr>
+<Id value='user' typref='12'>
+<Attr>
+<Pos l='61' c='14' s='4'/>
+</Attr>
+</Id>
+<Unary_Exp op='dom' typref='4'>
+<Attr>
+<Pos l='61' c='21' s='3'/>
+</Attr>
+<Id value='getAge' typref='19'>
+<Attr>
+<Pos l='61' c='25' s='6'/>
+</Attr>
+</Id>
+</Unary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op='&gt;=i'>
+<Attr>
+<Pos l='61' c='48' s='2'/>
+</Attr>
+<Binary_Exp op='(' typref='1'>
+<Attr>
+<Pos l='61' c='41' s='0'/>
+</Attr>
+<Id value='getAge' typref='19'>
+<Attr>
+<Pos l='61' c='35' s='6'/>
+</Attr>
+</Id>
+<Id value='user' typref='12'>
+<Attr>
+<Pos l='61' c='42' s='4'/>
+</Attr>
+</Id>
+</Binary_Exp>
+<Integer_Literal value='18' typref='1'>
+<Attr>
+<Pos l='61' c='50' s='2'/>
+</Attr>
+</Integer_Literal>
+</Exp_Comparison>
+</Binary_Pred>
+</Body>
+</Quantified_Pred>
+<Exp_Comparison op=':'>
+<Attr>
+<Pos l='62' c='18' s='1'/>
+</Attr>
+<Id value='hasNoRRights' typref='17'>
+<Attr>
+<Pos l='62' c='5' s='12'/>
+</Attr>
+</Id>
+<Binary_Exp op='&lt;-&gt;' typref='23'>
+<Attr>
+<Pos l='62' c='29' s='3'/>
+</Attr>
+<Id value='contents' typref='8'>
+<Attr>
+<Pos l='62' c='20' s='8'/>
+</Attr>
+</Id>
+<Id value='users' typref='4'>
+<Attr>
+<Pos l='62' c='31' s='5'/>
+</Attr>
+</Id>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=':'>
+<Attr>
+<Pos l='63' c='16' s='1'/>
+</Attr>
+<Id value='hasWRights' typref='17'>
+<Attr>
+<Pos l='63' c='5' s='10'/>
+</Attr>
+</Id>
+<Binary_Exp op='&lt;-&gt;' typref='23'>
+<Attr>
+<Pos l='63' c='27' s='3'/>
+</Attr>
+<Id value='contents' typref='8'>
+<Attr>
+<Pos l='63' c='18' s='8'/>
+</Attr>
+</Id>
+<Id value='users' typref='4'>
+<Attr>
+<Pos l='63' c='29' s='5'/>
+</Attr>
+</Id>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=':'>
+<Attr>
+<Pos l='64' c='12' s='1'/>
+</Attr>
+<Id value='shadow' typref='20'>
+<Attr>
+<Pos l='64' c='5' s='6'/>
+</Attr>
+</Id>
+<Binary_Exp op='--&gt;' typref='26'>
+<Attr>
+<Pos l='64' c='20' s='3'/>
+</Attr>
+<Id value='users' typref='4'>
+<Attr>
+<Pos l='64' c='14' s='5'/>
 </Attr>
 </Id>
 <Id value='PASSWORDS' typref='11'>
 <Attr>
-<Pos l='61' c='22' s='9'/>
+<Pos l='64' c='22' s='9'/>
 </Attr>
 </Id>
 </Binary_Exp>
 </Exp_Comparison>
 <Exp_Comparison op='='>
 <Attr>
-<Pos l='65' c='38' s='1'/>
+<Pos l='68' c='38' s='1'/>
 </Attr>
 <Unary_Exp op='dom' typref='8'>
 <Attr>
-<Pos l='65' c='5' s='3'/>
+<Pos l='68' c='5' s='3'/>
 </Attr>
-<Binary_Exp op='|&gt;' typref='16'>
+<Binary_Exp op='|&gt;' typref='17'>
 <Attr>
-<Pos l='65' c='22' s='2'/>
+<Pos l='68' c='22' s='2'/>
 </Attr>
-<Id value='hasNoRRights' typref='16'>
+<Id value='hasNoRRights' typref='17'>
 <Attr>
-<Pos l='65' c='9' s='12'/>
+<Pos l='68' c='9' s='12'/>
 </Attr>
 </Id>
 <Nary_Exp op='{' typref='4'>
 <Attr>
-<Pos l='65' c='24' s='1'/>
+<Pos l='68' c='24' s='1'/>
 </Attr>
 <Id value='masterUser' typref='12'>
 <Attr>
-<Pos l='65' c='25' s='10'/>
+<Pos l='68' c='25' s='10'/>
 </Attr>
 </Id>
 </Nary_Exp>
@@ -564,34 +648,34 @@
 </Unary_Exp>
 <EmptySet typref='8'>
 <Attr>
-<Pos l='65' c='40' s='2'/>
+<Pos l='68' c='40' s='2'/>
 </Attr>
 </EmptySet>
 </Exp_Comparison>
 <Exp_Comparison op='='>
 <Attr>
-<Pos l='66' c='36' s='1'/>
+<Pos l='69' c='36' s='1'/>
 </Attr>
 <Unary_Exp op='dom' typref='8'>
 <Attr>
-<Pos l='66' c='5' s='3'/>
+<Pos l='69' c='5' s='3'/>
 </Attr>
-<Binary_Exp op='|&gt;' typref='16'>
+<Binary_Exp op='|&gt;' typref='17'>
 <Attr>
-<Pos l='66' c='20' s='2'/>
+<Pos l='69' c='20' s='2'/>
 </Attr>
-<Id value='hasWRights' typref='16'>
+<Id value='hasWRights' typref='17'>
 <Attr>
-<Pos l='66' c='9' s='10'/>
+<Pos l='69' c='9' s='10'/>
 </Attr>
 </Id>
 <Nary_Exp op='{' typref='4'>
 <Attr>
-<Pos l='66' c='22' s='1'/>
+<Pos l='69' c='22' s='1'/>
 </Attr>
 <Id value='masterUser' typref='12'>
 <Attr>
-<Pos l='66' c='23' s='10'/>
+<Pos l='69' c='23' s='10'/>
 </Attr>
 </Id>
 </Nary_Exp>
@@ -599,36 +683,261 @@
 </Unary_Exp>
 <Id value='contents' typref='8'>
 <Attr>
-<Pos l='66' c='38' s='8'/>
+<Pos l='69' c='38' s='8'/>
 </Attr>
 </Id>
 </Exp_Comparison>
+<Quantified_Pred type='!'>
+<Attr>
+<Pos l='72' c='11' s='1'/>
+</Attr>
+<Variables>
+<Id value='user' typref='12'>
+<Attr>
+<Pos l='72' c='7' s='4'/>
+</Attr>
+</Id>
+</Variables>
+<Body>
+<Binary_Pred op='=&gt;'>
+<Attr>
+<Pos l='72' c='27' s='2'/>
+</Attr>
+<Exp_Comparison op=':'>
+<Attr>
+<Pos l='72' c='19' s='1'/>
+</Attr>
+<Id value='user' typref='12'>
+<Attr>
+<Pos l='72' c='14' s='4'/>
+</Attr>
+</Id>
+<Id value='users' typref='4'>
+<Attr>
+<Pos l='72' c='21' s='5'/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Nary_Pred op='&amp;'>
+<Exp_Comparison op='&lt;:'>
+<Attr>
+<Pos l='72' c='59' s='2'/>
+</Attr>
+<Unary_Exp op='dom' typref='8'>
+<Attr>
+<Pos l='72' c='29' s='3'/>
+</Attr>
+<Binary_Exp op='|&gt;' typref='17'>
+<Attr>
+<Pos l='72' c='49' s='2'/>
+</Attr>
+<Id value='getContentOwner' typref='17'>
+<Attr>
+<Pos l='72' c='33' s='15'/>
+</Attr>
+</Id>
+<Nary_Exp op='{' typref='4'>
+<Attr>
+<Pos l='72' c='51' s='1'/>
+</Attr>
+<Id value='user' typref='12'>
+<Attr>
+<Pos l='72' c='52' s='4'/>
+</Attr>
+</Id>
+</Nary_Exp>
+</Binary_Exp>
+</Unary_Exp>
+<Unary_Exp op='dom' typref='8'>
+<Attr>
+<Pos l='72' c='61' s='3'/>
+</Attr>
+<Binary_Exp op='|&gt;' typref='17'>
+<Attr>
+<Pos l='72' c='76' s='2'/>
+</Attr>
+<Id value='hasWRights' typref='17'>
+<Attr>
+<Pos l='72' c='65' s='10'/>
+</Attr>
+</Id>
+<Nary_Exp op='{' typref='4'>
+<Attr>
+<Pos l='72' c='78' s='1'/>
+</Attr>
+<Id value='user' typref='12'>
+<Attr>
+<Pos l='72' c='79' s='4'/>
+</Attr>
+</Id>
+</Nary_Exp>
+</Binary_Exp>
+</Unary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op='='>
+<Attr>
+<Pos l='73' c='90' s='1'/>
+</Attr>
+<Binary_Exp op='/\' typref='8'>
+<Attr>
+<Pos l='73' c='61' s='2'/>
+</Attr>
+<Unary_Exp op='dom' typref='8'>
+<Attr>
+<Pos l='73' c='31' s='3'/>
+</Attr>
+<Binary_Exp op='|&gt;' typref='17'>
+<Attr>
+<Pos l='73' c='51' s='2'/>
+</Attr>
+<Id value='getContentOwner' typref='17'>
+<Attr>
+<Pos l='73' c='35' s='15'/>
+</Attr>
+</Id>
+<Nary_Exp op='{' typref='4'>
+<Attr>
+<Pos l='73' c='53' s='1'/>
+</Attr>
+<Id value='user' typref='12'>
+<Attr>
+<Pos l='73' c='54' s='4'/>
+</Attr>
+</Id>
+</Nary_Exp>
+</Binary_Exp>
+</Unary_Exp>
+<Unary_Exp op='dom' typref='8'>
+<Attr>
+<Pos l='73' c='63' s='3'/>
+</Attr>
+<Binary_Exp op='|&gt;' typref='17'>
+<Attr>
+<Pos l='73' c='80' s='2'/>
+</Attr>
+<Id value='hasNoRRights' typref='17'>
+<Attr>
+<Pos l='73' c='67' s='12'/>
+</Attr>
+</Id>
+<Nary_Exp op='{' typref='4'>
+<Attr>
+<Pos l='73' c='82' s='1'/>
+</Attr>
+<Id value='user' typref='12'>
+<Attr>
+<Pos l='73' c='83' s='4'/>
+</Attr>
+</Id>
+</Nary_Exp>
+</Binary_Exp>
+</Unary_Exp>
+</Binary_Exp>
+<EmptySet typref='8'>
+<Attr>
+<Pos l='73' c='92' s='2'/>
+</Attr>
+</EmptySet>
+</Exp_Comparison>
+</Nary_Pred>
+</Binary_Pred>
+</Body>
+</Quantified_Pred>
+<Quantified_Pred type='!'>
+<Attr>
+<Pos l='75' c='11' s='1'/>
+</Attr>
+<Variables>
+<Id value='user' typref='12'>
+<Attr>
+<Pos l='75' c='7' s='4'/>
+</Attr>
+</Id>
+</Variables>
+<Body>
+<Binary_Pred op='=&gt;'>
+<Attr>
+<Pos l='75' c='27' s='2'/>
+</Attr>
+<Exp_Comparison op=':'>
+<Attr>
+<Pos l='75' c='19' s='1'/>
+</Attr>
+<Id value='user' typref='12'>
+<Attr>
+<Pos l='75' c='14' s='4'/>
+</Attr>
+</Id>
+<Id value='users' typref='4'>
+<Attr>
+<Pos l='75' c='21' s='5'/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison op='/='>
+<Attr>
+<Pos l='75' c='59' s='2'/>
+</Attr>
+<Unary_Exp op='dom' typref='8'>
+<Attr>
+<Pos l='75' c='29' s='3'/>
+</Attr>
+<Binary_Exp op='|&gt;' typref='17'>
+<Attr>
+<Pos l='75' c='49' s='2'/>
+</Attr>
+<Id value='getContentOwner' typref='17'>
+<Attr>
+<Pos l='75' c='33' s='15'/>
+</Attr>
+</Id>
+<Nary_Exp op='{' typref='4'>
+<Attr>
+<Pos l='75' c='51' s='1'/>
+</Attr>
+<Id value='user' typref='12'>
+<Attr>
+<Pos l='75' c='52' s='4'/>
+</Attr>
+</Id>
+</Nary_Exp>
+</Binary_Exp>
+</Unary_Exp>
+<EmptySet typref='8'>
+<Attr>
+<Pos l='75' c='61' s='2'/>
+</Attr>
+</EmptySet>
+</Exp_Comparison>
+</Binary_Pred>
+</Body>
+</Quantified_Pred>
 </Nary_Pred>
 </Invariant>
 <Initialisation>
 <Attr>
-<Pos l='69' c='1' s='14'/>
+<Pos l='78' c='1' s='14'/>
 </Attr>
 <Nary_Sub op='||'>
 <Assignement_Sub>
 <Attr>
-<Pos l='70' c='11' s='2'/>
+<Pos l='79' c='11' s='2'/>
 </Attr>
 <Variables>
 <Id value='users' typref='4'>
 <Attr>
-<Pos l='70' c='5' s='5'/>
+<Pos l='79' c='5' s='5'/>
 </Attr>
 </Id>
 </Variables>
 <Values>
 <Nary_Exp op='{' typref='4'>
 <Attr>
-<Pos l='70' c='14' s='1'/>
+<Pos l='79' c='14' s='1'/>
 </Attr>
 <Id value='masterUser' typref='12'>
 <Attr>
-<Pos l='70' c='15' s='10'/>
+<Pos l='79' c='15' s='10'/>
 </Attr>
 </Id>
 </Nary_Exp>
@@ -636,23 +945,23 @@
 </Assignement_Sub>
 <Assignement_Sub>
 <Attr>
-<Pos l='71' c='17' s='2'/>
+<Pos l='80' c='17' s='2'/>
 </Attr>
 <Variables>
 <Id value='loggedUsers' typref='4'>
 <Attr>
-<Pos l='71' c='5' s='11'/>
+<Pos l='80' c='5' s='11'/>
 </Attr>
 </Id>
 </Variables>
 <Values>
 <Nary_Exp op='{' typref='4'>
 <Attr>
-<Pos l='71' c='20' s='1'/>
+<Pos l='80' c='20' s='1'/>
 </Attr>
 <Id value='masterUser' typref='12'>
 <Attr>
-<Pos l='71' c='21' s='10'/>
+<Pos l='80' c='21' s='10'/>
 </Attr>
 </Id>
 </Nary_Exp>
@@ -660,127 +969,132 @@
 </Assignement_Sub>
 <Assignement_Sub>
 <Attr>
-<Pos l='72' c='14' s='2'/>
+<Pos l='81' c='14' s='2'/>
 </Attr>
 <Variables>
 <Id value='contents' typref='8'>
 <Attr>
-<Pos l='72' c='5' s='8'/>
+<Pos l='81' c='5' s='8'/>
 </Attr>
 </Id>
 </Variables>
 <Values>
-<EmptySet typref='8'>
+<Nary_Exp op='{' typref='8'>
 <Attr>
-<Pos l='72' c='17' s='2'/>
+<Pos l='81' c='17' s='1'/>
 </Attr>
-</EmptySet>
+<Id value='masterContent' typref='15'>
+<Attr>
+<Pos l='81' c='18' s='13'/>
+</Attr>
+</Id>
+</Nary_Exp>
 </Values>
 </Assignement_Sub>
 <Assignement_Sub>
 <Attr>
-<Pos l='73' c='19' s='2'/>
+<Pos l='82' c='19' s='2'/>
 </Attr>
 <Variables>
 <Id value='photoContents' typref='8'>
 <Attr>
-<Pos l='73' c='5' s='13'/>
+<Pos l='82' c='5' s='13'/>
 </Attr>
 </Id>
 </Variables>
 <Values>
 <EmptySet typref='8'>
 <Attr>
-<Pos l='73' c='22' s='2'/>
+<Pos l='82' c='22' s='2'/>
 </Attr>
 </EmptySet>
 </Values>
 </Assignement_Sub>
 <Assignement_Sub>
 <Attr>
-<Pos l='74' c='19' s='2'/>
+<Pos l='83' c='19' s='2'/>
 </Attr>
 <Variables>
 <Id value='videoContents' typref='8'>
 <Attr>
-<Pos l='74' c='5' s='13'/>
+<Pos l='83' c='5' s='13'/>
 </Attr>
 </Id>
 </Variables>
 <Values>
 <EmptySet typref='8'>
 <Attr>
-<Pos l='74' c='22' s='2'/>
+<Pos l='83' c='22' s='2'/>
 </Attr>
 </EmptySet>
 </Values>
 </Assignement_Sub>
 <Assignement_Sub>
 <Attr>
-<Pos l='75' c='18' s='2'/>
+<Pos l='84' c='18' s='2'/>
 </Attr>
 <Variables>
 <Id value='textContents' typref='8'>
 <Attr>
-<Pos l='75' c='5' s='12'/>
+<Pos l='84' c='5' s='12'/>
 </Attr>
 </Id>
 </Variables>
 <Values>
 <EmptySet typref='8'>
 <Attr>
-<Pos l='75' c='21' s='2'/>
+<Pos l='84' c='21' s='2'/>
 </Attr>
 </EmptySet>
 </Values>
 </Assignement_Sub>
 <Assignement_Sub>
 <Attr>
-<Pos l='76' c='21' s='2'/>
+<Pos l='85' c='21' s='2'/>
 </Attr>
 <Variables>
 <Id value='privateContents' typref='8'>
 <Attr>
-<Pos l='76' c='5' s='15'/>
+<Pos l='85' c='5' s='15'/>
 </Attr>
 </Id>
 </Variables>
 <Values>
 <EmptySet typref='8'>
 <Attr>
-<Pos l='76' c='24' s='2'/>
+<Pos l='85' c='24' s='2'/>
 </Attr>
 </EmptySet>
 </Values>
 </Assignement_Sub>
 <Assignement_Sub>
 <Attr>
-<Pos l='78' c='13' s='2'/>
+<Pos l='87' c='13' s='2'/>
 </Attr>
 <Variables>
-<Id value='pseudos' typref='15'>
+<Id value='pseudos' typref='16'>
 <Attr>
-<Pos l='78' c='5' s='7'/>
+<Pos l='87' c='5' s='7'/>
 </Attr>
 </Id>
 </Variables>
 <Values>
-<Nary_Exp op='{' typref='15'>
+<Nary_Exp op='{' typref='16'>
 <Attr>
-<Pos l='78' c='16' s='1'/>
+<Pos l='87' c='16' s='1'/>
 </Attr>
-<Binary_Exp op='|-&gt;' typref='26'>
+<Binary_Exp op='|-&gt;' typref='27'>
 <Attr>
-<Pos l='78' c='28' s='3'/>
+<Pos l='87' c='28' s='3'/>
 </Attr>
 <Id value='masterUser' typref='12'>
 <Attr>
-<Pos l='78' c='17' s='10'/>
+<Pos l='87' c='17' s='10'/>
 </Attr>
 </Id>
 <Id value='masterPseudo' typref='13'>
 <Attr>
-<Pos l='78' c='30' s='12'/>
+<Pos l='87' c='30' s='12'/>
 </Attr>
 </Id>
 </Binary_Exp>
@@ -789,51 +1103,32 @@
 </Assignement_Sub>
 <Assignement_Sub>
 <Attr>
-<Pos l='79' c='21' s='2'/>
+<Pos l='88' c='21' s='2'/>
 </Attr>
 <Variables>
-<Id value='getContentOwner' typref='16'>
+<Id value='getContentOwner' typref='17'>
 <Attr>
-<Pos l='79' c='5' s='15'/>
-</Attr>
-</Id>
-</Variables>
-<Values>
-<EmptySet typref='16'>
-<Attr>
-<Pos l='79' c='24' s='2'/>
-</Attr>
-</EmptySet>
-</Values>
-</Assignement_Sub>
-<Assignement_Sub>
-<Attr>
-<Pos l='80' c='15' s='2'/>
-</Attr>
-<Variables>
-<Id value='getGender' typref='17'>
-<Attr>
-<Pos l='80' c='5' s='9'/>
+<Pos l='88' c='5' s='15'/>
 </Attr>
 </Id>
 </Variables>
 <Values>
 <Nary_Exp op='{' typref='17'>
 <Attr>
-<Pos l='80' c='18' s='1'/>
+<Pos l='88' c='24' s='1'/>
 </Attr>
-<Binary_Exp op='|-&gt;' typref='27'>
+<Binary_Exp op='|-&gt;' typref='28'>
 <Attr>
-<Pos l='80' c='30' s='3'/>
+<Pos l='88' c='39' s='3'/>
 </Attr>
-<Id value='masterUser' typref='12'>
+<Id value='masterContent' typref='15'>
 <Attr>
-<Pos l='80' c='19' s='10'/>
+<Pos l='88' c='25' s='13'/>
 </Attr>
 </Id>
-<Id value='NB' typref='7'>
+<Id value='masterUser' typref='12'>
 <Attr>
-<Pos l='80' c='32' s='2'/>
+<Pos l='88' c='41' s='10'/>
 </Attr>
 </Id>
 </Binary_Exp>
@@ -842,32 +1137,66 @@
 </Assignement_Sub>
 <Assignement_Sub>
 <Attr>
-<Pos l='81' c='12' s='2'/>
+<Pos l='89' c='15' s='2'/>
 </Attr>
 <Variables>
-<Id value='getAge' typref='18'>
+<Id value='getGender' typref='18'>
 <Attr>
-<Pos l='81' c='5' s='6'/>
+<Pos l='89' c='5' s='9'/>
 </Attr>
 </Id>
 </Variables>
 <Values>
 <Nary_Exp op='{' typref='18'>
 <Attr>
-<Pos l='81' c='15' s='1'/>
+<Pos l='89' c='18' s='1'/>
 </Attr>
-<Binary_Exp op='|-&gt;' typref='28'>
+<Binary_Exp op='|-&gt;' typref='29'>
 <Attr>
-<Pos l='81' c='27' s='3'/>
+<Pos l='89' c='30' s='3'/>
 </Attr>
 <Id value='masterUser' typref='12'>
 <Attr>
-<Pos l='81' c='16' s='10'/>
+<Pos l='89' c='19' s='10'/>
+</Attr>
+</Id>
+<Id value='NB' typref='7'>
+<Attr>
+<Pos l='89' c='32' s='2'/>
+</Attr>
+</Id>
+</Binary_Exp>
+</Nary_Exp>
+</Values>
+</Assignement_Sub>
+<Assignement_Sub>
+<Attr>
+<Pos l='90' c='12' s='2'/>
+</Attr>
+<Variables>
+<Id value='getAge' typref='19'>
+<Attr>
+<Pos l='90' c='5' s='6'/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Nary_Exp op='{' typref='19'>
+<Attr>
+<Pos l='90' c='15' s='1'/>
+</Attr>
+<Binary_Exp op='|-&gt;' typref='30'>
+<Attr>
+<Pos l='90' c='27' s='3'/>
+</Attr>
+<Id value='masterUser' typref='12'>
+<Attr>
+<Pos l='90' c='16' s='10'/>
 </Attr>
 </Id>
 <Integer_Literal value='666' typref='1'>
 <Attr>
-<Pos l='81' c='29' s='3'/>
+<Pos l='90' c='29' s='3'/>
 </Attr>
 </Integer_Literal>
 </Binary_Exp>
@@ -876,70 +1205,85 @@
 </Assignement_Sub>
 <Assignement_Sub>
 <Attr>
-<Pos l='82' c='18' s='2'/>
+<Pos l='91' c='18' s='2'/>
 </Attr>
 <Variables>
-<Id value='hasNoRRights' typref='16'>
+<Id value='hasNoRRights' typref='17'>
 <Attr>
-<Pos l='82' c='5' s='12'/>
+<Pos l='91' c='5' s='12'/>
 </Attr>
 </Id>
 </Variables>
 <Values>
-<EmptySet typref='16'>
+<EmptySet typref='17'>
 <Attr>
-<Pos l='82' c='21' s='2'/>
+<Pos l='91' c='21' s='2'/>
 </Attr>
 </EmptySet>
 </Values>
 </Assignement_Sub>
 <Assignement_Sub>
 <Attr>
-<Pos l='83' c='16' s='2'/>
+<Pos l='92' c='16' s='2'/>
 </Attr>
 <Variables>
-<Id value='hasWRights' typref='16'>
+<Id value='hasWRights' typref='17'>
 <Attr>
-<Pos l='83' c='5' s='10'/>
+<Pos l='92' c='5' s='10'/>
 </Attr>
 </Id>
 </Variables>
 <Values>
-<EmptySet typref='16'>
+<Nary_Exp op='{' typref='17'>
 <Attr>
-<Pos l='83' c='19' s='2'/>
+<Pos l='92' c='19' s='1'/>
 </Attr>
-</EmptySet>
+<Binary_Exp op='|-&gt;' typref='28'>
+<Attr>
+<Pos l='92' c='34' s='3'/>
+</Attr>
+<Id value='masterContent' typref='15'>
+<Attr>
+<Pos l='92' c='20' s='13'/>
+</Attr>
+</Id>
+<Id value='masterUser' typref='12'>
+<Attr>
+<Pos l='92' c='36' s='10'/>
+</Attr>
+</Id>
+</Binary_Exp>
+</Nary_Exp>
 </Values>
 </Assignement_Sub>
 <Assignement_Sub>
 <Attr>
-<Pos l='84' c='12' s='2'/>
+<Pos l='93' c='12' s='2'/>
 </Attr>
 <Variables>
-<Id value='shadow' typref='19'>
+<Id value='shadow' typref='20'>
 <Attr>
-<Pos l='84' c='5' s='6'/>
+<Pos l='93' c='5' s='6'/>
 </Attr>
 </Id>
 </Variables>
 <Values>
-<Nary_Exp op='{' typref='19'>
+<Nary_Exp op='{' typref='20'>
 <Attr>
-<Pos l='84' c='15' s='1'/>
+<Pos l='93' c='15' s='1'/>
 </Attr>
-<Binary_Exp op='|-&gt;' typref='29'>
+<Binary_Exp op='|-&gt;' typref='31'>
 <Attr>
-<Pos l='84' c='27' s='3'/>
+<Pos l='93' c='27' s='3'/>
 </Attr>
 <Id value='masterUser' typref='12'>
 <Attr>
-<Pos l='84' c='16' s='10'/>
+<Pos l='93' c='16' s='10'/>
 </Attr>
 </Id>
 <Id value='masterPassword' typref='14'>
 <Attr>
-<Pos l='84' c='29' s='14'/>
+<Pos l='93' c='29' s='14'/>
 </Attr>
 </Id>
 </Binary_Exp>
@@ -951,17 +1295,17 @@
 <Operations>
 <Operation name='SetGender'>
 <Attr>
-<Pos l='89' c='5' s='9' endLine='94'/>
+<Pos l='98' c='5' s='9' endLine='103'/>
 </Attr>
 <Input_Parameters>
 <Id value='user' typref='12'>
 <Attr>
-<Pos l='89' c='15' s='4'/>
+<Pos l='98' c='15' s='4'/>
 </Attr>
 </Id>
 <Id value='gender' typref='7'>
 <Attr>
-<Pos l='89' c='21' s='6'/>
+<Pos l='98' c='21' s='6'/>
 </Attr>
 </Id>
 </Input_Parameters>
@@ -969,31 +1313,31 @@
 <Nary_Pred op='&amp;'>
 <Exp_Comparison op=':'>
 <Attr>
-<Pos l='91' c='14' s='1'/>
+<Pos l='100' c='14' s='1'/>
 </Attr>
 <Id value='user' typref='12'>
 <Attr>
-<Pos l='91' c='9' s='4'/>
+<Pos l='100' c='9' s='4'/>
 </Attr>
 </Id>
 <Id value='users' typref='4'>
 <Attr>
-<Pos l='91' c='16' s='5'/>
+<Pos l='100' c='16' s='5'/>
 </Attr>
 </Id>
 </Exp_Comparison>
 <Exp_Comparison op=':'>
 <Attr>
-<Pos l='91' c='31' s='1'/>
+<Pos l='100' c='31' s='1'/>
 </Attr>
 <Id value='gender' typref='7'>
 <Attr>
-<Pos l='91' c='24' s='6'/>
+<Pos l='100' c='24' s='6'/>
 </Attr>
 </Id>
 <Id value='GENDERS' typref='6'>
 <Attr>
-<Pos l='91' c='33' s='7'/>
+<Pos l='100' c='33' s='7'/>
 </Attr>
 </Id>
 </Exp_Comparison>
@@ -1002,41 +1346,41 @@
 <Body>
 <Assignement_Sub>
 <Attr>
-<Pos l='93' c='19' s='2'/>
+<Pos l='102' c='19' s='2'/>
 </Attr>
 <Variables>
-<Id value='getGender' typref='17'>
+<Id value='getGender' typref='18'>
 <Attr>
-<Pos l='93' c='9' s='9'/>
+<Pos l='102' c='9' s='9'/>
 </Attr>
 </Id>
 </Variables>
 <Values>
-<Binary_Exp op='&lt;+' typref='17'>
+<Binary_Exp op='&lt;+' typref='18'>
 <Attr>
-<Pos l='93' c='32' s='2'/>
+<Pos l='102' c='32' s='2'/>
 </Attr>
-<Id value='getGender' typref='17'>
+<Id value='getGender' typref='18'>
 <Attr>
-<Pos l='93' c='22' s='9'/>
+<Pos l='102' c='22' s='9'/>
 </Attr>
 </Id>
-<Nary_Exp op='{' typref='17'>
+<Nary_Exp op='{' typref='18'>
 <Attr>
-<Pos l='93' c='34' s='1'/>
+<Pos l='102' c='34' s='1'/>
 </Attr>
-<Binary_Exp op='|-&gt;' typref='27'>
+<Binary_Exp op='|-&gt;' typref='29'>
 <Attr>
-<Pos l='93' c='41' s='3'/>
+<Pos l='102' c='41' s='3'/>
 </Attr>
 <Id value='user' typref='12'>
 <Attr>
-<Pos l='93' c='36' s='4'/>
+<Pos l='102' c='36' s='4'/>
 </Attr>
 </Id>
 <Id value='gender' typref='7'>
 <Attr>
-<Pos l='93' c='43' s='6'/>
+<Pos l='102' c='43' s='6'/>
 </Attr>
 </Id>
 </Binary_Exp>
@@ -1048,17 +1392,17 @@
 </Operation>
 <Operation name='SetAge'>
 <Attr>
-<Pos l='97' c='5' s='6' endLine='102'/>
+<Pos l='106' c='5' s='6' endLine='111'/>
 </Attr>
 <Input_Parameters>
 <Id value='user' typref='12'>
 <Attr>
-<Pos l='97' c='12' s='4'/>
+<Pos l='106' c='12' s='4'/>
 </Attr>
 </Id>
 <Id value='age' typref='1'>
 <Attr>
-<Pos l='97' c='18' s='3'/>
+<Pos l='106' c='18' s='3'/>
 </Attr>
 </Id>
 </Input_Parameters>
@@ -1066,46 +1410,46 @@
 <Nary_Pred op='&amp;'>
 <Exp_Comparison op=':'>
 <Attr>
-<Pos l='99' c='14' s='1'/>
+<Pos l='108' c='14' s='1'/>
 </Attr>
 <Id value='user' typref='12'>
 <Attr>
-<Pos l='99' c='9' s='4'/>
+<Pos l='108' c='9' s='4'/>
 </Attr>
 </Id>
 <Id value='users' typref='4'>
 <Attr>
-<Pos l='99' c='16' s='5'/>
+<Pos l='108' c='16' s='5'/>
 </Attr>
 </Id>
 </Exp_Comparison>
 <Exp_Comparison op=':'>
 <Attr>
-<Pos l='99' c='28' s='1'/>
+<Pos l='108' c='28' s='1'/>
 </Attr>
 <Id value='age' typref='1'>
 <Attr>
-<Pos l='99' c='24' s='3'/>
+<Pos l='108' c='24' s='3'/>
 </Attr>
 </Id>
 <Id value='NATURAL' typref='2'>
 <Attr>
-<Pos l='99' c='30' s='7'/>
+<Pos l='108' c='30' s='7'/>
 </Attr>
 </Id>
 </Exp_Comparison>
 <Exp_Comparison op='&gt;=i'>
 <Attr>
-<Pos l='99' c='38' s='2'/>
+<Pos l='108' c='38' s='2'/>
 </Attr>
 <Id value='age' typref='1'>
 <Attr>
-<Pos l='99' c='34' s='3'/>
+<Pos l='108' c='34' s='3'/>
 </Attr>
 </Id>
 <Integer_Literal value='18' typref='1'>
 <Attr>
-<Pos l='99' c='40' s='2'/>
+<Pos l='108' c='40' s='2'/>
 </Attr>
 </Integer_Literal>
 </Exp_Comparison>
@@ -1114,41 +1458,41 @@
 <Body>
 <Assignement_Sub>
 <Attr>
-<Pos l='101' c='16' s='2'/>
+<Pos l='110' c='16' s='2'/>
 </Attr>
 <Variables>
-<Id value='getAge' typref='18'>
+<Id value='getAge' typref='19'>
 <Attr>
-<Pos l='101' c='9' s='6'/>
+<Pos l='110' c='9' s='6'/>
 </Attr>
 </Id>
 </Variables>
 <Values>
-<Binary_Exp op='&lt;+' typref='18'>
+<Binary_Exp op='&lt;+' typref='19'>
 <Attr>
-<Pos l='101' c='26' s='2'/>
+<Pos l='110' c='26' s='2'/>
 </Attr>
-<Id value='getAge' typref='18'>
+<Id value='getAge' typref='19'>
 <Attr>
-<Pos l='101' c='19' s='6'/>
+<Pos l='110' c='19' s='6'/>
 </Attr>
 </Id>
-<Nary_Exp op='{' typref='18'>
+<Nary_Exp op='{' typref='19'>
 <Attr>
-<Pos l='101' c='28' s='1'/>
+<Pos l='110' c='28' s='1'/>
 </Attr>
-<Binary_Exp op='|-&gt;' typref='28'>
+<Binary_Exp op='|-&gt;' typref='30'>
 <Attr>
-<Pos l='101' c='35' s='3'/>
+<Pos l='110' c='35' s='3'/>
 </Attr>
 <Id value='user' typref='12'>
 <Attr>
-<Pos l='101' c='30' s='4'/>
+<Pos l='110' c='30' s='4'/>
 </Attr>
 </Id>
 <Id value='age' typref='1'>
 <Attr>
-<Pos l='101' c='37' s='3'/>
+<Pos l='110' c='37' s='3'/>
 </Attr>
 </Id>
 </Binary_Exp>
@@ -1160,17 +1504,17 @@
 </Operation>
 <Operation name='SetPseudo'>
 <Attr>
-<Pos l='104' c='5' s='9' endLine='110'/>
+<Pos l='113' c='5' s='9' endLine='119'/>
 </Attr>
 <Input_Parameters>
 <Id value='user' typref='12'>
 <Attr>
-<Pos l='104' c='15' s='4'/>
+<Pos l='113' c='15' s='4'/>
 </Attr>
 </Id>
 <Id value='pseudo' typref='13'>
 <Attr>
-<Pos l='104' c='21' s='6'/>
+<Pos l='113' c='21' s='6'/>
 </Attr>
 </Id>
 </Input_Parameters>
@@ -1178,65 +1522,65 @@
 <Nary_Pred op='&amp;'>
 <Exp_Comparison op=':'>
 <Attr>
-<Pos l='106' c='14' s='1'/>
+<Pos l='115' c='14' s='1'/>
 </Attr>
 <Id value='user' typref='12'>
 <Attr>
-<Pos l='106' c='9' s='4'/>
+<Pos l='115' c='9' s='4'/>
 </Attr>
 </Id>
 <Id value='users' typref='4'>
 <Attr>
-<Pos l='106' c='16' s='5'/>
+<Pos l='115' c='16' s='5'/>
 </Attr>
 </Id>
 </Exp_Comparison>
 <Exp_Comparison op='/='>
 <Attr>
-<Pos l='106' c='29' s='2'/>
+<Pos l='115' c='29' s='2'/>
 </Attr>
 <Id value='user' typref='12'>
 <Attr>
-<Pos l='106' c='24' s='4'/>
+<Pos l='115' c='24' s='4'/>
 </Attr>
 </Id>
 <Id value='masterUser' typref='12'>
 <Attr>
-<Pos l='106' c='31' s='10'/>
+<Pos l='115' c='31' s='10'/>
 </Attr>
 </Id>
 </Exp_Comparison>
 <Exp_Comparison op=':'>
 <Attr>
-<Pos l='107' c='16' s='1'/>
+<Pos l='116' c='16' s='1'/>
 </Attr>
 <Id value='pseudo' typref='13'>
 <Attr>
-<Pos l='107' c='9' s='6'/>
+<Pos l='116' c='9' s='6'/>
 </Attr>
 </Id>
 <Id value='PSEUDOS' typref='5'>
 <Attr>
-<Pos l='107' c='18' s='7'/>
+<Pos l='116' c='18' s='7'/>
 </Attr>
 </Id>
 </Exp_Comparison>
 <Exp_Comparison op='/:'>
 <Attr>
-<Pos l='107' c='35' s='2'/>
+<Pos l='116' c='35' s='2'/>
 </Attr>
 <Id value='pseudo' typref='13'>
 <Attr>
-<Pos l='107' c='28' s='6'/>
+<Pos l='116' c='28' s='6'/>
 </Attr>
 </Id>
 <Unary_Exp op='ran' typref='5'>
 <Attr>
-<Pos l='107' c='37' s='3'/>
+<Pos l='116' c='37' s='3'/>
 </Attr>
-<Id value='pseudos' typref='15'>
+<Id value='pseudos' typref='16'>
 <Attr>
-<Pos l='107' c='41' s='7'/>
+<Pos l='116' c='41' s='7'/>
 </Attr>
 </Id>
 </Unary_Exp>
@@ -1246,41 +1590,41 @@
 <Body>
 <Assignement_Sub>
 <Attr>
-<Pos l='109' c='17' s='2'/>
+<Pos l='118' c='17' s='2'/>
 </Attr>
 <Variables>
-<Id value='pseudos' typref='15'>
+<Id value='pseudos' typref='16'>
 <Attr>
-<Pos l='109' c='9' s='7'/>
+<Pos l='118' c='9' s='7'/>
 </Attr>
 </Id>
 </Variables>
 <Values>
-<Binary_Exp op='&lt;+' typref='15'>
+<Binary_Exp op='&lt;+' typref='16'>
 <Attr>
-<Pos l='109' c='28' s='2'/>
+<Pos l='118' c='28' s='2'/>
 </Attr>
-<Id value='pseudos' typref='15'>
+<Id value='pseudos' typref='16'>
 <Attr>
-<Pos l='109' c='20' s='7'/>
+<Pos l='118' c='20' s='7'/>
 </Attr>
 </Id>
-<Nary_Exp op='{' typref='15'>
+<Nary_Exp op='{' typref='16'>
 <Attr>
-<Pos l='109' c='30' s='1'/>
+<Pos l='118' c='30' s='1'/>
 </Attr>
-<Binary_Exp op='|-&gt;' typref='26'>
+<Binary_Exp op='|-&gt;' typref='27'>
 <Attr>
-<Pos l='109' c='37' s='3'/>
+<Pos l='118' c='37' s='3'/>
 </Attr>
 <Id value='user' typref='12'>
 <Attr>
-<Pos l='109' c='32' s='4'/>
+<Pos l='118' c='32' s='4'/>
 </Attr>
 </Id>
 <Id value='pseudo' typref='13'>
 <Attr>
-<Pos l='109' c='39' s='6'/>
+<Pos l='118' c='39' s='6'/>
 </Attr>
 </Id>
 </Binary_Exp>
@@ -1292,17 +1636,17 @@
 </Operation>
 <Operation name='LogIn'>
 <Attr>
-<Pos l='113' c='5' s='5' endLine='120'/>
+<Pos l='122' c='5' s='5' endLine='129'/>
 </Attr>
 <Input_Parameters>
 <Id value='pseudo' typref='13'>
 <Attr>
-<Pos l='113' c='11' s='6'/>
+<Pos l='122' c='11' s='6'/>
 </Attr>
 </Id>
 <Id value='pwd' typref='14'>
 <Attr>
-<Pos l='113' c='19' s='3'/>
+<Pos l='122' c='19' s='3'/>
 </Attr>
 </Id>
 </Input_Parameters>
@@ -1310,111 +1654,111 @@
 <Nary_Pred op='&amp;'>
 <Exp_Comparison op=':'>
 <Attr>
-<Pos l='115' c='16' s='1'/>
+<Pos l='124' c='16' s='1'/>
 </Attr>
 <Id value='pseudo' typref='13'>
 <Attr>
-<Pos l='115' c='9' s='6'/>
+<Pos l='124' c='9' s='6'/>
 </Attr>
 </Id>
 <Id value='PSEUDOS' typref='5'>
 <Attr>
-<Pos l='115' c='18' s='7'/>
+<Pos l='124' c='18' s='7'/>
 </Attr>
 </Id>
 </Exp_Comparison>
 <Exp_Comparison op=':'>
 <Attr>
-<Pos l='115' c='35' s='1'/>
+<Pos l='124' c='35' s='1'/>
 </Attr>
 <Id value='pseudo' typref='13'>
 <Attr>
-<Pos l='115' c='28' s='6'/>
+<Pos l='124' c='28' s='6'/>
 </Attr>
 </Id>
 <Unary_Exp op='ran' typref='5'>
 <Attr>
-<Pos l='115' c='37' s='3'/>
+<Pos l='124' c='37' s='3'/>
 </Attr>
-<Id value='pseudos' typref='15'>
+<Id value='pseudos' typref='16'>
 <Attr>
-<Pos l='115' c='41' s='7'/>
+<Pos l='124' c='41' s='7'/>
 </Attr>
 </Id>
 </Unary_Exp>
 </Exp_Comparison>
 <Exp_Comparison op=':'>
 <Attr>
-<Pos l='116' c='13' s='1'/>
+<Pos l='125' c='13' s='1'/>
 </Attr>
 <Id value='pwd' typref='14'>
 <Attr>
-<Pos l='116' c='9' s='3'/>
+<Pos l='125' c='9' s='3'/>
 </Attr>
 </Id>
 <Id value='PASSWORDS' typref='11'>
 <Attr>
-<Pos l='116' c='15' s='9'/>
+<Pos l='125' c='15' s='9'/>
 </Attr>
 </Id>
 </Exp_Comparison>
 <Exp_Comparison op=':'>
 <Attr>
-<Pos l='116' c='31' s='1'/>
+<Pos l='125' c='31' s='1'/>
 </Attr>
 <Id value='pwd' typref='14'>
 <Attr>
-<Pos l='116' c='27' s='3'/>
+<Pos l='125' c='27' s='3'/>
 </Attr>
 </Id>
 <Unary_Exp op='ran' typref='11'>
 <Attr>
-<Pos l='116' c='33' s='3'/>
+<Pos l='125' c='33' s='3'/>
 </Attr>
-<Id value='shadow' typref='19'>
+<Id value='shadow' typref='20'>
 <Attr>
-<Pos l='116' c='37' s='6'/>
+<Pos l='125' c='37' s='6'/>
 </Attr>
 </Id>
 </Unary_Exp>
 </Exp_Comparison>
 <Exp_Comparison op='='>
 <Attr>
-<Pos l='117' c='35' s='1'/>
+<Pos l='126' c='35' s='1'/>
 </Attr>
 <Binary_Exp op='(' typref='14'>
 <Attr>
-<Pos l='117' c='15' s='0'/>
+<Pos l='126' c='15' s='0'/>
 </Attr>
-<Id value='shadow' typref='19'>
+<Id value='shadow' typref='20'>
 <Attr>
-<Pos l='117' c='9' s='6'/>
+<Pos l='126' c='9' s='6'/>
 </Attr>
 </Id>
 <Binary_Exp op='(' typref='12'>
 <Attr>
-<Pos l='117' c='25' s='0'/>
+<Pos l='126' c='25' s='0'/>
 </Attr>
-<Unary_Exp op='~' typref='30'>
+<Unary_Exp op='~' typref='32'>
 <Attr>
-<Pos l='117' c='16' s='7'/>
+<Pos l='126' c='16' s='7'/>
 </Attr>
-<Id value='pseudos' typref='15'>
+<Id value='pseudos' typref='16'>
 <Attr>
-<Pos l='117' c='16' s='7'/>
+<Pos l='126' c='16' s='7'/>
 </Attr>
 </Id>
 </Unary_Exp>
 <Id value='pseudo' typref='13'>
 <Attr>
-<Pos l='117' c='26' s='6'/>
+<Pos l='126' c='26' s='6'/>
 </Attr>
 </Id>
 </Binary_Exp>
 </Binary_Exp>
 <Id value='pwd' typref='14'>
 <Attr>
-<Pos l='117' c='37' s='3'/>
+<Pos l='126' c='37' s='3'/>
 </Attr>
 </Id>
 </Exp_Comparison>
@@ -1423,46 +1767,46 @@
 <Body>
 <Assignement_Sub>
 <Attr>
-<Pos l='119' c='21' s='2'/>
+<Pos l='128' c='21' s='2'/>
 </Attr>
 <Variables>
 <Id value='loggedUsers' typref='4'>
 <Attr>
-<Pos l='119' c='9' s='11'/>
+<Pos l='128' c='9' s='11'/>
 </Attr>
 </Id>
 </Variables>
 <Values>
 <Binary_Exp op='\/' typref='4'>
 <Attr>
-<Pos l='119' c='36' s='2'/>
+<Pos l='128' c='36' s='2'/>
 </Attr>
 <Id value='loggedUsers' typref='4'>
 <Attr>
-<Pos l='119' c='24' s='11'/>
+<Pos l='128' c='24' s='11'/>
 </Attr>
 </Id>
 <Nary_Exp op='{' typref='4'>
 <Attr>
-<Pos l='119' c='38' s='1'/>
+<Pos l='128' c='38' s='1'/>
 </Attr>
 <Binary_Exp op='(' typref='12'>
 <Attr>
-<Pos l='119' c='48' s='0'/>
+<Pos l='128' c='48' s='0'/>
 </Attr>
-<Unary_Exp op='~' typref='30'>
+<Unary_Exp op='~' typref='32'>
 <Attr>
-<Pos l='119' c='39' s='7'/>
+<Pos l='128' c='39' s='7'/>
 </Attr>
-<Id value='pseudos' typref='15'>
+<Id value='pseudos' typref='16'>
 <Attr>
-<Pos l='119' c='39' s='7'/>
+<Pos l='128' c='39' s='7'/>
 </Attr>
 </Id>
 </Unary_Exp>
 <Id value='pseudo' typref='13'>
 <Attr>
-<Pos l='119' c='49' s='6'/>
+<Pos l='128' c='49' s='6'/>
 </Attr>
 </Id>
 </Binary_Exp>
@@ -1474,12 +1818,12 @@
 </Operation>
 <Operation name='LogOut'>
 <Attr>
-<Pos l='122' c='5' s='6' endLine='127'/>
+<Pos l='131' c='5' s='6' endLine='136'/>
 </Attr>
 <Input_Parameters>
 <Id value='user' typref='12'>
 <Attr>
-<Pos l='122' c='12' s='4'/>
+<Pos l='131' c='12' s='4'/>
 </Attr>
 </Id>
 </Input_Parameters>
@@ -1487,46 +1831,46 @@
 <Nary_Pred op='&amp;'>
 <Exp_Comparison op=':'>
 <Attr>
-<Pos l='124' c='14' s='1'/>
+<Pos l='133' c='14' s='1'/>
 </Attr>
 <Id value='user' typref='12'>
 <Attr>
-<Pos l='124' c='9' s='4'/>
+<Pos l='133' c='9' s='4'/>
 </Attr>
 </Id>
 <Id value='USERS' typref='4'>
 <Attr>
-<Pos l='124' c='16' s='5'/>
+<Pos l='133' c='16' s='5'/>
 </Attr>
 </Id>
 </Exp_Comparison>
 <Exp_Comparison op=':'>
 <Attr>
-<Pos l='124' c='29' s='1'/>
+<Pos l='133' c='29' s='1'/>
 </Attr>
 <Id value='user' typref='12'>
 <Attr>
-<Pos l='124' c='24' s='4'/>
+<Pos l='133' c='24' s='4'/>
 </Attr>
 </Id>
 <Id value='users' typref='4'>
 <Attr>
-<Pos l='124' c='31' s='5'/>
+<Pos l='133' c='31' s='5'/>
 </Attr>
 </Id>
 </Exp_Comparison>
 <Exp_Comparison op=':'>
 <Attr>
-<Pos l='124' c='44' s='1'/>
+<Pos l='133' c='44' s='1'/>
 </Attr>
 <Id value='user' typref='12'>
 <Attr>
-<Pos l='124' c='39' s='4'/>
+<Pos l='133' c='39' s='4'/>
 </Attr>
 </Id>
 <Id value='loggedUsers' typref='4'>
 <Attr>
-<Pos l='124' c='46' s='11'/>
+<Pos l='133' c='46' s='11'/>
 </Attr>
 </Id>
 </Exp_Comparison>
@@ -1535,32 +1879,32 @@
 <Body>
 <Assignement_Sub>
 <Attr>
-<Pos l='126' c='21' s='2'/>
+<Pos l='135' c='21' s='2'/>
 </Attr>
 <Variables>
 <Id value='loggedUsers' typref='4'>
 <Attr>
-<Pos l='126' c='9' s='11'/>
+<Pos l='135' c='9' s='11'/>
 </Attr>
 </Id>
 </Variables>
 <Values>
 <Binary_Exp op='-s' typref='4'>
 <Attr>
-<Pos l='126' c='36' s='1'/>
+<Pos l='135' c='36' s='1'/>
 </Attr>
 <Id value='loggedUsers' typref='4'>
 <Attr>
-<Pos l='126' c='24' s='11'/>
+<Pos l='135' c='24' s='11'/>
 </Attr>
 </Id>
 <Nary_Exp op='{' typref='4'>
 <Attr>
-<Pos l='126' c='38' s='1'/>
+<Pos l='135' c='38' s='1'/>
 </Attr>
 <Id value='user' typref='12'>
 <Attr>
-<Pos l='126' c='39' s='4'/>
+<Pos l='135' c='39' s='4'/>
 </Attr>
 </Id>
 </Nary_Exp>
@@ -1571,32 +1915,42 @@
 </Operation>
 <Operation name='AddUser'>
 <Attr>
-<Pos l='130' c='5' s='7' endLine='143'/>
+<Pos l='139' c='5' s='7' endLine='172'/>
 </Attr>
 <Input_Parameters>
 <Id value='user' typref='12'>
 <Attr>
-<Pos l='130' c='13' s='4'/>
+<Pos l='139' c='13' s='4'/>
 </Attr>
 </Id>
 <Id value='pseudo' typref='13'>
 <Attr>
-<Pos l='130' c='19' s='6'/>
+<Pos l='139' c='19' s='6'/>
 </Attr>
 </Id>
 <Id value='pwd' typref='14'>
 <Attr>
-<Pos l='130' c='27' s='3'/>
+<Pos l='139' c='27' s='3'/>
 </Attr>
 </Id>
 <Id value='gender' typref='7'>
 <Attr>
-<Pos l='130' c='32' s='6'/>
+<Pos l='139' c='32' s='6'/>
 </Attr>
 </Id>
 <Id value='age' typref='1'>
 <Attr>
-<Pos l='130' c='40' s='3'/>
+<Pos l='139' c='40' s='3'/>
+</Attr>
+</Id>
+<Id value='content' typref='15'>
+<Attr>
+<Pos l='139' c='45' s='7'/>
+</Attr>
+</Id>
+<Id value='contentType' typref='10'>
+<Attr>
+<Pos l='139' c='54' s='11'/>
 </Attr>
 </Id>
 </Input_Parameters>
@@ -1604,425 +1958,210 @@
 <Nary_Pred op='&amp;'>
 <Exp_Comparison op=':'>
 <Attr>
-<Pos l='132' c='14' s='1'/>
+<Pos l='141' c='14' s='1'/>
 </Attr>
 <Id value='user' typref='12'>
 <Attr>
-<Pos l='132' c='9' s='4'/>
+<Pos l='141' c='9' s='4'/>
 </Attr>
 </Id>
 <Id value='USERS' typref='4'>
 <Attr>
-<Pos l='132' c='16' s='5'/>
+<Pos l='141' c='16' s='5'/>
 </Attr>
 </Id>
 </Exp_Comparison>
 <Exp_Comparison op='/:'>
 <Attr>
-<Pos l='132' c='29' s='2'/>
+<Pos l='141' c='29' s='2'/>
 </Attr>
 <Id value='user' typref='12'>
 <Attr>
-<Pos l='132' c='24' s='4'/>
+<Pos l='141' c='24' s='4'/>
 </Attr>
 </Id>
 <Id value='users' typref='4'>
 <Attr>
-<Pos l='132' c='31' s='5'/>
+<Pos l='141' c='31' s='5'/>
 </Attr>
 </Id>
 </Exp_Comparison>
 <Exp_Comparison op='/='>
 <Attr>
-<Pos l='132' c='44' s='2'/>
+<Pos l='141' c='44' s='2'/>
 </Attr>
 <Id value='user' typref='12'>
 <Attr>
-<Pos l='132' c='39' s='4'/>
+<Pos l='141' c='39' s='4'/>
 </Attr>
 </Id>
 <Id value='masterUser' typref='12'>
 <Attr>
-<Pos l='132' c='46' s='10'/>
+<Pos l='141' c='46' s='10'/>
 </Attr>
 </Id>
 </Exp_Comparison>
 <Exp_Comparison op=':'>
 <Attr>
-<Pos l='133' c='16' s='1'/>
+<Pos l='142' c='16' s='1'/>
 </Attr>
 <Id value='pseudo' typref='13'>
 <Attr>
-<Pos l='133' c='9' s='6'/>
+<Pos l='142' c='9' s='6'/>
 </Attr>
 </Id>
 <Id value='PSEUDOS' typref='5'>
 <Attr>
-<Pos l='133' c='18' s='7'/>
+<Pos l='142' c='18' s='7'/>
 </Attr>
 </Id>
 </Exp_Comparison>
 <Exp_Comparison op='/:'>
 <Attr>
-<Pos l='133' c='35' s='2'/>
+<Pos l='142' c='35' s='2'/>
 </Attr>
 <Id value='pseudo' typref='13'>
 <Attr>
-<Pos l='133' c='28' s='6'/>
+<Pos l='142' c='28' s='6'/>
 </Attr>
 </Id>
 <Unary_Exp op='ran' typref='5'>
 <Attr>
-<Pos l='133' c='37' s='3'/>
+<Pos l='142' c='37' s='3'/>
 </Attr>
-<Id value='pseudos' typref='15'>
+<Id value='pseudos' typref='16'>
 <Attr>
-<Pos l='133' c='41' s='7'/>
+<Pos l='142' c='41' s='7'/>
 </Attr>
 </Id>
 </Unary_Exp>
 </Exp_Comparison>
 <Exp_Comparison op=':'>
 <Attr>
-<Pos l='134' c='13' s='1'/>
+<Pos l='143' c='13' s='1'/>
 </Attr>
 <Id value='pwd' typref='14'>
 <Attr>
-<Pos l='134' c='9' s='3'/>
+<Pos l='143' c='9' s='3'/>
 </Attr>
 </Id>
 <Id value='PASSWORDS' typref='11'>
 <Attr>
-<Pos l='134' c='15' s='9'/>
+<Pos l='143' c='15' s='9'/>
 </Attr>
 </Id>
 </Exp_Comparison>
 <Exp_Comparison op='/:'>
 <Attr>
-<Pos l='134' c='31' s='2'/>
+<Pos l='143' c='31' s='2'/>
 </Attr>
 <Id value='pwd' typref='14'>
 <Attr>
-<Pos l='134' c='27' s='3'/>
+<Pos l='143' c='27' s='3'/>
 </Attr>
 </Id>
 <Unary_Exp op='ran' typref='11'>
 <Attr>
-<Pos l='134' c='33' s='3'/>
+<Pos l='143' c='33' s='3'/>
 </Attr>
-<Id value='shadow' typref='19'>
+<Id value='shadow' typref='20'>
 <Attr>
-<Pos l='134' c='37' s='6'/>
+<Pos l='143' c='37' s='6'/>
 </Attr>
 </Id>
 </Unary_Exp>
 </Exp_Comparison>
 <Exp_Comparison op=':'>
 <Attr>
-<Pos l='135' c='16' s='1'/>
+<Pos l='144' c='16' s='1'/>
 </Attr>
 <Id value='gender' typref='7'>
 <Attr>
-<Pos l='135' c='9' s='6'/>
+<Pos l='144' c='9' s='6'/>
 </Attr>
 </Id>
 <Id value='GENDERS' typref='6'>
 <Attr>
-<Pos l='135' c='18' s='7'/>
+<Pos l='144' c='18' s='7'/>
 </Attr>
 </Id>
 </Exp_Comparison>
 <Exp_Comparison op=':'>
 <Attr>
-<Pos l='136' c='13' s='1'/>
+<Pos l='145' c='17' s='1'/>
+</Attr>
+<Id value='content' typref='15'>
+<Attr>
+<Pos l='145' c='9' s='7'/>
+</Attr>
+</Id>
+<Id value='CONTENTS' typref='8'>
+<Attr>
+<Pos l='145' c='19' s='8'/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison op='/:'>
+<Attr>
+<Pos l='145' c='38' s='2'/>
+</Attr>
+<Id value='content' typref='15'>
+<Attr>
+<Pos l='145' c='30' s='7'/>
+</Attr>
+</Id>
+<Id value='contents' typref='8'>
+<Attr>
+<Pos l='145' c='40' s='8'/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison op=':'>
+<Attr>
+<Pos l='146' c='21' s='1'/>
+</Attr>
+<Id value='contentType' typref='10'>
+<Attr>
+<Pos l='146' c='9' s='11'/>
+</Attr>
+</Id>
+<Id value='CONTENT_TYPES' typref='9'>
+<Attr>
+<Pos l='146' c='23' s='13'/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison op=':'>
+<Attr>
+<Pos l='147' c='13' s='1'/>
 </Attr>
 <Id value='age' typref='1'>
 <Attr>
-<Pos l='136' c='9' s='3'/>
+<Pos l='147' c='9' s='3'/>
 </Attr>
 </Id>
 <Id value='NATURAL' typref='2'>
 <Attr>
-<Pos l='136' c='15' s='7'/>
+<Pos l='147' c='15' s='7'/>
 </Attr>
 </Id>
 </Exp_Comparison>
 <Exp_Comparison op='&gt;=i'>
 <Attr>
-<Pos l='136' c='23' s='2'/>
+<Pos l='147' c='23' s='2'/>
 </Attr>
 <Id value='age' typref='1'>
 <Attr>
-<Pos l='136' c='19' s='3'/>
+<Pos l='147' c='19' s='3'/>
 </Attr>
 </Id>
 <Integer_Literal value='18' typref='1'>
 <Attr>
-<Pos l='136' c='25' s='2'/>
+<Pos l='147' c='25' s='2'/>
 </Attr>
 </Integer_Literal>
 </Exp_Comparison>
-</Nary_Pred>
-</Precondition>
-<Body>
-<Nary_Sub op='||'>
-<Assignement_Sub>
-<Attr>
-<Pos l='138' c='15' s='2'/>
-</Attr>
-<Variables>
-<Id value='users' typref='4'>
-<Attr>
-<Pos l='138' c='9' s='5'/>
-</Attr>
-</Id>
-</Variables>
-<Values>
-<Binary_Exp op='\/' typref='4'>
-<Attr>
-<Pos l='138' c='24' s='2'/>
-</Attr>
-<Id value='users' typref='4'>
-<Attr>
-<Pos l='138' c='18' s='5'/>
-</Attr>
-</Id>
-<Nary_Exp op='{' typref='4'>
-<Attr>
-<Pos l='138' c='26' s='1'/>
-</Attr>
-<Id value='user' typref='12'>
-<Attr>
-<Pos l='138' c='27' s='4'/>
-</Attr>
-</Id>
-</Nary_Exp>
-</Binary_Exp>
-</Values>
-</Assignement_Sub>
-<Assignement_Sub>
-<Attr>
-<Pos l='139' c='16' s='2'/>
-</Attr>
-<Variables>
-<Id value='shadow' typref='19'>
-<Attr>
-<Pos l='139' c='9' s='6'/>
-</Attr>
-</Id>
-</Variables>
-<Values>
-<Binary_Exp op='&lt;+' typref='19'>
-<Attr>
-<Pos l='139' c='26' s='2'/>
-</Attr>
-<Id value='shadow' typref='19'>
-<Attr>
-<Pos l='139' c='19' s='6'/>
-</Attr>
-</Id>
-<Nary_Exp op='{' typref='19'>
-<Attr>
-<Pos l='139' c='28' s='1'/>
-</Attr>
-<Binary_Exp op='|-&gt;' typref='29'>
-<Attr>
-<Pos l='139' c='35' s='3'/>
-</Attr>
-<Id value='user' typref='12'>
-<Attr>
-<Pos l='139' c='30' s='4'/>
-</Attr>
-</Id>
-<Id value='pwd' typref='14'>
-<Attr>
-<Pos l='139' c='37' s='3'/>
-</Attr>
-</Id>
-</Binary_Exp>
-</Nary_Exp>
-</Binary_Exp>
-</Values>
-</Assignement_Sub>
-<Assignement_Sub>
-<Attr>
-<Pos l='140' c='17' s='2'/>
-</Attr>
-<Variables>
-<Id value='pseudos' typref='15'>
-<Attr>
-<Pos l='140' c='9' s='7'/>
-</Attr>
-</Id>
-</Variables>
-<Values>
-<Binary_Exp op='&lt;+' typref='15'>
-<Attr>
-<Pos l='140' c='28' s='2'/>
-</Attr>
-<Id value='pseudos' typref='15'>
-<Attr>
-<Pos l='140' c='20' s='7'/>
-</Attr>
-</Id>
-<Nary_Exp op='{' typref='15'>
-<Attr>
-<Pos l='140' c='30' s='1'/>
-</Attr>
-<Binary_Exp op='|-&gt;' typref='26'>
-<Attr>
-<Pos l='140' c='37' s='3'/>
-</Attr>
-<Id value='user' typref='12'>
-<Attr>
-<Pos l='140' c='32' s='4'/>
-</Attr>
-</Id>
-<Id value='pseudo' typref='13'>
-<Attr>
-<Pos l='140' c='39' s='6'/>
-</Attr>
-</Id>
-</Binary_Exp>
-</Nary_Exp>
-</Binary_Exp>
-</Values>
-</Assignement_Sub>
-<Assignement_Sub>
-<Attr>
-<Pos l='141' c='19' s='2'/>
-</Attr>
-<Variables>
-<Id value='getGender' typref='17'>
-<Attr>
-<Pos l='141' c='9' s='9'/>
-</Attr>
-</Id>
-</Variables>
-<Values>
-<Binary_Exp op='\/' typref='17'>
-<Attr>
-<Pos l='141' c='32' s='2'/>
-</Attr>
-<Id value='getGender' typref='17'>
-<Attr>
-<Pos l='141' c='22' s='9'/>
-</Attr>
-</Id>
-<Nary_Exp op='{' typref='17'>
-<Attr>
-<Pos l='141' c='34' s='1'/>
-</Attr>
-<Binary_Exp op='|-&gt;' typref='27'>
-<Attr>
-<Pos l='141' c='41' s='3'/>
-</Attr>
-<Id value='user' typref='12'>
-<Attr>
-<Pos l='141' c='36' s='4'/>
-</Attr>
-</Id>
-<Id value='gender' typref='7'>
-<Attr>
-<Pos l='141' c='43' s='6'/>
-</Attr>
-</Id>
-</Binary_Exp>
-</Nary_Exp>
-</Binary_Exp>
-</Values>
-</Assignement_Sub>
-<Assignement_Sub>
-<Attr>
-<Pos l='142' c='16' s='2'/>
-</Attr>
-<Variables>
-<Id value='getAge' typref='18'>
-<Attr>
-<Pos l='142' c='9' s='6'/>
-</Attr>
-</Id>
-</Variables>
-<Values>
-<Binary_Exp op='&lt;+' typref='18'>
-<Attr>
-<Pos l='142' c='26' s='2'/>
-</Attr>
-<Id value='getAge' typref='18'>
-<Attr>
-<Pos l='142' c='19' s='6'/>
-</Attr>
-</Id>
-<Nary_Exp op='{' typref='18'>
-<Attr>
-<Pos l='142' c='28' s='1'/>
-</Attr>
-<Binary_Exp op='|-&gt;' typref='28'>
-<Attr>
-<Pos l='142' c='35' s='3'/>
-</Attr>
-<Id value='user' typref='12'>
-<Attr>
-<Pos l='142' c='30' s='4'/>
-</Attr>
-</Id>
-<Id value='age' typref='1'>
-<Attr>
-<Pos l='142' c='37' s='3'/>
-</Attr>
-</Id>
-</Binary_Exp>
-</Nary_Exp>
-</Binary_Exp>
-</Values>
-</Assignement_Sub>
-</Nary_Sub>
-</Body>
-</Operation>
-<Operation name='DeleteUser'>
-<Attr>
-<Pos l='145' c='5' s='10' endLine='171'/>
-</Attr>
-<Input_Parameters>
-<Id value='user' typref='12'>
-<Attr>
-<Pos l='145' c='16' s='4'/>
-</Attr>
-</Id>
-</Input_Parameters>
-<Precondition>
-<Nary_Pred op='&amp;'>
-<Exp_Comparison op=':'>
-<Attr>
-<Pos l='147' c='14' s='1'/>
-</Attr>
-<Id value='user' typref='12'>
-<Attr>
-<Pos l='147' c='9' s='4'/>
-</Attr>
-</Id>
-<Id value='USERS' typref='4'>
-<Attr>
-<Pos l='147' c='16' s='5'/>
-</Attr>
-</Id>
-</Exp_Comparison>
-<Exp_Comparison op=':'>
-<Attr>
-<Pos l='147' c='29' s='1'/>
-</Attr>
-<Id value='user' typref='12'>
-<Attr>
-<Pos l='147' c='24' s='4'/>
-</Attr>
-</Id>
-<Id value='users' typref='4'>
-<Attr>
-<Pos l='147' c='31' s='5'/>
-</Attr>
-</Id>
-</Exp_Comparison>
-<Exp_Comparison op='/='>
+<Exp_Comparison op='/:'>
 <Attr>
 <Pos l='148' c='14' s='2'/>
 </Attr>
@@ -2031,11 +2170,16 @@
 <Pos l='148' c='9' s='4'/>
 </Attr>
 </Id>
-<Id value='masterUser' typref='12'>
+<Unary_Exp op='ran' typref='4'>
 <Attr>
-<Pos l='148' c='16' s='10'/>
+<Pos l='148' c='16' s='3'/>
+</Attr>
+<Id value='getContentOwner' typref='17'>
+<Attr>
+<Pos l='148' c='20' s='15'/>
 </Attr>
 </Id>
+</Unary_Exp>
 </Exp_Comparison>
 </Nary_Pred>
 </Precondition>
@@ -2053,9 +2197,9 @@
 </Id>
 </Variables>
 <Values>
-<Binary_Exp op='-s' typref='4'>
+<Binary_Exp op='\/' typref='4'>
 <Attr>
-<Pos l='150' c='24' s='1'/>
+<Pos l='150' c='24' s='2'/>
 </Attr>
 <Id value='users' typref='4'>
 <Attr>
@@ -2077,602 +2221,510 @@
 </Assignement_Sub>
 <Assignement_Sub>
 <Attr>
-<Pos l='151' c='21' s='2'/>
+<Pos l='151' c='16' s='2'/>
 </Attr>
 <Variables>
-<Id value='loggedUsers' typref='4'>
+<Id value='shadow' typref='20'>
 <Attr>
-<Pos l='151' c='9' s='11'/>
+<Pos l='151' c='9' s='6'/>
 </Attr>
 </Id>
 </Variables>
 <Values>
-<Binary_Exp op='-s' typref='4'>
+<Binary_Exp op='&lt;+' typref='20'>
 <Attr>
-<Pos l='151' c='36' s='1'/>
+<Pos l='151' c='26' s='2'/>
 </Attr>
-<Id value='loggedUsers' typref='4'>
+<Id value='shadow' typref='20'>
 <Attr>
-<Pos l='151' c='24' s='11'/>
+<Pos l='151' c='19' s='6'/>
 </Attr>
 </Id>
-<Nary_Exp op='{' typref='4'>
+<Nary_Exp op='{' typref='20'>
 <Attr>
-<Pos l='151' c='38' s='1'/>
+<Pos l='151' c='28' s='1'/>
+</Attr>
+<Binary_Exp op='|-&gt;' typref='31'>
+<Attr>
+<Pos l='151' c='35' s='3'/>
 </Attr>
 <Id value='user' typref='12'>
 <Attr>
-<Pos l='151' c='39' s='4'/>
+<Pos l='151' c='30' s='4'/>
 </Attr>
 </Id>
+<Id value='pwd' typref='14'>
+<Attr>
+<Pos l='151' c='37' s='3'/>
+</Attr>
+</Id>
+</Binary_Exp>
 </Nary_Exp>
 </Binary_Exp>
 </Values>
 </Assignement_Sub>
 <Assignement_Sub>
 <Attr>
-<Pos l='154' c='19' s='2'/>
+<Pos l='152' c='17' s='2'/>
 </Attr>
 <Variables>
-<Id value='getGender' typref='17'>
+<Id value='pseudos' typref='16'>
 <Attr>
-<Pos l='154' c='9' s='9'/>
+<Pos l='152' c='9' s='7'/>
 </Attr>
 </Id>
 </Variables>
 <Values>
-<Binary_Exp op='&lt;&lt;|' typref='17'>
+<Binary_Exp op='&lt;+' typref='16'>
 <Attr>
-<Pos l='154' c='29' s='3'/>
+<Pos l='152' c='28' s='2'/>
 </Attr>
-<Nary_Exp op='{' typref='4'>
+<Id value='pseudos' typref='16'>
 <Attr>
-<Pos l='154' c='22' s='1'/>
+<Pos l='152' c='20' s='7'/>
+</Attr>
+</Id>
+<Nary_Exp op='{' typref='16'>
+<Attr>
+<Pos l='152' c='30' s='1'/>
+</Attr>
+<Binary_Exp op='|-&gt;' typref='27'>
+<Attr>
+<Pos l='152' c='37' s='3'/>
 </Attr>
 <Id value='user' typref='12'>
 <Attr>
-<Pos l='154' c='23' s='4'/>
+<Pos l='152' c='32' s='4'/>
 </Attr>
 </Id>
-</Nary_Exp>
-<Id value='getGender' typref='17'>
+<Id value='pseudo' typref='13'>
 <Attr>
-<Pos l='154' c='31' s='9'/>
+<Pos l='152' c='39' s='6'/>
 </Attr>
 </Id>
+</Binary_Exp>
+</Nary_Exp>
 </Binary_Exp>
 </Values>
 </Assignement_Sub>
 <Assignement_Sub>
 <Attr>
-<Pos l='155' c='16' s='2'/>
+<Pos l='153' c='19' s='2'/>
 </Attr>
 <Variables>
-<Id value='getAge' typref='18'>
+<Id value='getGender' typref='18'>
 <Attr>
-<Pos l='155' c='9' s='6'/>
+<Pos l='153' c='9' s='9'/>
 </Attr>
 </Id>
 </Variables>
 <Values>
-<Binary_Exp op='&lt;&lt;|' typref='18'>
+<Binary_Exp op='\/' typref='18'>
 <Attr>
-<Pos l='155' c='26' s='3'/>
+<Pos l='153' c='32' s='2'/>
 </Attr>
-<Nary_Exp op='{' typref='4'>
+<Id value='getGender' typref='18'>
 <Attr>
-<Pos l='155' c='19' s='1'/>
+<Pos l='153' c='22' s='9'/>
+</Attr>
+</Id>
+<Nary_Exp op='{' typref='18'>
+<Attr>
+<Pos l='153' c='34' s='1'/>
+</Attr>
+<Binary_Exp op='|-&gt;' typref='29'>
+<Attr>
+<Pos l='153' c='41' s='3'/>
 </Attr>
 <Id value='user' typref='12'>
 <Attr>
-<Pos l='155' c='20' s='4'/>
+<Pos l='153' c='36' s='4'/>
 </Attr>
 </Id>
-</Nary_Exp>
-<Id value='getAge' typref='18'>
+<Id value='gender' typref='7'>
 <Attr>
-<Pos l='155' c='28' s='6'/>
+<Pos l='153' c='43' s='6'/>
 </Attr>
 </Id>
+</Binary_Exp>
+</Nary_Exp>
 </Binary_Exp>
 </Values>
 </Assignement_Sub>
 <Assignement_Sub>
 <Attr>
-<Pos l='156' c='17' s='2'/>
+<Pos l='154' c='16' s='2'/>
 </Attr>
 <Variables>
-<Id value='pseudos' typref='15'>
+<Id value='getAge' typref='19'>
 <Attr>
-<Pos l='156' c='9' s='7'/>
+<Pos l='154' c='9' s='6'/>
 </Attr>
 </Id>
 </Variables>
 <Values>
-<Binary_Exp op='&lt;&lt;|' typref='15'>
+<Binary_Exp op='&lt;+' typref='19'>
 <Attr>
-<Pos l='156' c='27' s='3'/>
+<Pos l='154' c='26' s='2'/>
 </Attr>
-<Nary_Exp op='{' typref='4'>
+<Id value='getAge' typref='19'>
 <Attr>
-<Pos l='156' c='20' s='1'/>
+<Pos l='154' c='19' s='6'/>
+</Attr>
+</Id>
+<Nary_Exp op='{' typref='19'>
+<Attr>
+<Pos l='154' c='28' s='1'/>
+</Attr>
+<Binary_Exp op='|-&gt;' typref='30'>
+<Attr>
+<Pos l='154' c='35' s='3'/>
 </Attr>
 <Id value='user' typref='12'>
 <Attr>
-<Pos l='156' c='21' s='4'/>
+<Pos l='154' c='30' s='4'/>
 </Attr>
 </Id>
-</Nary_Exp>
-<Id value='pseudos' typref='15'>
+<Id value='age' typref='1'>
 <Attr>
-<Pos l='156' c='29' s='7'/>
+<Pos l='154' c='37' s='3'/>
 </Attr>
 </Id>
+</Binary_Exp>
+</Nary_Exp>
 </Binary_Exp>
 </Values>
 </Assignement_Sub>
 <Assignement_Sub>
 <Attr>
-<Pos l='157' c='16' s='2'/>
-</Attr>
-<Variables>
-<Id value='shadow' typref='19'>
-<Attr>
-<Pos l='157' c='9' s='6'/>
-</Attr>
-</Id>
-</Variables>
-<Values>
-<Binary_Exp op='&lt;&lt;|' typref='19'>
-<Attr>
-<Pos l='157' c='26' s='3'/>
-</Attr>
-<Nary_Exp op='{' typref='4'>
-<Attr>
-<Pos l='157' c='19' s='1'/>
-</Attr>
-<Id value='user' typref='12'>
-<Attr>
-<Pos l='157' c='20' s='4'/>
-</Attr>
-</Id>
-</Nary_Exp>
-<Id value='shadow' typref='19'>
-<Attr>
-<Pos l='157' c='28' s='6'/>
-</Attr>
-</Id>
-</Binary_Exp>
-</Values>
-</Assignement_Sub>
-<Assignement_Sub>
-<Attr>
-<Pos l='160' c='18' s='2'/>
+<Pos l='157' c='18' s='2'/>
 </Attr>
 <Variables>
 <Id value='contents' typref='8'>
 <Attr>
-<Pos l='160' c='9' s='8'/>
+<Pos l='157' c='9' s='8'/>
 </Attr>
 </Id>
 </Variables>
 <Values>
-<Binary_Exp op='-s' typref='8'>
+<Binary_Exp op='\/' typref='8'>
 <Attr>
-<Pos l='160' c='30' s='1'/>
+<Pos l='157' c='30' s='2'/>
 </Attr>
 <Id value='contents' typref='8'>
 <Attr>
-<Pos l='160' c='21' s='8'/>
+<Pos l='157' c='21' s='8'/>
 </Attr>
 </Id>
-<Unary_Exp op='dom' typref='8'>
+<Nary_Exp op='{' typref='8'>
 <Attr>
-<Pos l='160' c='32' s='3'/>
+<Pos l='157' c='32' s='1'/>
 </Attr>
-<Binary_Exp op='|&gt;' typref='16'>
+<Id value='content' typref='15'>
 <Attr>
-<Pos l='160' c='52' s='2'/>
-</Attr>
-<Id value='getContentOwner' typref='16'>
-<Attr>
-<Pos l='160' c='36' s='15'/>
-</Attr>
-</Id>
-<Nary_Exp op='{' typref='4'>
-<Attr>
-<Pos l='160' c='54' s='1'/>
-</Attr>
-<Id value='user' typref='12'>
-<Attr>
-<Pos l='160' c='55' s='4'/>
+<Pos l='157' c='33' s='7'/>
 </Attr>
 </Id>
 </Nary_Exp>
-</Binary_Exp>
-</Unary_Exp>
 </Binary_Exp>
 </Values>
 </Assignement_Sub>
 <Assignement_Sub>
 <Attr>
-<Pos l='161' c='25' s='2'/>
+<Pos l='158' c='25' s='2'/>
 </Attr>
 <Variables>
-<Id value='privateContents' typref='8'>
+<Id value='getContentOwner' typref='17'>
 <Attr>
-<Pos l='161' c='9' s='15'/>
+<Pos l='158' c='9' s='15'/>
 </Attr>
 </Id>
 </Variables>
 <Values>
-<Binary_Exp op='-s' typref='8'>
+<Binary_Exp op='\/' typref='17'>
 <Attr>
-<Pos l='161' c='44' s='1'/>
+<Pos l='158' c='44' s='2'/>
 </Attr>
-<Id value='privateContents' typref='8'>
+<Id value='getContentOwner' typref='17'>
 <Attr>
-<Pos l='161' c='28' s='15'/>
-</Attr>
-</Id>
-<Unary_Exp op='dom' typref='8'>
-<Attr>
-<Pos l='161' c='46' s='3'/>
-</Attr>
-<Binary_Exp op='|&gt;' typref='16'>
-<Attr>
-<Pos l='161' c='66' s='2'/>
-</Attr>
-<Id value='getContentOwner' typref='16'>
-<Attr>
-<Pos l='161' c='50' s='15'/>
+<Pos l='158' c='28' s='15'/>
 </Attr>
 </Id>
-<Nary_Exp op='{' typref='4'>
+<Nary_Exp op='{' typref='17'>
 <Attr>
-<Pos l='161' c='68' s='1'/>
+<Pos l='158' c='46' s='1'/>
 </Attr>
+<Binary_Exp op='|-&gt;' typref='28'>
+<Attr>
+<Pos l='158' c='55' s='3'/>
+</Attr>
+<Id value='content' typref='15'>
+<Attr>
+<Pos l='158' c='47' s='7'/>
+</Attr>
+</Id>
 <Id value='user' typref='12'>
 <Attr>
-<Pos l='161' c='69' s='4'/>
+<Pos l='158' c='57' s='4'/>
 </Attr>
 </Id>
-</Nary_Exp>
 </Binary_Exp>
-</Unary_Exp>
+</Nary_Exp>
 </Binary_Exp>
 </Values>
 </Assignement_Sub>
+<If_Sub elseif='no'>
+<Attr>
+<Pos l='161' c='9' s='2'/>
+</Attr>
+<Condition>
+<Exp_Comparison op='='>
+<Attr>
+<Pos l='161' c='24' s='1'/>
+</Attr>
+<Id value='contentType' typref='10'>
+<Attr>
+<Pos l='161' c='12' s='11'/>
+</Attr>
+</Id>
+<Id value='PHOTO' typref='10'>
+<Attr>
+<Pos l='161' c='26' s='5'/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Condition>
+<Then>
 <Assignement_Sub>
 <Attr>
-<Pos l='162' c='23' s='2'/>
+<Pos l='162' c='27' s='2'/>
 </Attr>
 <Variables>
 <Id value='photoContents' typref='8'>
 <Attr>
-<Pos l='162' c='9' s='13'/>
+<Pos l='162' c='13' s='13'/>
 </Attr>
 </Id>
 </Variables>
 <Values>
-<Binary_Exp op='-s' typref='8'>
+<Binary_Exp op='\/' typref='8'>
 <Attr>
-<Pos l='162' c='40' s='1'/>
+<Pos l='162' c='44' s='2'/>
 </Attr>
 <Id value='photoContents' typref='8'>
 <Attr>
-<Pos l='162' c='26' s='13'/>
+<Pos l='162' c='30' s='13'/>
 </Attr>
 </Id>
-<Unary_Exp op='dom' typref='8'>
+<Nary_Exp op='{' typref='8'>
 <Attr>
-<Pos l='162' c='42' s='3'/>
+<Pos l='162' c='46' s='1'/>
 </Attr>
-<Binary_Exp op='|&gt;' typref='16'>
+<Id value='content' typref='15'>
 <Attr>
-<Pos l='162' c='62' s='2'/>
-</Attr>
-<Id value='getContentOwner' typref='16'>
-<Attr>
-<Pos l='162' c='46' s='15'/>
-</Attr>
-</Id>
-<Nary_Exp op='{' typref='4'>
-<Attr>
-<Pos l='162' c='64' s='1'/>
-</Attr>
-<Id value='user' typref='12'>
-<Attr>
-<Pos l='162' c='65' s='4'/>
+<Pos l='162' c='47' s='7'/>
 </Attr>
 </Id>
 </Nary_Exp>
 </Binary_Exp>
-</Unary_Exp>
-</Binary_Exp>
 </Values>
 </Assignement_Sub>
+</Then>
+<Else>
+<If_Sub elseif='yes'>
+<Condition>
+<Exp_Comparison op='='>
+<Attr>
+<Pos l='163' c='27' s='1'/>
+</Attr>
+<Id value='contentType' typref='10'>
+<Attr>
+<Pos l='163' c='15' s='11'/>
+</Attr>
+</Id>
+<Id value='VIDEO' typref='10'>
+<Attr>
+<Pos l='163' c='29' s='5'/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Condition>
+<Then>
 <Assignement_Sub>
 <Attr>
-<Pos l='163' c='23' s='2'/>
+<Pos l='164' c='27' s='2'/>
 </Attr>
 <Variables>
 <Id value='videoContents' typref='8'>
 <Attr>
-<Pos l='163' c='9' s='13'/>
+<Pos l='164' c='13' s='13'/>
 </Attr>
 </Id>
 </Variables>
 <Values>
-<Binary_Exp op='-s' typref='8'>
+<Binary_Exp op='\/' typref='8'>
 <Attr>
-<Pos l='163' c='40' s='1'/>
+<Pos l='164' c='44' s='2'/>
 </Attr>
 <Id value='videoContents' typref='8'>
 <Attr>
-<Pos l='163' c='26' s='13'/>
+<Pos l='164' c='30' s='13'/>
 </Attr>
 </Id>
-<Unary_Exp op='dom' typref='8'>
+<Nary_Exp op='{' typref='8'>
 <Attr>
-<Pos l='163' c='42' s='3'/>
+<Pos l='164' c='46' s='1'/>
 </Attr>
-<Binary_Exp op='|&gt;' typref='16'>
+<Id value='content' typref='15'>
 <Attr>
-<Pos l='163' c='62' s='2'/>
-</Attr>
-<Id value='getContentOwner' typref='16'>
-<Attr>
-<Pos l='163' c='46' s='15'/>
-</Attr>
-</Id>
-<Nary_Exp op='{' typref='4'>
-<Attr>
-<Pos l='163' c='64' s='1'/>
-</Attr>
-<Id value='user' typref='12'>
-<Attr>
-<Pos l='163' c='65' s='4'/>
+<Pos l='164' c='47' s='7'/>
 </Attr>
 </Id>
 </Nary_Exp>
 </Binary_Exp>
-</Unary_Exp>
-</Binary_Exp>
 </Values>
 </Assignement_Sub>
+</Then>
+<Else>
+<If_Sub elseif='yes'>
+<Condition>
+<Exp_Comparison op='='>
+<Attr>
+<Pos l='165' c='27' s='1'/>
+</Attr>
+<Id value='contentType' typref='10'>
+<Attr>
+<Pos l='165' c='15' s='11'/>
+</Attr>
+</Id>
+<Id value='TEXT' typref='10'>
+<Attr>
+<Pos l='165' c='29' s='4'/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Condition>
+<Then>
 <Assignement_Sub>
 <Attr>
-<Pos l='164' c='22' s='2'/>
+<Pos l='166' c='26' s='2'/>
 </Attr>
 <Variables>
 <Id value='textContents' typref='8'>
 <Attr>
-<Pos l='164' c='9' s='12'/>
+<Pos l='166' c='13' s='12'/>
 </Attr>
 </Id>
 </Variables>
 <Values>
-<Binary_Exp op='-s' typref='8'>
+<Binary_Exp op='\/' typref='8'>
 <Attr>
-<Pos l='164' c='38' s='1'/>
+<Pos l='166' c='42' s='2'/>
 </Attr>
 <Id value='textContents' typref='8'>
 <Attr>
-<Pos l='164' c='25' s='12'/>
+<Pos l='166' c='29' s='12'/>
 </Attr>
 </Id>
-<Unary_Exp op='dom' typref='8'>
+<Nary_Exp op='{' typref='8'>
 <Attr>
-<Pos l='164' c='40' s='3'/>
+<Pos l='166' c='44' s='1'/>
 </Attr>
-<Binary_Exp op='|&gt;' typref='16'>
+<Id value='content' typref='15'>
 <Attr>
-<Pos l='164' c='60' s='2'/>
-</Attr>
-<Id value='getContentOwner' typref='16'>
-<Attr>
-<Pos l='164' c='44' s='15'/>
-</Attr>
-</Id>
-<Nary_Exp op='{' typref='4'>
-<Attr>
-<Pos l='164' c='62' s='1'/>
-</Attr>
-<Id value='user' typref='12'>
-<Attr>
-<Pos l='164' c='63' s='4'/>
-</Attr>
-</Id>
-</Nary_Exp>
-</Binary_Exp>
-</Unary_Exp>
-</Binary_Exp>
-</Values>
-</Assignement_Sub>
-<Assignement_Sub>
-<Attr>
-<Pos l='165' c='25' s='2'/>
-</Attr>
-<Variables>
-<Id value='getContentOwner' typref='16'>
-<Attr>
-<Pos l='165' c='9' s='15'/>
-</Attr>
-</Id>
-</Variables>
-<Values>
-<Binary_Exp op='|&gt;&gt;' typref='16'>
-<Attr>
-<Pos l='165' c='44' s='3'/>
-</Attr>
-<Id value='getContentOwner' typref='16'>
-<Attr>
-<Pos l='165' c='28' s='15'/>
-</Attr>
-</Id>
-<Nary_Exp op='{' typref='4'>
-<Attr>
-<Pos l='165' c='46' s='1'/>
-</Attr>
-<Id value='user' typref='12'>
-<Attr>
-<Pos l='165' c='47' s='4'/>
+<Pos l='166' c='45' s='7'/>
 </Attr>
 </Id>
 </Nary_Exp>
 </Binary_Exp>
 </Values>
 </Assignement_Sub>
-<Assignement_Sub>
-<Attr>
-<Pos l='169' c='22' s='2'/>
-</Attr>
-<Variables>
-<Id value='hasNoRRights' typref='16'>
-<Attr>
-<Pos l='169' c='9' s='12'/>
-</Attr>
-</Id>
-</Variables>
-<Values>
-<Binary_Exp op='&lt;|' typref='16'>
-<Attr>
-<Pos l='169' c='55' s='2'/>
-</Attr>
-<Unary_Exp op='dom' typref='8'>
-<Attr>
-<Pos l='169' c='25' s='3'/>
-</Attr>
-<Binary_Exp op='|&gt;&gt;' typref='16'>
-<Attr>
-<Pos l='169' c='45' s='3'/>
-</Attr>
-<Id value='getContentOwner' typref='16'>
-<Attr>
-<Pos l='169' c='29' s='15'/>
-</Attr>
-</Id>
-<Nary_Exp op='{' typref='4'>
-<Attr>
-<Pos l='169' c='47' s='1'/>
-</Attr>
-<Id value='user' typref='12'>
-<Attr>
-<Pos l='169' c='48' s='4'/>
-</Attr>
-</Id>
-</Nary_Exp>
-</Binary_Exp>
-</Unary_Exp>
-<Binary_Exp op='|&gt;&gt;' typref='16'>
-<Attr>
-<Pos l='169' c='71' s='3'/>
-</Attr>
-<Id value='hasNoRRights' typref='16'>
-<Attr>
-<Pos l='169' c='58' s='12'/>
-</Attr>
-</Id>
-<Nary_Exp op='{' typref='4'>
-<Attr>
-<Pos l='169' c='73' s='1'/>
-</Attr>
-<Id value='user' typref='12'>
-<Attr>
-<Pos l='169' c='74' s='4'/>
-</Attr>
-</Id>
-</Nary_Exp>
-</Binary_Exp>
-</Binary_Exp>
-</Values>
-</Assignement_Sub>
+</Then>
+</If_Sub>
+</Else>
+</If_Sub>
+</Else>
+</If_Sub>
 <Assignement_Sub>
 <Attr>
 <Pos l='170' c='20' s='2'/>
 </Attr>
 <Variables>
-<Id value='hasWRights' typref='16'>
+<Id value='hasWRights' typref='17'>
 <Attr>
 <Pos l='170' c='9' s='10'/>
 </Attr>
 </Id>
 </Variables>
 <Values>
-<Binary_Exp op='&lt;|' typref='16'>
+<Binary_Exp op='\/' typref='17'>
 <Attr>
 <Pos l='170' c='53' s='2'/>
 </Attr>
-<Unary_Exp op='dom' typref='8'>
+<Binary_Exp op='\/' typref='17'>
 <Attr>
-<Pos l='170' c='23' s='3'/>
+<Pos l='170' c='34' s='2'/>
 </Attr>
-<Binary_Exp op='|&gt;&gt;' typref='16'>
+<Id value='hasWRights' typref='17'>
 <Attr>
-<Pos l='170' c='43' s='3'/>
-</Attr>
-<Id value='getContentOwner' typref='16'>
-<Attr>
-<Pos l='170' c='27' s='15'/>
+<Pos l='170' c='23' s='10'/>
 </Attr>
 </Id>
-<Nary_Exp op='{' typref='4'>
+<Nary_Exp op='{' typref='17'>
 <Attr>
-<Pos l='170' c='45' s='1'/>
+<Pos l='170' c='36' s='1'/>
 </Attr>
+<Binary_Exp op='|-&gt;' typref='28'>
+<Attr>
+<Pos l='170' c='45' s='3'/>
+</Attr>
+<Id value='content' typref='15'>
+<Attr>
+<Pos l='170' c='37' s='7'/>
+</Attr>
+</Id>
 <Id value='user' typref='12'>
 <Attr>
-<Pos l='170' c='46' s='4'/>
+<Pos l='170' c='47' s='4'/>
 </Attr>
 </Id>
+</Binary_Exp>
 </Nary_Exp>
 </Binary_Exp>
-</Unary_Exp>
-<Binary_Exp op='|&gt;&gt;' typref='16'>
+<Nary_Exp op='{' typref='17'>
 <Attr>
-<Pos l='170' c='67' s='3'/>
+<Pos l='170' c='55' s='1'/>
 </Attr>
-<Id value='hasWRights' typref='16'>
+<Binary_Exp op='|-&gt;' typref='28'>
 <Attr>
-<Pos l='170' c='56' s='10'/>
+<Pos l='170' c='64' s='3'/>
 </Attr>
-</Id>
-<Nary_Exp op='{' typref='4'>
+<Id value='content' typref='15'>
 <Attr>
-<Pos l='170' c='69' s='1'/>
-</Attr>
-<Id value='user' typref='12'>
-<Attr>
-<Pos l='170' c='70' s='4'/>
+<Pos l='170' c='56' s='7'/>
 </Attr>
 </Id>
-</Nary_Exp>
+<Id value='masterUser' typref='12'>
+<Attr>
+<Pos l='170' c='66' s='10'/>
+</Attr>
+</Id>
 </Binary_Exp>
+</Nary_Exp>
 </Binary_Exp>
 </Values>
 </Assignement_Sub>
 </Nary_Sub>
 </Body>
 </Operation>
-<Operation name='PublishContent'>
+<Operation name='DeleteUser'>
 <Attr>
-<Pos l='174' c='5' s='14' endLine='195'/>
+<Pos l='174' c='5' s='10' endLine='200'/>
 </Attr>
 <Input_Parameters>
 <Id value='user' typref='12'>
 <Attr>
-<Pos l='174' c='20' s='4'/>
-</Attr>
-</Id>
-<Id value='content' typref='31'>
-<Attr>
-<Pos l='174' c='26' s='7'/>
-</Attr>
-</Id>
-<Id value='contentType' typref='10'>
-<Attr>
-<Pos l='174' c='35' s='11'/>
+<Pos l='174' c='16' s='4'/>
 </Attr>
 </Id>
 </Input_Parameters>
@@ -2708,63 +2760,18 @@
 </Attr>
 </Id>
 </Exp_Comparison>
-<Exp_Comparison op=':'>
+<Exp_Comparison op='/='>
 <Attr>
-<Pos l='176' c='44' s='1'/>
+<Pos l='177' c='14' s='2'/>
 </Attr>
 <Id value='user' typref='12'>
 <Attr>
-<Pos l='176' c='39' s='4'/>
+<Pos l='177' c='9' s='4'/>
 </Attr>
 </Id>
-<Id value='loggedUsers' typref='4'>
+<Id value='masterUser' typref='12'>
 <Attr>
-<Pos l='176' c='46' s='11'/>
-</Attr>
-</Id>
-</Exp_Comparison>
-<Exp_Comparison op=':'>
-<Attr>
-<Pos l='177' c='17' s='1'/>
-</Attr>
-<Id value='content' typref='31'>
-<Attr>
-<Pos l='177' c='9' s='7'/>
-</Attr>
-</Id>
-<Id value='CONTENTS' typref='8'>
-<Attr>
-<Pos l='177' c='19' s='8'/>
-</Attr>
-</Id>
-</Exp_Comparison>
-<Exp_Comparison op='/:'>
-<Attr>
-<Pos l='178' c='17' s='2'/>
-</Attr>
-<Id value='content' typref='31'>
-<Attr>
-<Pos l='178' c='9' s='7'/>
-</Attr>
-</Id>
-<Id value='contents' typref='8'>
-<Attr>
-<Pos l='178' c='19' s='8'/>
-</Attr>
-</Id>
-</Exp_Comparison>
-<Exp_Comparison op=':'>
-<Attr>
-<Pos l='179' c='21' s='1'/>
-</Attr>
-<Id value='contentType' typref='10'>
-<Attr>
-<Pos l='179' c='9' s='11'/>
-</Attr>
-</Id>
-<Id value='CONTENT_TYPES' typref='9'>
-<Attr>
-<Pos l='179' c='23' s='13'/>
+<Pos l='177' c='16' s='10'/>
 </Attr>
 </Id>
 </Exp_Comparison>
@@ -2774,32 +2781,763 @@
 <Nary_Sub op='||'>
 <Assignement_Sub>
 <Attr>
-<Pos l='181' c='18' s='2'/>
+<Pos l='179' c='15' s='2'/>
+</Attr>
+<Variables>
+<Id value='users' typref='4'>
+<Attr>
+<Pos l='179' c='9' s='5'/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Binary_Exp op='-s' typref='4'>
+<Attr>
+<Pos l='179' c='24' s='1'/>
+</Attr>
+<Id value='users' typref='4'>
+<Attr>
+<Pos l='179' c='18' s='5'/>
+</Attr>
+</Id>
+<Nary_Exp op='{' typref='4'>
+<Attr>
+<Pos l='179' c='26' s='1'/>
+</Attr>
+<Id value='user' typref='12'>
+<Attr>
+<Pos l='179' c='27' s='4'/>
+</Attr>
+</Id>
+</Nary_Exp>
+</Binary_Exp>
+</Values>
+</Assignement_Sub>
+<Assignement_Sub>
+<Attr>
+<Pos l='180' c='21' s='2'/>
+</Attr>
+<Variables>
+<Id value='loggedUsers' typref='4'>
+<Attr>
+<Pos l='180' c='9' s='11'/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Binary_Exp op='-s' typref='4'>
+<Attr>
+<Pos l='180' c='36' s='1'/>
+</Attr>
+<Id value='loggedUsers' typref='4'>
+<Attr>
+<Pos l='180' c='24' s='11'/>
+</Attr>
+</Id>
+<Nary_Exp op='{' typref='4'>
+<Attr>
+<Pos l='180' c='38' s='1'/>
+</Attr>
+<Id value='user' typref='12'>
+<Attr>
+<Pos l='180' c='39' s='4'/>
+</Attr>
+</Id>
+</Nary_Exp>
+</Binary_Exp>
+</Values>
+</Assignement_Sub>
+<Assignement_Sub>
+<Attr>
+<Pos l='183' c='19' s='2'/>
+</Attr>
+<Variables>
+<Id value='getGender' typref='18'>
+<Attr>
+<Pos l='183' c='9' s='9'/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Binary_Exp op='&lt;&lt;|' typref='18'>
+<Attr>
+<Pos l='183' c='29' s='3'/>
+</Attr>
+<Nary_Exp op='{' typref='4'>
+<Attr>
+<Pos l='183' c='22' s='1'/>
+</Attr>
+<Id value='user' typref='12'>
+<Attr>
+<Pos l='183' c='23' s='4'/>
+</Attr>
+</Id>
+</Nary_Exp>
+<Id value='getGender' typref='18'>
+<Attr>
+<Pos l='183' c='31' s='9'/>
+</Attr>
+</Id>
+</Binary_Exp>
+</Values>
+</Assignement_Sub>
+<Assignement_Sub>
+<Attr>
+<Pos l='184' c='16' s='2'/>
+</Attr>
+<Variables>
+<Id value='getAge' typref='19'>
+<Attr>
+<Pos l='184' c='9' s='6'/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Binary_Exp op='&lt;&lt;|' typref='19'>
+<Attr>
+<Pos l='184' c='26' s='3'/>
+</Attr>
+<Nary_Exp op='{' typref='4'>
+<Attr>
+<Pos l='184' c='19' s='1'/>
+</Attr>
+<Id value='user' typref='12'>
+<Attr>
+<Pos l='184' c='20' s='4'/>
+</Attr>
+</Id>
+</Nary_Exp>
+<Id value='getAge' typref='19'>
+<Attr>
+<Pos l='184' c='28' s='6'/>
+</Attr>
+</Id>
+</Binary_Exp>
+</Values>
+</Assignement_Sub>
+<Assignement_Sub>
+<Attr>
+<Pos l='185' c='17' s='2'/>
+</Attr>
+<Variables>
+<Id value='pseudos' typref='16'>
+<Attr>
+<Pos l='185' c='9' s='7'/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Binary_Exp op='&lt;&lt;|' typref='16'>
+<Attr>
+<Pos l='185' c='27' s='3'/>
+</Attr>
+<Nary_Exp op='{' typref='4'>
+<Attr>
+<Pos l='185' c='20' s='1'/>
+</Attr>
+<Id value='user' typref='12'>
+<Attr>
+<Pos l='185' c='21' s='4'/>
+</Attr>
+</Id>
+</Nary_Exp>
+<Id value='pseudos' typref='16'>
+<Attr>
+<Pos l='185' c='29' s='7'/>
+</Attr>
+</Id>
+</Binary_Exp>
+</Values>
+</Assignement_Sub>
+<Assignement_Sub>
+<Attr>
+<Pos l='186' c='16' s='2'/>
+</Attr>
+<Variables>
+<Id value='shadow' typref='20'>
+<Attr>
+<Pos l='186' c='9' s='6'/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Binary_Exp op='&lt;&lt;|' typref='20'>
+<Attr>
+<Pos l='186' c='26' s='3'/>
+</Attr>
+<Nary_Exp op='{' typref='4'>
+<Attr>
+<Pos l='186' c='19' s='1'/>
+</Attr>
+<Id value='user' typref='12'>
+<Attr>
+<Pos l='186' c='20' s='4'/>
+</Attr>
+</Id>
+</Nary_Exp>
+<Id value='shadow' typref='20'>
+<Attr>
+<Pos l='186' c='28' s='6'/>
+</Attr>
+</Id>
+</Binary_Exp>
+</Values>
+</Assignement_Sub>
+<Assignement_Sub>
+<Attr>
+<Pos l='189' c='18' s='2'/>
 </Attr>
 <Variables>
 <Id value='contents' typref='8'>
 <Attr>
-<Pos l='181' c='9' s='8'/>
+<Pos l='189' c='9' s='8'/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Binary_Exp op='-s' typref='8'>
+<Attr>
+<Pos l='189' c='30' s='1'/>
+</Attr>
+<Id value='contents' typref='8'>
+<Attr>
+<Pos l='189' c='21' s='8'/>
+</Attr>
+</Id>
+<Unary_Exp op='dom' typref='8'>
+<Attr>
+<Pos l='189' c='32' s='3'/>
+</Attr>
+<Binary_Exp op='|&gt;' typref='17'>
+<Attr>
+<Pos l='189' c='52' s='2'/>
+</Attr>
+<Id value='getContentOwner' typref='17'>
+<Attr>
+<Pos l='189' c='36' s='15'/>
+</Attr>
+</Id>
+<Nary_Exp op='{' typref='4'>
+<Attr>
+<Pos l='189' c='54' s='1'/>
+</Attr>
+<Id value='user' typref='12'>
+<Attr>
+<Pos l='189' c='55' s='4'/>
+</Attr>
+</Id>
+</Nary_Exp>
+</Binary_Exp>
+</Unary_Exp>
+</Binary_Exp>
+</Values>
+</Assignement_Sub>
+<Assignement_Sub>
+<Attr>
+<Pos l='190' c='25' s='2'/>
+</Attr>
+<Variables>
+<Id value='privateContents' typref='8'>
+<Attr>
+<Pos l='190' c='9' s='15'/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Binary_Exp op='-s' typref='8'>
+<Attr>
+<Pos l='190' c='44' s='1'/>
+</Attr>
+<Id value='privateContents' typref='8'>
+<Attr>
+<Pos l='190' c='28' s='15'/>
+</Attr>
+</Id>
+<Unary_Exp op='dom' typref='8'>
+<Attr>
+<Pos l='190' c='46' s='3'/>
+</Attr>
+<Binary_Exp op='|&gt;' typref='17'>
+<Attr>
+<Pos l='190' c='66' s='2'/>
+</Attr>
+<Id value='getContentOwner' typref='17'>
+<Attr>
+<Pos l='190' c='50' s='15'/>
+</Attr>
+</Id>
+<Nary_Exp op='{' typref='4'>
+<Attr>
+<Pos l='190' c='68' s='1'/>
+</Attr>
+<Id value='user' typref='12'>
+<Attr>
+<Pos l='190' c='69' s='4'/>
+</Attr>
+</Id>
+</Nary_Exp>
+</Binary_Exp>
+</Unary_Exp>
+</Binary_Exp>
+</Values>
+</Assignement_Sub>
+<Assignement_Sub>
+<Attr>
+<Pos l='191' c='23' s='2'/>
+</Attr>
+<Variables>
+<Id value='photoContents' typref='8'>
+<Attr>
+<Pos l='191' c='9' s='13'/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Binary_Exp op='-s' typref='8'>
+<Attr>
+<Pos l='191' c='40' s='1'/>
+</Attr>
+<Id value='photoContents' typref='8'>
+<Attr>
+<Pos l='191' c='26' s='13'/>
+</Attr>
+</Id>
+<Unary_Exp op='dom' typref='8'>
+<Attr>
+<Pos l='191' c='42' s='3'/>
+</Attr>
+<Binary_Exp op='|&gt;' typref='17'>
+<Attr>
+<Pos l='191' c='62' s='2'/>
+</Attr>
+<Id value='getContentOwner' typref='17'>
+<Attr>
+<Pos l='191' c='46' s='15'/>
+</Attr>
+</Id>
+<Nary_Exp op='{' typref='4'>
+<Attr>
+<Pos l='191' c='64' s='1'/>
+</Attr>
+<Id value='user' typref='12'>
+<Attr>
+<Pos l='191' c='65' s='4'/>
+</Attr>
+</Id>
+</Nary_Exp>
+</Binary_Exp>
+</Unary_Exp>
+</Binary_Exp>
+</Values>
+</Assignement_Sub>
+<Assignement_Sub>
+<Attr>
+<Pos l='192' c='23' s='2'/>
+</Attr>
+<Variables>
+<Id value='videoContents' typref='8'>
+<Attr>
+<Pos l='192' c='9' s='13'/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Binary_Exp op='-s' typref='8'>
+<Attr>
+<Pos l='192' c='40' s='1'/>
+</Attr>
+<Id value='videoContents' typref='8'>
+<Attr>
+<Pos l='192' c='26' s='13'/>
+</Attr>
+</Id>
+<Unary_Exp op='dom' typref='8'>
+<Attr>
+<Pos l='192' c='42' s='3'/>
+</Attr>
+<Binary_Exp op='|&gt;' typref='17'>
+<Attr>
+<Pos l='192' c='62' s='2'/>
+</Attr>
+<Id value='getContentOwner' typref='17'>
+<Attr>
+<Pos l='192' c='46' s='15'/>
+</Attr>
+</Id>
+<Nary_Exp op='{' typref='4'>
+<Attr>
+<Pos l='192' c='64' s='1'/>
+</Attr>
+<Id value='user' typref='12'>
+<Attr>
+<Pos l='192' c='65' s='4'/>
+</Attr>
+</Id>
+</Nary_Exp>
+</Binary_Exp>
+</Unary_Exp>
+</Binary_Exp>
+</Values>
+</Assignement_Sub>
+<Assignement_Sub>
+<Attr>
+<Pos l='193' c='22' s='2'/>
+</Attr>
+<Variables>
+<Id value='textContents' typref='8'>
+<Attr>
+<Pos l='193' c='9' s='12'/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Binary_Exp op='-s' typref='8'>
+<Attr>
+<Pos l='193' c='38' s='1'/>
+</Attr>
+<Id value='textContents' typref='8'>
+<Attr>
+<Pos l='193' c='25' s='12'/>
+</Attr>
+</Id>
+<Unary_Exp op='dom' typref='8'>
+<Attr>
+<Pos l='193' c='40' s='3'/>
+</Attr>
+<Binary_Exp op='|&gt;' typref='17'>
+<Attr>
+<Pos l='193' c='60' s='2'/>
+</Attr>
+<Id value='getContentOwner' typref='17'>
+<Attr>
+<Pos l='193' c='44' s='15'/>
+</Attr>
+</Id>
+<Nary_Exp op='{' typref='4'>
+<Attr>
+<Pos l='193' c='62' s='1'/>
+</Attr>
+<Id value='user' typref='12'>
+<Attr>
+<Pos l='193' c='63' s='4'/>
+</Attr>
+</Id>
+</Nary_Exp>
+</Binary_Exp>
+</Unary_Exp>
+</Binary_Exp>
+</Values>
+</Assignement_Sub>
+<Assignement_Sub>
+<Attr>
+<Pos l='194' c='25' s='2'/>
+</Attr>
+<Variables>
+<Id value='getContentOwner' typref='17'>
+<Attr>
+<Pos l='194' c='9' s='15'/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Binary_Exp op='|&gt;&gt;' typref='17'>
+<Attr>
+<Pos l='194' c='44' s='3'/>
+</Attr>
+<Id value='getContentOwner' typref='17'>
+<Attr>
+<Pos l='194' c='28' s='15'/>
+</Attr>
+</Id>
+<Nary_Exp op='{' typref='4'>
+<Attr>
+<Pos l='194' c='46' s='1'/>
+</Attr>
+<Id value='user' typref='12'>
+<Attr>
+<Pos l='194' c='47' s='4'/>
+</Attr>
+</Id>
+</Nary_Exp>
+</Binary_Exp>
+</Values>
+</Assignement_Sub>
+<Assignement_Sub>
+<Attr>
+<Pos l='198' c='22' s='2'/>
+</Attr>
+<Variables>
+<Id value='hasNoRRights' typref='17'>
+<Attr>
+<Pos l='198' c='9' s='12'/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Binary_Exp op='&lt;|' typref='17'>
+<Attr>
+<Pos l='198' c='55' s='2'/>
+</Attr>
+<Unary_Exp op='dom' typref='8'>
+<Attr>
+<Pos l='198' c='25' s='3'/>
+</Attr>
+<Binary_Exp op='|&gt;&gt;' typref='17'>
+<Attr>
+<Pos l='198' c='45' s='3'/>
+</Attr>
+<Id value='getContentOwner' typref='17'>
+<Attr>
+<Pos l='198' c='29' s='15'/>
+</Attr>
+</Id>
+<Nary_Exp op='{' typref='4'>
+<Attr>
+<Pos l='198' c='47' s='1'/>
+</Attr>
+<Id value='user' typref='12'>
+<Attr>
+<Pos l='198' c='48' s='4'/>
+</Attr>
+</Id>
+</Nary_Exp>
+</Binary_Exp>
+</Unary_Exp>
+<Binary_Exp op='|&gt;&gt;' typref='17'>
+<Attr>
+<Pos l='198' c='71' s='3'/>
+</Attr>
+<Id value='hasNoRRights' typref='17'>
+<Attr>
+<Pos l='198' c='58' s='12'/>
+</Attr>
+</Id>
+<Nary_Exp op='{' typref='4'>
+<Attr>
+<Pos l='198' c='73' s='1'/>
+</Attr>
+<Id value='user' typref='12'>
+<Attr>
+<Pos l='198' c='74' s='4'/>
+</Attr>
+</Id>
+</Nary_Exp>
+</Binary_Exp>
+</Binary_Exp>
+</Values>
+</Assignement_Sub>
+<Assignement_Sub>
+<Attr>
+<Pos l='199' c='20' s='2'/>
+</Attr>
+<Variables>
+<Id value='hasWRights' typref='17'>
+<Attr>
+<Pos l='199' c='9' s='10'/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Binary_Exp op='&lt;|' typref='17'>
+<Attr>
+<Pos l='199' c='53' s='2'/>
+</Attr>
+<Unary_Exp op='dom' typref='8'>
+<Attr>
+<Pos l='199' c='23' s='3'/>
+</Attr>
+<Binary_Exp op='|&gt;&gt;' typref='17'>
+<Attr>
+<Pos l='199' c='43' s='3'/>
+</Attr>
+<Id value='getContentOwner' typref='17'>
+<Attr>
+<Pos l='199' c='27' s='15'/>
+</Attr>
+</Id>
+<Nary_Exp op='{' typref='4'>
+<Attr>
+<Pos l='199' c='45' s='1'/>
+</Attr>
+<Id value='user' typref='12'>
+<Attr>
+<Pos l='199' c='46' s='4'/>
+</Attr>
+</Id>
+</Nary_Exp>
+</Binary_Exp>
+</Unary_Exp>
+<Binary_Exp op='|&gt;&gt;' typref='17'>
+<Attr>
+<Pos l='199' c='67' s='3'/>
+</Attr>
+<Id value='hasWRights' typref='17'>
+<Attr>
+<Pos l='199' c='56' s='10'/>
+</Attr>
+</Id>
+<Nary_Exp op='{' typref='4'>
+<Attr>
+<Pos l='199' c='69' s='1'/>
+</Attr>
+<Id value='user' typref='12'>
+<Attr>
+<Pos l='199' c='70' s='4'/>
+</Attr>
+</Id>
+</Nary_Exp>
+</Binary_Exp>
+</Binary_Exp>
+</Values>
+</Assignement_Sub>
+</Nary_Sub>
+</Body>
+</Operation>
+<Operation name='PublishContent'>
+<Attr>
+<Pos l='203' c='5' s='14' endLine='225'/>
+</Attr>
+<Input_Parameters>
+<Id value='user' typref='12'>
+<Attr>
+<Pos l='203' c='20' s='4'/>
+</Attr>
+</Id>
+<Id value='content' typref='15'>
+<Attr>
+<Pos l='203' c='26' s='7'/>
+</Attr>
+</Id>
+<Id value='contentType' typref='10'>
+<Attr>
+<Pos l='203' c='35' s='11'/>
+</Attr>
+</Id>
+</Input_Parameters>
+<Precondition>
+<Nary_Pred op='&amp;'>
+<Exp_Comparison op=':'>
+<Attr>
+<Pos l='205' c='14' s='1'/>
+</Attr>
+<Id value='user' typref='12'>
+<Attr>
+<Pos l='205' c='9' s='4'/>
+</Attr>
+</Id>
+<Id value='USERS' typref='4'>
+<Attr>
+<Pos l='205' c='16' s='5'/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison op=':'>
+<Attr>
+<Pos l='205' c='29' s='1'/>
+</Attr>
+<Id value='user' typref='12'>
+<Attr>
+<Pos l='205' c='24' s='4'/>
+</Attr>
+</Id>
+<Id value='users' typref='4'>
+<Attr>
+<Pos l='205' c='31' s='5'/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison op=':'>
+<Attr>
+<Pos l='205' c='44' s='1'/>
+</Attr>
+<Id value='user' typref='12'>
+<Attr>
+<Pos l='205' c='39' s='4'/>
+</Attr>
+</Id>
+<Id value='loggedUsers' typref='4'>
+<Attr>
+<Pos l='205' c='46' s='11'/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison op=':'>
+<Attr>
+<Pos l='206' c='17' s='1'/>
+</Attr>
+<Id value='content' typref='15'>
+<Attr>
+<Pos l='206' c='9' s='7'/>
+</Attr>
+</Id>
+<Id value='CONTENTS' typref='8'>
+<Attr>
+<Pos l='206' c='19' s='8'/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison op='/:'>
+<Attr>
+<Pos l='207' c='17' s='2'/>
+</Attr>
+<Id value='content' typref='15'>
+<Attr>
+<Pos l='207' c='9' s='7'/>
+</Attr>
+</Id>
+<Id value='contents' typref='8'>
+<Attr>
+<Pos l='207' c='19' s='8'/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison op=':'>
+<Attr>
+<Pos l='209' c='21' s='1'/>
+</Attr>
+<Id value='contentType' typref='10'>
+<Attr>
+<Pos l='209' c='9' s='11'/>
+</Attr>
+</Id>
+<Id value='CONTENT_TYPES' typref='9'>
+<Attr>
+<Pos l='209' c='23' s='13'/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Nary_Pred>
+</Precondition>
+<Body>
+<Nary_Sub op='||'>
+<Assignement_Sub>
+<Attr>
+<Pos l='211' c='18' s='2'/>
+</Attr>
+<Variables>
+<Id value='contents' typref='8'>
+<Attr>
+<Pos l='211' c='9' s='8'/>
 </Attr>
 </Id>
 </Variables>
 <Values>
 <Binary_Exp op='\/' typref='8'>
 <Attr>
-<Pos l='181' c='30' s='2'/>
+<Pos l='211' c='30' s='2'/>
 </Attr>
 <Id value='contents' typref='8'>
 <Attr>
-<Pos l='181' c='21' s='8'/>
+<Pos l='211' c='21' s='8'/>
 </Attr>
 </Id>
 <Nary_Exp op='{' typref='8'>
 <Attr>
-<Pos l='181' c='32' s='1'/>
+<Pos l='211' c='32' s='1'/>
 </Attr>
-<Id value='content' typref='31'>
+<Id value='content' typref='15'>
 <Attr>
-<Pos l='181' c='33' s='7'/>
+<Pos l='211' c='33' s='7'/>
 </Attr>
 </Id>
 </Nary_Exp>
@@ -2808,41 +3546,41 @@
 </Assignement_Sub>
 <Assignement_Sub>
 <Attr>
-<Pos l='182' c='25' s='2'/>
+<Pos l='212' c='25' s='2'/>
 </Attr>
 <Variables>
-<Id value='getContentOwner' typref='16'>
+<Id value='getContentOwner' typref='17'>
 <Attr>
-<Pos l='182' c='9' s='15'/>
+<Pos l='212' c='9' s='15'/>
 </Attr>
 </Id>
 </Variables>
 <Values>
-<Binary_Exp op='\/' typref='16'>
+<Binary_Exp op='\/' typref='17'>
 <Attr>
-<Pos l='182' c='44' s='2'/>
+<Pos l='212' c='44' s='2'/>
 </Attr>
-<Id value='getContentOwner' typref='16'>
+<Id value='getContentOwner' typref='17'>
 <Attr>
-<Pos l='182' c='28' s='15'/>
+<Pos l='212' c='28' s='15'/>
 </Attr>
 </Id>
-<Nary_Exp op='{' typref='16'>
+<Nary_Exp op='{' typref='17'>
 <Attr>
-<Pos l='182' c='46' s='1'/>
+<Pos l='212' c='46' s='1'/>
 </Attr>
-<Binary_Exp op='|-&gt;' typref='32'>
+<Binary_Exp op='|-&gt;' typref='28'>
 <Attr>
-<Pos l='182' c='55' s='3'/>
+<Pos l='212' c='55' s='3'/>
 </Attr>
-<Id value='content' typref='31'>
+<Id value='content' typref='15'>
 <Attr>
-<Pos l='182' c='47' s='7'/>
+<Pos l='212' c='47' s='7'/>
 </Attr>
 </Id>
 <Id value='user' typref='12'>
 <Attr>
-<Pos l='182' c='57' s='4'/>
+<Pos l='212' c='57' s='4'/>
 </Attr>
 </Id>
 </Binary_Exp>
@@ -2852,66 +3590,66 @@
 </Assignement_Sub>
 <Assignement_Sub>
 <Attr>
-<Pos l='185' c='20' s='2'/>
+<Pos l='215' c='20' s='2'/>
 </Attr>
 <Variables>
-<Id value='hasWRights' typref='16'>
+<Id value='hasWRights' typref='17'>
 <Attr>
-<Pos l='185' c='9' s='10'/>
+<Pos l='215' c='9' s='10'/>
 </Attr>
 </Id>
 </Variables>
 <Values>
-<Binary_Exp op='\/' typref='16'>
+<Binary_Exp op='\/' typref='17'>
 <Attr>
-<Pos l='185' c='53' s='2'/>
+<Pos l='215' c='53' s='2'/>
 </Attr>
-<Binary_Exp op='\/' typref='16'>
+<Binary_Exp op='\/' typref='17'>
 <Attr>
-<Pos l='185' c='34' s='2'/>
+<Pos l='215' c='34' s='2'/>
 </Attr>
-<Id value='hasWRights' typref='16'>
+<Id value='hasWRights' typref='17'>
 <Attr>
-<Pos l='185' c='23' s='10'/>
+<Pos l='215' c='23' s='10'/>
 </Attr>
 </Id>
-<Nary_Exp op='{' typref='16'>
+<Nary_Exp op='{' typref='17'>
 <Attr>
-<Pos l='185' c='36' s='1'/>
+<Pos l='215' c='36' s='1'/>
 </Attr>
-<Binary_Exp op='|-&gt;' typref='32'>
+<Binary_Exp op='|-&gt;' typref='28'>
 <Attr>
-<Pos l='185' c='45' s='3'/>
+<Pos l='215' c='45' s='3'/>
 </Attr>
-<Id value='content' typref='31'>
+<Id value='content' typref='15'>
 <Attr>
-<Pos l='185' c='37' s='7'/>
+<Pos l='215' c='37' s='7'/>
 </Attr>
 </Id>
 <Id value='user' typref='12'>
 <Attr>
-<Pos l='185' c='47' s='4'/>
+<Pos l='215' c='47' s='4'/>
 </Attr>
 </Id>
 </Binary_Exp>
 </Nary_Exp>
 </Binary_Exp>
-<Nary_Exp op='{' typref='16'>
+<Nary_Exp op='{' typref='17'>
 <Attr>
-<Pos l='185' c='55' s='1'/>
+<Pos l='215' c='55' s='1'/>
 </Attr>
-<Binary_Exp op='|-&gt;' typref='32'>
+<Binary_Exp op='|-&gt;' typref='28'>
 <Attr>
-<Pos l='185' c='64' s='3'/>
+<Pos l='215' c='64' s='3'/>
 </Attr>
-<Id value='content' typref='31'>
+<Id value='content' typref='15'>
 <Attr>
-<Pos l='185' c='56' s='7'/>
+<Pos l='215' c='56' s='7'/>
 </Attr>
 </Id>
 <Id value='masterUser' typref='12'>
 <Attr>
-<Pos l='185' c='66' s='10'/>
+<Pos l='215' c='66' s='10'/>
 </Attr>
 </Id>
 </Binary_Exp>
@@ -2921,21 +3659,21 @@
 </Assignement_Sub>
 <If_Sub elseif='no'>
 <Attr>
-<Pos l='188' c='9' s='2'/>
+<Pos l='218' c='9' s='2'/>
 </Attr>
 <Condition>
 <Exp_Comparison op='='>
 <Attr>
-<Pos l='188' c='24' s='1'/>
+<Pos l='218' c='24' s='1'/>
 </Attr>
 <Id value='contentType' typref='10'>
 <Attr>
-<Pos l='188' c='12' s='11'/>
+<Pos l='218' c='12' s='11'/>
 </Attr>
 </Id>
 <Id value='PHOTO' typref='10'>
 <Attr>
-<Pos l='188' c='26' s='5'/>
+<Pos l='218' c='26' s='5'/>
 </Attr>
 </Id>
 </Exp_Comparison>
@@ -2943,32 +3681,32 @@
 <Then>
 <Assignement_Sub>
 <Attr>
-<Pos l='189' c='27' s='2'/>
+<Pos l='219' c='27' s='2'/>
 </Attr>
 <Variables>
 <Id value='photoContents' typref='8'>
 <Attr>
-<Pos l='189' c='13' s='13'/>
+<Pos l='219' c='13' s='13'/>
 </Attr>
 </Id>
 </Variables>
 <Values>
 <Binary_Exp op='\/' typref='8'>
 <Attr>
-<Pos l='189' c='44' s='2'/>
+<Pos l='219' c='44' s='2'/>
 </Attr>
 <Id value='photoContents' typref='8'>
 <Attr>
-<Pos l='189' c='30' s='13'/>
+<Pos l='219' c='30' s='13'/>
 </Attr>
 </Id>
 <Nary_Exp op='{' typref='8'>
 <Attr>
-<Pos l='189' c='46' s='1'/>
+<Pos l='219' c='46' s='1'/>
 </Attr>
-<Id value='content' typref='31'>
+<Id value='content' typref='15'>
 <Attr>
-<Pos l='189' c='47' s='7'/>
+<Pos l='219' c='47' s='7'/>
 </Attr>
 </Id>
 </Nary_Exp>
@@ -2981,16 +3719,16 @@
 <Condition>
 <Exp_Comparison op='='>
 <Attr>
-<Pos l='190' c='27' s='1'/>
+<Pos l='220' c='27' s='1'/>
 </Attr>
 <Id value='contentType' typref='10'>
 <Attr>
-<Pos l='190' c='15' s='11'/>
+<Pos l='220' c='15' s='11'/>
 </Attr>
 </Id>
 <Id value='VIDEO' typref='10'>
 <Attr>
-<Pos l='190' c='29' s='5'/>
+<Pos l='220' c='29' s='5'/>
 </Attr>
 </Id>
 </Exp_Comparison>
@@ -2998,32 +3736,32 @@
 <Then>
 <Assignement_Sub>
 <Attr>
-<Pos l='191' c='27' s='2'/>
+<Pos l='221' c='27' s='2'/>
 </Attr>
 <Variables>
 <Id value='videoContents' typref='8'>
 <Attr>
-<Pos l='191' c='13' s='13'/>
+<Pos l='221' c='13' s='13'/>
 </Attr>
 </Id>
 </Variables>
 <Values>
 <Binary_Exp op='\/' typref='8'>
 <Attr>
-<Pos l='191' c='44' s='2'/>
+<Pos l='221' c='44' s='2'/>
 </Attr>
 <Id value='videoContents' typref='8'>
 <Attr>
-<Pos l='191' c='30' s='13'/>
+<Pos l='221' c='30' s='13'/>
 </Attr>
 </Id>
 <Nary_Exp op='{' typref='8'>
 <Attr>
-<Pos l='191' c='46' s='1'/>
+<Pos l='221' c='46' s='1'/>
 </Attr>
-<Id value='content' typref='31'>
+<Id value='content' typref='15'>
 <Attr>
-<Pos l='191' c='47' s='7'/>
+<Pos l='221' c='47' s='7'/>
 </Attr>
 </Id>
 </Nary_Exp>
@@ -3036,16 +3774,16 @@
 <Condition>
 <Exp_Comparison op='='>
 <Attr>
-<Pos l='192' c='27' s='1'/>
+<Pos l='222' c='27' s='1'/>
 </Attr>
 <Id value='contentType' typref='10'>
 <Attr>
-<Pos l='192' c='15' s='11'/>
+<Pos l='222' c='15' s='11'/>
 </Attr>
 </Id>
 <Id value='TEXT' typref='10'>
 <Attr>
-<Pos l='192' c='29' s='4'/>
+<Pos l='222' c='29' s='4'/>
 </Attr>
 </Id>
 </Exp_Comparison>
@@ -3053,32 +3791,32 @@
 <Then>
 <Assignement_Sub>
 <Attr>
-<Pos l='193' c='26' s='2'/>
+<Pos l='223' c='26' s='2'/>
 </Attr>
 <Variables>
 <Id value='textContents' typref='8'>
 <Attr>
-<Pos l='193' c='13' s='12'/>
+<Pos l='223' c='13' s='12'/>
 </Attr>
 </Id>
 </Variables>
 <Values>
 <Binary_Exp op='\/' typref='8'>
 <Attr>
-<Pos l='193' c='42' s='2'/>
+<Pos l='223' c='42' s='2'/>
 </Attr>
 <Id value='textContents' typref='8'>
 <Attr>
-<Pos l='193' c='29' s='12'/>
+<Pos l='223' c='29' s='12'/>
 </Attr>
 </Id>
 <Nary_Exp op='{' typref='8'>
 <Attr>
-<Pos l='193' c='44' s='1'/>
+<Pos l='223' c='44' s='1'/>
 </Attr>
-<Id value='content' typref='31'>
+<Id value='content' typref='15'>
 <Attr>
-<Pos l='193' c='45' s='7'/>
+<Pos l='223' c='45' s='7'/>
 </Attr>
 </Id>
 </Nary_Exp>
@@ -3096,17 +3834,17 @@
 </Operation>
 <Operation name='DeleteContent'>
 <Attr>
-<Pos l='197' c='5' s='13' endLine='239'/>
+<Pos l='227' c='5' s='13' endLine='272'/>
 </Attr>
 <Input_Parameters>
 <Id value='user' typref='12'>
 <Attr>
-<Pos l='197' c='19' s='4'/>
+<Pos l='227' c='19' s='4'/>
 </Attr>
 </Id>
-<Id value='content' typref='31'>
+<Id value='content' typref='15'>
 <Attr>
-<Pos l='197' c='25' s='7'/>
+<Pos l='227' c='25' s='7'/>
 </Attr>
 </Id>
 </Input_Parameters>
@@ -3114,117 +3852,174 @@
 <Nary_Pred op='&amp;'>
 <Exp_Comparison op=':'>
 <Attr>
-<Pos l='199' c='14' s='1'/>
+<Pos l='229' c='14' s='1'/>
 </Attr>
 <Id value='user' typref='12'>
 <Attr>
-<Pos l='199' c='9' s='4'/>
+<Pos l='229' c='9' s='4'/>
 </Attr>
 </Id>
 <Id value='USERS' typref='4'>
 <Attr>
-<Pos l='199' c='16' s='5'/>
+<Pos l='229' c='16' s='5'/>
 </Attr>
 </Id>
 </Exp_Comparison>
 <Exp_Comparison op=':'>
 <Attr>
-<Pos l='199' c='29' s='1'/>
+<Pos l='229' c='29' s='1'/>
 </Attr>
 <Id value='user' typref='12'>
 <Attr>
-<Pos l='199' c='24' s='4'/>
+<Pos l='229' c='24' s='4'/>
 </Attr>
 </Id>
 <Id value='users' typref='4'>
 <Attr>
-<Pos l='199' c='31' s='5'/>
+<Pos l='229' c='31' s='5'/>
 </Attr>
 </Id>
 </Exp_Comparison>
 <Exp_Comparison op=':'>
 <Attr>
-<Pos l='199' c='44' s='1'/>
+<Pos l='229' c='44' s='1'/>
 </Attr>
 <Id value='user' typref='12'>
 <Attr>
-<Pos l='199' c='39' s='4'/>
+<Pos l='229' c='39' s='4'/>
 </Attr>
 </Id>
 <Id value='loggedUsers' typref='4'>
 <Attr>
-<Pos l='199' c='46' s='11'/>
+<Pos l='229' c='46' s='11'/>
 </Attr>
 </Id>
 </Exp_Comparison>
 <Exp_Comparison op=':'>
 <Attr>
-<Pos l='200' c='17' s='1'/>
+<Pos l='230' c='17' s='1'/>
 </Attr>
-<Id value='content' typref='31'>
+<Id value='content' typref='15'>
 <Attr>
-<Pos l='200' c='9' s='7'/>
+<Pos l='230' c='9' s='7'/>
 </Attr>
 </Id>
 <Id value='CONTENTS' typref='8'>
 <Attr>
-<Pos l='200' c='19' s='8'/>
+<Pos l='230' c='19' s='8'/>
 </Attr>
 </Id>
 </Exp_Comparison>
 <Exp_Comparison op=':'>
 <Attr>
-<Pos l='200' c='38' s='1'/>
+<Pos l='230' c='38' s='1'/>
 </Attr>
-<Id value='content' typref='31'>
+<Id value='content' typref='15'>
 <Attr>
-<Pos l='200' c='30' s='7'/>
+<Pos l='230' c='30' s='7'/>
 </Attr>
 </Id>
 <Id value='contents' typref='8'>
 <Attr>
-<Pos l='200' c='40' s='8'/>
+<Pos l='230' c='40' s='8'/>
 </Attr>
 </Id>
 </Exp_Comparison>
-<Nary_Pred op='or'>
-<Exp_Comparison op='='>
+<Exp_Comparison op='/='>
 <Attr>
-<Pos l='201' c='35' s='1'/>
+<Pos l='231' c='17' s='2'/>
+</Attr>
+<Id value='content' typref='15'>
+<Attr>
+<Pos l='231' c='9' s='7'/>
+</Attr>
+</Id>
+<Id value='masterContent' typref='15'>
+<Attr>
+<Pos l='231' c='19' s='13'/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Nary_Pred op='&amp;'>
+<Exp_Comparison op='/='>
+<Attr>
+<Pos l='232' c='35' s='2'/>
 </Attr>
 <Binary_Exp op='(' typref='12'>
 <Attr>
-<Pos l='201' c='25' s='0'/>
+<Pos l='232' c='25' s='0'/>
 </Attr>
-<Id value='getContentOwner' typref='16'>
+<Id value='getContentOwner' typref='17'>
 <Attr>
-<Pos l='201' c='10' s='15'/>
+<Pos l='232' c='10' s='15'/>
 </Attr>
 </Id>
-<Id value='content' typref='31'>
+<Id value='content' typref='15'>
 <Attr>
-<Pos l='201' c='26' s='7'/>
+<Pos l='232' c='26' s='7'/>
+</Attr>
+</Id>
+</Binary_Exp>
+<Id value='masterUser' typref='12'>
+<Attr>
+<Pos l='232' c='37' s='10'/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison op='='>
+<Attr>
+<Pos l='232' c='55' s='1'/>
+</Attr>
+<Id value='user' typref='12'>
+<Attr>
+<Pos l='232' c='50' s='4'/>
+</Attr>
+</Id>
+<Id value='masterUser' typref='12'>
+<Attr>
+<Pos l='232' c='57' s='10'/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Nary_Pred>
+<Nary_Pred op='&amp;'>
+<Exp_Comparison op='='>
+<Attr>
+<Pos l='233' c='35' s='1'/>
+</Attr>
+<Binary_Exp op='(' typref='12'>
+<Attr>
+<Pos l='233' c='25' s='0'/>
+</Attr>
+<Id value='getContentOwner' typref='17'>
+<Attr>
+<Pos l='233' c='10' s='15'/>
+</Attr>
+</Id>
+<Id value='content' typref='15'>
+<Attr>
+<Pos l='233' c='26' s='7'/>
 </Attr>
 </Id>
 </Binary_Exp>
 <Id value='user' typref='12'>
 <Attr>
-<Pos l='201' c='37' s='4'/>
+<Pos l='233' c='37' s='4'/>
 </Attr>
 </Id>
 </Exp_Comparison>
-<Exp_Comparison op='='>
+<Exp_Comparison op='/='>
 <Attr>
-<Pos l='201' c='50' s='1'/>
+<Pos l='233' c='49' s='2'/>
 </Attr>
 <Id value='user' typref='12'>
 <Attr>
-<Pos l='201' c='45' s='4'/>
+<Pos l='233' c='44' s='4'/>
 </Attr>
 </Id>
 <Id value='masterUser' typref='12'>
 <Attr>
-<Pos l='201' c='52' s='10'/>
+<Pos l='233' c='51' s='10'/>
 </Attr>
 </Id>
 </Exp_Comparison>
@@ -3234,34 +4029,33 @@
 <Body>
 <If_Sub elseif='no'>
 <Attr>
-<Pos l='203' c='9' s='2'/>
+<Pos l='235' c='9' s='2'/>
 </Attr>
 <Condition>
-<Nary_Pred op='&amp;'>
-<Exp_Comparison op='='>
+<Exp_Comparison op='&lt;=i'>
 <Attr>
-<Pos l='203' c='43' s='1'/>
+<Pos l='235' c='43' s='2'/>
 </Attr>
 <Unary_Exp op='card' typref='1'>
 <Attr>
-<Pos l='203' c='12' s='4'/>
+<Pos l='235' c='12' s='4'/>
 </Attr>
-<Binary_Exp op='|&gt;' typref='16'>
+<Binary_Exp op='|&gt;' typref='17'>
 <Attr>
-<Pos l='203' c='33' s='2'/>
+<Pos l='235' c='33' s='2'/>
 </Attr>
-<Id value='getContentOwner' typref='16'>
+<Id value='getContentOwner' typref='17'>
 <Attr>
-<Pos l='203' c='17' s='15'/>
+<Pos l='235' c='17' s='15'/>
 </Attr>
 </Id>
 <Nary_Exp op='{' typref='4'>
 <Attr>
-<Pos l='203' c='35' s='1'/>
+<Pos l='235' c='35' s='1'/>
 </Attr>
 <Id value='user' typref='12'>
 <Attr>
-<Pos l='203' c='36' s='4'/>
+<Pos l='235' c='36' s='4'/>
 </Attr>
 </Id>
 </Nary_Exp>
@@ -3269,57 +4063,41 @@
 </Unary_Exp>
 <Integer_Literal value='1' typref='1'>
 <Attr>
-<Pos l='203' c='45' s='1'/>
+<Pos l='235' c='45' s='1'/>
 </Attr>
 </Integer_Literal>
 </Exp_Comparison>
-<Exp_Comparison op='/='>
-<Attr>
-<Pos l='203' c='54' s='2'/>
-</Attr>
-<Id value='user' typref='12'>
-<Attr>
-<Pos l='203' c='49' s='4'/>
-</Attr>
-</Id>
-<Id value='masterUser' typref='12'>
-<Attr>
-<Pos l='203' c='56' s='10'/>
-</Attr>
-</Id>
-</Exp_Comparison>
-</Nary_Pred>
 </Condition>
 <Then>
 <Nary_Sub op='||'>
 <Assignement_Sub>
 <Attr>
-<Pos l='207' c='19' s='2'/>
+<Pos l='239' c='19' s='2'/>
 </Attr>
 <Variables>
 <Id value='users' typref='4'>
 <Attr>
-<Pos l='207' c='13' s='5'/>
+<Pos l='239' c='13' s='5'/>
 </Attr>
 </Id>
 </Variables>
 <Values>
 <Binary_Exp op='-s' typref='4'>
 <Attr>
-<Pos l='207' c='28' s='1'/>
+<Pos l='239' c='28' s='1'/>
 </Attr>
 <Id value='users' typref='4'>
 <Attr>
-<Pos l='207' c='22' s='5'/>
+<Pos l='239' c='22' s='5'/>
 </Attr>
 </Id>
 <Nary_Exp op='{' typref='4'>
 <Attr>
-<Pos l='207' c='30' s='1'/>
+<Pos l='239' c='30' s='1'/>
 </Attr>
 <Id value='user' typref='12'>
 <Attr>
-<Pos l='207' c='31' s='4'/>
+<Pos l='239' c='31' s='4'/>
 </Attr>
 </Id>
 </Nary_Exp>
@@ -3328,32 +4106,32 @@
 </Assignement_Sub>
 <Assignement_Sub>
 <Attr>
-<Pos l='208' c='25' s='2'/>
+<Pos l='240' c='25' s='2'/>
 </Attr>
 <Variables>
 <Id value='loggedUsers' typref='4'>
 <Attr>
-<Pos l='208' c='13' s='11'/>
+<Pos l='240' c='13' s='11'/>
 </Attr>
 </Id>
 </Variables>
 <Values>
 <Binary_Exp op='-s' typref='4'>
 <Attr>
-<Pos l='208' c='40' s='1'/>
+<Pos l='240' c='40' s='1'/>
 </Attr>
 <Id value='loggedUsers' typref='4'>
 <Attr>
-<Pos l='208' c='28' s='11'/>
+<Pos l='240' c='28' s='11'/>
 </Attr>
 </Id>
 <Nary_Exp op='{' typref='4'>
 <Attr>
-<Pos l='208' c='42' s='1'/>
+<Pos l='240' c='42' s='1'/>
 </Attr>
 <Id value='user' typref='12'>
 <Attr>
-<Pos l='208' c='43' s='4'/>
+<Pos l='240' c='43' s='4'/>
 </Attr>
 </Id>
 </Nary_Exp>
@@ -3362,67 +4140,33 @@
 </Assignement_Sub>
 <Assignement_Sub>
 <Attr>
-<Pos l='211' c='23' s='2'/>
+<Pos l='243' c='23' s='2'/>
 </Attr>
 <Variables>
-<Id value='getGender' typref='17'>
+<Id value='getGender' typref='18'>
 <Attr>
-<Pos l='211' c='13' s='9'/>
-</Attr>
-</Id>
-</Variables>
-<Values>
-<Binary_Exp op='&lt;&lt;|' typref='17'>
-<Attr>
-<Pos l='211' c='33' s='3'/>
-</Attr>
-<Nary_Exp op='{' typref='4'>
-<Attr>
-<Pos l='211' c='26' s='1'/>
-</Attr>
-<Id value='user' typref='12'>
-<Attr>
-<Pos l='211' c='27' s='4'/>
-</Attr>
-</Id>
-</Nary_Exp>
-<Id value='getGender' typref='17'>
-<Attr>
-<Pos l='211' c='35' s='9'/>
-</Attr>
-</Id>
-</Binary_Exp>
-</Values>
-</Assignement_Sub>
-<Assignement_Sub>
-<Attr>
-<Pos l='212' c='20' s='2'/>
-</Attr>
-<Variables>
-<Id value='getAge' typref='18'>
-<Attr>
-<Pos l='212' c='13' s='6'/>
+<Pos l='243' c='13' s='9'/>
 </Attr>
 </Id>
 </Variables>
 <Values>
 <Binary_Exp op='&lt;&lt;|' typref='18'>
 <Attr>
-<Pos l='212' c='30' s='3'/>
+<Pos l='243' c='33' s='3'/>
 </Attr>
 <Nary_Exp op='{' typref='4'>
 <Attr>
-<Pos l='212' c='23' s='1'/>
+<Pos l='243' c='26' s='1'/>
 </Attr>
 <Id value='user' typref='12'>
 <Attr>
-<Pos l='212' c='24' s='4'/>
+<Pos l='243' c='27' s='4'/>
 </Attr>
 </Id>
 </Nary_Exp>
-<Id value='getAge' typref='18'>
+<Id value='getGender' typref='18'>
 <Attr>
-<Pos l='212' c='32' s='6'/>
+<Pos l='243' c='35' s='9'/>
 </Attr>
 </Id>
 </Binary_Exp>
@@ -3430,67 +4174,33 @@
 </Assignement_Sub>
 <Assignement_Sub>
 <Attr>
-<Pos l='213' c='21' s='2'/>
+<Pos l='244' c='20' s='2'/>
 </Attr>
 <Variables>
-<Id value='pseudos' typref='15'>
+<Id value='getAge' typref='19'>
 <Attr>
-<Pos l='213' c='13' s='7'/>
-</Attr>
-</Id>
-</Variables>
-<Values>
-<Binary_Exp op='&lt;&lt;|' typref='15'>
-<Attr>
-<Pos l='213' c='31' s='3'/>
-</Attr>
-<Nary_Exp op='{' typref='4'>
-<Attr>
-<Pos l='213' c='24' s='1'/>
-</Attr>
-<Id value='user' typref='12'>
-<Attr>
-<Pos l='213' c='25' s='4'/>
-</Attr>
-</Id>
-</Nary_Exp>
-<Id value='pseudos' typref='15'>
-<Attr>
-<Pos l='213' c='33' s='7'/>
-</Attr>
-</Id>
-</Binary_Exp>
-</Values>
-</Assignement_Sub>
-<Assignement_Sub>
-<Attr>
-<Pos l='214' c='20' s='2'/>
-</Attr>
-<Variables>
-<Id value='shadow' typref='19'>
-<Attr>
-<Pos l='214' c='13' s='6'/>
+<Pos l='244' c='13' s='6'/>
 </Attr>
 </Id>
 </Variables>
 <Values>
 <Binary_Exp op='&lt;&lt;|' typref='19'>
 <Attr>
-<Pos l='214' c='30' s='3'/>
+<Pos l='244' c='30' s='3'/>
 </Attr>
 <Nary_Exp op='{' typref='4'>
 <Attr>
-<Pos l='214' c='23' s='1'/>
+<Pos l='244' c='23' s='1'/>
 </Attr>
 <Id value='user' typref='12'>
 <Attr>
-<Pos l='214' c='24' s='4'/>
+<Pos l='244' c='24' s='4'/>
 </Attr>
 </Id>
 </Nary_Exp>
-<Id value='shadow' typref='19'>
+<Id value='getAge' typref='19'>
 <Attr>
-<Pos l='214' c='32' s='6'/>
+<Pos l='244' c='32' s='6'/>
 </Attr>
 </Id>
 </Binary_Exp>
@@ -3498,45 +4208,113 @@
 </Assignement_Sub>
 <Assignement_Sub>
 <Attr>
-<Pos l='217' c='22' s='2'/>
+<Pos l='245' c='21' s='2'/>
+</Attr>
+<Variables>
+<Id value='pseudos' typref='16'>
+<Attr>
+<Pos l='245' c='13' s='7'/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Binary_Exp op='&lt;&lt;|' typref='16'>
+<Attr>
+<Pos l='245' c='31' s='3'/>
+</Attr>
+<Nary_Exp op='{' typref='4'>
+<Attr>
+<Pos l='245' c='24' s='1'/>
+</Attr>
+<Id value='user' typref='12'>
+<Attr>
+<Pos l='245' c='25' s='4'/>
+</Attr>
+</Id>
+</Nary_Exp>
+<Id value='pseudos' typref='16'>
+<Attr>
+<Pos l='245' c='33' s='7'/>
+</Attr>
+</Id>
+</Binary_Exp>
+</Values>
+</Assignement_Sub>
+<Assignement_Sub>
+<Attr>
+<Pos l='246' c='20' s='2'/>
+</Attr>
+<Variables>
+<Id value='shadow' typref='20'>
+<Attr>
+<Pos l='246' c='13' s='6'/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Binary_Exp op='&lt;&lt;|' typref='20'>
+<Attr>
+<Pos l='246' c='30' s='3'/>
+</Attr>
+<Nary_Exp op='{' typref='4'>
+<Attr>
+<Pos l='246' c='23' s='1'/>
+</Attr>
+<Id value='user' typref='12'>
+<Attr>
+<Pos l='246' c='24' s='4'/>
+</Attr>
+</Id>
+</Nary_Exp>
+<Id value='shadow' typref='20'>
+<Attr>
+<Pos l='246' c='32' s='6'/>
+</Attr>
+</Id>
+</Binary_Exp>
+</Values>
+</Assignement_Sub>
+<Assignement_Sub>
+<Attr>
+<Pos l='249' c='22' s='2'/>
 </Attr>
 <Variables>
 <Id value='contents' typref='8'>
 <Attr>
-<Pos l='217' c='13' s='8'/>
+<Pos l='249' c='13' s='8'/>
 </Attr>
 </Id>
 </Variables>
 <Values>
 <Binary_Exp op='-s' typref='8'>
 <Attr>
-<Pos l='217' c='34' s='1'/>
+<Pos l='249' c='34' s='1'/>
 </Attr>
 <Id value='contents' typref='8'>
 <Attr>
-<Pos l='217' c='25' s='8'/>
+<Pos l='249' c='25' s='8'/>
 </Attr>
 </Id>
 <Unary_Exp op='dom' typref='8'>
 <Attr>
-<Pos l='217' c='36' s='3'/>
+<Pos l='249' c='36' s='3'/>
 </Attr>
-<Binary_Exp op='|&gt;' typref='16'>
+<Binary_Exp op='|&gt;' typref='17'>
 <Attr>
-<Pos l='217' c='56' s='2'/>
+<Pos l='249' c='56' s='2'/>
 </Attr>
-<Id value='getContentOwner' typref='16'>
+<Id value='getContentOwner' typref='17'>
 <Attr>
-<Pos l='217' c='40' s='15'/>
+<Pos l='249' c='40' s='15'/>
 </Attr>
 </Id>
 <Nary_Exp op='{' typref='4'>
 <Attr>
-<Pos l='217' c='58' s='1'/>
+<Pos l='249' c='58' s='1'/>
 </Attr>
 <Id value='user' typref='12'>
 <Attr>
-<Pos l='217' c='59' s='4'/>
+<Pos l='249' c='59' s='4'/>
 </Attr>
 </Id>
 </Nary_Exp>
@@ -3547,45 +4325,45 @@
 </Assignement_Sub>
 <Assignement_Sub>
 <Attr>
-<Pos l='218' c='27' s='2'/>
+<Pos l='250' c='27' s='2'/>
 </Attr>
 <Variables>
 <Id value='photoContents' typref='8'>
 <Attr>
-<Pos l='218' c='13' s='13'/>
+<Pos l='250' c='13' s='13'/>
 </Attr>
 </Id>
 </Variables>
 <Values>
 <Binary_Exp op='-s' typref='8'>
 <Attr>
-<Pos l='218' c='44' s='1'/>
+<Pos l='250' c='44' s='1'/>
 </Attr>
 <Id value='photoContents' typref='8'>
 <Attr>
-<Pos l='218' c='30' s='13'/>
+<Pos l='250' c='30' s='13'/>
 </Attr>
 </Id>
 <Unary_Exp op='dom' typref='8'>
 <Attr>
-<Pos l='218' c='46' s='3'/>
+<Pos l='250' c='46' s='3'/>
 </Attr>
-<Binary_Exp op='|&gt;' typref='16'>
+<Binary_Exp op='|&gt;' typref='17'>
 <Attr>
-<Pos l='218' c='66' s='2'/>
+<Pos l='250' c='66' s='2'/>
 </Attr>
-<Id value='getContentOwner' typref='16'>
+<Id value='getContentOwner' typref='17'>
 <Attr>
-<Pos l='218' c='50' s='15'/>
+<Pos l='250' c='50' s='15'/>
 </Attr>
 </Id>
 <Nary_Exp op='{' typref='4'>
 <Attr>
-<Pos l='218' c='68' s='1'/>
+<Pos l='250' c='68' s='1'/>
 </Attr>
 <Id value='user' typref='12'>
 <Attr>
-<Pos l='218' c='69' s='4'/>
+<Pos l='250' c='69' s='4'/>
 </Attr>
 </Id>
 </Nary_Exp>
@@ -3596,45 +4374,45 @@
 </Assignement_Sub>
 <Assignement_Sub>
 <Attr>
-<Pos l='219' c='27' s='2'/>
+<Pos l='251' c='27' s='2'/>
 </Attr>
 <Variables>
 <Id value='videoContents' typref='8'>
 <Attr>
-<Pos l='219' c='13' s='13'/>
+<Pos l='251' c='13' s='13'/>
 </Attr>
 </Id>
 </Variables>
 <Values>
 <Binary_Exp op='-s' typref='8'>
 <Attr>
-<Pos l='219' c='44' s='1'/>
+<Pos l='251' c='44' s='1'/>
 </Attr>
 <Id value='videoContents' typref='8'>
 <Attr>
-<Pos l='219' c='30' s='13'/>
+<Pos l='251' c='30' s='13'/>
 </Attr>
 </Id>
 <Unary_Exp op='dom' typref='8'>
 <Attr>
-<Pos l='219' c='46' s='3'/>
+<Pos l='251' c='46' s='3'/>
 </Attr>
-<Binary_Exp op='|&gt;' typref='16'>
+<Binary_Exp op='|&gt;' typref='17'>
 <Attr>
-<Pos l='219' c='66' s='2'/>
+<Pos l='251' c='66' s='2'/>
 </Attr>
-<Id value='getContentOwner' typref='16'>
+<Id value='getContentOwner' typref='17'>
 <Attr>
-<Pos l='219' c='50' s='15'/>
+<Pos l='251' c='50' s='15'/>
 </Attr>
 </Id>
 <Nary_Exp op='{' typref='4'>
 <Attr>
-<Pos l='219' c='68' s='1'/>
+<Pos l='251' c='68' s='1'/>
 </Attr>
 <Id value='user' typref='12'>
 <Attr>
-<Pos l='219' c='69' s='4'/>
+<Pos l='251' c='69' s='4'/>
 </Attr>
 </Id>
 </Nary_Exp>
@@ -3645,45 +4423,45 @@
 </Assignement_Sub>
 <Assignement_Sub>
 <Attr>
-<Pos l='220' c='26' s='2'/>
+<Pos l='252' c='26' s='2'/>
 </Attr>
 <Variables>
 <Id value='textContents' typref='8'>
 <Attr>
-<Pos l='220' c='13' s='12'/>
+<Pos l='252' c='13' s='12'/>
 </Attr>
 </Id>
 </Variables>
 <Values>
 <Binary_Exp op='-s' typref='8'>
 <Attr>
-<Pos l='220' c='42' s='1'/>
+<Pos l='252' c='42' s='1'/>
 </Attr>
 <Id value='textContents' typref='8'>
 <Attr>
-<Pos l='220' c='29' s='12'/>
+<Pos l='252' c='29' s='12'/>
 </Attr>
 </Id>
 <Unary_Exp op='dom' typref='8'>
 <Attr>
-<Pos l='220' c='44' s='3'/>
+<Pos l='252' c='44' s='3'/>
 </Attr>
-<Binary_Exp op='|&gt;' typref='16'>
+<Binary_Exp op='|&gt;' typref='17'>
 <Attr>
-<Pos l='220' c='64' s='2'/>
+<Pos l='252' c='64' s='2'/>
 </Attr>
-<Id value='getContentOwner' typref='16'>
+<Id value='getContentOwner' typref='17'>
 <Attr>
-<Pos l='220' c='48' s='15'/>
+<Pos l='252' c='48' s='15'/>
 </Attr>
 </Id>
 <Nary_Exp op='{' typref='4'>
 <Attr>
-<Pos l='220' c='66' s='1'/>
+<Pos l='252' c='66' s='1'/>
 </Attr>
 <Id value='user' typref='12'>
 <Attr>
-<Pos l='220' c='67' s='4'/>
+<Pos l='252' c='67' s='4'/>
 </Attr>
 </Id>
 </Nary_Exp>
@@ -3694,45 +4472,45 @@
 </Assignement_Sub>
 <Assignement_Sub>
 <Attr>
-<Pos l='221' c='29' s='2'/>
+<Pos l='253' c='29' s='2'/>
 </Attr>
 <Variables>
 <Id value='privateContents' typref='8'>
 <Attr>
-<Pos l='221' c='13' s='15'/>
+<Pos l='253' c='13' s='15'/>
 </Attr>
 </Id>
 </Variables>
 <Values>
 <Binary_Exp op='-s' typref='8'>
 <Attr>
-<Pos l='221' c='48' s='1'/>
+<Pos l='253' c='48' s='1'/>
 </Attr>
 <Id value='privateContents' typref='8'>
 <Attr>
-<Pos l='221' c='32' s='15'/>
+<Pos l='253' c='32' s='15'/>
 </Attr>
 </Id>
 <Unary_Exp op='dom' typref='8'>
 <Attr>
-<Pos l='221' c='50' s='3'/>
+<Pos l='253' c='50' s='3'/>
 </Attr>
-<Binary_Exp op='|&gt;' typref='16'>
+<Binary_Exp op='|&gt;' typref='17'>
 <Attr>
-<Pos l='221' c='70' s='2'/>
+<Pos l='253' c='70' s='2'/>
 </Attr>
-<Id value='getContentOwner' typref='16'>
+<Id value='getContentOwner' typref='17'>
 <Attr>
-<Pos l='221' c='54' s='15'/>
+<Pos l='253' c='54' s='15'/>
 </Attr>
 </Id>
 <Nary_Exp op='{' typref='4'>
 <Attr>
-<Pos l='221' c='72' s='1'/>
+<Pos l='253' c='72' s='1'/>
 </Attr>
 <Id value='user' typref='12'>
 <Attr>
-<Pos l='221' c='73' s='4'/>
+<Pos l='253' c='73' s='4'/>
 </Attr>
 </Id>
 </Nary_Exp>
@@ -3743,32 +4521,32 @@
 </Assignement_Sub>
 <Assignement_Sub>
 <Attr>
-<Pos l='222' c='29' s='2'/>
+<Pos l='254' c='29' s='2'/>
 </Attr>
 <Variables>
-<Id value='getContentOwner' typref='16'>
+<Id value='getContentOwner' typref='17'>
 <Attr>
-<Pos l='222' c='13' s='15'/>
+<Pos l='254' c='13' s='15'/>
 </Attr>
 </Id>
 </Variables>
 <Values>
-<Binary_Exp op='|&gt;&gt;' typref='16'>
+<Binary_Exp op='|&gt;&gt;' typref='17'>
 <Attr>
-<Pos l='222' c='48' s='3'/>
+<Pos l='254' c='48' s='3'/>
 </Attr>
-<Id value='getContentOwner' typref='16'>
+<Id value='getContentOwner' typref='17'>
 <Attr>
-<Pos l='222' c='32' s='15'/>
+<Pos l='254' c='32' s='15'/>
 </Attr>
 </Id>
 <Nary_Exp op='{' typref='4'>
 <Attr>
-<Pos l='222' c='50' s='1'/>
+<Pos l='254' c='50' s='1'/>
 </Attr>
 <Id value='user' typref='12'>
 <Attr>
-<Pos l='222' c='51' s='4'/>
+<Pos l='254' c='51' s='4'/>
 </Attr>
 </Id>
 </Nary_Exp>
@@ -3777,61 +4555,61 @@
 </Assignement_Sub>
 <Assignement_Sub>
 <Attr>
-<Pos l='226' c='26' s='2'/>
+<Pos l='258' c='26' s='2'/>
 </Attr>
 <Variables>
-<Id value='hasNoRRights' typref='16'>
+<Id value='hasNoRRights' typref='17'>
 <Attr>
-<Pos l='226' c='13' s='12'/>
+<Pos l='258' c='13' s='12'/>
 </Attr>
 </Id>
 </Variables>
 <Values>
-<Binary_Exp op='&lt;|' typref='16'>
+<Binary_Exp op='&lt;|' typref='17'>
 <Attr>
-<Pos l='226' c='59' s='2'/>
+<Pos l='258' c='59' s='2'/>
 </Attr>
 <Unary_Exp op='dom' typref='8'>
 <Attr>
-<Pos l='226' c='29' s='3'/>
+<Pos l='258' c='29' s='3'/>
 </Attr>
-<Binary_Exp op='|&gt;&gt;' typref='16'>
+<Binary_Exp op='|&gt;&gt;' typref='17'>
 <Attr>
-<Pos l='226' c='49' s='3'/>
+<Pos l='258' c='49' s='3'/>
 </Attr>
-<Id value='getContentOwner' typref='16'>
+<Id value='getContentOwner' typref='17'>
 <Attr>
-<Pos l='226' c='33' s='15'/>
+<Pos l='258' c='33' s='15'/>
 </Attr>
 </Id>
 <Nary_Exp op='{' typref='4'>
 <Attr>
-<Pos l='226' c='51' s='1'/>
+<Pos l='258' c='51' s='1'/>
 </Attr>
 <Id value='user' typref='12'>
 <Attr>
-<Pos l='226' c='52' s='4'/>
+<Pos l='258' c='52' s='4'/>
 </Attr>
 </Id>
 </Nary_Exp>
 </Binary_Exp>
 </Unary_Exp>
-<Binary_Exp op='|&gt;&gt;' typref='16'>
+<Binary_Exp op='|&gt;&gt;' typref='17'>
 <Attr>
-<Pos l='226' c='75' s='3'/>
+<Pos l='258' c='75' s='3'/>
 </Attr>
-<Id value='hasNoRRights' typref='16'>
+<Id value='hasNoRRights' typref='17'>
 <Attr>
-<Pos l='226' c='62' s='12'/>
+<Pos l='258' c='62' s='12'/>
 </Attr>
 </Id>
 <Nary_Exp op='{' typref='4'>
 <Attr>
-<Pos l='226' c='77' s='1'/>
+<Pos l='258' c='77' s='1'/>
 </Attr>
 <Id value='user' typref='12'>
 <Attr>
-<Pos l='226' c='78' s='4'/>
+<Pos l='258' c='78' s='4'/>
 </Attr>
 </Id>
 </Nary_Exp>
@@ -3841,61 +4619,61 @@
 </Assignement_Sub>
 <Assignement_Sub>
 <Attr>
-<Pos l='227' c='24' s='2'/>
+<Pos l='259' c='24' s='2'/>
 </Attr>
 <Variables>
-<Id value='hasWRights' typref='16'>
+<Id value='hasWRights' typref='17'>
 <Attr>
-<Pos l='227' c='13' s='10'/>
+<Pos l='259' c='13' s='10'/>
 </Attr>
 </Id>
 </Variables>
 <Values>
-<Binary_Exp op='&lt;|' typref='16'>
+<Binary_Exp op='&lt;|' typref='17'>
 <Attr>
-<Pos l='227' c='57' s='2'/>
+<Pos l='259' c='57' s='2'/>
 </Attr>
 <Unary_Exp op='dom' typref='8'>
 <Attr>
-<Pos l='227' c='27' s='3'/>
+<Pos l='259' c='27' s='3'/>
 </Attr>
-<Binary_Exp op='|&gt;&gt;' typref='16'>
+<Binary_Exp op='|&gt;&gt;' typref='17'>
 <Attr>
-<Pos l='227' c='47' s='3'/>
+<Pos l='259' c='47' s='3'/>
 </Attr>
-<Id value='getContentOwner' typref='16'>
+<Id value='getContentOwner' typref='17'>
 <Attr>
-<Pos l='227' c='31' s='15'/>
+<Pos l='259' c='31' s='15'/>
 </Attr>
 </Id>
 <Nary_Exp op='{' typref='4'>
 <Attr>
-<Pos l='227' c='49' s='1'/>
+<Pos l='259' c='49' s='1'/>
 </Attr>
 <Id value='user' typref='12'>
 <Attr>
-<Pos l='227' c='50' s='4'/>
+<Pos l='259' c='50' s='4'/>
 </Attr>
 </Id>
 </Nary_Exp>
 </Binary_Exp>
 </Unary_Exp>
-<Binary_Exp op='|&gt;&gt;' typref='16'>
+<Binary_Exp op='|&gt;&gt;' typref='17'>
 <Attr>
-<Pos l='227' c='71' s='3'/>
+<Pos l='259' c='71' s='3'/>
 </Attr>
-<Id value='hasWRights' typref='16'>
+<Id value='hasWRights' typref='17'>
 <Attr>
-<Pos l='227' c='60' s='10'/>
+<Pos l='259' c='60' s='10'/>
 </Attr>
 </Id>
 <Nary_Exp op='{' typref='4'>
 <Attr>
-<Pos l='227' c='73' s='1'/>
+<Pos l='259' c='73' s='1'/>
 </Attr>
 <Id value='user' typref='12'>
 <Attr>
-<Pos l='227' c='74' s='4'/>
+<Pos l='259' c='74' s='4'/>
 </Attr>
 </Id>
 </Nary_Exp>
@@ -3906,35 +4684,81 @@
 </Nary_Sub>
 </Then>
 <Else>
+<If_Sub elseif='yes'>
+<Condition>
+<Nary_Pred op='or'>
+<Exp_Comparison op='='>
+<Attr>
+<Pos l='260' c='41' s='1'/>
+</Attr>
+<Binary_Exp op='(' typref='12'>
+<Attr>
+<Pos l='260' c='31' s='0'/>
+</Attr>
+<Id value='getContentOwner' typref='17'>
+<Attr>
+<Pos l='260' c='16' s='15'/>
+</Attr>
+</Id>
+<Id value='content' typref='15'>
+<Attr>
+<Pos l='260' c='32' s='7'/>
+</Attr>
+</Id>
+</Binary_Exp>
+<Id value='user' typref='12'>
+<Attr>
+<Pos l='260' c='43' s='4'/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison op='='>
+<Attr>
+<Pos l='260' c='56' s='1'/>
+</Attr>
+<Id value='user' typref='12'>
+<Attr>
+<Pos l='260' c='51' s='4'/>
+</Attr>
+</Id>
+<Id value='masterUser' typref='12'>
+<Attr>
+<Pos l='260' c='58' s='10'/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Nary_Pred>
+</Condition>
+<Then>
 <Nary_Sub op='||'>
 <Assignement_Sub>
 <Attr>
-<Pos l='229' c='22' s='2'/>
+<Pos l='262' c='22' s='2'/>
 </Attr>
 <Variables>
 <Id value='contents' typref='8'>
 <Attr>
-<Pos l='229' c='13' s='8'/>
+<Pos l='262' c='13' s='8'/>
 </Attr>
 </Id>
 </Variables>
 <Values>
 <Binary_Exp op='-s' typref='8'>
 <Attr>
-<Pos l='229' c='34' s='1'/>
+<Pos l='262' c='34' s='1'/>
 </Attr>
 <Id value='contents' typref='8'>
 <Attr>
-<Pos l='229' c='25' s='8'/>
+<Pos l='262' c='25' s='8'/>
 </Attr>
 </Id>
 <Nary_Exp op='{' typref='8'>
 <Attr>
-<Pos l='229' c='36' s='1'/>
+<Pos l='262' c='36' s='1'/>
 </Attr>
-<Id value='content' typref='31'>
+<Id value='content' typref='15'>
 <Attr>
-<Pos l='229' c='37' s='7'/>
+<Pos l='262' c='37' s='7'/>
 </Attr>
 </Id>
 </Nary_Exp>
@@ -3943,32 +4767,32 @@
 </Assignement_Sub>
 <Assignement_Sub>
 <Attr>
-<Pos l='230' c='29' s='2'/>
+<Pos l='263' c='29' s='2'/>
 </Attr>
 <Variables>
 <Id value='privateContents' typref='8'>
 <Attr>
-<Pos l='230' c='13' s='15'/>
+<Pos l='263' c='13' s='15'/>
 </Attr>
 </Id>
 </Variables>
 <Values>
 <Binary_Exp op='-s' typref='8'>
 <Attr>
-<Pos l='230' c='48' s='1'/>
+<Pos l='263' c='48' s='1'/>
 </Attr>
 <Id value='privateContents' typref='8'>
 <Attr>
-<Pos l='230' c='32' s='15'/>
+<Pos l='263' c='32' s='15'/>
 </Attr>
 </Id>
 <Nary_Exp op='{' typref='8'>
 <Attr>
-<Pos l='230' c='50' s='1'/>
+<Pos l='263' c='50' s='1'/>
 </Attr>
-<Id value='content' typref='31'>
+<Id value='content' typref='15'>
 <Attr>
-<Pos l='230' c='51' s='7'/>
+<Pos l='263' c='51' s='7'/>
 </Attr>
 </Id>
 </Nary_Exp>
@@ -3977,32 +4801,32 @@
 </Assignement_Sub>
 <Assignement_Sub>
 <Attr>
-<Pos l='231' c='27' s='2'/>
+<Pos l='264' c='27' s='2'/>
 </Attr>
 <Variables>
 <Id value='photoContents' typref='8'>
 <Attr>
-<Pos l='231' c='13' s='13'/>
+<Pos l='264' c='13' s='13'/>
 </Attr>
 </Id>
 </Variables>
 <Values>
 <Binary_Exp op='-s' typref='8'>
 <Attr>
-<Pos l='231' c='44' s='1'/>
+<Pos l='264' c='44' s='1'/>
 </Attr>
 <Id value='photoContents' typref='8'>
 <Attr>
-<Pos l='231' c='30' s='13'/>
+<Pos l='264' c='30' s='13'/>
 </Attr>
 </Id>
 <Nary_Exp op='{' typref='8'>
 <Attr>
-<Pos l='231' c='46' s='1'/>
+<Pos l='264' c='46' s='1'/>
 </Attr>
-<Id value='content' typref='31'>
+<Id value='content' typref='15'>
 <Attr>
-<Pos l='231' c='47' s='7'/>
+<Pos l='264' c='47' s='7'/>
 </Attr>
 </Id>
 </Nary_Exp>
@@ -4011,32 +4835,32 @@
 </Assignement_Sub>
 <Assignement_Sub>
 <Attr>
-<Pos l='232' c='27' s='2'/>
+<Pos l='265' c='27' s='2'/>
 </Attr>
 <Variables>
 <Id value='videoContents' typref='8'>
 <Attr>
-<Pos l='232' c='13' s='13'/>
+<Pos l='265' c='13' s='13'/>
 </Attr>
 </Id>
 </Variables>
 <Values>
 <Binary_Exp op='-s' typref='8'>
 <Attr>
-<Pos l='232' c='44' s='1'/>
+<Pos l='265' c='44' s='1'/>
 </Attr>
 <Id value='videoContents' typref='8'>
 <Attr>
-<Pos l='232' c='30' s='13'/>
+<Pos l='265' c='30' s='13'/>
 </Attr>
 </Id>
 <Nary_Exp op='{' typref='8'>
 <Attr>
-<Pos l='232' c='46' s='1'/>
+<Pos l='265' c='46' s='1'/>
 </Attr>
-<Id value='content' typref='31'>
+<Id value='content' typref='15'>
 <Attr>
-<Pos l='232' c='47' s='7'/>
+<Pos l='265' c='47' s='7'/>
 </Attr>
 </Id>
 </Nary_Exp>
@@ -4045,32 +4869,32 @@
 </Assignement_Sub>
 <Assignement_Sub>
 <Attr>
-<Pos l='233' c='26' s='2'/>
+<Pos l='266' c='26' s='2'/>
 </Attr>
 <Variables>
 <Id value='textContents' typref='8'>
 <Attr>
-<Pos l='233' c='13' s='12'/>
+<Pos l='266' c='13' s='12'/>
 </Attr>
 </Id>
 </Variables>
 <Values>
 <Binary_Exp op='-s' typref='8'>
 <Attr>
-<Pos l='233' c='42' s='1'/>
+<Pos l='266' c='42' s='1'/>
 </Attr>
 <Id value='textContents' typref='8'>
 <Attr>
-<Pos l='233' c='29' s='12'/>
+<Pos l='266' c='29' s='12'/>
 </Attr>
 </Id>
 <Nary_Exp op='{' typref='8'>
 <Attr>
-<Pos l='233' c='44' s='1'/>
+<Pos l='266' c='44' s='1'/>
 </Attr>
-<Id value='content' typref='31'>
+<Id value='content' typref='15'>
 <Attr>
-<Pos l='233' c='45' s='7'/>
+<Pos l='266' c='45' s='7'/>
 </Attr>
 </Id>
 </Nary_Exp>
@@ -4079,33 +4903,33 @@
 </Assignement_Sub>
 <Assignement_Sub>
 <Attr>
-<Pos l='235' c='29' s='2'/>
+<Pos l='268' c='29' s='2'/>
 </Attr>
 <Variables>
-<Id value='getContentOwner' typref='16'>
+<Id value='getContentOwner' typref='17'>
 <Attr>
-<Pos l='235' c='13' s='15'/>
+<Pos l='268' c='13' s='15'/>
 </Attr>
 </Id>
 </Variables>
 <Values>
-<Binary_Exp op='&lt;&lt;|' typref='16'>
+<Binary_Exp op='&lt;&lt;|' typref='17'>
 <Attr>
-<Pos l='235' c='42' s='3'/>
+<Pos l='268' c='42' s='3'/>
 </Attr>
 <Nary_Exp op='{' typref='8'>
 <Attr>
-<Pos l='235' c='32' s='1'/>
+<Pos l='268' c='32' s='1'/>
 </Attr>
-<Id value='content' typref='31'>
+<Id value='content' typref='15'>
 <Attr>
-<Pos l='235' c='33' s='7'/>
+<Pos l='268' c='33' s='7'/>
 </Attr>
 </Id>
 </Nary_Exp>
-<Id value='getContentOwner' typref='16'>
+<Id value='getContentOwner' typref='17'>
 <Attr>
-<Pos l='235' c='44' s='15'/>
+<Pos l='268' c='44' s='15'/>
 </Attr>
 </Id>
 </Binary_Exp>
@@ -4113,33 +4937,33 @@
 </Assignement_Sub>
 <Assignement_Sub>
 <Attr>
-<Pos l='236' c='26' s='2'/>
+<Pos l='269' c='26' s='2'/>
 </Attr>
 <Variables>
-<Id value='hasNoRRights' typref='16'>
+<Id value='hasNoRRights' typref='17'>
 <Attr>
-<Pos l='236' c='13' s='12'/>
+<Pos l='269' c='13' s='12'/>
 </Attr>
 </Id>
 </Variables>
 <Values>
-<Binary_Exp op='&lt;&lt;|' typref='16'>
+<Binary_Exp op='&lt;&lt;|' typref='17'>
 <Attr>
-<Pos l='236' c='39' s='3'/>
+<Pos l='269' c='39' s='3'/>
 </Attr>
 <Nary_Exp op='{' typref='8'>
 <Attr>
-<Pos l='236' c='29' s='1'/>
+<Pos l='269' c='29' s='1'/>
 </Attr>
-<Id value='content' typref='31'>
+<Id value='content' typref='15'>
 <Attr>
-<Pos l='236' c='30' s='7'/>
+<Pos l='269' c='30' s='7'/>
 </Attr>
 </Id>
 </Nary_Exp>
-<Id value='hasNoRRights' typref='16'>
+<Id value='hasNoRRights' typref='17'>
 <Attr>
-<Pos l='236' c='41' s='12'/>
+<Pos l='269' c='41' s='12'/>
 </Attr>
 </Id>
 </Binary_Exp>
@@ -4147,56 +4971,58 @@
 </Assignement_Sub>
 <Assignement_Sub>
 <Attr>
-<Pos l='237' c='24' s='2'/>
+<Pos l='270' c='24' s='2'/>
 </Attr>
 <Variables>
-<Id value='hasWRights' typref='16'>
+<Id value='hasWRights' typref='17'>
 <Attr>
-<Pos l='237' c='13' s='10'/>
+<Pos l='270' c='13' s='10'/>
 </Attr>
 </Id>
 </Variables>
 <Values>
-<Binary_Exp op='&lt;&lt;|' typref='16'>
+<Binary_Exp op='&lt;&lt;|' typref='17'>
 <Attr>
-<Pos l='237' c='37' s='3'/>
+<Pos l='270' c='37' s='3'/>
 </Attr>
 <Nary_Exp op='{' typref='8'>
 <Attr>
-<Pos l='237' c='27' s='1'/>
+<Pos l='270' c='27' s='1'/>
 </Attr>
-<Id value='content' typref='31'>
+<Id value='content' typref='15'>
 <Attr>
-<Pos l='237' c='28' s='7'/>
+<Pos l='270' c='28' s='7'/>
 </Attr>
 </Id>
 </Nary_Exp>
-<Id value='hasWRights' typref='16'>
+<Id value='hasWRights' typref='17'>
 <Attr>
-<Pos l='237' c='39' s='10'/>
+<Pos l='270' c='39' s='10'/>
 </Attr>
 </Id>
 </Binary_Exp>
 </Values>
 </Assignement_Sub>
 </Nary_Sub>
+</Then>
+</If_Sub>
 </Else>
 </If_Sub>
 </Body>
 </Operation>
 <Operation name='SetPrivateContent'>
 <Attr>
-<Pos l='241' c='5' s='17' endLine='248'/>
+<Pos l='274' c='5' s='17' endLine='281'/>
 </Attr>
 <Input_Parameters>
 <Id value='user' typref='12'>
 <Attr>
-<Pos l='241' c='23' s='4'/>
+<Pos l='274' c='23' s='4'/>
 </Attr>
 </Id>
-<Id value='content' typref='31'>
+<Id value='content' typref='15'>
 <Attr>
-<Pos l='241' c='29' s='7'/>
+<Pos l='274' c='29' s='7'/>
 </Attr>
 </Id>
 </Input_Parameters>
@@ -4204,117 +5030,117 @@
 <Nary_Pred op='&amp;'>
 <Exp_Comparison op=':'>
 <Attr>
-<Pos l='243' c='14' s='1'/>
+<Pos l='276' c='14' s='1'/>
 </Attr>
 <Id value='user' typref='12'>
 <Attr>
-<Pos l='243' c='9' s='4'/>
+<Pos l='276' c='9' s='4'/>
 </Attr>
 </Id>
 <Id value='USERS' typref='4'>
 <Attr>
-<Pos l='243' c='16' s='5'/>
+<Pos l='276' c='16' s='5'/>
 </Attr>
 </Id>
 </Exp_Comparison>
 <Exp_Comparison op=':'>
 <Attr>
-<Pos l='243' c='29' s='1'/>
+<Pos l='276' c='29' s='1'/>
 </Attr>
 <Id value='user' typref='12'>
 <Attr>
-<Pos l='243' c='24' s='4'/>
+<Pos l='276' c='24' s='4'/>
 </Attr>
 </Id>
 <Id value='users' typref='4'>
 <Attr>
-<Pos l='243' c='31' s='5'/>
+<Pos l='276' c='31' s='5'/>
 </Attr>
 </Id>
 </Exp_Comparison>
 <Exp_Comparison op=':'>
 <Attr>
-<Pos l='243' c='44' s='1'/>
+<Pos l='276' c='44' s='1'/>
 </Attr>
 <Id value='user' typref='12'>
 <Attr>
-<Pos l='243' c='39' s='4'/>
+<Pos l='276' c='39' s='4'/>
 </Attr>
 </Id>
 <Id value='loggedUsers' typref='4'>
 <Attr>
-<Pos l='243' c='46' s='11'/>
+<Pos l='276' c='46' s='11'/>
 </Attr>
 </Id>
 </Exp_Comparison>
 <Exp_Comparison op=':'>
 <Attr>
-<Pos l='244' c='17' s='1'/>
+<Pos l='277' c='17' s='1'/>
 </Attr>
-<Id value='content' typref='31'>
+<Id value='content' typref='15'>
 <Attr>
-<Pos l='244' c='9' s='7'/>
+<Pos l='277' c='9' s='7'/>
 </Attr>
 </Id>
 <Id value='CONTENTS' typref='8'>
 <Attr>
-<Pos l='244' c='19' s='8'/>
+<Pos l='277' c='19' s='8'/>
 </Attr>
 </Id>
 </Exp_Comparison>
 <Exp_Comparison op=':'>
 <Attr>
-<Pos l='244' c='38' s='1'/>
+<Pos l='277' c='38' s='1'/>
 </Attr>
-<Id value='content' typref='31'>
+<Id value='content' typref='15'>
 <Attr>
-<Pos l='244' c='30' s='7'/>
+<Pos l='277' c='30' s='7'/>
 </Attr>
 </Id>
 <Id value='contents' typref='8'>
 <Attr>
-<Pos l='244' c='40' s='8'/>
+<Pos l='277' c='40' s='8'/>
 </Attr>
 </Id>
 </Exp_Comparison>
 <Nary_Pred op='or'>
 <Exp_Comparison op='='>
 <Attr>
-<Pos l='245' c='35' s='1'/>
+<Pos l='278' c='35' s='1'/>
 </Attr>
 <Binary_Exp op='(' typref='12'>
 <Attr>
-<Pos l='245' c='25' s='0'/>
+<Pos l='278' c='25' s='0'/>
 </Attr>
-<Id value='getContentOwner' typref='16'>
+<Id value='getContentOwner' typref='17'>
 <Attr>
-<Pos l='245' c='10' s='15'/>
+<Pos l='278' c='10' s='15'/>
 </Attr>
 </Id>
-<Id value='content' typref='31'>
+<Id value='content' typref='15'>
 <Attr>
-<Pos l='245' c='26' s='7'/>
+<Pos l='278' c='26' s='7'/>
 </Attr>
 </Id>
 </Binary_Exp>
 <Id value='user' typref='12'>
 <Attr>
-<Pos l='245' c='37' s='4'/>
+<Pos l='278' c='37' s='4'/>
 </Attr>
 </Id>
 </Exp_Comparison>
 <Exp_Comparison op='='>
 <Attr>
-<Pos l='245' c='50' s='1'/>
+<Pos l='278' c='50' s='1'/>
 </Attr>
 <Id value='user' typref='12'>
 <Attr>
-<Pos l='245' c='45' s='4'/>
+<Pos l='278' c='45' s='4'/>
 </Attr>
 </Id>
 <Id value='masterUser' typref='12'>
 <Attr>
-<Pos l='245' c='52' s='10'/>
+<Pos l='278' c='52' s='10'/>
 </Attr>
 </Id>
 </Exp_Comparison>
@@ -4324,32 +5150,32 @@
 <Body>
 <Assignement_Sub>
 <Attr>
-<Pos l='247' c='25' s='2'/>
+<Pos l='280' c='25' s='2'/>
 </Attr>
 <Variables>
 <Id value='privateContents' typref='8'>
 <Attr>
-<Pos l='247' c='9' s='15'/>
+<Pos l='280' c='9' s='15'/>
 </Attr>
 </Id>
 </Variables>
 <Values>
 <Binary_Exp op='\/' typref='8'>
 <Attr>
-<Pos l='247' c='44' s='2'/>
+<Pos l='280' c='44' s='2'/>
 </Attr>
 <Id value='privateContents' typref='8'>
 <Attr>
-<Pos l='247' c='28' s='15'/>
+<Pos l='280' c='28' s='15'/>
 </Attr>
 </Id>
 <Nary_Exp op='{' typref='8'>
 <Attr>
-<Pos l='247' c='46' s='1'/>
+<Pos l='280' c='46' s='1'/>
 </Attr>
-<Id value='content' typref='31'>
+<Id value='content' typref='15'>
 <Attr>
-<Pos l='247' c='47' s='7'/>
+<Pos l='280' c='47' s='7'/>
 </Attr>
 </Id>
 </Nary_Exp>
@@ -4360,17 +5186,17 @@
 </Operation>
 <Operation name='SetPublicContent'>
 <Attr>
-<Pos l='250' c='5' s='16' endLine='257'/>
+<Pos l='283' c='5' s='16' endLine='290'/>
 </Attr>
 <Input_Parameters>
 <Id value='user' typref='12'>
 <Attr>
-<Pos l='250' c='22' s='4'/>
+<Pos l='283' c='22' s='4'/>
 </Attr>
 </Id>
-<Id value='content' typref='31'>
+<Id value='content' typref='15'>
 <Attr>
-<Pos l='250' c='28' s='7'/>
+<Pos l='283' c='28' s='7'/>
 </Attr>
 </Id>
 </Input_Parameters>
@@ -4378,117 +5204,117 @@
 <Nary_Pred op='&amp;'>
 <Exp_Comparison op=':'>
 <Attr>
-<Pos l='252' c='14' s='1'/>
+<Pos l='285' c='14' s='1'/>
 </Attr>
 <Id value='user' typref='12'>
 <Attr>
-<Pos l='252' c='9' s='4'/>
+<Pos l='285' c='9' s='4'/>
 </Attr>
 </Id>
 <Id value='USERS' typref='4'>
 <Attr>
-<Pos l='252' c='16' s='5'/>
+<Pos l='285' c='16' s='5'/>
 </Attr>
 </Id>
 </Exp_Comparison>
 <Exp_Comparison op=':'>
 <Attr>
-<Pos l='252' c='29' s='1'/>
+<Pos l='285' c='29' s='1'/>
 </Attr>
 <Id value='user' typref='12'>
 <Attr>
-<Pos l='252' c='24' s='4'/>
+<Pos l='285' c='24' s='4'/>
 </Attr>
 </Id>
 <Id value='users' typref='4'>
 <Attr>
-<Pos l='252' c='31' s='5'/>
+<Pos l='285' c='31' s='5'/>
 </Attr>
 </Id>
 </Exp_Comparison>
 <Exp_Comparison op=':'>
 <Attr>
-<Pos l='252' c='44' s='1'/>
+<Pos l='285' c='44' s='1'/>
 </Attr>
 <Id value='user' typref='12'>
 <Attr>
-<Pos l='252' c='39' s='4'/>
+<Pos l='285' c='39' s='4'/>
 </Attr>
 </Id>
 <Id value='loggedUsers' typref='4'>
 <Attr>
-<Pos l='252' c='46' s='11'/>
+<Pos l='285' c='46' s='11'/>
 </Attr>
 </Id>
 </Exp_Comparison>
 <Exp_Comparison op=':'>
 <Attr>
-<Pos l='253' c='17' s='1'/>
+<Pos l='286' c='17' s='1'/>
 </Attr>
-<Id value='content' typref='31'>
+<Id value='content' typref='15'>
 <Attr>
-<Pos l='253' c='9' s='7'/>
+<Pos l='286' c='9' s='7'/>
 </Attr>
 </Id>
 <Id value='CONTENTS' typref='8'>
 <Attr>
-<Pos l='253' c='19' s='8'/>
+<Pos l='286' c='19' s='8'/>
 </Attr>
 </Id>
 </Exp_Comparison>
 <Exp_Comparison op=':'>
 <Attr>
-<Pos l='253' c='38' s='1'/>
+<Pos l='286' c='38' s='1'/>
 </Attr>
-<Id value='content' typref='31'>
+<Id value='content' typref='15'>
 <Attr>
-<Pos l='253' c='30' s='7'/>
+<Pos l='286' c='30' s='7'/>
 </Attr>
 </Id>
 <Id value='contents' typref='8'>
 <Attr>
-<Pos l='253' c='40' s='8'/>
+<Pos l='286' c='40' s='8'/>
 </Attr>
 </Id>
 </Exp_Comparison>
 <Nary_Pred op='or'>
 <Exp_Comparison op='='>
 <Attr>
-<Pos l='254' c='35' s='1'/>
+<Pos l='287' c='35' s='1'/>
 </Attr>
 <Binary_Exp op='(' typref='12'>
 <Attr>
-<Pos l='254' c='25' s='0'/>
+<Pos l='287' c='25' s='0'/>
 </Attr>
-<Id value='getContentOwner' typref='16'>
+<Id value='getContentOwner' typref='17'>
 <Attr>
-<Pos l='254' c='10' s='15'/>
+<Pos l='287' c='10' s='15'/>
 </Attr>
 </Id>
-<Id value='content' typref='31'>
+<Id value='content' typref='15'>
 <Attr>
-<Pos l='254' c='26' s='7'/>
+<Pos l='287' c='26' s='7'/>
 </Attr>
 </Id>
 </Binary_Exp>
 <Id value='user' typref='12'>
 <Attr>
-<Pos l='254' c='37' s='4'/>
+<Pos l='287' c='37' s='4'/>
 </Attr>
 </Id>
 </Exp_Comparison>
 <Exp_Comparison op='='>
 <Attr>
-<Pos l='254' c='50' s='1'/>
+<Pos l='287' c='50' s='1'/>
 </Attr>
 <Id value='user' typref='12'>
 <Attr>
-<Pos l='254' c='45' s='4'/>
+<Pos l='287' c='45' s='4'/>
 </Attr>
 </Id>
 <Id value='masterUser' typref='12'>
 <Attr>
-<Pos l='254' c='52' s='10'/>
+<Pos l='287' c='52' s='10'/>
 </Attr>
 </Id>
 </Exp_Comparison>
@@ -4498,32 +5324,32 @@
 <Body>
 <Assignement_Sub>
 <Attr>
-<Pos l='256' c='25' s='2'/>
+<Pos l='289' c='25' s='2'/>
 </Attr>
 <Variables>
 <Id value='privateContents' typref='8'>
 <Attr>
-<Pos l='256' c='9' s='15'/>
+<Pos l='289' c='9' s='15'/>
 </Attr>
 </Id>
 </Variables>
 <Values>
 <Binary_Exp op='-s' typref='8'>
 <Attr>
-<Pos l='256' c='44' s='1'/>
+<Pos l='289' c='44' s='1'/>
 </Attr>
 <Id value='privateContents' typref='8'>
 <Attr>
-<Pos l='256' c='28' s='15'/>
+<Pos l='289' c='28' s='15'/>
 </Attr>
 </Id>
 <Nary_Exp op='{' typref='8'>
 <Attr>
-<Pos l='256' c='46' s='1'/>
+<Pos l='289' c='46' s='1'/>
 </Attr>
-<Id value='content' typref='31'>
+<Id value='content' typref='15'>
 <Attr>
-<Pos l='256' c='47' s='7'/>
+<Pos l='289' c='47' s='7'/>
 </Attr>
 </Id>
 </Nary_Exp>
@@ -4534,22 +5360,22 @@
 </Operation>
 <Operation name='RevokeRRights'>
 <Attr>
-<Pos l='260' c='5' s='13' endLine='268'/>
+<Pos l='293' c='5' s='13' endLine='301'/>
 </Attr>
 <Input_Parameters>
 <Id value='from' typref='12'>
 <Attr>
-<Pos l='260' c='19' s='4'/>
+<Pos l='293' c='19' s='4'/>
 </Attr>
 </Id>
-<Id value='content' typref='31'>
+<Id value='content' typref='15'>
 <Attr>
-<Pos l='260' c='25' s='7'/>
+<Pos l='293' c='25' s='7'/>
 </Attr>
 </Id>
 <Id value='target' typref='12'>
 <Attr>
-<Pos l='260' c='34' s='6'/>
+<Pos l='293' c='34' s='6'/>
 </Attr>
 </Id>
 </Input_Parameters>
@@ -4557,177 +5383,202 @@
 <Nary_Pred op='&amp;'>
 <Exp_Comparison op=':'>
 <Attr>
-<Pos l='262' c='14' s='1'/>
+<Pos l='295' c='14' s='1'/>
 </Attr>
 <Id value='from' typref='12'>
 <Attr>
-<Pos l='262' c='9' s='4'/>
+<Pos l='295' c='9' s='4'/>
 </Attr>
 </Id>
 <Id value='USERS' typref='4'>
 <Attr>
-<Pos l='262' c='16' s='5'/>
+<Pos l='295' c='16' s='5'/>
 </Attr>
 </Id>
 </Exp_Comparison>
 <Exp_Comparison op=':'>
 <Attr>
-<Pos l='262' c='29' s='1'/>
+<Pos l='295' c='29' s='1'/>
 </Attr>
 <Id value='from' typref='12'>
 <Attr>
-<Pos l='262' c='24' s='4'/>
+<Pos l='295' c='24' s='4'/>
 </Attr>
 </Id>
 <Id value='users' typref='4'>
 <Attr>
-<Pos l='262' c='31' s='5'/>
+<Pos l='295' c='31' s='5'/>
 </Attr>
 </Id>
 </Exp_Comparison>
 <Exp_Comparison op=':'>
 <Attr>
-<Pos l='262' c='44' s='1'/>
+<Pos l='295' c='44' s='1'/>
 </Attr>
 <Id value='from' typref='12'>
 <Attr>
-<Pos l='262' c='39' s='4'/>
+<Pos l='295' c='39' s='4'/>
 </Attr>
 </Id>
 <Id value='loggedUsers' typref='4'>
 <Attr>
-<Pos l='262' c='46' s='11'/>
+<Pos l='295' c='46' s='11'/>
 </Attr>
 </Id>
 </Exp_Comparison>
 <Exp_Comparison op=':'>
 <Attr>
-<Pos l='263' c='17' s='1'/>
+<Pos l='296' c='17' s='1'/>
 </Attr>
-<Id value='content' typref='31'>
+<Id value='content' typref='15'>
 <Attr>
-<Pos l='263' c='9' s='7'/>
+<Pos l='296' c='9' s='7'/>
 </Attr>
 </Id>
 <Id value='CONTENTS' typref='8'>
 <Attr>
-<Pos l='263' c='19' s='8'/>
+<Pos l='296' c='19' s='8'/>
 </Attr>
 </Id>
 </Exp_Comparison>
 <Exp_Comparison op=':'>
 <Attr>
-<Pos l='263' c='38' s='1'/>
+<Pos l='296' c='38' s='1'/>
 </Attr>
-<Id value='content' typref='31'>
+<Id value='content' typref='15'>
 <Attr>
-<Pos l='263' c='30' s='7'/>
+<Pos l='296' c='30' s='7'/>
 </Attr>
 </Id>
 <Id value='contents' typref='8'>
 <Attr>
-<Pos l='263' c='40' s='8'/>
+<Pos l='296' c='40' s='8'/>
 </Attr>
 </Id>
 </Exp_Comparison>
 <Exp_Comparison op=':'>
 <Attr>
-<Pos l='264' c='16' s='1'/>
+<Pos l='297' c='16' s='1'/>
 </Attr>
 <Id value='target' typref='12'>
 <Attr>
-<Pos l='264' c='9' s='6'/>
+<Pos l='297' c='9' s='6'/>
 </Attr>
 </Id>
 <Id value='USERS' typref='4'>
 <Attr>
-<Pos l='264' c='18' s='5'/>
+<Pos l='297' c='18' s='5'/>
 </Attr>
 </Id>
 </Exp_Comparison>
 <Exp_Comparison op=':'>
 <Attr>
-<Pos l='264' c='33' s='1'/>
+<Pos l='297' c='33' s='1'/>
 </Attr>
 <Id value='target' typref='12'>
 <Attr>
-<Pos l='264' c='26' s='6'/>
+<Pos l='297' c='26' s='6'/>
 </Attr>
 </Id>
 <Id value='users' typref='4'>
 <Attr>
-<Pos l='264' c='35' s='5'/>
+<Pos l='297' c='35' s='5'/>
 </Attr>
 </Id>
 </Exp_Comparison>
 <Exp_Comparison op='/='>
 <Attr>
-<Pos l='264' c='50' s='2'/>
+<Pos l='297' c='50' s='2'/>
 </Attr>
 <Id value='target' typref='12'>
 <Attr>
-<Pos l='264' c='43' s='6'/>
+<Pos l='297' c='43' s='6'/>
 </Attr>
 </Id>
 <Id value='from' typref='12'>
 <Attr>
-<Pos l='264' c='52' s='4'/>
+<Pos l='297' c='52' s='4'/>
 </Attr>
 </Id>
 </Exp_Comparison>
 <Exp_Comparison op='/='>
 <Attr>
-<Pos l='264' c='66' s='2'/>
+<Pos l='297' c='66' s='2'/>
 </Attr>
 <Id value='target' typref='12'>
 <Attr>
-<Pos l='264' c='59' s='6'/>
+<Pos l='297' c='59' s='6'/>
 </Attr>
 </Id>
 <Id value='masterUser' typref='12'>
 <Attr>
-<Pos l='264' c='68' s='10'/>
+<Pos l='297' c='68' s='10'/>
 </Attr>
 </Id>
+</Exp_Comparison>
+<Exp_Comparison op='/='>
+<Attr>
+<Pos l='297' c='88' s='2'/>
+</Attr>
+<Id value='target' typref='12'>
+<Attr>
+<Pos l='297' c='81' s='6'/>
+</Attr>
+</Id>
+<Binary_Exp op='(' typref='12'>
+<Attr>
+<Pos l='297' c='105' s='0'/>
+</Attr>
+<Id value='getContentOwner' typref='17'>
+<Attr>
+<Pos l='297' c='90' s='15'/>
+</Attr>
+</Id>
+<Id value='content' typref='15'>
+<Attr>
+<Pos l='297' c='106' s='7'/>
+</Attr>
+</Id>
+</Binary_Exp>
 </Exp_Comparison>
 <Nary_Pred op='or'>
 <Exp_Comparison op='='>
 <Attr>
-<Pos l='265' c='35' s='1'/>
+<Pos l='298' c='35' s='1'/>
 </Attr>
 <Binary_Exp op='(' typref='12'>
 <Attr>
-<Pos l='265' c='25' s='0'/>
+<Pos l='298' c='25' s='0'/>
 </Attr>
-<Id value='getContentOwner' typref='16'>
+<Id value='getContentOwner' typref='17'>
 <Attr>
-<Pos l='265' c='10' s='15'/>
+<Pos l='298' c='10' s='15'/>
 </Attr>
 </Id>
-<Id value='content' typref='31'>
+<Id value='content' typref='15'>
 <Attr>
-<Pos l='265' c='26' s='7'/>
+<Pos l='298' c='26' s='7'/>
 </Attr>
 </Id>
 </Binary_Exp>
 <Id value='from' typref='12'>
 <Attr>
-<Pos l='265' c='37' s='4'/>
+<Pos l='298' c='37' s='4'/>
 </Attr>
 </Id>
 </Exp_Comparison>
 <Exp_Comparison op='='>
 <Attr>
-<Pos l='265' c='50' s='1'/>
+<Pos l='298' c='50' s='1'/>
 </Attr>
 <Id value='from' typref='12'>
 <Attr>
-<Pos l='265' c='45' s='4'/>
+<Pos l='298' c='45' s='4'/>
 </Attr>
 </Id>
 <Id value='masterUser' typref='12'>
 <Attr>
-<Pos l='265' c='52' s='10'/>
+<Pos l='298' c='52' s='10'/>
 </Attr>
 </Id>
 </Exp_Comparison>
@@ -4737,41 +5588,41 @@
 <Body>
 <Assignement_Sub>
 <Attr>
-<Pos l='267' c='22' s='2'/>
+<Pos l='300' c='22' s='2'/>
 </Attr>
 <Variables>
-<Id value='hasNoRRights' typref='16'>
+<Id value='hasNoRRights' typref='17'>
 <Attr>
-<Pos l='267' c='9' s='12'/>
+<Pos l='300' c='9' s='12'/>
 </Attr>
 </Id>
 </Variables>
 <Values>
-<Binary_Exp op='\/' typref='16'>
+<Binary_Exp op='\/' typref='17'>
 <Attr>
-<Pos l='267' c='38' s='2'/>
+<Pos l='300' c='38' s='2'/>
 </Attr>
-<Id value='hasNoRRights' typref='16'>
+<Id value='hasNoRRights' typref='17'>
 <Attr>
-<Pos l='267' c='25' s='12'/>
+<Pos l='300' c='25' s='12'/>
 </Attr>
 </Id>
-<Nary_Exp op='{' typref='16'>
+<Nary_Exp op='{' typref='17'>
 <Attr>
-<Pos l='267' c='40' s='1'/>
+<Pos l='300' c='40' s='1'/>
 </Attr>
-<Binary_Exp op='|-&gt;' typref='32'>
+<Binary_Exp op='|-&gt;' typref='28'>
 <Attr>
-<Pos l='267' c='49' s='3'/>
+<Pos l='300' c='49' s='3'/>
 </Attr>
-<Id value='content' typref='31'>
+<Id value='content' typref='15'>
 <Attr>
-<Pos l='267' c='41' s='7'/>
+<Pos l='300' c='41' s='7'/>
 </Attr>
 </Id>
 <Id value='target' typref='12'>
 <Attr>
-<Pos l='267' c='51' s='6'/>
+<Pos l='300' c='51' s='6'/>
 </Attr>
 </Id>
 </Binary_Exp>
@@ -4783,22 +5634,22 @@
 </Operation>
 <Operation name='GrantRRights'>
 <Attr>
-<Pos l='270' c='5' s='12' endLine='278'/>
+<Pos l='303' c='5' s='12' endLine='311'/>
 </Attr>
 <Input_Parameters>
 <Id value='from' typref='12'>
 <Attr>
-<Pos l='270' c='18' s='4'/>
+<Pos l='303' c='18' s='4'/>
 </Attr>
 </Id>
-<Id value='content' typref='31'>
+<Id value='content' typref='15'>
 <Attr>
-<Pos l='270' c='24' s='7'/>
+<Pos l='303' c='24' s='7'/>
 </Attr>
 </Id>
 <Id value='target' typref='12'>
 <Attr>
-<Pos l='270' c='33' s='6'/>
+<Pos l='303' c='33' s='6'/>
 </Attr>
 </Id>
 </Input_Parameters>
@@ -4806,177 +5657,177 @@
 <Nary_Pred op='&amp;'>
 <Exp_Comparison op=':'>
 <Attr>
-<Pos l='272' c='14' s='1'/>
+<Pos l='305' c='14' s='1'/>
 </Attr>
 <Id value='from' typref='12'>
 <Attr>
-<Pos l='272' c='9' s='4'/>
+<Pos l='305' c='9' s='4'/>
 </Attr>
 </Id>
 <Id value='USERS' typref='4'>
 <Attr>
-<Pos l='272' c='16' s='5'/>
+<Pos l='305' c='16' s='5'/>
 </Attr>
 </Id>
 </Exp_Comparison>
 <Exp_Comparison op=':'>
 <Attr>
-<Pos l='272' c='29' s='1'/>
+<Pos l='305' c='29' s='1'/>
 </Attr>
 <Id value='from' typref='12'>
 <Attr>
-<Pos l='272' c='24' s='4'/>
+<Pos l='305' c='24' s='4'/>
 </Attr>
 </Id>
 <Id value='users' typref='4'>
 <Attr>
-<Pos l='272' c='31' s='5'/>
+<Pos l='305' c='31' s='5'/>
 </Attr>
 </Id>
 </Exp_Comparison>
 <Exp_Comparison op=':'>
 <Attr>
-<Pos l='272' c='44' s='1'/>
+<Pos l='305' c='44' s='1'/>
 </Attr>
 <Id value='from' typref='12'>
 <Attr>
-<Pos l='272' c='39' s='4'/>
+<Pos l='305' c='39' s='4'/>
 </Attr>
 </Id>
 <Id value='loggedUsers' typref='4'>
 <Attr>
-<Pos l='272' c='46' s='11'/>
+<Pos l='305' c='46' s='11'/>
 </Attr>
 </Id>
 </Exp_Comparison>
 <Exp_Comparison op=':'>
 <Attr>
-<Pos l='273' c='17' s='1'/>
+<Pos l='306' c='17' s='1'/>
 </Attr>
-<Id value='content' typref='31'>
+<Id value='content' typref='15'>
 <Attr>
-<Pos l='273' c='9' s='7'/>
+<Pos l='306' c='9' s='7'/>
 </Attr>
 </Id>
 <Id value='CONTENTS' typref='8'>
 <Attr>
-<Pos l='273' c='19' s='8'/>
+<Pos l='306' c='19' s='8'/>
 </Attr>
 </Id>
 </Exp_Comparison>
 <Exp_Comparison op=':'>
 <Attr>
-<Pos l='273' c='38' s='1'/>
+<Pos l='306' c='38' s='1'/>
 </Attr>
-<Id value='content' typref='31'>
+<Id value='content' typref='15'>
 <Attr>
-<Pos l='273' c='30' s='7'/>
+<Pos l='306' c='30' s='7'/>
 </Attr>
 </Id>
 <Id value='contents' typref='8'>
 <Attr>
-<Pos l='273' c='40' s='8'/>
+<Pos l='306' c='40' s='8'/>
 </Attr>
 </Id>
 </Exp_Comparison>
 <Exp_Comparison op=':'>
 <Attr>
-<Pos l='274' c='16' s='1'/>
+<Pos l='307' c='16' s='1'/>
 </Attr>
 <Id value='target' typref='12'>
 <Attr>
-<Pos l='274' c='9' s='6'/>
+<Pos l='307' c='9' s='6'/>
 </Attr>
 </Id>
 <Id value='USERS' typref='4'>
 <Attr>
-<Pos l='274' c='18' s='5'/>
+<Pos l='307' c='18' s='5'/>
 </Attr>
 </Id>
 </Exp_Comparison>
 <Exp_Comparison op=':'>
 <Attr>
-<Pos l='274' c='33' s='1'/>
+<Pos l='307' c='33' s='1'/>
 </Attr>
 <Id value='target' typref='12'>
 <Attr>
-<Pos l='274' c='26' s='6'/>
+<Pos l='307' c='26' s='6'/>
 </Attr>
 </Id>
 <Id value='users' typref='4'>
 <Attr>
-<Pos l='274' c='35' s='5'/>
+<Pos l='307' c='35' s='5'/>
 </Attr>
 </Id>
 </Exp_Comparison>
 <Exp_Comparison op='/='>
 <Attr>
-<Pos l='274' c='50' s='2'/>
+<Pos l='307' c='50' s='2'/>
 </Attr>
 <Id value='target' typref='12'>
 <Attr>
-<Pos l='274' c='43' s='6'/>
+<Pos l='307' c='43' s='6'/>
 </Attr>
 </Id>
 <Id value='from' typref='12'>
 <Attr>
-<Pos l='274' c='52' s='4'/>
+<Pos l='307' c='52' s='4'/>
 </Attr>
 </Id>
 </Exp_Comparison>
 <Exp_Comparison op='/='>
 <Attr>
-<Pos l='274' c='66' s='2'/>
+<Pos l='307' c='66' s='2'/>
 </Attr>
 <Id value='target' typref='12'>
 <Attr>
-<Pos l='274' c='59' s='6'/>
+<Pos l='307' c='59' s='6'/>
 </Attr>
 </Id>
 <Id value='masterUser' typref='12'>
 <Attr>
-<Pos l='274' c='68' s='10'/>
+<Pos l='307' c='68' s='10'/>
 </Attr>
 </Id>
 </Exp_Comparison>
 <Nary_Pred op='or'>
 <Exp_Comparison op='='>
 <Attr>
-<Pos l='275' c='35' s='1'/>
+<Pos l='308' c='35' s='1'/>
 </Attr>
 <Binary_Exp op='(' typref='12'>
 <Attr>
-<Pos l='275' c='25' s='0'/>
+<Pos l='308' c='25' s='0'/>
 </Attr>
-<Id value='getContentOwner' typref='16'>
+<Id value='getContentOwner' typref='17'>
 <Attr>
-<Pos l='275' c='10' s='15'/>
+<Pos l='308' c='10' s='15'/>
 </Attr>
 </Id>
-<Id value='content' typref='31'>
+<Id value='content' typref='15'>
 <Attr>
-<Pos l='275' c='26' s='7'/>
+<Pos l='308' c='26' s='7'/>
 </Attr>
 </Id>
 </Binary_Exp>
 <Id value='from' typref='12'>
 <Attr>
-<Pos l='275' c='37' s='4'/>
+<Pos l='308' c='37' s='4'/>
 </Attr>
 </Id>
 </Exp_Comparison>
 <Exp_Comparison op='='>
 <Attr>
-<Pos l='275' c='50' s='1'/>
+<Pos l='308' c='50' s='1'/>
 </Attr>
 <Id value='from' typref='12'>
 <Attr>
-<Pos l='275' c='45' s='4'/>
+<Pos l='308' c='45' s='4'/>
 </Attr>
 </Id>
 <Id value='masterUser' typref='12'>
 <Attr>
-<Pos l='275' c='52' s='10'/>
+<Pos l='308' c='52' s='10'/>
 </Attr>
 </Id>
 </Exp_Comparison>
@@ -4986,41 +5837,41 @@
 <Body>
 <Assignement_Sub>
 <Attr>
-<Pos l='277' c='22' s='2'/>
+<Pos l='310' c='22' s='2'/>
 </Attr>
 <Variables>
-<Id value='hasNoRRights' typref='16'>
+<Id value='hasNoRRights' typref='17'>
 <Attr>
-<Pos l='277' c='9' s='12'/>
+<Pos l='310' c='9' s='12'/>
 </Attr>
 </Id>
 </Variables>
 <Values>
-<Binary_Exp op='-s' typref='16'>
+<Binary_Exp op='-s' typref='17'>
 <Attr>
-<Pos l='277' c='38' s='1'/>
+<Pos l='310' c='38' s='1'/>
 </Attr>
-<Id value='hasNoRRights' typref='16'>
+<Id value='hasNoRRights' typref='17'>
 <Attr>
-<Pos l='277' c='25' s='12'/>
+<Pos l='310' c='25' s='12'/>
 </Attr>
 </Id>
-<Nary_Exp op='{' typref='16'>
+<Nary_Exp op='{' typref='17'>
 <Attr>
-<Pos l='277' c='40' s='1'/>
+<Pos l='310' c='40' s='1'/>
 </Attr>
-<Binary_Exp op='|-&gt;' typref='32'>
+<Binary_Exp op='|-&gt;' typref='28'>
 <Attr>
-<Pos l='277' c='49' s='3'/>
+<Pos l='310' c='49' s='3'/>
 </Attr>
-<Id value='content' typref='31'>
+<Id value='content' typref='15'>
 <Attr>
-<Pos l='277' c='41' s='7'/>
+<Pos l='310' c='41' s='7'/>
 </Attr>
 </Id>
 <Id value='target' typref='12'>
 <Attr>
-<Pos l='277' c='51' s='6'/>
+<Pos l='310' c='51' s='6'/>
 </Attr>
 </Id>
 </Binary_Exp>
@@ -5032,22 +5883,22 @@
 </Operation>
 <Operation name='RevokeWRights'>
 <Attr>
-<Pos l='281' c='5' s='13' endLine='289'/>
+<Pos l='314' c='5' s='13' endLine='322'/>
 </Attr>
 <Input_Parameters>
 <Id value='from' typref='12'>
 <Attr>
-<Pos l='281' c='19' s='4'/>
+<Pos l='314' c='19' s='4'/>
 </Attr>
 </Id>
-<Id value='content' typref='31'>
+<Id value='content' typref='15'>
 <Attr>
-<Pos l='281' c='25' s='7'/>
+<Pos l='314' c='25' s='7'/>
 </Attr>
 </Id>
 <Id value='target' typref='12'>
 <Attr>
-<Pos l='281' c='34' s='6'/>
+<Pos l='314' c='34' s='6'/>
 </Attr>
 </Id>
 </Input_Parameters>
@@ -5055,177 +5906,202 @@
 <Nary_Pred op='&amp;'>
 <Exp_Comparison op=':'>
 <Attr>
-<Pos l='283' c='14' s='1'/>
+<Pos l='316' c='14' s='1'/>
 </Attr>
 <Id value='from' typref='12'>
 <Attr>
-<Pos l='283' c='9' s='4'/>
+<Pos l='316' c='9' s='4'/>
 </Attr>
 </Id>
 <Id value='USERS' typref='4'>
 <Attr>
-<Pos l='283' c='16' s='5'/>
+<Pos l='316' c='16' s='5'/>
 </Attr>
 </Id>
 </Exp_Comparison>
 <Exp_Comparison op=':'>
 <Attr>
-<Pos l='283' c='29' s='1'/>
+<Pos l='316' c='29' s='1'/>
 </Attr>
 <Id value='from' typref='12'>
 <Attr>
-<Pos l='283' c='24' s='4'/>
+<Pos l='316' c='24' s='4'/>
 </Attr>
 </Id>
 <Id value='users' typref='4'>
 <Attr>
-<Pos l='283' c='31' s='5'/>
+<Pos l='316' c='31' s='5'/>
 </Attr>
 </Id>
 </Exp_Comparison>
 <Exp_Comparison op=':'>
 <Attr>
-<Pos l='283' c='44' s='1'/>
+<Pos l='316' c='44' s='1'/>
 </Attr>
 <Id value='from' typref='12'>
 <Attr>
-<Pos l='283' c='39' s='4'/>
+<Pos l='316' c='39' s='4'/>
 </Attr>
 </Id>
 <Id value='loggedUsers' typref='4'>
 <Attr>
-<Pos l='283' c='46' s='11'/>
+<Pos l='316' c='46' s='11'/>
 </Attr>
 </Id>
 </Exp_Comparison>
 <Exp_Comparison op=':'>
 <Attr>
-<Pos l='284' c='17' s='1'/>
+<Pos l='317' c='17' s='1'/>
 </Attr>
-<Id value='content' typref='31'>
+<Id value='content' typref='15'>
 <Attr>
-<Pos l='284' c='9' s='7'/>
+<Pos l='317' c='9' s='7'/>
 </Attr>
 </Id>
 <Id value='CONTENTS' typref='8'>
 <Attr>
-<Pos l='284' c='19' s='8'/>
+<Pos l='317' c='19' s='8'/>
 </Attr>
 </Id>
 </Exp_Comparison>
 <Exp_Comparison op=':'>
 <Attr>
-<Pos l='284' c='38' s='1'/>
+<Pos l='317' c='38' s='1'/>
 </Attr>
-<Id value='content' typref='31'>
+<Id value='content' typref='15'>
 <Attr>
-<Pos l='284' c='30' s='7'/>
+<Pos l='317' c='30' s='7'/>
 </Attr>
 </Id>
 <Id value='contents' typref='8'>
 <Attr>
-<Pos l='284' c='40' s='8'/>
+<Pos l='317' c='40' s='8'/>
 </Attr>
 </Id>
 </Exp_Comparison>
 <Exp_Comparison op=':'>
 <Attr>
-<Pos l='285' c='16' s='1'/>
+<Pos l='318' c='16' s='1'/>
 </Attr>
 <Id value='target' typref='12'>
 <Attr>
-<Pos l='285' c='9' s='6'/>
+<Pos l='318' c='9' s='6'/>
 </Attr>
 </Id>
 <Id value='USERS' typref='4'>
 <Attr>
-<Pos l='285' c='18' s='5'/>
+<Pos l='318' c='18' s='5'/>
 </Attr>
 </Id>
 </Exp_Comparison>
 <Exp_Comparison op=':'>
 <Attr>
-<Pos l='285' c='33' s='1'/>
+<Pos l='318' c='33' s='1'/>
 </Attr>
 <Id value='target' typref='12'>
 <Attr>
-<Pos l='285' c='26' s='6'/>
+<Pos l='318' c='26' s='6'/>
 </Attr>
 </Id>
 <Id value='users' typref='4'>
 <Attr>
-<Pos l='285' c='35' s='5'/>
+<Pos l='318' c='35' s='5'/>
 </Attr>
 </Id>
 </Exp_Comparison>
 <Exp_Comparison op='/='>
 <Attr>
-<Pos l='285' c='50' s='2'/>
+<Pos l='318' c='50' s='2'/>
 </Attr>
 <Id value='target' typref='12'>
 <Attr>
-<Pos l='285' c='43' s='6'/>
+<Pos l='318' c='43' s='6'/>
 </Attr>
 </Id>
 <Id value='from' typref='12'>
 <Attr>
-<Pos l='285' c='52' s='4'/>
+<Pos l='318' c='52' s='4'/>
 </Attr>
 </Id>
 </Exp_Comparison>
 <Exp_Comparison op='/='>
 <Attr>
-<Pos l='285' c='66' s='2'/>
+<Pos l='318' c='66' s='2'/>
 </Attr>
 <Id value='target' typref='12'>
 <Attr>
-<Pos l='285' c='59' s='6'/>
+<Pos l='318' c='59' s='6'/>
 </Attr>
 </Id>
 <Id value='masterUser' typref='12'>
 <Attr>
-<Pos l='285' c='68' s='10'/>
+<Pos l='318' c='68' s='10'/>
 </Attr>
 </Id>
+</Exp_Comparison>
+<Exp_Comparison op='/='>
+<Attr>
+<Pos l='318' c='88' s='2'/>
+</Attr>
+<Id value='target' typref='12'>
+<Attr>
+<Pos l='318' c='81' s='6'/>
+</Attr>
+</Id>
+<Binary_Exp op='(' typref='12'>
+<Attr>
+<Pos l='318' c='105' s='0'/>
+</Attr>
+<Id value='getContentOwner' typref='17'>
+<Attr>
+<Pos l='318' c='90' s='15'/>
+</Attr>
+</Id>
+<Id value='content' typref='15'>
+<Attr>
+<Pos l='318' c='106' s='7'/>
+</Attr>
+</Id>
+</Binary_Exp>
 </Exp_Comparison>
 <Nary_Pred op='or'>
 <Exp_Comparison op='='>
 <Attr>
-<Pos l='286' c='35' s='1'/>
+<Pos l='319' c='35' s='1'/>
 </Attr>
 <Binary_Exp op='(' typref='12'>
 <Attr>
-<Pos l='286' c='25' s='0'/>
+<Pos l='319' c='25' s='0'/>
 </Attr>
-<Id value='getContentOwner' typref='16'>
+<Id value='getContentOwner' typref='17'>
 <Attr>
-<Pos l='286' c='10' s='15'/>
+<Pos l='319' c='10' s='15'/>
 </Attr>
 </Id>
-<Id value='content' typref='31'>
+<Id value='content' typref='15'>
 <Attr>
-<Pos l='286' c='26' s='7'/>
+<Pos l='319' c='26' s='7'/>
 </Attr>
 </Id>
 </Binary_Exp>
 <Id value='from' typref='12'>
 <Attr>
-<Pos l='286' c='37' s='4'/>
+<Pos l='319' c='37' s='4'/>
 </Attr>
 </Id>
 </Exp_Comparison>
 <Exp_Comparison op='='>
 <Attr>
-<Pos l='286' c='50' s='1'/>
+<Pos l='319' c='50' s='1'/>
 </Attr>
 <Id value='from' typref='12'>
 <Attr>
-<Pos l='286' c='45' s='4'/>
+<Pos l='319' c='45' s='4'/>
 </Attr>
 </Id>
 <Id value='masterUser' typref='12'>
 <Attr>
-<Pos l='286' c='52' s='10'/>
+<Pos l='319' c='52' s='10'/>
 </Attr>
 </Id>
 </Exp_Comparison>
@@ -5235,41 +6111,41 @@
 <Body>
 <Assignement_Sub>
 <Attr>
-<Pos l='288' c='20' s='2'/>
+<Pos l='321' c='20' s='2'/>
 </Attr>
 <Variables>
-<Id value='hasWRights' typref='16'>
+<Id value='hasWRights' typref='17'>
 <Attr>
-<Pos l='288' c='9' s='10'/>
+<Pos l='321' c='9' s='10'/>
 </Attr>
 </Id>
 </Variables>
 <Values>
-<Binary_Exp op='-s' typref='16'>
+<Binary_Exp op='-s' typref='17'>
 <Attr>
-<Pos l='288' c='34' s='1'/>
+<Pos l='321' c='34' s='1'/>
 </Attr>
-<Id value='hasWRights' typref='16'>
+<Id value='hasWRights' typref='17'>
 <Attr>
-<Pos l='288' c='23' s='10'/>
+<Pos l='321' c='23' s='10'/>
 </Attr>
 </Id>
-<Nary_Exp op='{' typref='16'>
+<Nary_Exp op='{' typref='17'>
 <Attr>
-<Pos l='288' c='36' s='1'/>
+<Pos l='321' c='36' s='1'/>
 </Attr>
-<Binary_Exp op='|-&gt;' typref='32'>
+<Binary_Exp op='|-&gt;' typref='28'>
 <Attr>
-<Pos l='288' c='45' s='3'/>
+<Pos l='321' c='45' s='3'/>
 </Attr>
-<Id value='content' typref='31'>
+<Id value='content' typref='15'>
 <Attr>
-<Pos l='288' c='37' s='7'/>
+<Pos l='321' c='37' s='7'/>
 </Attr>
 </Id>
 <Id value='target' typref='12'>
 <Attr>
-<Pos l='288' c='47' s='6'/>
+<Pos l='321' c='47' s='6'/>
 </Attr>
 </Id>
 </Binary_Exp>
@@ -5281,22 +6157,22 @@
 </Operation>
 <Operation name='GrantWRights'>
 <Attr>
-<Pos l='291' c='5' s='12' endLine='300'/>
+<Pos l='324' c='5' s='12' endLine='333'/>
 </Attr>
 <Input_Parameters>
 <Id value='from' typref='12'>
 <Attr>
-<Pos l='291' c='18' s='4'/>
+<Pos l='324' c='18' s='4'/>
 </Attr>
 </Id>
-<Id value='content' typref='31'>
+<Id value='content' typref='15'>
 <Attr>
-<Pos l='291' c='24' s='7'/>
+<Pos l='324' c='24' s='7'/>
 </Attr>
 </Id>
 <Id value='target' typref='12'>
 <Attr>
-<Pos l='291' c='33' s='6'/>
+<Pos l='324' c='33' s='6'/>
 </Attr>
 </Id>
 </Input_Parameters>
@@ -5304,177 +6180,177 @@
 <Nary_Pred op='&amp;'>
 <Exp_Comparison op=':'>
 <Attr>
-<Pos l='293' c='14' s='1'/>
+<Pos l='326' c='14' s='1'/>
 </Attr>
 <Id value='from' typref='12'>
 <Attr>
-<Pos l='293' c='9' s='4'/>
+<Pos l='326' c='9' s='4'/>
 </Attr>
 </Id>
 <Id value='USERS' typref='4'>
 <Attr>
-<Pos l='293' c='16' s='5'/>
+<Pos l='326' c='16' s='5'/>
 </Attr>
 </Id>
 </Exp_Comparison>
 <Exp_Comparison op=':'>
 <Attr>
-<Pos l='293' c='29' s='1'/>
+<Pos l='326' c='29' s='1'/>
 </Attr>
 <Id value='from' typref='12'>
 <Attr>
-<Pos l='293' c='24' s='4'/>
+<Pos l='326' c='24' s='4'/>
 </Attr>
 </Id>
 <Id value='users' typref='4'>
 <Attr>
-<Pos l='293' c='31' s='5'/>
+<Pos l='326' c='31' s='5'/>
 </Attr>
 </Id>
 </Exp_Comparison>
 <Exp_Comparison op=':'>
 <Attr>
-<Pos l='293' c='44' s='1'/>
+<Pos l='326' c='44' s='1'/>
 </Attr>
 <Id value='from' typref='12'>
 <Attr>
-<Pos l='293' c='39' s='4'/>
+<Pos l='326' c='39' s='4'/>
 </Attr>
 </Id>
 <Id value='loggedUsers' typref='4'>
 <Attr>
-<Pos l='293' c='46' s='11'/>
+<Pos l='326' c='46' s='11'/>
 </Attr>
 </Id>
 </Exp_Comparison>
 <Exp_Comparison op=':'>
 <Attr>
-<Pos l='294' c='17' s='1'/>
+<Pos l='327' c='17' s='1'/>
 </Attr>
-<Id value='content' typref='31'>
+<Id value='content' typref='15'>
 <Attr>
-<Pos l='294' c='9' s='7'/>
+<Pos l='327' c='9' s='7'/>
 </Attr>
 </Id>
 <Id value='CONTENTS' typref='8'>
 <Attr>
-<Pos l='294' c='19' s='8'/>
+<Pos l='327' c='19' s='8'/>
 </Attr>
 </Id>
 </Exp_Comparison>
 <Exp_Comparison op=':'>
 <Attr>
-<Pos l='294' c='38' s='1'/>
+<Pos l='327' c='38' s='1'/>
 </Attr>
-<Id value='content' typref='31'>
+<Id value='content' typref='15'>
 <Attr>
-<Pos l='294' c='30' s='7'/>
+<Pos l='327' c='30' s='7'/>
 </Attr>
 </Id>
 <Id value='contents' typref='8'>
 <Attr>
-<Pos l='294' c='40' s='8'/>
+<Pos l='327' c='40' s='8'/>
 </Attr>
 </Id>
 </Exp_Comparison>
 <Exp_Comparison op=':'>
 <Attr>
-<Pos l='295' c='16' s='1'/>
+<Pos l='328' c='16' s='1'/>
 </Attr>
 <Id value='target' typref='12'>
 <Attr>
-<Pos l='295' c='9' s='6'/>
+<Pos l='328' c='9' s='6'/>
 </Attr>
 </Id>
 <Id value='USERS' typref='4'>
 <Attr>
-<Pos l='295' c='18' s='5'/>
+<Pos l='328' c='18' s='5'/>
 </Attr>
 </Id>
 </Exp_Comparison>
 <Exp_Comparison op=':'>
 <Attr>
-<Pos l='295' c='33' s='1'/>
+<Pos l='328' c='33' s='1'/>
 </Attr>
 <Id value='target' typref='12'>
 <Attr>
-<Pos l='295' c='26' s='6'/>
+<Pos l='328' c='26' s='6'/>
 </Attr>
 </Id>
 <Id value='users' typref='4'>
 <Attr>
-<Pos l='295' c='35' s='5'/>
+<Pos l='328' c='35' s='5'/>
 </Attr>
 </Id>
 </Exp_Comparison>
 <Exp_Comparison op='/='>
 <Attr>
-<Pos l='295' c='50' s='2'/>
+<Pos l='328' c='50' s='2'/>
 </Attr>
 <Id value='target' typref='12'>
 <Attr>
-<Pos l='295' c='43' s='6'/>
+<Pos l='328' c='43' s='6'/>
 </Attr>
 </Id>
 <Id value='from' typref='12'>
 <Attr>
-<Pos l='295' c='52' s='4'/>
+<Pos l='328' c='52' s='4'/>
 </Attr>
 </Id>
 </Exp_Comparison>
 <Exp_Comparison op='/='>
 <Attr>
-<Pos l='295' c='66' s='2'/>
+<Pos l='328' c='66' s='2'/>
 </Attr>
 <Id value='target' typref='12'>
 <Attr>
-<Pos l='295' c='59' s='6'/>
+<Pos l='328' c='59' s='6'/>
 </Attr>
 </Id>
 <Id value='masterUser' typref='12'>
 <Attr>
-<Pos l='295' c='68' s='10'/>
+<Pos l='328' c='68' s='10'/>
 </Attr>
 </Id>
 </Exp_Comparison>
 <Nary_Pred op='or'>
 <Exp_Comparison op='='>
 <Attr>
-<Pos l='296' c='35' s='1'/>
+<Pos l='329' c='35' s='1'/>
 </Attr>
 <Binary_Exp op='(' typref='12'>
 <Attr>
-<Pos l='296' c='25' s='0'/>
+<Pos l='329' c='25' s='0'/>
 </Attr>
-<Id value='getContentOwner' typref='16'>
+<Id value='getContentOwner' typref='17'>
 <Attr>
-<Pos l='296' c='10' s='15'/>
+<Pos l='329' c='10' s='15'/>
 </Attr>
 </Id>
-<Id value='content' typref='31'>
+<Id value='content' typref='15'>
 <Attr>
-<Pos l='296' c='26' s='7'/>
+<Pos l='329' c='26' s='7'/>
 </Attr>
 </Id>
 </Binary_Exp>
 <Id value='from' typref='12'>
 <Attr>
-<Pos l='296' c='37' s='4'/>
+<Pos l='329' c='37' s='4'/>
 </Attr>
 </Id>
 </Exp_Comparison>
 <Exp_Comparison op='='>
 <Attr>
-<Pos l='296' c='50' s='1'/>
+<Pos l='329' c='50' s='1'/>
 </Attr>
 <Id value='from' typref='12'>
 <Attr>
-<Pos l='296' c='45' s='4'/>
+<Pos l='329' c='45' s='4'/>
 </Attr>
 </Id>
 <Id value='masterUser' typref='12'>
 <Attr>
-<Pos l='296' c='52' s='10'/>
+<Pos l='329' c='52' s='10'/>
 </Attr>
 </Id>
 </Exp_Comparison>
@@ -5485,41 +6361,41 @@
 <Nary_Sub op='||'>
 <Assignement_Sub>
 <Attr>
-<Pos l='298' c='22' s='2'/>
+<Pos l='331' c='22' s='2'/>
 </Attr>
 <Variables>
-<Id value='hasNoRRights' typref='16'>
+<Id value='hasNoRRights' typref='17'>
 <Attr>
-<Pos l='298' c='9' s='12'/>
+<Pos l='331' c='9' s='12'/>
 </Attr>
 </Id>
 </Variables>
 <Values>
-<Binary_Exp op='-s' typref='16'>
+<Binary_Exp op='-s' typref='17'>
 <Attr>
-<Pos l='298' c='38' s='1'/>
+<Pos l='331' c='38' s='1'/>
 </Attr>
-<Id value='hasNoRRights' typref='16'>
+<Id value='hasNoRRights' typref='17'>
 <Attr>
-<Pos l='298' c='25' s='12'/>
+<Pos l='331' c='25' s='12'/>
 </Attr>
 </Id>
-<Nary_Exp op='{' typref='16'>
+<Nary_Exp op='{' typref='17'>
 <Attr>
-<Pos l='298' c='40' s='1'/>
+<Pos l='331' c='40' s='1'/>
 </Attr>
-<Binary_Exp op='|-&gt;' typref='32'>
+<Binary_Exp op='|-&gt;' typref='28'>
 <Attr>
-<Pos l='298' c='49' s='3'/>
+<Pos l='331' c='49' s='3'/>
 </Attr>
-<Id value='content' typref='31'>
+<Id value='content' typref='15'>
 <Attr>
-<Pos l='298' c='41' s='7'/>
+<Pos l='331' c='41' s='7'/>
 </Attr>
 </Id>
 <Id value='target' typref='12'>
 <Attr>
-<Pos l='298' c='51' s='6'/>
+<Pos l='331' c='51' s='6'/>
 </Attr>
 </Id>
 </Binary_Exp>
@@ -5529,41 +6405,41 @@
 </Assignement_Sub>
 <Assignement_Sub>
 <Attr>
-<Pos l='299' c='20' s='2'/>
+<Pos l='332' c='20' s='2'/>
 </Attr>
 <Variables>
-<Id value='hasWRights' typref='16'>
+<Id value='hasWRights' typref='17'>
 <Attr>
-<Pos l='299' c='9' s='10'/>
+<Pos l='332' c='9' s='10'/>
 </Attr>
 </Id>
 </Variables>
 <Values>
-<Binary_Exp op='\/' typref='16'>
+<Binary_Exp op='\/' typref='17'>
 <Attr>
-<Pos l='299' c='34' s='2'/>
+<Pos l='332' c='34' s='2'/>
 </Attr>
-<Id value='hasWRights' typref='16'>
+<Id value='hasWRights' typref='17'>
 <Attr>
-<Pos l='299' c='23' s='10'/>
+<Pos l='332' c='23' s='10'/>
 </Attr>
 </Id>
-<Nary_Exp op='{' typref='16'>
+<Nary_Exp op='{' typref='17'>
 <Attr>
-<Pos l='299' c='36' s='1'/>
+<Pos l='332' c='36' s='1'/>
 </Attr>
-<Binary_Exp op='|-&gt;' typref='32'>
+<Binary_Exp op='|-&gt;' typref='28'>
 <Attr>
-<Pos l='299' c='45' s='3'/>
+<Pos l='332' c='45' s='3'/>
 </Attr>
-<Id value='content' typref='31'>
+<Id value='content' typref='15'>
 <Attr>
-<Pos l='299' c='37' s='7'/>
+<Pos l='332' c='37' s='7'/>
 </Attr>
 </Id>
 <Id value='target' typref='12'>
 <Attr>
-<Pos l='299' c='47' s='6'/>
+<Pos l='332' c='47' s='6'/>
 </Attr>
 </Id>
 </Binary_Exp>
@@ -5640,6 +6516,9 @@
 <Id value='PASSWORDS'/>
 </Type>
 <Type id='15'>
+<Id value='CONTENTS'/>
+</Type>
+<Type id='16'>
 <Unary_Exp op='POW'>
 <Binary_Exp op='*'>
 <Id value='USERS'/>
@@ -5647,19 +6526,11 @@
 </Binary_Exp>
 </Unary_Exp>
 </Type>
-<Type id='16'>
+<Type id='17'>
 <Unary_Exp op='POW'>
 <Binary_Exp op='*'>
 <Id value='CONTENTS'/>
 <Id value='USERS'/>
-</Binary_Exp>
-</Unary_Exp>
-</Type>
-<Type id='17'>
-<Unary_Exp op='POW'>
-<Binary_Exp op='*'>
-<Id value='USERS'/>
-<Id value='GENDERS'/>
 </Binary_Exp>
 </Unary_Exp>
 </Type>
@@ -5667,7 +6538,7 @@
 <Unary_Exp op='POW'>
 <Binary_Exp op='*'>
 <Id value='USERS'/>
-<Id value='INTEGER'/>
+<Id value='GENDERS'/>
 </Binary_Exp>
 </Unary_Exp>
 </Type>
@@ -5675,24 +6546,22 @@
 <Unary_Exp op='POW'>
 <Binary_Exp op='*'>
 <Id value='USERS'/>
-<Id value='PASSWORDS'/>
+<Id value='INTEGER'/>
 </Binary_Exp>
 </Unary_Exp>
 </Type>
 <Type id='20'>
 <Unary_Exp op='POW'>
-<Unary_Exp op='POW'>
-<Id value='CONTENTS'/>
-</Unary_Exp>
+<Binary_Exp op='*'>
+<Id value='USERS'/>
+<Id value='PASSWORDS'/>
+</Binary_Exp>
 </Unary_Exp>
 </Type>
 <Type id='21'>
 <Unary_Exp op='POW'>
 <Unary_Exp op='POW'>
-<Binary_Exp op='*'>
-<Id value='USERS'/>
-<Id value='PSEUDOS'/>
-</Binary_Exp>
+<Id value='CONTENTS'/>
 </Unary_Exp>
 </Unary_Exp>
 </Type>
@@ -5700,8 +6569,8 @@
 <Unary_Exp op='POW'>
 <Unary_Exp op='POW'>
 <Binary_Exp op='*'>
-<Id value='CONTENTS'/>
 <Id value='USERS'/>
+<Id value='PSEUDOS'/>
 </Binary_Exp>
 </Unary_Exp>
 </Unary_Exp>
@@ -5710,8 +6579,8 @@
 <Unary_Exp op='POW'>
 <Unary_Exp op='POW'>
 <Binary_Exp op='*'>
+<Id value='CONTENTS'/>
 <Id value='USERS'/>
-<Id value='GENDERS'/>
 </Binary_Exp>
 </Unary_Exp>
 </Unary_Exp>
@@ -5721,7 +6590,7 @@
 <Unary_Exp op='POW'>
 <Binary_Exp op='*'>
 <Id value='USERS'/>
-<Id value='INTEGER'/>
+<Id value='GENDERS'/>
 </Binary_Exp>
 </Unary_Exp>
 </Unary_Exp>
@@ -5731,51 +6600,58 @@
 <Unary_Exp op='POW'>
 <Binary_Exp op='*'>
 <Id value='USERS'/>
-<Id value='PASSWORDS'/>
+<Id value='INTEGER'/>
 </Binary_Exp>
 </Unary_Exp>
 </Unary_Exp>
 </Type>
 <Type id='26'>
+<Unary_Exp op='POW'>
+<Unary_Exp op='POW'>
+<Binary_Exp op='*'>
+<Id value='USERS'/>
+<Id value='PASSWORDS'/>
+</Binary_Exp>
+</Unary_Exp>
+</Unary_Exp>
+</Type>
+<Type id='27'>
 <Binary_Exp op='*'>
 <Id value='USERS'/>
 <Id value='PSEUDOS'/>
 </Binary_Exp>
 </Type>
-<Type id='27'>
-<Binary_Exp op='*'>
-<Id value='USERS'/>
-<Id value='GENDERS'/>
-</Binary_Exp>
-</Type>
 <Type id='28'>
 <Binary_Exp op='*'>
+<Id value='CONTENTS'/>
 <Id value='USERS'/>
-<Id value='INTEGER'/>
 </Binary_Exp>
 </Type>
 <Type id='29'>
 <Binary_Exp op='*'>
 <Id value='USERS'/>
-<Id value='PASSWORDS'/>
+<Id value='GENDERS'/>
 </Binary_Exp>
 </Type>
 <Type id='30'>
+<Binary_Exp op='*'>
+<Id value='USERS'/>
+<Id value='INTEGER'/>
+</Binary_Exp>
+</Type>
+<Type id='31'>
+<Binary_Exp op='*'>
+<Id value='USERS'/>
+<Id value='PASSWORDS'/>
+</Binary_Exp>
+</Type>
+<Type id='32'>
 <Unary_Exp op='POW'>
 <Binary_Exp op='*'>
 <Id value='PSEUDOS'/>
 <Id value='USERS'/>
 </Binary_Exp>
 </Unary_Exp>
-</Type>
-<Type id='31'>
-<Id value='CONTENTS'/>
-</Type>
-<Type id='32'>
-<Binary_Exp op='*'>
-<Id value='CONTENTS'/>
-<Id value='USERS'/>
-</Binary_Exp>
 </Type>
 </TypeInfos>
 
